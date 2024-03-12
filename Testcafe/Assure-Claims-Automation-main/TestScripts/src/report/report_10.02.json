@@ -1,0 +1,22 @@
+{
+  "fixtures": [
+    {
+      "name": "Smoke_Security",
+      "tests": [
+        {
+          "id": 1,
+          "name": "UserCreation&Login",
+          "steps": [],
+          "status": "passed",
+          "screenshot": null,
+          "userAgent": [
+            "Chrome 88.0.4324.150 / Windows 8.1"
+          ],
+          "durationMs": "20s",
+          "stackTrace": []
+        }
+      ]
+    }
+  ],
+  "startTime": "2021-02-10T11:14:11"
+}

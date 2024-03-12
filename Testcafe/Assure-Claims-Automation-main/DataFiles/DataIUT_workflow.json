@@ -1,0 +1,30 @@
+[
+  {
+    "URL_workflow": "https://riskmaster-demo.cm-csc.com/workflow/#/",
+    "WorkflowUsername": "admin",
+    "WorkflowPassword": "admin123",
+    "Workflow_Username": "Admin Dod",
+    "Username1": "johndoe",
+    "password1": "johndoe",
+    "Login_Username1": "John Doe",
+    "username2": "jamesjohnson",
+    "password2": "jamesjohnson",
+    "Login_Username2": "James Johnson",
+    "Modulename": "Configure Workflows",
+    "Workflow_Name": "Username",
+    "Workflow_Description": "Description",
+    "Workflow_Name_Edit": "Edit Username",
+    "Workflow_Description_Edit": "Edit Description",
+    "Workflow_Step1": "Verify Step 1",
+    "Workflow_Step2": "Verify Step 2",
+    "User1": "John Doe",
+    "User2": "James Johnson",
+    "Group1": "Training",
+    "Filename": "I_bill_9July.pdf",
+    "Record_Type": "Event",
+    "Document_Type": "Medical Bill",
+    "Event_Number": "MK003478",
+    "Comment1": "Step1 approved"
+
+  }
+]

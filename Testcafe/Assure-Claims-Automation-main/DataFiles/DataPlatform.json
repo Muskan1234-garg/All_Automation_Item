@@ -1,0 +1,12 @@
+[
+    {
+        "URL": "https://assure-claims.stage-1.hub-51.claims-mp-dev.dev.us.insurance.dxc.com/riskmasterux/#/login",
+        "Username": "dxc",
+        "Password": "dxc",
+        "Username_Okta": "rkotak@csc.com",
+        "Password_Okta": "Riskmaster@123",
+        "SecurityUsername_Okta":"rkotak rkotak",
+        "DSN": "AssureClaims",
+        "URL_Okta": "https://dev-447259.oktapreview.com"
+    }
+]

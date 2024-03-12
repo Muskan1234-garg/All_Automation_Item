@@ -1,0 +1,2 @@
+call PrerequisiteAndSmoke.bat
+call RegressionExecutor.bat

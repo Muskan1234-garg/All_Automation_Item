@@ -1,0 +1,23 @@
+[
+    {   
+      
+        "URL": "https://dev-ora-assure-claims.dxc-rmcl.com/riskmasterux",
+        "Username": "csciut",
+        "Password": "csciut",
+        "DSN": "RMIUT204_MCON_EROFF",
+
+        "ClaimStatus": "Open",
+        "Department": "8",
+        "GCClaimType": "APV",
+        "DateOfEvent": "11/11/2012",
+        "DateOfClaim": "11/11/2012",
+        "ClaimDateReptd": "11/11/2012",
+		"GCPolicyLOB": "ACV",
+
+        "GCCarrierPolicyLOB": "APV",
+        "PolicySystem": "RMSTG",
+        "PolicyName": "APV Policy Coverage9",
+        "PolicyUnit": "1285560",
+        "PolicyCoverage": "114 Medical Benefits"
+    }
+]

@@ -1,0 +1,13 @@
+Utility Name : UserPermissionForTargetDSN.js
+Location : https://github.dxc.com/insurance/Assure-Claims-Automation/tree/main/TestScripts/UserPermissionForTargetDSN.js
+Steps to run the utility: 
+	1) Download the Assure-Claims-Automation repository
+	2) Choose the TargetDSN for which we want to give permission for 100 users.
+	3) Set the target dsn name in the variable named 'TargetDSN' given in the script.
+		eg : let TargetDSNName = "Name_of_the_target_DSN";
+	4) Run the testcafe script.
+		
+
+
+
+	
