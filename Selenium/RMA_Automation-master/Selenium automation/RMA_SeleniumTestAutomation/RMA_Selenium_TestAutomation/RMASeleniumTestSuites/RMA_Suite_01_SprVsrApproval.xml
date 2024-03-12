@@ -1,0 +1,318 @@
+<suite name="RMA_Suite_01_SprVsrApproval" parallel="none" allow-return-values="true">
+
+ <!-- Following Is The User Detials and Should Follow Supervisor Heirarchy As Mentioned Below -->
+
+ <!--  Users : loginuser>loginmgr1>loginmgr2, And They Should Belong To Module Groups LoginUserGroup, LoginMgr1Group1, LoginMgr2Group2 Respectively -->
+ 
+ <!--  user : CurrAdj>CurrAdjMgr1>CurrAdjMgr2, And They Should Belong To Module Groups CurrAdjGroup, CurrAdjMgr1Group1, CurrAdjMgr2Group2 Respectively -->
+ 
+ <!-- user4 And user5 Should Have Different Managers And They Should Belong To Module Group Training -->
+
+ <!--RMA_TC_044_C Has To Be Executed In Between RMA_TC_041 And RMA_TC_042 As It Removes User Privileges Settings-->
+  
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="3" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_01_SprVsrApproval" />
+ 
+ <!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test> 
+
+   <!--Verify That Required DSN Is Selected In RMA Application-->
+    <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+     </test>
+   
+   <!--Verify that  Payment Limits Can Be Set At Group Level In User Privileges Setup-->
+      <test name="RMA_TC_011">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_011"/>
+    </classes>
+     </test>
+      
+   <!--Verify That Chain Of Current Adjuster With Notify Immediate User Functionality Can Be  Chosen In Payment Parameter Set-Up-->
+      <test name="RMA_TC_012">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_012"/>
+    </classes>
+     </test>
+
+     
+   <!--Verify Payment Can Be Created And Is Going On Hold Because Of Exceeded Payment Limits-->
+    <test name="RMA_TC_013">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_013"/>
+    </classes>
+     </test>
+     
+<!--Listing Of Transactions Created In RMA_TC_013 In Pending Transaction's Submitted Column Under Current Adjuster's Hierarchy Having  Sufficient Limits To Approve Is Validated-->
+   <test name="RMA_TC_014">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_014"/>
+    </classes>
+     </test>
+   
+     
+<!--Transaction Created In RMA_TC_013 Is Not Listed In Login User's Managers List Is Validated-->
+   <test name="RMA_TC_015">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_015"/>
+    </classes>
+     </test> 
+     
+ 
+ <!--Transaction Created In RMA_TC_013 Is Listed In Current Adjuster's List And On Approval Goes To His Manager Is Validated-->
+   <test name="RMA_TC_016">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_016"/>
+    </classes>
+     </test> 
+     
+  <!--Transaction Created In RMA_TC_013 Is Listed In Current Adjuster Manager's List And On Approval Goes To His Manager Is Validated-->
+   <test name="RMA_TC_017">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_017"/>
+    </classes>
+     </test> 
+     
+     
+ <!--Transaction Created In RMA_TC_013 Is Listed In Manager's List Of Current Adjuster Manager And User Has Also Received A Diary For The Same-->
+   <test name="RMA_TC_018">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_018"/>
+    </classes>
+     </test>  
+
+ <!--Verify diary/email is sent to the user who created this transaction-->
+   <test name="RMA_TC_019">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_019"/>
+    </classes>
+     </test>
+
+ <!--Chain Of Current Adjuster With Notify Immediate User Functionality Setting In Payment Parameter Set-Up Clean Up Is Validated-->
+   <test name="RMA_TC_020_C">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_020_C"/>
+    </classes>
+     </test>	 
+
+<!-- Verify that chain of  Current Adjuster with jump Functionality can be  chosen in Payment Parameter Setup-->    
+      <test name="RMA_TC_021">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_021"/>
+    </classes>
+     </test> 
+  
+   <!-- Verify Payment can be created and is going on Hold because of exceeded payment limits -->
+      <test name="RMA_TC_022">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_022"/>
+    </classes>
+     </test> 
+	 
+       <!-- Verify transaction is listed in my pending transactions and in submitted to column, listed user should be the one in current adjuster's hierarchy having  sufficient limits to approve--> 
+      <test name="RMA_TC_023">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_023"/>
+    </classes>
+     </test>   
+      
+      <!-- Verify that hold transaction(Created in RMA_TC_022) is not listed in login user's managers list-->  
+      <test name="RMA_TC_024">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_024"/>
+    </classes>
+     </test> 
+       
+     <!-- Verify that hold transaction (Created in TC_022) is not listed in current adjuster's list--> 
+      <test name="RMA_TC_025">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_025"/>
+    </classes>
+     </test>
+     
+      <!-- Verify that hold transaction is  listed in current adjuster's manager's manager list and user should also have received a diary and an email--> 
+      <test name="RMA_TC_026">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_026"/>
+    </classes>
+     </test>
+     
+     <!--Verify user is able to approve the transaction and diary/email is sent to Current Adjuster of Claim--> 
+      <test name="RMA_TC_027_c">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_027_c"/>
+    </classes>
+     </test>  
+     
+  <!--Verify that chain of  login user with jump Functionality can be  chosen in Payment Parameter Setup --> 
+      <test name="RMA_TC_028">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_028"/>
+    </classes>
+     </test>  
+     
+        <!--Verify Payment can be created and is going on Hold because of exceeded payment limits --> 
+      <test name="RMA_TC_029">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_029"/>
+    </classes>
+     </test> 
+ 
+ <!-- Verify transaction is listed in my pending transactions and in submitted to column, listed user should be the one in login user's  hierarchy having  sufficient limits to approve --> 
+      <test name="RMA_TC_030">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_030"/>
+    </classes>
+     </test> 
+     
+		 <!--Verify that hold transaction(Created in RMA_TC_029) is not listed in login user's managers list--> 
+      <test name="RMA_TC_031">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_031"/>
+    </classes>
+     </test> 
+	 <!--Verify that hold transaction is not listed in current adjuster's list--> 
+      <test name="RMA_TC_032">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_032"/>
+    </classes>
+     </test> 
+     
+      <!--Verify that hold transaction is  listed in  login user's manager's manager list and user should also have received a diary and an email--> 
+      <test name="RMA_TC_033">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_033"/>
+    </classes>
+     </test> 
+	 <!--Verify user is able to approve the transaction and diary/email is sent to the user who created this transaction--> 
+      <test name="RMA_TC_034">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_034_c"/>
+    </classes>
+     </test> 
+     	 
+	<!--Verify That Chain Of Login User With Notify Immediate User Functionality Can Be Chosen In Payment Parameter Setup--> 
+    <test name="RMA_TC_035">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_035"/>
+    </classes>
+     </test> 
+     
+  <!--Verify Payment Can Be Created And Is Going On Hold Because Of Exceeded Payment Limits--> 
+    <test name="RMA_TC_036">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_036"/>
+    </classes>
+     </test>
+	 
+<!--Verify transaction is listed in my pending transactions and in submitted to column,user should be manager of the login user--> 
+    <test name="RMA_TC_037">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_037"/>
+    </classes>
+     </test>
+	 
+	     <!--Verify that hold transaction is not listed in current adjuster's  list--> 
+    <test name="RMA_TC_038">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_038"/>
+    </classes>
+     </test>
+     
+   <!--Verify that hold transaction is  listed in login manager's list and when he tries to approve the transaction , it goes to his manager--> 
+    <test name="RMA_TC_039">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_039"/>
+    </classes>
+     </test>
+     
+  <!--Verify that hold transaction is  listed in login user's manager's manager list and user should also have received a diary and an email--> 
+    <test name="RMA_TC_040">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_040"/>
+    </classes>
+    </test>
+	
+ <!--Verify user is able to approve the transaction and diary/email is sent to the user who created this transaction--> 
+    <test name="RMA_TC_041">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_041"/>
+    </classes>
+     </test>
+     
+  <!--RMA_TC_044_C Has To Be Executed In Between RMA_TC_041 And RMA_TC_042 As It Removes User Privileges Settings-->
+           
+  <!--User Payment Limit Setting In User Privileges Set Up Page Clean Up Is Validated-->
+    <test name="RMA_TC_044">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_044_C"/>
+    </classes>
+     </test>
+     
+<!--Verify That  Payment Limits Can Be Set At Group And User Level In User Privileges Setup--> 
+    <test name="RMA_TC_042">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_042"/>
+    </classes>
+     </test>
+     
+ <!--Verify Payments Can Be Created And Is Going On Hold Because Of Exceeded Payment Limits-->
+    <test name="RMA_TC_043">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_043"/>
+    </classes>
+     </test>
+
+                
+<!--Verify that  Payment Limits can be set at user level and setting "restrict unspecified user" can be de-selected in User Privileges Setup--> 
+    <test name="RMA_TC_045">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_045"/>
+    </classes>
+     </test>
+     
+<!--Verify if"Restrict unspecified user" is unchecked then payment made by this user doesn’t go on hold--> 
+    <test name="RMA_TC_046">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_046"/>
+    </classes>
+     </test>
+	 
+<!--Verify if"Restrict unspecified user" is unchecked then he should be able to approve payment of any amount--> 
+    <test name="RMA_TC_047">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_047"/>
+    </classes>
+     </test>
+     
+ <!--Verify "Restrict unspecified user" can be selected in User Privileges setup--> 
+    <test name="RMA_TC_048">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_048"/>
+    </classes>
+     </test>
+	 
+	 <!--Verify if"Restrict unspecified user" is checked then payment made by this user should go on hold as his limit is now $0--> 
+    <test name="RMA_TC_049">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_049"/>
+    </classes>
+     </test>
+	 
+	  <!--Verify if"Restrict unspecified user" is checked then he should NOT be able to approve payment of any amount--> 
+    <test name="RMA_TC_050">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_050_c"/>
+    </classes>
+     </test>
+     
+ </suite> 

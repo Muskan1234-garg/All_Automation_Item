@@ -1,0 +1,197 @@
+<suite name="RMA_Suite_02_SprVsrApproval_01" parallel="none" allow-return-values="true">
+ <!-- Following Are The User Details and Should Follow Supervisor Heirarchy As Mentioned Below -->
+
+ <!--  Users : loginuser>loginmgr1>loginmgr2, And They Should Belong To Module Groups LoginUserGroup, LoginMgr1Group1, LoginMgr2Group2 Respectively -->
+ 
+ <!--  Users : CurrAdj>CurrAdjMgr1>CurrAdjMgr2, And They Should Belong To Module Groups CurrAdjGroup, CurrAdjMgr1Group1, CurrAdjMgr2Group2 Respectively -->
+ 
+ <!-- user4 And user5 Should Have No Managers And They Should Belong To Module Group Training -->
+
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="3" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_02_SprVsrApproval_01" />
+
+ <!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test> 
+
+ <!--Verify That Required DSN Is Selected In RMA Application-->
+    <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+     </test>
+	 
+<!--Verify that  Payment Limits are working if applied only at group level and Current adjuster chain with Jump functionality is selected in Payment Parameter -->
+    <test name="RMA_TC_064">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_064"/>
+    </classes>
+     </test>
+     
+ <!--Verify That Chain Of Current Adjuster With Notify Immediate User Functionality Can Be  Chosen In Payment Parameter Set-Up-->
+    <test name="RMA_TC_051">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_051"/>
+    </classes>
+     </test>
+ 
+<!--Verify Payment Can Be Created And Is Going On Hold Because Of Exceeded Payment Limits-->
+      <test name="RMA_TC_052">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_052"/>
+    </classes>
+     </test>
+     
+<!--Verify Transaction Is Listed In My Pending Transactions And In Submitted To Column,User Should Be Current Adjuster-->
+ <test name="RMA_TC_053">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_053"/>
+    </classes>
+     </test>
+     
+<!--Verify That Hold Transaction Is Not Listed In Login User's Managers List-->
+      <test name="RMA_TC_054">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_054"/>
+    </classes>
+     </test>
+     
+<!--Verify That Hold Transaction Is Not Listed In Top Level Managers List-->
+      <test name="RMA_TC_055">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_055"/>
+    </classes>
+     </test>
+     
+ <!--Verify That Hold Transaction Is Not Listed In LOB Managers List-->
+  <test name="RMA_TC_056">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_056"/>
+  </classes>
+ </test>
+ 
+ <!--Verify That Transaction Created In RMA_TC_052 Is Listed In Current Adjuster's List And On Approval Goes To His Manager-->
+  <test name="RMA_TC_057">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_057"/>
+  </classes>
+  </test>
+  
+ <!--Verify That Transaction Created In RMA_TC_052 Is Listed In Current Adjuster Manager's List And On Approval Goes To His Manager-->
+  <test name="RMA_TC_058">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_058"/>
+  </classes>
+  </test>
+  
+  <!--Verify That Transaction Created In RMA_TC_052 Is Listed In Current Adjuster Manager's Manager List And On Approval Goes To LOB Manager-->
+  <test name="RMA_TC_059">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_059"/>
+  </classes>
+  </test>
+  
+  <!--Verify That Transaction Created In RMA_TC_052 Is Listed In LOB Manager List And On Approval Goes To Top Level Manager-->
+  <test name="RMA_TC_060">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_060"/>
+  </classes>
+  </test>
+
+ <!--Verify That Diary/Email Is Sent To Current Adjuster Of Claim-->
+  <test name="RMA_TC_061">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_061"/>
+  </classes>
+  </test>
+  
+ <!--Verify That Transaction Created In RMA_TC_052 Can Be Approved By Top Level Manager-->
+  <test name="RMA_TC_062">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_062"/>
+  </classes>
+  </test>
+  
+ <!--Verify That Diary/Email Is Sent To Current Adjuster Of Claim When Payment Is Approved By Top Level Manager-->
+ <test name="RMA_TC_063">
+  <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_063"/>
+  </classes>
+  </test>
+  
+<!--Verify that Notify immediate manager setting is Off in payment system parameters-->
+  <test name="RMA_TC_065">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_065"/>
+  </classes>
+     </test>
+	 
+<!--Verify Payment can be created and is going on Hold because of exceeded payment limits-->
+  <test name="RMA_TC_066">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_066"/>
+  </classes>
+     </test>
+	 
+ <!--Verify transaction is listed in my pending transactions and in submitted to column, listed user should be the one in current adjuster's hierarchy having  sufficient limits to approve. -->
+  <test name="RMA_TC_067">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_067"/>
+  </classes>
+     </test>
+	 
+<!--Verify that hold transaction is not listed in login user's managers list-->
+  <test name="RMA_TC_068">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_068"/>
+  </classes>
+     </test>
+	 
+ <!--Verify that hold transaction is not listed in current adjuster's list-->
+  <test name="RMA_TC_069">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_069"/>
+  </classes>
+     </test>
+	 
+<!--Verify that hold transaction is  listed in Lob manager & top level manager list and user should also have received a diary and an email.-->
+  <test name="RMA_TC_070">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_070"/>
+  </classes>
+     </test>
+	 
+<!--Verify that all the payments are visible to top level manager when Show all Transactions within my authority is checked-->
+  <test name="RMA_TC_071">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_071"/>
+  </classes>
+     </test>
+	 
+ <!--Verify user is able to approve the transaction  -->
+  <test name="RMA_TC_072">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_072"/>
+  </classes>
+     </test>
+	 
+<!--Diary/email is sent to the current adjuster of the claim-->
+  <test name="RMA_TC_073">
+   <classes>
+  <class name="rmaseleniumtestscripts.RMA_TC_073"/>
+  </classes>
+     </test>
+	 
+<!--Verify That Payment Parameter Set Up And User Privileges Payment Limit Assignment Is Cleaned Up-->
+<test name="RMA_TC_074_C">
+ <classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_074_C"/>
+ </classes>
+ </test> 
+ </suite> 

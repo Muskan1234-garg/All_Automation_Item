@@ -1,0 +1,379 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite16_EnhancedNotes_GC_VC_Maint" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application-->  
+    <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+     </test>
+  
+<!-- Creation, Edit And Deletion Of Enhanced Notes For An Already Created Claim -->
+    <test name="RMA_TC_335_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_335_WorkersCompClaim"/>
+    </classes>
+     </test>
+     
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For An Adjustor Associated With A Claim -->   
+ <test name="RMA_TC_336_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_336"/>
+    </classes>
+     </test>
+     
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For A Defendant Associated With A Claim -->   
+ <test name="RMA_TC_337_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_337"/>
+    </classes>
+     </test>
+           
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For A Litigation Associated With A Claim -->   
+ <test name="RMA_TC_339_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_339"/>
+    </classes>
+     </test>
+     
+  <!--  Creation, Edit And Deletion Of Enhanced Notes For A Demand Offer (Added To Litigation) Associated With A Claim -->
+    <test name="RMA_TC_342_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_342"/>
+    </classes>
+     </test>
+     
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For A Subrogation Associated With A Claim -->   
+  <test name="RMA_TC_340_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_340"/>
+    </classes>
+     </test>
+    
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For A Demand Offer (Added To Subrogation) Associated With A Claim -->
+    <test name="RMA_TC_344_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_344"/>
+    </classes>
+     </test>
+    
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For An Arbitration Associated With A Claim -->   
+  <test name="RMA_TC_341_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_341"/>
+    </classes>
+     </test>
+    
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For An Employee (Person Involved Added To Litigation) Associated With A Claim -->   
+  <test name="RMA_TC_345_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_345"/>
+    </classes>
+     </test>
+ 
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For An Driver (Person Involved Added To Litigation) Associated With A Claim -->   
+  <test name="RMA_TC_346_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_346"/>
+    </classes>
+     </test>
+    
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For An Injury (Person Involved) Associated With A Claim -->   
+     <test name="RMA_TC_374_WorkersCompClaim_Li">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_374"/>
+    </classes>
+     </test>
+    
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For A Demand Offer (Added To Injury) Associated With A Claim -->   
+  <test name="RMA_TC_375_WorkersCompClaim_Li">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_375"/>
+    </classes>
+     </test>
+  
+   <!-- Creation, Edit And Deletion Of Enhanced Notes For Case Management System (Injury) Associated With A Claim -->   
+  <test name="RMA_TC_376_WorkersCompClaim_Li">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_376"/>
+    </classes>
+     </test>
+     
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For Case Manager (Case Management System) Associated With A Claim -->   
+  <test name="RMA_TC_377_WorkersCompClaim_Li">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_377"/>
+    </classes>
+     </test>
+
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For Accommodation (Case Management System) Associated With A Claim -->   
+  <test name="RMA_TC_378_WorkersCompClaim_Li">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_378"/>
+    </classes>
+     </test>
+     
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For Vocational Rehab (Case Management System) Associated With A Claim -->   
+  <test name="RMA_TC_379_WorkersCompClaim_Li">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_379"/>
+    </classes>
+     </test>
+ 
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For A Patient (Person Involved Added To Litigation) Associated With A Claim -->   
+  <test name="RMA_TC_347_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_347"/>
+    </classes>
+     </test>
+    
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For A Witness (Person Involved Added To Litigation) Associated With A Claim -->   
+  <test name="RMA_TC_348_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_348"/>
+    </classes>
+     </test>
+     
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For A Physician (Person Involved Added To Litigation) Associated With A Claim -->   
+  <test name="RMA_TC_349_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_349"/>
+    </classes>
+     </test> 
+     
+    <!-- Creation, Edit And Deletion Of Enhanced Notes For A Medical Staff (Person Involved Added To Litigation) Associated With A Claim -->   
+  <test name="RMA_TC_350_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_350"/>
+    </classes>
+     </test>  
+     
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For A Other Person (Person Involved Added To Litigation) Associated With A Claim -->   
+  <test name="RMA_TC_351_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_351"/>
+    </classes>
+     </test>  
+     
+   <!-- Creation, Edit And Deletion Of Enhanced Notes For An Employee (Person Involved) Associated With A Claim -->   
+  <test name="RMA_TC_352_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_352"/>
+    </classes>
+     </test> 
+     
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For Driver (Person Involved) Associated With A Claim -->   
+  <test name="RMA_TC_353_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_353"/>
+    </classes>
+     </test> 
+ 
+   <!-- Creation, Edit And Deletion Of Enhanced Notes For An Injury (Person Involved) Associated With A Claim -->   
+     <test name="RMA_TC_374_WorkersCompClaim_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_374"/>
+    </classes>
+     </test>
+    
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For A Demand Offer (Added To Injury) Associated With A Claim -->   
+  <test name="RMA_TC_375_WorkersCompClaim_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_375"/>
+    </classes>
+     </test>
+  
+   <!-- Creation, Edit And Deletion Of Enhanced Notes For Case Management System (Injury) Associated With A Claim -->   
+  <test name="RMA_TC_376_WorkersCompClaim_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_376"/>
+    </classes>
+     </test>
+     
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For Case Manager (Case Management System) Associated With A Claim -->   
+  <test name="RMA_TC_377_WorkersCompClaim_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_377"/>
+    </classes>
+     </test>
+
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For Accommodation (Case Management System) Associated With A Claim -->   
+  <test name="RMA_TC_378_WorkersCompClaim_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_378"/>
+    </classes>
+     </test>
+     
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For Vocational Rehab (Case Management System) Associated With A Claim -->   
+  <test name="RMA_TC_379_WorkersCompClaim_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_379"/>
+    </classes>
+     </test>   
+ 
+     
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For Patient (Person Involved) Associated With A Claim -->   
+  <test name="RMA_TC_354_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_354"/>
+    </classes>
+     </test>  
+     
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For Physician (Person Involved) Associated With A Claim -->   
+  <test name="RMA_TC_355_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_355"/>
+    </classes>
+     </test>    
+     
+   <!-- Creation, Edit And Deletion Of Enhanced Notes For Witness (Person Involved) Associated With A Claim -->   
+  	<test name="RMA_TC_356_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_356"/>
+    </classes>
+     </test>  
+     
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For Medical Staff (Person Involved) Associated With A Claim -->   
+  	<test name="RMA_TC_357_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_357"/>
+    </classes>
+     </test>
+     
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For Other Person (Person Involved) Associated With A Claim -->   
+  	<test name="RMA_TC_358_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_358"/>
+    </classes>
+     </test>
+     
+      <!-- Creation, Edit And Deletion Of Enhanced Notes For Financial/Reserves Page Associated With A Claim -->   
+  	<test name="RMA_TC_359_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_359"/>
+    </classes>
+     </test>
+     
+      <!-- Creation, Edit And Deletion Of Enhanced Notes For Payment Associated With A Claim -->   
+  	<test name="RMA_TC_360_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_360"/>
+    </classes>
+     </test>
+     
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For Collection Associated With A Claim -->   
+  	<test name="RMA_TC_361_WorkersCompClaim">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_361"/>
+    </classes>
+     </test>
+     
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For An Already Created General Claim -->
+    <test name="RMA_TC_335_Event">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_335_Event"/>
+    </classes>
+     </test>
+     
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For An Employee (Person Involved) Associated With A Claim -->   
+  <test name="RMA_TC_352_Event">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_352"/>
+    </classes>
+     </test> 
+     
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For Driver (Person Involved) Associated With A Claim -->   
+  <test name="RMA_TC_353_Event">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_353"/>
+    </classes>
+     </test> 
+     
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For An Injury (Person Involved) Associated With A Claim -->   
+     <test name="RMA_TC_374_Event_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_374"/>
+    </classes>
+     </test>
+    
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For A Demand Offer (Added To Injury) Associated With A Claim -->   
+  <test name="RMA_TC_375_Event_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_375"/>
+    </classes>
+     </test>
+  
+   <!-- Creation, Edit And Deletion Of Enhanced Notes For Case Management System (Injury) Associated With A Claim -->   
+  <test name="RMA_TC_376_Event_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_376"/>
+    </classes>
+     </test>
+     
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For Case Manager (Case Management System) Associated With A Claim -->   
+  <test name="RMA_TC_377_Event_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_377"/>
+    </classes>
+     </test>
+
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For Accommodation (Case Management System) Associated With A Claim -->   
+  <test name="RMA_TC_378_Event_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_378"/>
+    </classes>
+     </test>
+     
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For Vocational Rehab (Case Management System) Associated With A Claim -->   
+  <test name="RMA_TC_379_Event_PI">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_379"/>
+    </classes>
+     </test>
+     
+  <!-- Creation, Edit And Deletion Of Enhanced Notes For Patient (Person Involved) Associated With A Claim -->   
+  <test name="RMA_TC_354_Event">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_354"/>
+    </classes>
+     </test>  
+     
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For Physician (Person Involved) Associated With A Claim -->   
+  <test name="RMA_TC_355_Event">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_355"/>
+    </classes>
+     </test>    
+     
+   <!-- Creation, Edit And Deletion Of Enhanced Notes For Witness (Person Involved) Associated With A Claim -->   
+  	<test name="RMA_TC_356_Event">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_356"/>
+    </classes>
+     </test>  
+     
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For Medical Staff (Person Involved) Associated With A Claim -->   
+  	<test name="RMA_TC_357_Event">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_357"/>
+    </classes>
+     </test>
+     
+     <!-- Creation, Edit And Deletion Of Enhanced Notes For Other Person (Person Involved) Associated With A Claim -->   
+  	<test name="RMA_TC_358_Event">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_358"/>
+    </classes>
+     </test>
+     
+     </suite>

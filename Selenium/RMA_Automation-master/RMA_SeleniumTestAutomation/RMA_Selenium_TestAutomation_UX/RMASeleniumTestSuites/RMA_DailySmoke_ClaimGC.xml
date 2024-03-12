@@ -1,0 +1,156 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="2" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_DailySmoke_ClaimGC" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+<!--Successful Event Creation On Providing Mandatory Data Is Validated--> 
+	<test name="RMA_Smoke_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_001" />
+		</classes>
+	</test>
+
+<!--Successful Corporate General Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_Smoke_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC_Smoke" />
+		</classes>
+	</test>
+	
+<!--Successful Adjuster Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit And Delete Of Created Adjuster Is Validated -->
+	<test name="RMA_Smoke_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_003" />
+		</classes>
+	</test>
+	
+<!--Successful Claimant Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claimant Is Validated -->
+	 <test name="RMA_Smoke_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_004" />
+		</classes>
+	</test>
+	
+<!--Successful Defendant Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claimant Is Validated -->
+	 <test name="RMA_Smoke_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_005" />
+		</classes>
+	</test>
+		
+<!--Successful Litigation Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit And Delete Of Created Litigation Is Validated-->
+	<test name="RMA_Smoke_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_006" />
+		</classes>
+	</test>
+	
+<!--Successful Subrogation Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit And Delete Of Created Subrogation Is Validated -->
+	<test name="RMA_Smoke_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_007" />
+		</classes>
+	</test>
+	
+<!--Successful Arbitration Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit And Delete Of Created Arbitration Is Validated -->
+	 <test name="RMA_Smoke_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_008" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of MedicalStaff As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_027">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_027" />
+		</classes>
+ 	</test> 
+	
+
+<!--Successful Comment Creation For An Already Created Claim, Close And Cancel Image Button Function On Comments Screen Is Validated -->
+	 <test name="RMA_Smoke_TC_024">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_024" />
+		</classes>
+	</test>
+	
+	<!--Comment Summary Screen Functionality Verification For An Already Created Claim, Close Image Button Both On The Header And Main screen Of Comment Summary, Print Image Button Functionality Is Validated-->
+	 <test name="RMA_Smoke_TC_027">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_027" />
+		</classes>
+	</test>
+
+<!--Diary Is Attached To Created Claim With DairyNotes, Priority, Work Activity (Validated Too), Task Name (Validated Too), Estimated Hours Values, Required Tab Existence Is Verified, Cancel And Save Button Functionality Is Validated--> -->
+	 <test name="RMA_Smoke_TC_022">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_022" />
+		</classes>
+	</test>
+	
+<!--Verify View Record Diary Is Showing Diary, Created For Claim Is Validated -->
+	<test name="RMA_Smoke_TC_023">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_023" />
+		</classes>
+	</test>
+	
+<!--Delete All Diary Is Validated -->
+	<test name="RMA_Smoke_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_010" />
+		</classes>
+	</test>
+
+	
+<!--Verify Record Summary Displays Correct Details For A Claim -->
+<test name="RMA_Smoke_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_020" />
+		</classes>
+</test>
+
+<!--Successful Corporate General Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_Smoke_II">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC_Smoke" />
+		</classes>
+	</test>
+
+<!--Comment below Executive Summary Test case as scripting is not done as per the current flow -->
+<!--Verify That Executive Summary Displays Correct Claim Details -->
+	<test name="RMA_Smoke_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_019" />
+		</classes>
+	</test>
+
+<!-- Successful Claim Search And Then Delete Of The Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_050">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_050" />
+		</classes>
+</test> 
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>

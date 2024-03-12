@@ -1,0 +1,172 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite02_Maint_Employee_Regression_04" />
+	<!-- RMA_Reg_Maint_Employee_TC_041 Is Placed At Last As It Do Not Contain 
+		Settings To Revert -->
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="1" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That A PowerView Is Created And Created User Is Given Permission 
+		To That PowerView -->
+	<test name="RMA_Reg_PowerviewCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That ToolTip Is Changed When Changed Via Old Power View By Enabling 
+		UX Setting Of Violation Page -->
+		<!-- Not applicable now -->
+<!-- 	<test name="RMA_Reg_Maint_Employee_TC_032"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_032" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+	<!--Verify That When User Removes Any ToolBar Button And Any Field Then 
+		Same Is Not Visible On Violation Screen Via UX PowerView -->
+	<test name="RMA_Reg_Maint_Employee_TC_047">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_047" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Add Again ToolBar Button And Field Via UX 
+		PowerView In Violation Page -->
+	<test name="RMA_Reg_Maint_Employee_TC_039">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_039" />
+		</classes>
+	</test>
+
+	<!--Verification Of Data Being Entered In All The Fields ON Employee Maintenance 
+		Page Is Getting Saved Without Any Error -->
+	<test name="RMA_Reg_Maint_Employee_TC_058">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_058" />
+		</classes>
+	</test>
+
+	<!--Verify That ToolTip Is Changed When Changed Via Old Power View By Enabling 
+		UX Setting Of Dependents Page -->
+		<!-- Not applicable now -->
+<!-- 	<test name="RMA_Reg_Maint_Employee_TC_031"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_031" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+	<!--Verify That User Is Able To Make Any Field As Required and Validation 
+		Message Is Displayed In UX PowerView On Dependents -->
+	<test name="RMA_Reg_Maint_Employee_TC_036">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_036" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Remove Any Field And Save The Dependent 
+		On Main Screen Without Any Error -->
+	<test name="RMA_Reg_Maint_Employee_TC_043">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_043" />
+		</classes>
+	</test>
+
+	<!--Verify That Sequence Of ToolBar Buttons Are Getting Changed Via UX Power 
+		View On Employee Maintenance Page -->
+	<test name="RMA_Reg_Maint_Employee_TC_028">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_028" />
+		</classes>
+	</test>
+
+	<!--Verify That Sequence Of ToolBar Buttons Are Getting Changed Via UX Power 
+		View On Dependents Page -->
+	<test name="RMA_Reg_Maint_Employee_TC_030">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_030" />
+		</classes>
+	</test>
+
+	<!-- After Execution RMA_Reg_Maint_Employee_TC_033, sequence Is To Be Manually 
+		Changed Back To Correct One In PV -->
+	<!--Verify That Sequence Of ToolBar Buttons Are Getting Changed Via UX Power 
+		View On Violation Page -->
+	<test name="RMA_Reg_Maint_Employee_TC_033">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_033" />
+		</classes>
+	</test>
+
+	<!--Verify The Validation Message For Date Hired Filed And Termination Date 
+		Is Displayed As Read Only After Making Date Hired Field Required And Termination 
+		Date Field Read Only In Employee Maintenance PowerView -->
+	<test name="RMA_Reg_Maint_Employee_TC_089">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_089" />
+		</classes>
+	</test>
+
+	<!--Verify The Validation Message For License Number And License Type Is 
+		Displayed As Read Only After Making License Number Field Required And License 
+		Type Field Read Only In Employee Maintenance PowerView -->
+	<test name="RMA_Reg_Maint_Employee_TC_090">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_090" />
+		</classes>
+	</test>
+
+	<!--Verification of Changes On Adding/Removing Fields On Employee Maintenance 
+		From PowerView -->
+	<!-- -->
+	<test name="RMA_Reg_Maint_Employee_TC_057">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_057" />
+		</classes>
+	</test>
+
+	<!--Verify That When User Removes Any Tab Then The Same Is Not Visible On 
+		That Screen -->
+	<test name="RMA_Reg_Maint_Employee_TC_042">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_042" />
+		</classes>
+	</test>
+
+	<!-- After execution Of RMA_Reg_Maint_Employee_TC_041, contact addresses 
+		field is to be manually added in PV -->
+	<!--Verify That When User Add Any Tab Then The Same Is Visible On The Screen -->
+	<test name="RMA_Reg_Maint_Employee_TC_041">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_041" />
+		</classes>
+	</test>
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

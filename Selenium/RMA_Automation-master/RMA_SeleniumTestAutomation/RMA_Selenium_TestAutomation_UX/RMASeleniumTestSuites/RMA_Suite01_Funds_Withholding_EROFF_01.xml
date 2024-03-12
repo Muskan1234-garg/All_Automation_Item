@@ -1,0 +1,93 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite01_Funds_Withholding_EROFF_01" />
+	<!-- To make this suite run on any server, please change DSN name in DataSheet "RMA_Suite01_Funds_Withholding.xlsx" for test 
+		cases RMA_Reg_Funds_Withholding_TC025,021 -->
+	
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Enable Required SMS And Utility Settings For Suite RMA_Suite01_Funds_Withholding -->
+	<test name="RMA_Reg_Funds_Withholding_TC_025">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_025" />
+		</classes>
+	</test>
+	
+	<!--Verify Maintenance Screen Navigation In RMA Application -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>	
+	
+	<!--Verify The All Validation Messages Of Save Button On Withholding Screen.-->
+	<test name="RMA_Reg_Funds_Withholding_RecipientCreation">
+	<parameter name="NoOfWithholdingRecipient" value="2" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_RecipientCreation" />
+		</classes>
+	</test>		
+	
+	<!--Verify That Withholding Payment Created On Corporate General Claim With New And Updated Withholding Setup Done For An Employee On ER OFF Environment -->
+	<test name="RMA_Reg_Funds_Withholding_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_010" />
+		</classes>
+	</test>
+	
+	<!--Verify Withholding Payment Creation On Corporate Property Claim With Enable/Disable Withholding CheckBox On Withholding Setup Screen Done For Physician On ER OFF Environment -->
+	<test name="RMA_Reg_Funds_Withholding_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_011" />
+		</classes>
+	</test>
+	
+	<!--Verify Withholding Setup Done For Patient On ER OFF Environment And Withholding Payment Created, Cleared And Then Voided On Corporate Vehicle Accident Claim -->
+	<test name="RMA_Reg_Funds_Withholding_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_012" />
+		</classes>
+	</test>
+		
+	<!--Verify Withholding Setup Done For Entity On ER OFF Environment And Withholding Payment Created With Warning Message During Printing The Payment On Corporate Non Occupational Claim -->
+	<test name="RMA_Reg_Funds_Withholding_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_014" />
+		</classes>
+	</test>
+		
+	<!--Verify Withholding Setup Done For Employee On ER OFF Environment And Withholding Payment Created With Payee Type "O-Other Payees (People & Entities)" And Not Created With Payee Type C-Claimant And P-Person Involved On Corporate Worker's Comp Claim -->
+	<test name="RMA_Reg_Funds_Withholding_TC_022">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_022" />
+		</classes>
+	</test>
+	
+	<!--Verify That Withholding CheckBox And All Its Child Node Backup Withholding, Create, Update And View CheckBoxes Are Available For Employee, Entity, Driver, Medical Staff, Patient, Physician, People Maintenance And Organization Hierarchy In SMS On ER OFF Environment -->
+	<test name="RMA_Reg_Funds_Withholding_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_021" />
+		</classes>
+	</test>	
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

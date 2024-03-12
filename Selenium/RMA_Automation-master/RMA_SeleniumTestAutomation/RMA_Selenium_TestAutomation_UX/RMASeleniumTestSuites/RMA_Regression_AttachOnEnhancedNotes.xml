@@ -1,0 +1,169 @@
+<!-- RMA_Regression_AttachOnEnhancedNotes -->
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- Change The System Time To Eastern Standard Time Before Execution Of 
+		This Suite -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_AttachEnhancedNotes_TC_001" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Complete The Necessary Utilities Settings Setup For Attachments On Enhanced Notes Module
+	<test name="RMA_Reg_AttachEnhancedNotes_Setup">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_Setup" />
+		</classes>
+	</test>  -->
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+
+	<!--Attach A Document On Enhanced Notes On Claimant Level Is Validated-->
+	<test name="RMA_Reg_AttachEnhancedNotes_TC_001">
+		<parameter name="EntityName" value="Claimant" />
+		<parameter name="NotesLevel" value="CLAIM"/>
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_TC_001" />
+		</classes>
+	</test>
+	
+	<!-- Attach A Document On Enhanced Notes On Claimant Level Is Validated-->
+	<test name="RMA_Reg_AttachEnhancedNotes_TC_001_1">
+		<parameter name="EntityName" value="Claimant" />
+		<parameter name="NotesLevel" value="CLAIMANT"/>
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_TC_001" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_GC_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+	
+	<!-- Attach A Document On Enhanced Notes On Claim And Event Level On Event Enhanced Notes Screen Is Validated-->
+	<test name="RMA_Reg_AttachEnhancedNotes_TC_002_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_TC_002" />
+		</classes>
+	</test>
+	
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_GC_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+<!-- Navigation To Maintenance-->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+
+<!-- Corporate Policy Tracking Creation From Maintenance -->
+	<test name="RMA_Smoke_TC_002_GC_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_059" />
+		</classes>
+	</test>
+	
+	<!-- Attach A Document On Policy Tracking And Verify Its On The Claims
+	<test name="RMA_Reg_AttachEnhancedNotes_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_TC_003" />
+		</classes>
+	</test>  -->
+	
+	<!-- Corporate General Claim Creation In RMA Application
+	<test name="RMA_Smoke_TC_002_GC_4">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test> -->
+
+	<!-- Attach A Document On Enhanced Notes From Note Creation Screen
+	<test name="RMA_Reg_AttachEnhancedNotes_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_TC_004" />
+		</classes>
+	</test> -->
+	
+	<!-- Corporate General Claim Creation In RMA Application
+	<test name="RMA_Smoke_TC_002_GC_5">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test> -->
+
+	<!-- Verification Of Delete Attachment on Enhanced Notes
+	<test name="RMA_Reg_AttachEnhancedNotes_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_TC_005" />
+		</classes>
+	</test> -->
+	
+	<!-- Folder Creation And Other Functionalities Are Validated
+	<test name="RMA_Reg_AttachEnhancedNotes_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_TC_007" />
+		</classes>
+	</test> -->
+	
+	<!-- Expand Feature Of Attachments On Enhanced Notes Is Validated
+	<test name="RMA_Reg_AttachEnhancedNotes_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_TC_008" />
+		</classes>
+	</test> -->
+	
+	<!-- Corporate General Claim Creation In RMA Application
+	<test name="RMA_Smoke_TC_002_GC_6">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test> -->
+	
+	<!-- Verification Of Annotate feature Of Attachment On Enhanced Notes
+	<test name="RMA_Reg_AttachEnhancedNotes_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_TC_009" />
+		</classes>
+	</test> -->
+	
+	<!-- Verification Of SMS Permissions Of Attachment on Enhanced Notes
+	<test name="RMA_Reg_AttachEnhancedNotes_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AttachEnhancedNotes_TC_006" />
+		</classes>
+	</test> -->
+
+ 	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

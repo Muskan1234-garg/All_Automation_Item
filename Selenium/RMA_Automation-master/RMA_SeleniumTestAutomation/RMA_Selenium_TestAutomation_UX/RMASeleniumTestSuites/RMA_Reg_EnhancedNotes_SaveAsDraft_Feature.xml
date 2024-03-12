@@ -1,0 +1,128 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_EnhancedNotes_SaveAsDraft_Feature" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Successful Corporate General Claim Creation -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Creation of Enhanced Notes As Draft On A Claim Then On Its Corresponding 
+		Claimant,Event -->
+	<test name="RMA_Reg_EnhancedNotes_TC_025">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_025" />
+		</classes>
+	</test>
+
+	<!--Enable/Disable Delete,Edit Enhanced Note Setting For Claim,Claimant,Event 
+		In SMS -->
+	<test name="RMA_Reg_EnhancedNotes_TC_026">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_026" />
+		</classes>
+	</test>
+
+	<!-- Successful Corporate General Claim Creation -->
+	<test name="RMA_Smoke_TC_002_GC_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Verify That User Is Able To Edit Notes / Draft As Main Note Or Draft 
+		On Enhanced Notes Screen At Claim,Event Level -->
+	<test name="RMA_Reg_EnhancedNotes_TC_027">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_027" />
+		</classes>
+	</test>
+
+	<!-- Successful Corporate General Claim Creation -->
+	<test name="RMA_Smoke_TC_002_GC_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Verify That Record Is Getting Saved As Draft Automatically After 5 
+		Minutes At Claim Level Enhanced Notes,Verify That Note Attachment, Export, 
+		Color Selection, View All Notes, Advance Search Icon Is Not Present On Draft 
+		Tab On Enhanced Notes Screen At Event Level -->
+	<test name="RMA_Reg_EnhancedNotes_TC_Draft_Timer">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_Draft_Timer" />
+		</classes>
+	</test>
+
+	<!-- Successful Corporate General Claim Creation -->
+	<test name="RMA_Smoke_TC_002_GC_4">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="2" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That A PowerView Is Created And Created User Is Given Permission 
+		To That PowerView -->
+	<test name="RMA_Reg_PowerviewCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_EnhancedNotes_TC_028">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_028" />
+		</classes>
+	</test>
+
+	<!-- Successful Corporate General Claim Creation -->
+	<test name="RMA_Smoke_TC_002_GC_5">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+	<!-- Verify That User Is Able To Edit Note And Save As Draft Via Right Navigation 
+		Of Claim Screen, Verify Save As Draft Feature (Edit Draft As Main Note, And 
+		Verify Advanced Search, All Colors, Print Button Are Not Present On Draft 
+		Tab) -->
+	<test name="RMA_Reg_EnhancedNotes_TC_029">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_029" />
+		</classes>
+	</test>
+
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>

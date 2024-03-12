@@ -1,0 +1,72 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- Change The System Time To Eastern Standard Time Before Execution Of 
+		This Suite -->
+	<!-- Last time execution over BurpScan: RMATest_1 i.e. IntServerColumnNumber = 8; -->
+			
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Regression_Diary_3" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_29">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_29" />
+		</classes>
+	</test>
+
+	<!-- user creation test case -->
+	<!--To Create New Users -->
+	<parameter name="NoOfUsers" value="2" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_30">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_30" />
+		</classes>
+	</test>
+
+
+	<!--Attach Diary On Case Manager -->
+	<test name="RMA_Regression_Diary_TC_31">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_31" />
+		</classes>
+	</test>
+
+	<!-- Attach Diary On Accomodation -->
+	<test name="RMA_Regression_Diary_TC_32">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_32" />
+		</classes>
+	</test>
+
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>
+

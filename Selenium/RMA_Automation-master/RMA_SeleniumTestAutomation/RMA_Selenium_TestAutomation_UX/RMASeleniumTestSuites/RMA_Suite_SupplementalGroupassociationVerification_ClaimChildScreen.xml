@@ -1,0 +1,98 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_SupplementalGroupassociationVerification_ClaimChildScreen" />
+
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>	
+	
+	<!--Successful New Users For Powerview Creation Is Validated -->
+	<!--To Set The No. Of Users As Per The Requirement -->
+	<parameter name="NoOfUsers" value="1" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>	
+			
+	<!--Verify That A PowerView Is Created And Created User Is Given Permission 
+		To That PowerView -->
+	<test name="RMA_Reg_PowerviewCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Successful Logout And Login With Selected Zone Is Validated -->
+	 <test name="RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001_01">
+	 <parameter name="ClassNameForUserName" value="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001::UserName" />
+	 <parameter name="ClassNameForPassword" value="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001::Password" />
+	 <parameter name="ClassNameForZoneName" value="Claims" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001" />
+		</classes>
+	</test>		
+
+	<!--General Claim Getting Created By Entering All Mandatory Fields Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>		
+	
+	<!-- Verify The Claims PI Supplemental Fields With Field Type Time, Grid and String On The Basis Of Value Selected In Group Associated Field -->
+	<test name="RMA_Reg_SupplementalGroupAssociation_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_TC_003" />
+		</classes>
+	</test>	 
+
+	<!-- Verify The Reserve Supplemental Fields With Field Type Checkbox On The Basis Of Value Selected In Group Associated Field Reserve SubType-->
+	<test name="RMA_Reg_SupplementalGroupAssociation_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_TC_004" />
+		</classes>
+	</test>	
+	
+	<!-- Verify The Claims Litigation Supplemental Fields With Field Type Field Type Date, Multi-Entity On The Basis Of Value Selected In Group Associated Field -->
+	<test name="RMA_Reg_SupplementalGroupAssociation_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_TC_005" />
+		</classes>
+	</test>	
+	
+	<!--General Claim Getting Created By Entering All Mandatory Fields Is Validated -->
+	<test name="RMA_Smoke_TC_002_PC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_PC" />
+		</classes>
+	</test>	
+	
+	<!-- Verify The Claims Litigation Supplemental Fields With Field Type Field Type Date, Multi-Entity On The Basis Of Value Selected In Group Associated Field -->
+	<test name="RMA_Reg_SupplementalGroupAssociation_TC_005_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_TC_005" />
+		</classes>
+	</test>		
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

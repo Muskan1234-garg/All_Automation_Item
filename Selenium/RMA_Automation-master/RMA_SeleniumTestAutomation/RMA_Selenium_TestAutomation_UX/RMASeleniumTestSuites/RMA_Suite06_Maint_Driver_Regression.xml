@@ -1,0 +1,123 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- To Execute this suite turn on Paging from Grid Configuration,enable 
+		PI as PayeeType Setting and make sure test01 user is present -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite06_Maint_Driver_Regression" />
+	<!-- This Suite Can Be Run On 132 Server. All Uncommented Test Cases Are 
+		Tested on It. -->
+	<!-- To make this suite run on 132 server, please change DataSheet for test 
+		cases RMA_Reg_Maint_Driver_TC_007,008,010 -->
+	<!--Verify That RMA Application Is Logged In -->
+
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Navigation To Maintenance Screen -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+
+	<!--Verify The Mail Merge Functionality On Driver Screen -->
+	<test name="RMA_Reg_Maint_Driver_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_011" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Add Newly Created Driver In As Claimant 
+		And Make Payment Over It -->
+	<test name="RMA_Reg_Maint_Driver_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_005" />
+		</classes>
+	</test>
+
+	<!-- Verify ToolBar Button On Driver Are Working Fine -->
+	<test name="RMA_Reg_Maint_Driver_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_001" />
+		</classes>
+	</test>
+
+	<!-- Verify Existence Of Fields And Buttons On Driver Page -->
+	<test name="RMA_Reg_Maint_Driver_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Verify That Newly Created Driver Is ComingUp In List If User Search 
+		For The Same -->
+	<test name="RMA_Reg_Maint_Driver_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_003" />
+		</classes>
+	</test>
+
+	<!-- Verify That User Is Able To Add Newly Created Driver In As Person Involved 
+		And Make Payment Over It -->
+	<test name="RMA_Reg_Maint_Driver_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_004" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Add Newly Created Driver In As Defendant -->
+	<test name="RMA_Reg_Maint_Driver_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_006" />
+		</classes>
+	</test>
+
+	<!--Verify That Attachments Can Be Attached, Detached, Email and DownLoaded 
+		On Driver Maintenance Screen -->
+	<test name="RMA_Reg_Maint_Driver_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_009" />
+		</classes>
+	</test>
+
+	<!-- Verify That SMS Settings For Driver Are Working Properly -->
+	<test name="RMA_Reg_Maint_Driver_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_007" />
+		</classes>
+	</test>
+
+	<!--Verify That PowerView Settings For Driver Are Working Properly -->
+
+	<test name="RMA_Reg_Maint_Driver_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_008" />
+		</classes>
+	</test>
+
+	<!--Verify That Driver Is Present On Entity Screen On Entity Screen In Case -->
+	<!-- Of ERON -->
+	-->
+	<!-- <test name="RMA_Reg_Maint_Driver_TC_010"> -->
+	<!-- <classes> -->
+	<!-- <class name="rmaseleniumtestscripts.RMA_Reg_Maint_Driver_TC_010" /> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

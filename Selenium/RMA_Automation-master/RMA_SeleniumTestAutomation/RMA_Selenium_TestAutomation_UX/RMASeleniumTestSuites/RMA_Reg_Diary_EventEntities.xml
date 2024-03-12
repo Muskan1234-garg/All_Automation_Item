@@ -1,0 +1,110 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- Change The System Time To Eastern Standard Time Before Execution Of 
+		This Suite -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Diary_EventEntities" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Diary Calendar Functionality Is Validated -->
+	<test name="RMA_Regression_Diary_TC_22">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_22" />
+		</classes>
+	</test>
+
+	<!-- Diary Creation On Event=>Fall Info Screen And Their Verification On 
+		Diary List Screen Is Validated -->
+	<test name="RMA_Regression_Diary_TC_23">
+		<parameter name="EntityName" value="FallInfo" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_23" />
+		</classes>
+	</test>
+
+	<!-- Diary Creation On Event=>MED Watch Screen And Their Verification On 
+		Diary List Screen Is Validated -->
+	<test name="RMA_Regression_Diary_TC_23_1">
+		<parameter name="EntityName" value="MedWatch" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_23" />
+		</classes>
+	</test>
+
+	<!-- Diary Creation On Event=>MEDWatch Test Screen And Their Verification 
+		On Diary List Screen Is Validated -->
+	<test name="RMA_Regression_Diary_TC_23_2">
+		<parameter name="EntityName" value="MedWatchTest" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_23" />
+		</classes>
+	</test>
+
+	<!-- Diary Creation On Event=>Concomitant Screen And Their Verification 
+		On Diary List Screen Is Validated -->
+	<test name="RMA_Regression_Diary_TC_23_3">
+		<parameter name="EntityName" value="Concomitant" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_23" />
+		</classes>
+	</test>
+
+	<!-- Creation Of General Claim With Mandatory Fields -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Diary Creation On Schedule Check And Their Verification On Diary List 
+		Screen Is Validated -->
+	<test name="RMA_Regression_Diary_TC_24">
+		<parameter name="EntityName" value="Schedule Check" />
+		<parameter name="DeleteTable" value="No" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_24" />
+		</classes>
+	</test>
+
+	<!-- Administrative Tracking Table Creation Is Validated -->
+	<test name="RMA_Regression_AdminTrackingTableCreation_TC_01">
+		<parameter name="FieldType" value="Number" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Regression_AdminTrackingTableCreation_TC_01" />
+		</classes>
+	</test>
+
+	<!-- Diary Creation On Admin Tracking List And Their Verification On Diary 
+		List Screen Is Validated -->
+	<test name="RMA_Regression_Diary_TC_24_1">
+		<parameter name="EntityName" value="Admin Tracking" />
+		<parameter name="DeleteTable" value="Yes" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_24" />
+		</classes>
+	</test>
+	
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>
+	

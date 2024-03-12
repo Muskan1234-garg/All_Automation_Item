@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RMA_Suite23_SmokeSuite03]" allow-return-values="true">
+  <parameter name="ExecutedSuiteName" value="RMA_Suite24_SmokeSuite03"/>
+  <parameter name="DataSourceRow" value="2"/>
+  <test name="RMA_Smoke_TC_058(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_057">
+        <methods>
+          <include name="SetUp"/>
+          <include name="RMA_FailureReport"/>
+          <include name="ExitSetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_057 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_053">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_053 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_058">
+        <methods>
+          <include name="RMA_FailureReport"/>
+          <include name="RMA_Smoke_TC_058_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_058 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_054">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_054 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_055">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_055 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_056">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_056 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_Smoke_TC_058(failed) -->
+  <test name="RMA_Smoke_TC_053(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_057">
+        <methods>
+          <include name="SetUp"/>
+          <include name="RMA_FailureReport"/>
+          <include name="ExitSetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_057 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_053">
+        <methods>
+          <include name="RMA_Smoke_TC_053_Test"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_053 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_058">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_058 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_054">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_054 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_055">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_055 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_056">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_056 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_Smoke_TC_053(failed) -->
+  <test name="RMA_Smoke_TC_054(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_057">
+        <methods>
+          <include name="SetUp"/>
+          <include name="RMA_FailureReport"/>
+          <include name="ExitSetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_057 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_053">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_053 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_054">
+        <methods>
+          <include name="RMA_Smoke_TC_054_Test"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_054 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_058">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_058 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_055">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_055 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_056">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_056 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_Smoke_TC_054(failed) -->
+  <test name="RMA_Smoke_TC_055(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_057">
+        <methods>
+          <include name="SetUp"/>
+          <include name="RMA_FailureReport"/>
+          <include name="ExitSetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_057 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_053">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_053 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_055">
+        <methods>
+          <include name="RMA_Smoke_TC_055_Test"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_055 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_058">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_058 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_054">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_054 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_056">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_056 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_Smoke_TC_055(failed) -->
+  <test name="RMA_Smoke_TC_056(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_057">
+        <methods>
+          <include name="SetUp"/>
+          <include name="RMA_FailureReport"/>
+          <include name="ExitSetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_057 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_053">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_053 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_058">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_058 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_054">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_054 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_055">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_055 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_056">
+        <methods>
+          <include name="RMA_Smoke_TC_056_Test"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_056 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_Smoke_TC_056(failed) -->
+  <test name="RMA_Smoke_TC_057(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_057">
+        <methods>
+          <include name="SetUp"/>
+          <include name="RMA_Smoke_TC_057_Test"/>
+          <include name="RMA_FailureReport"/>
+          <include name="ExitSetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_057 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_053">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_053 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_058">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_058 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_054">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_054 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_055">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_055 -->
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_056">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_056 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_Smoke_TC_057(failed) -->
+</suite> <!-- Failed suite [RMA_Suite23_SmokeSuite03] -->

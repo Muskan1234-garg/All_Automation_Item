@@ -1,0 +1,584 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Super_ClaimLimitSuite_WC" />
+
+	<parameter name="DataSourceRow" value="1" /><!--To Set The Datasource 
+		Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData -->
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="1" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 1 Started here -->
+
+	<!-- Verify the scenario-Select a Claim type and claim status- Check with 
+		Allow access(Checked) and Allow Create(Checked) -->
+	<!--To Set The LOB Based on claim -->
+	<test name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings1_1">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="check" />
+		<parameter name="AllowAcessOption" value="check" />
+		<parameter name="ClaimTypeOption" value="FromEntityFactory" />
+		<parameter name="ClaimStatusOption" value="FromEntityFactory" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="RMA_Reg_Super_ClaimLimitClaimCreationUpdate1_1_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Super_AccessClaim1_1_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_AccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 1 Ended here -->
+	<!-- Run Independently Test Scenario 2 Started here -->
+	<!-- Verify the scenario-Select a Claim type and claim status- Check with 
+		Allow access(Checked) and Allow Create(Unchecked) -->
+
+	<test name="RMA_Reg_Super_ClaimLimitNotAllowCreateUpdateButAllowAccess1_2">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="uncheck" />
+		<parameter name="AllowAcessOption" value="check" />
+		<parameter name="ClaimTypeOption" value="FromEntityFactory" />
+		<parameter name="ClaimStatusOption" value="FromEntityFactory" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimitNoClaimCreation1_2_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_CorporateClaimNotAbleToCreateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="RMA_Reg_Super_AccessClaim1_2_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_AccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_NotAbleToUpdateClaimVerification1_2_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimNotAbleToUpdateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 2 Ended here -->
+
+	<!-- Run Independently Test Scenario 3 Started Here -->
+	<!-- Verify the scenario-Select a Claim type and claim status- Check with 
+		Allow access(UnChecked) and Allow Create(checked) -->
+
+	<test name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateNotAllowAccess1_3">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="check" />
+		<parameter name="AllowAcessOption" value="uncheck" />
+		<parameter name="ClaimTypeOption" value="FromEntityFactory" />
+		<parameter name="ClaimStatusOption" value="FromEntityFactory" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimitCreateClaimButNotAcess1_3_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_CorporateClaimAbleToCreateButNotAccessVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Super_ClaimLimit_TC_001_NotAccess1_3_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_NotAccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<!-- Run Independently Test Scenario 3 Ended Here -->
+
+	<!-- Run Independently Test Scenario 4 Started here -->
+	<!-- Verify the scenario-Select a Claim type and claim status- Check with 
+		Allow access(UnChecked) and Allow Create(Unchecked) -->
+
+	<test name="RMA_Reg_Super_ClaimLimitNotAllowCreateUpdateNotAllowAccess1_4">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="uncheck" />
+		<parameter name="AllowAcessOption" value="uncheck" />
+		<parameter name="ClaimTypeOption" value="FromEntityFactory" />
+		<parameter name="ClaimStatusOption" value="FromEntityFactory" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimitNoClaimCreation1_4_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_CorporateClaimNotAbleToCreateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimit_NotAccess1_4_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_NotAccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 4 Ended here -->
+
+	<!-- Run Independently Test Scenario 5 Started here -->
+	<!--Verify the scenario-Select Claim Status but NO claim Type- Check with 
+		Allow access(Checked) and Allow Create(Checked) -->
+
+
+	<test name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings2_1">
+		<!--To Set The Parameter Based on claim -->
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="check" />
+		<parameter name="AllowAcessOption" value="check" />
+		<parameter name="ClaimTypeOption" value="NA" />
+		<parameter name="ClaimStatusOption" value="FromEntityFactory" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="RMA_Reg_Super_ClaimLimitClaimCreationUpdate2_1_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Super_AccessClaim2_1_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_AccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 5 Ended here -->
+	<!-- Run Independently Test Scenario 6 Started here -->
+	<!--Verify the scenario-Select Claim Status but NO claim Type- Check with 
+		Allow access(Checked) and Allow Create(UnChecked) -->
+
+	<test name="RMA_Reg_Super_ClaimLimitNotAllowCreateUpdateButAllowAccess2_2">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="uncheck" />
+		<parameter name="AllowAcessOption" value="check" />
+		<parameter name="ClaimTypeOption" value="NA" />
+		<parameter name="ClaimStatusOption" value="FromEntityFactory" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimitNoClaimCreation2_2_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_CorporateClaimNotAbleToCreateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_AccessClaim2_2_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_AccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_NotAbleToUpdateClaimVerification2_2_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimNotAbleToUpdateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- Run Independently Test Scenario 6 Ended here -->
+	<!-- Run Independently Test Scenario 7 Started here -->
+	<!--Verify the scenario-Select Claim Status but NO claim Type- Check with 
+		Allow access(Checked) and Allow Create(UnChecked) -->
+
+	<test name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateNotAllowAccess2_3">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="check" />
+		<parameter name="AllowAcessOption" value="uncheck" />
+		<parameter name="ClaimTypeOption" value="NA" />
+		<parameter name="ClaimStatusOption" value="FromEntityFactory" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimitCreateClaimButNotAccess2_3_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_CorporateClaimAbleToCreateButNotAccessVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Super_ClaimLimit_TC_001_NotAccess2_3_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_NotAccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- Run Independently Test Scenario 7 Ended here -->
+	<!-- Test Scenario 8 Started here Need To Run rmaseleniumtestscripts.RMA_Smoke_TC_002_WC To generate Claim Number To search If Fails -->
+
+
+	<!--Verify the scenario-Select Claim Status but NO claim Type- Check with 
+		Allow access(UnChecked) and Allow Create(UnChecked) -->
+
+	<test name="RMA_Reg_Super_ClaimLimitNotAllowCreateUpdateNotAllowAccess2_4">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="uncheck" />
+		<parameter name="AllowAcessOption" value="uncheck" />
+		<parameter name="ClaimTypeOption" value="NA" />
+		<parameter name="ClaimStatusOption" value="FromEntityFactory" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimitNoClaimCreation2_4_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_CorporateClaimNotAbleToCreateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimit_NotAccess2_4_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_NotAccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Test Scenario 8 Started here Need To Run rmaseleniumtestscripts.RMA_Smoke_TC_002_WC To generate Claim Number To search If Fails -->
+
+	<!-- Run Independently Test Scenario 9 Started here -->
+	<!-- Verify the scenario-Select a Claim type but NO claim status- Check 
+		with Allow access(Checked) and Allow Create(Checked) -->
+
+
+	<test name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings3_1">
+		<!--To Set The Parameter Based on claim -->
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="check" />
+		<parameter name="AllowAcessOption" value="check" />
+		<parameter name="ClaimTypeOption" value="FromEntityFactory" />
+		<parameter name="ClaimStatusOption" value="NA" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="RMA_Reg_Super_ClaimLimitClaimCreationUpdate3_1_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Super_AccessClaim3_1_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_AccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 9 Ended here -->
+	<!-- Run Independently Test Scenario 10 Started here -->
+	<!-- Verify the scenario-Select a Claim type but NO claim status- Check 
+		with Allow access(Checked) and Allow Create(UnChecked) -->
+
+	<test name="RMA_Reg_Super_ClaimLimitNotAllowCreateUpdateButAllowAccess3_2">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="uncheck" />
+		<parameter name="AllowAcessOption" value="check" />
+		<parameter name="ClaimTypeOption" value="FromEntityFactory" />
+		<parameter name="ClaimStatusOption" value="NA" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimitNoClaimCreation3_2_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_CorporateClaimNotAbleToCreateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_AccessClaim3_2_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_AccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_NotAbleToUpdateClaimVerification3_2_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimNotAbleToUpdateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<!-- Run Independently Test Scenario 10 Ended here -->
+	<!-- Run Independently Test Scenario 11 Started here -->
+	<!-- Verify the scenario-Select a Claim type but NO claim status- Check 
+		with Allow access(Checked) and Allow Create(UnChecked) -->
+
+	<test name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateNotAllowAccess3_3">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="check" />
+		<parameter name="AllowAcessOption" value="uncheck" />
+		<parameter name="ClaimTypeOption" value="FromEntityFactory" />
+		<parameter name="ClaimStatusOption" value="NA" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+		<test name="RMA_Reg_Super_ClaimLimitCreateClaimButNotAccess3_3_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_CorporateClaimAbleToCreateButNotAccessVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Super_ClaimLimit_TC_001_NotAccess3_3_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_NotAccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 11 Ended here -->
+	
+	<!-- Test Scenario 12 Started here Need To Run rmaseleniumtestscripts.RMA_Smoke_TC_002_WC To generate Claim Number To search If Fails -->
+
+	<!-- Verify the scenario-Select a Claim type but NO claim status- Check 
+		with Allow access(unChecked) and Allow Create(unChecked) -->
+
+	<test name="RMA_Reg_Super_ClaimLimitNotAllowCreateUpdateNotAllowAccess3_4">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="AllowCreateUpdateOption" value="uncheck" />
+		<parameter name="AllowAcessOption" value="uncheck" />
+		<parameter name="ClaimTypeOption" value="FromEntityFactory" />
+		<parameter name="ClaimStatusOption" value="NA" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimitNoClaimCreation3_4_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_CorporateClaimNotAbleToCreateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimit_NotAccess3_4_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_NotAccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 13 Ended here -->
+
+	<!-- Verify the scenario-Select a Claim type but NO claim status- Check 
+		with Allow access(unChecked) and Allow Create(unChecked) Claim Limits Do 
+		Not Work When Claim Limit Flag Is OFF In User Privilege -->
+
+	<test name="RMA_Reg_Super_ClaimLimitFlagOff">
+		<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+		<parameter name="LimitFlag" value="Off" />
+		<parameter name="AllowCreateUpdateOption" value="uncheck" />
+		<parameter name="AllowAcessOption" value="uncheck" />
+		<parameter name="ClaimTypeOption" value="FromEntityFactory" />
+		<parameter name="ClaimStatusOption" value="FromEntityFactory" />
+		<parameter name="CarrierCorporateOption" value="Corporate" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_ClaimLimitFlagOff" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_ClaimLimitClaimCreationUpdate_ClaimLimitFlagOff">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_AccessClaim_ClaimLimitFlagOff">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_AccessClaim" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!--Successful Verify When Reserve Limits Are Exceeded CheckBox is OFF, 
+		Reserves Do Not Go On Hold Is Validated -->
+	<test name="RMA_Reg_Super_UserDeletion_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserDeletion_TC_001" />
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 13 Ended here -->
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

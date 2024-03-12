@@ -1,0 +1,78 @@
+ <!-- Bank account used is "Bank for Duplicacy" which is already created in the DB. -->
+	
+
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="4" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_02_QTPReg_01_DupPay1" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--'0-No Additional Criteria' Duplicate Payment Criteria Is Validated -->
+	<test name="RMA_QTPRegression_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_001" />
+		</classes>
+	</test>
+
+	<!--'1 - Transaction Date within X Days.' Duplicate Payment Criteria Is 
+		Validated -->
+	<test name="RMA_QTPRegression_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_004" />
+		</classes>
+	</test>
+
+	<!--'2-Payment Total' Duplicate Payment Criteria Is Validated -->
+	<test name="RMA_QTPRegression_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_002" />
+		</classes>
+	</test>
+
+	<!--'5- Payment Total and Trans Date within X Days' Duplicate Payment Criteria 
+		Is Validated -->
+	<test name="RMA_QTPRegression_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_005" />
+		</classes>
+	</test>
+
+	<!--'4-Split Amount and Transaction Type' Duplicate Payment Criteria Is 
+		Validated -->
+	<test name="RMA_QTPRegression_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_003" />
+		</classes>
+	</test>
+
+	<!--'9 - Invoice Number per Payee' Duplicate Payment Criteria Is Validated -->
+	<test name="RMA_QTPRegression_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_006" />
+		</classes>
+	</test>
+
+	<!--'6 - Split Amt, Trans Type, & Trans Date within X Days' Duplicate Payment 
+		Criteria Is Validated -->
+	<test name="RMA_QTPRegression_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_007" />
+		</classes>
+
+	</test>
+</suite>
+

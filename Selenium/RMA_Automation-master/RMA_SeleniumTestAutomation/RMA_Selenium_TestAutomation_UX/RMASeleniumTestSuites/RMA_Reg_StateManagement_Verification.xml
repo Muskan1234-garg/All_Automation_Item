@@ -1,0 +1,55 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="2" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Reg_StateManagement_Verification" />
+
+<!--Verify that RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+<!-- Temp Test Suite to verify Test Block -->
+<!--  	 <test name="A_TestCode_Blocks">  -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.A_TestCode_Blocks" />	  -->
+<!-- 		</classes> -->
+<!-- 	 </test>	  -->
+	 
+	 <!-- Add State from State Mainteanance & Verify from different pages -->
+ 	 <test name="RMA_Reg_Maint_State_TC_001"> 
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_State_TC_001" />	 
+		</classes>
+	 </test>	
+	 
+	 <!-- Add State from State Mainteanance & Verify from different pages -->
+ 	 <test name="RMA_Reg_Maint_State_TC_009"> 
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_State_TC_009" />	 
+		</classes>
+	 </test>	
+	 
+	 <!-- Add State from State Mainteanance & Verify from different pages -->
+ 	 <test name="RMA_Reg_Maint_State_TC_010"> 
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_State_TC_010" />	 
+		</classes>
+	 </test>	
+	 
+	 <!-- Add State from State Mainteanance & Verify from different pages -->
+ 	 <test name="RMA_Reg_Maint_State_TC_011"> 
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_State_TC_011" />	 
+		</classes>
+	 </test>
+</suite>

@@ -1,0 +1,72 @@
+<suite name="RMA_Suite_Catastrophe" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_Catastrophe" />
+
+ <!--Verify That RMA Application Is Logged In--> 
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+  <!--Verify That Required DSN Is Selected In RMA Application -->
+ 	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="1" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That A PowerView Is Created And Created User Is Given Permission 
+		To That PowerView -->
+	<test name="RMA_Reg_PowerviewCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001" />
+		</classes>
+	</test>
+<!--Verify That Page Cannot Be Found In Power View Message Must Be Displayed 
+		When User Has Removed Catastrophe Maintenance Screen From Power View -->
+	<test name="RMA_Reg_Maint_Catastrophe_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Catastrophe_TC_004" />
+		</classes>
+	</test>
+<!--Verify That Catastrophe Maintenance Screen Is Opening Without Any Error 
+		When Respective Screen Is Added In Power View -->
+	<test name="RMA_Reg_Maint_Catastrophe_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Catastrophe_TC_005" />
+		</classes>
+	</test>
+	
+Verify Create Edit and Delete On Catastrophe From Maintenance Screen Is Validated
+	<test name="RMA_Reg_Maint_Catastrophe_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Catastrophe_TC_001" />
+		</classes>
+	</test>
+	 
+ Verify attaching created Catastrophe to Claim Is Validated
+	<test name="RMA_Reg_Maint_Catastrophe_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Catastrophe_TC_002" />
+		</classes>
+	</test>
+
+Verify SMS Settings For Catastrophe Is Validated
+	<test name="RMA_Reg_Maint_Catastrophe_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Catastrophe_TC_003" />
+		</classes>
+	</test>
+	
+</suite>

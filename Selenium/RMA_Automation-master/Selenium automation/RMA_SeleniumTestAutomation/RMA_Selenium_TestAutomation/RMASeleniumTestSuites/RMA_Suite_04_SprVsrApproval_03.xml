@@ -1,0 +1,65 @@
+<suite name="RMA_Suite_04_SprVsrApproval_03" parallel="none" allow-return-values="true">
+
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="3" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_04_SprVsrApproval_03" />
+
+ <!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test> 
+
+   <!--Verify That Required DSN Is Selected In RMA Application-->
+    <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+     </test>
+	 	 
+	 <!--Verify Module Group And Users Are Created Successfully-->
+    <test name="RMA_TC_UserCreationSASuite4">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_UserCreationSASuite4"/>
+    </classes>
+     </test>
+	 
+	<!--Verify Hold Handling In Case Of Reserve Limit With Notify Immediate Manager Setting Applied -->
+    <test name="RMA_TC_081">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_081"/>
+    </classes>
+     </test>
+	 
+	<!--Verify Hold Handling In Case Of Claim Incurred Limit With Notify Immediate Manager Setting Applied -->
+    <test name="RMA_TC_082">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_082"/>
+    </classes>
+     </test>
+	 
+    <!--Verify Hold Handling In Case Of Payment Limit With Notify Immediate Manager Setting Applied -->
+    <test name="RMA_TC_083">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_083"/>
+    </classes>
+     </test>
+	 
+	 <!--Verify Hold Handling In Case Of Pay Detail Limit With Notify Immediate Manager Setting -->
+    <test name="RMA_TC_084">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_084"/>
+    </classes>
+     </test>
+	 
+	 <!--Verify Hold Handling in case of Per Claim Pay Limits with notify immediate manager setting-->
+    <test name="RMA_TC_085">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_085"/>
+    </classes>
+     </test>
+     
+ </suite> 

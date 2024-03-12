@@ -1,0 +1,200 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- Change The System Time To Eastern Standard Time Before Execution Of 
+		This Suite -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Suite_ReserveWorksheet_01" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Reserve WorkSheet Settings For GC From Line Of Business Setup And Reserve 
+		WorkSheet Configuration Setting From Utilities Is Validated -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_Settings">
+		<parameter name="LOB" value="GC - General Claims" />
+		<parameter name="numofreserves" value="2" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_Settings" />
+		</classes>
+	</test>
+
+	<!--Reserve WorkSheet Settings For WC From Line Of Business Setup And Reserve 
+		WorkSheet Configuration Setting From Utilities Is Validated -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_Settings_1">
+		<parameter name="LOB" value="WC - Worker's Compensation" />
+		<parameter name="numofreserves" value="2" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_Settings" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data, 
+		Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of 
+		Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Creation Of Reserve Work Sheet Is Validated -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorksheet_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verification Of Created Reserve WorkSheet On FDH Screen -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_TC_002" />
+		</classes>
+	</test>
+
+	<!--Verification Of Fields And Tabs In Case Of Clone Of Already Approved 
+		WorkSheet -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorksheet_TC_003" />
+		</classes>
+	</test>
+
+	<!--Verification Of Fields Value On Reserve History After Creating Payments 
+		And Collections On Reserve WorkSheet -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorksheet_TC_005" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data, 
+		Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of 
+		Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Verification Of Functions Of Submit, Reject And Clear ToolBar Button 
+		On Reserve WorkSheet Page -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorksheet_TC_006" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Prevent Modifying Reserves To Zero Settings For Reserve WorkSheet Is 
+		Validated -->
+	<test name="RMA_Reg_Funds_ReserveWorksheet_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorksheet_TC_017" />
+		</classes>
+	</test>
+
+	<!-- Below test cases added by Nikita -->
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_Smoke_TC_002_GC_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Reserve WorkSheet Customization And Print Functionality Is Validated -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_004">
+		<parameter name="LOB" value="GC - General Claims" />
+		<parameter name="numofreserves" value="2" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_TC_004" />
+		</classes>
+	</test>
+
+	<!--Verify Reserve WorkSheet "Attach PDF" Functionality -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_TC_008" />
+		</classes>
+	</test>
+
+	<!-- Successful Carrier WC Claim Creation Is Validated -->
+	<test name="RMA_Smoke_TC_075">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_075" />
+		</classes>
+	</test>
+
+	<!-- To Save a Reserve WorkSheet On A Carrier Worker's Claim -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_009">
+		<parameter name="LOB" value="WC" />
+		<parameter name="PolicyType" value="External" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_TC_009"></class>
+		</classes>
+	</test>
+
+	<!--Verify that if WorkSheet Approval Setting Is ON From SMS Then It Should 
+		Get Displayed In Supervisory Approval -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_TC_007"></class>
+		</classes>
+	</test>
+
+	<!-- Verify That Corporate Reserve WorkSheet Should Work With Corporate 
+		Internal Policy Is Validated -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_TC_019" />
+		</classes>
+	</test>
+
+	<!-- Revert Reserve WorkSheet Settings From Line Of Business Setup -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_RevertSettings">
+		<parameter name="LOB" value="GC - General Claims" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_RevertSettings" />
+		</classes>
+	</test>
+
+	<!-- Revert Reserve WorkSheet Settings From Line Of Business Setup -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_RevertSettings_1">
+		<parameter name="LOB" value="WC - Worker's Compensation" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_RevertSettings" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

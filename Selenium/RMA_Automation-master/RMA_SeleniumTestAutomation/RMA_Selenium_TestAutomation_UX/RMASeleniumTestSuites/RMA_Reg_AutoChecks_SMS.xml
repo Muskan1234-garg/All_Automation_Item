@@ -1,0 +1,91 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_AutoChecks_SMS" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>	
+	
+	<!-- Successful Reserve Creation, Reserve Grid Value Verification, Color Code Change And Tool Tip Amount Of Reserve Progress Image On GC Claim Screen 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_009" />
+		</classes>
+	</test>
+	
+	<!--Verify The SMS Settings "Create/Edit Payee Fields Directly" on Autochecks -->
+	<test name="RMA_Reg_Funds_AutoChecks_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_012" />
+		</classes>
+	</test>
+	
+	<!--Verify The SMS Settings "Allow Direct Entry/Edit of Control Number" on Autochecks" -->		
+	<test name="RMA_Reg_Funds_AutoChecks_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_014" />
+		</classes>
+	</test>
+	
+	<!--Verify The SMS Settings "Allow Freeze Payment for Auto Check Batch" on Autochecks -->
+	<test name="RMA_Reg_Funds_AutoChecks_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_015" />
+		</classes>
+	</test>
+	
+	<!-- Verify The SMS Settings "Allow Edit Of Generate Pay To The Order Of & Allow Edit Of Pay To The Order Of" on Autochecks -->
+	<test name="RMA_Reg_Funds_AutoChecks_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_016" />
+		</classes>
+	</test>
+	
+		<!-- Verify The SMS Settings "Allow Payee Lookup With Tax ID" on Autochecks -->
+	<test name="RMA_Reg_Funds_AutoChecks_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_017" />
+		</classes>
+	</test>
+	
+	<!-- Verify The SMS Settings "Allow Change Payee" on Autochecks -->
+	<test name="RMA_Reg_Funds_AutoChecks_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_011" />
+		</classes>
+	</test>
+	
+	<!-- Verify The SMS Settings Create, Update, View And Delete on Autochecks -->
+	<test name="RMA_Reg_Funds_AutoChecks_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_013" />
+		</classes>
+	</test>
+	
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

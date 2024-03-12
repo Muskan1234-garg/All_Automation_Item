@@ -1,0 +1,84 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_PrintCheck_RollUp_01"/>
+
+<!-- Run This Suite On Automation Regression Environment, IISRESET Can Be Done There Without Disturbing Other Teams-->
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+		
+	
+	<!-- Distribution Type ->FileOptions Settings On Utilities Payment Parameter Page, IISRESET Is To Be Done After These Settings -->
+	<!-- //To File Only - Express Mail, //To Printer and File - Regular Mail, //To Custom File Only - "FX Wires", //TO PRINTER ONLY - "Wire Transfer" -->
+	<!-- Run This Suite On Automation Regression Environment, IISRESET Can Be Done There Without Disturbing Other Teams-->
+<!-- 	<test name="RMA_QTPRegression_DistributionType_FileOptionsSettings">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_DistributionType_FileOptionsSettings" />
+		</classes>
+	</test> -->
+	
+	<!--Setting Up A Bank account With Check Stock Is Validated -->
+	<test name="RMA_Reg_Funds_BankAccount_TC_029_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_029" />
+		</classes>
+	</test>
+
+	
+	<!-- Roll Up A Payment For The Same Payee Through Print Check To File Options: 'TO FILE ONLY' Option Is Validated -->
+	<test name="RMA_QTPRegression_TC_052">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_052" />
+		</classes>
+	</test>
+	
+	
+	<!--Setting Up A Bank account With Check Stock Is Validated -->
+	<test name="RMA_Reg_Funds_BankAccount_TC_029_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_029" />
+		</classes>
+	</test>
+
+	<!-- Roll Up A Payment For The Same Payee Through Print Check To File Options: 'TO PRINTER AND FILE ONLY' Option Is Validated -->
+	<test name="RMA_QTPRegression_TC_053">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_053" />
+		</classes>
+	</test>
+	
+	<!--Setting Up A Bank account With Check Stock Is Validated
+	<test name="RMA_Reg_Funds_BankAccount_TC_029_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_029" />
+		</classes>
+	</test> -->
+
+	<!-- Roll Up A Payment For The Same Payee Through Print Check To File Options: 'TO CUSTOM FILE ONLY' Option Is Validated
+	<test name="RMA_QTPRegression_TC_054">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_054" />
+		</classes>
+	</test> -->
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

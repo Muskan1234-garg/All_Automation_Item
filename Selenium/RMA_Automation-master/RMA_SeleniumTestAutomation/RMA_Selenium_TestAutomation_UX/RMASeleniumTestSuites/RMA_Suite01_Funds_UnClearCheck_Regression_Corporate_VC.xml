@@ -1,0 +1,111 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="2" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName"
+		value="RMA_Suite01_Funds_UnClearCheck_Regression_Corporate_VC" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Vehicle's Accident Claim Getting Created By Entering All Mandatory Fields 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_VC" />
+		</classes>
+	</test>
+
+	<!--Creation Of Payments and Collection and Print Them By Various Methods 
+		Is Validated -->
+	<test name="RMA_Reg_Funds_UnclearCheck_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_UnclearCheck_TC_001" />
+		</classes>
+	</test>
+
+	<!--Creation Of Payments and Collection and Print Them By Various Methods 
+		Is Validated -->
+	<test name="RMA_Reg_Funds_UnclearCheck_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_UnclearCheck_TC_002" />
+		</classes>
+	</test>
+
+	<!--Various Filters Like Bank account, Company, From Date, To Date and Include 
+		Collections On UnClear Checks Are Validated -->
+	<test name="RMA_Reg_Funds_UnclearCheck_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_UnclearCheck_TC_003" />
+		</classes>
+	</test>
+
+	<!--Checks Not Attached to Claims CheckBox Function Is Validated -->
+	<test name="RMA_Reg_Funds_UnclearCheck_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_UnclearCheck_TC_004" />
+		</classes>
+	</test>
+
+	<!--When Clear CheckBox Is unChecked On Transaction, Then Check Is Not Visible 
+		On Funds->UnClear Checks Page,No Cleared Date In Transaction History and 
+		Funds History Is Validated -->
+	<test name="RMA_Reg_Funds_UnclearCheck_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_UnclearCheck_TC_005" />
+		</classes>
+	</test>
+
+	<!--Void Payments Are Not Visible On The UnClear Checks Screen Is Validated -->
+	<test name="RMA_Reg_Funds_UnclearCheck_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_UnclearCheck_TC_006" />
+		</classes>
+	</test>
+
+	<!--Visibility Of Printed Final/Supplemental Payment On UnClear Screen Is 
+		Validated -->
+	<test name="RMA_Reg_Funds_UnclearCheck_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_UnclearCheck_TC_007" />
+		</classes>
+	</test>
+
+	<!--Combined Payment Setup -->
+	<test name="RMA_QTPRegression_TC_052_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_052_I" />
+		</classes>
+	</test>
+
+	<!--Visibility Of Printed Combined Payment On UnClear Screen Is Validated -->
+	<test name="RMA_Reg_Funds_UnclearCheck_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_UnclearCheck_TC_008" />
+		</classes>
+	</test>
+
+	<!--SMS Settings For UnClear Checks Is Validated -->
+	<test name="RMA_Reg_Funds_UnclearCheck_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_UnclearCheck_TC_009" />
+		</classes>
+	</test>
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

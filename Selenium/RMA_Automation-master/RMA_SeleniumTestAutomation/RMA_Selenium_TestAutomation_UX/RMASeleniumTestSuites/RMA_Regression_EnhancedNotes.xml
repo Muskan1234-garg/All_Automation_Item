@@ -1,0 +1,75 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName"
+		value="RMA_Regression_EnhancedNotes" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+		
+	<!--Verify User Is Getting Confirmation PopUp When Expanding 2nd Window Of Enhanced Notes -->
+	<test name="RMA_Reg_EnhancedNotes_TC_018">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_018" />
+		</classes>
+	</test>
+
+
+	<!--Verify That PopUp Is Displayed When User Close Parent Window Without Closing Expanded PopUp Window-->
+	<test name="RMA_Reg_EnhancedNotes_TC_022">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_022" />
+		</classes>
+	</test>
+	
+	<!-- Enhanced Note Setting For GC In Utilities_LOB Parameters Setup And 
+		Verification -->
+	<test name="RMA_Reg_EnhancedNotes_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_007" />
+		</classes>
+	</test>
+
+	<!-- Create And Edit Of Enhanced Notes On Policy Tracking On Maintenance 
+		Screen Is Validated -->
+	<test name="RMA_Reg_EnhancedNotes_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_012" />
+		</classes>
+	</test>
+
+	<!-- Create And Edit Of Enhanced Notes On Policy Tracking On Maintenance 
+		Screen Is Validated -->
+	<test name="RMA_Reg_EnhancedNotes_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_013" />
+		</classes>
+	</test>
+
+	<!--Create, Edit, Delete, View All Notes and Print Of Enhanced Notes On 
+		Policy Tracking Page On Maintenance Screen -->
+	<test name="RMA_Reg_EnhancedNotes_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_017" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

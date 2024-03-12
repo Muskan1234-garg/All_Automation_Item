@@ -1,0 +1,41 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_QTPRegression_TC_052_I" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>	
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim Is Validated--> 
+	<test name="RMA_Smoke_TC_002_GC_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+	
+	<!--Successful Send Mail Send Mail After Suite Completion	-->
+	 <test name="RMA_Smoke_TC_050">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_050" />
+		</classes>
+	</test>
+
+<!--Successful Send Mail Send Mail After Suite Completion
+	 <test name="RMA_QTPRegression_TC_045">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_045" />
+		</classes>
+	</test>	-->
+</suite>

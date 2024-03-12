@@ -1,0 +1,240 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_29_SelReg_11_Attachments(EVT_VC)" />
+<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>	
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On An Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_101_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_101" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(MedicalStaff) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_111_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_111" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(Employee) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_112_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_112" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment OnPI(Patient) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_113_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_113" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On PI(Physician) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_114_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_114" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On PI(Driver) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_115_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_115" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment OnPI(Witness) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_116_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_116" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On PI(OtherPerson) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_117_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_117" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On Dated Text On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_131_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_131" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On Vehicle's Claim Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_103_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_103" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On Dated Text On Adjuster On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_105_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_105" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On Claimant On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_106_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_106" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On Defendant On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_107_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_107" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On Litigation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_109_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_109" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On PI(MedicalStaff) On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_111_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_111" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On PI(Employee) On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_112_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_112" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On PI(Patient) On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_113_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_113" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On PI(Physician) On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_114_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_114" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(Driver) On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_115_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_115" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(Witness) On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_116_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_116" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(OtherPerson) On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_117_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_117" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On Payment On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_119_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_119" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On Collection On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_120_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_120" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On Expert On Litigation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_121_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_121" />
+		</classes>
+	</test>	
+	<!--Litigation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_024_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_024" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(MedicalStaff) On Litigation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_133_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_133" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(Employee) On Litigation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_134_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_134" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(Patient) On Litigation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_135_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_135" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(Physician) On Litigation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_136_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_136" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(Driver) On Litigation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_137_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_137" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(OtherPerson) On Litigation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_139_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_139" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On PI(Witness) On Litigation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_138_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_138" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On Case Management On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_132_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_132" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On Case Manager On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_140_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_140" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On Case Manager Notes On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_141_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_141" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On Accommodation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_142_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_142" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On Vocational Rehabilitation On VC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_143_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_143" />
+		</classes>
+	</test>		
+	</suite>

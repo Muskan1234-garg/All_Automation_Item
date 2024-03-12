@@ -1,0 +1,249 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite02_Maint_Employee_Regression" />
+	<!-- RMA_Reg_Maint_Employee_TC_041 Is Placed At Last As It Do Not Contain 
+		Settings To Revert -->
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Verify The Maintenance Navigation In RMA Application -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+
+	<!--Verify Create,Edit and Delete Of Employee From Maintenance -->
+	<test name="RMA_Reg_Maint_Employee_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_001" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of Attachments On Employee -->
+	<test name="RMA_Reg_Maint_Employee_TC_027">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_027" />
+		</classes>
+	</test>
+
+	<!--Verify Diary addition On Employee From Maintenance -->
+	<test name="RMA_Reg_Maint_Employee_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_002" />
+		</classes>
+	</test>
+
+	<!--Verify Comment Creation On Employee From Maintenance -->
+	<test name="RMA_Reg_Maint_Employee_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_003" />
+		</classes>
+	</test>
+
+	<!--Verify That Correct Validation Message Is Displayed When User Enters 
+		Date Last Verified Less Than Date Of Birth -->
+	<test name="RMA_Reg_Maint_Employee_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_004" />
+		</classes>
+	</test>
+
+	<!--Verify That Correct Validation Message Is Displayed When User Enters 
+		Date Last Verified Greater Than Todays Date -->
+	<test name="RMA_Reg_Maint_Employee_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_005" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		License Expiration Date Less Than Date Of Birth -->
+	<test name="RMA_Reg_Maint_Employee_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_006" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		Date Of Death Less Than Date Of Birth -->
+	<test name="RMA_Reg_Maint_Employee_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_007" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		Date Of Death Before Date Hired -->
+	<test name="RMA_Reg_Maint_Employee_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_008" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		Date Hired Less Than Date Of Birth -->
+	<test name="RMA_Reg_Maint_Employee_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_009" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		Date Hired Greater Than Todays Date -->
+	<test name="RMA_Reg_Maint_Employee_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_010" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		Date Hired Less Than Termination Date -->
+	<test name="RMA_Reg_Maint_Employee_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_013" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		Termination Date Less Than Date Of Birth -->
+	<test name="RMA_Reg_Maint_Employee_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_014" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		Termination Date Greater Than Todays Date -->
+	<test name="RMA_Reg_Maint_Employee_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_015" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		Birth Date Greater Than Todays Date -->
+	<test name="RMA_Reg_Maint_Employee_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_016" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		Work Permit Date Less Than Date Of Birth -->
+	<test name="RMA_Reg_Maint_Employee_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_017" />
+		</classes>
+	</test>
+
+	<!-- Verify That Correct Validation Message Is Displayed When User Enters 
+		Effective Date More Than Expiration Date -->
+	<test name="RMA_Reg_Maint_Employee_TC_018">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_018" />
+		</classes>
+	</test>
+
+	<!--Verify That Correct Results Must Be Displayed When User Searches Any 
+		Employee Created Via Maintenance -->
+	<test name="RMA_Reg_Maint_Employee_TC_048">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_048" />
+		</classes>
+	</test>
+
+	<!--Verify The Correct Validation When User Tries To Save A Record Without 
+		Entering Values In Mandatory Fields -->
+	<test name="RMA_Reg_Maint_Employee_TC_049">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_049" />
+		</classes>
+	</test>
+
+	<!--Verify The Correct Validation When User Click ToolBar Button Of A Record 
+		Without Saving It -->
+	<test name="RMA_Reg_Maint_Employee_TC_050">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_050" />
+		</classes>
+	</test>
+
+	<!--Verification of Banking Information feature of Employee Maintenance -->
+	<test name="RMA_Reg_Maint_Employee_TC_051">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_051" />
+		</classes>
+	</test>
+
+	<!--Enables The User To Add Withholding To The Employee -->
+	<test name="RMA_Reg_Maint_Employee_TC_052">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_052" />
+		</classes>
+	</test>
+
+	<!--Verification Of Violation feature Of Employee Maintenance -->
+	<test name="RMA_Reg_Maint_Employee_TC_053">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_053" />
+		</classes>
+	</test>
+
+	<!--Verification Of Dependent Feature Of Employee Maintenance -->
+	<test name="RMA_Reg_Maint_Employee_TC_054">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_054" />
+		</classes>
+	</test>
+
+	<!--Verification of Record Summary On Employee Maintenance -->
+	<test name="RMA_Reg_Maint_Employee_TC_055">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_055" />
+		</classes>
+	</test>
+
+	<!--Verification of Record Summary On Dependent -->
+	<test name="RMA_Reg_Maint_Employee_TC_056">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_056" />
+		</classes>
+	</test>
+	
+	<!--Functionality Of Supplemental Grid On Employee Is Validated-->
+	<test name="RMA_Reg_Maint_Employee_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_012" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Add Values In Supplemental Tab -->
+	<test name="RMA_Reg_Maint_Employee_TC_024">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_024" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Not Able To Print The Payment On Employee(As Other 
+		Payee) For Which Freeze Payment CheckBox Is Checked -->
+	<test name="RMA_Reg_Maint_Employee_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_011" />
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,81 @@
+<suite name="RMA_suite_BankAccount_SubbankAccounts" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_SubbankAccounts" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+ 	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--Navigation Screen Validation Pre-requisite For Smoke Suite 12 Test Cases Is Validated -->
+	<!--<test name="RMA_Smoke_TC_041_I">
+	<classes>
+		<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+		</test>-->
+		
+		<!--Verifying Check Stocks Dropdown On Sub Bank Account --> 
+		<test name="RMA_Reg_Funds_BankAccount_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_021" />
+		</classes>
+	</test>
+	
+	<!--Verifying Sub Bank Account Node Bank Account From Right Side Pane --> 
+	<test name="RMA_Reg_Funds_BankAccount_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_020" />
+		</classes>
+	</test>
+	
+	<!--Creating New Sub Bank Account --> 
+	<test name="RMA_Reg_Funds_BankAccount_TC_022">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_022" />
+		</classes>
+	</test>
+	
+	<!--Verifying Existing Sub Bank From Lookup Data --> 
+	<test name="RMA_Reg_Funds_BankAccount_TC_023">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_023" />
+		</classes>
+	</test>
+	
+	<!--Assigning Different Check Stocks For Different Sub Bank Account From Same Bank Account --> 
+	<test name="RMA_Reg_Funds_BankAccount_TC_025">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_025" />
+		</classes>
+	</test>
+	
+	<!--Creating New Payment With Sub Bank Account -->
+	<test name="RMA_Reg_Funds_BankAccount_TC_028">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_028" />
+		</classes>
+	</test>
+	
+	<!--Verify Record Summary Of Sub Bank Account -->
+	<test name="RMA_Reg_Funds_BankAccount_TC_024">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_024" />
+		</classes>
+	</test>
+		<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

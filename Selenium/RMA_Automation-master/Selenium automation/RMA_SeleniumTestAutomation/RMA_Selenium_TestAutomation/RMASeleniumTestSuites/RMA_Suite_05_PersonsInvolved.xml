@@ -1,0 +1,305 @@
+<suite name="RMA_Suite_05_PersonsInvolved" parallel="none" allow-return-values="true">
+
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="3" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_05_PersonsInvolved" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test> 
+
+<!--Verify That Required DSN Is Selected In RMA Application-->
+    <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+     </test>
+
+<!--Verify That Litigation Can Be Added To A General Claim-->
+    <test name="RMA_TC_086">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_086"/>
+    </classes>
+     </test>
+     
+<!--Verify Add,Edit And Delete Of Existing Employee As Person Involved In Litigation In General Claim-->
+    <test name="RMA_TC_087">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_087"/>
+    </classes>
+     </test>
+	 
+<!--Verify Add,Edit And Delete Of Existing Medical Staff As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_088">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_088"/>
+    </classes>
+     </test>
+	 
+<!--Verify Add,Edit And Delete Of Existing Driver As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_089">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_089"/>
+    </classes>
+     </test>
+		
+<!--Verify Add,Edit And Delete Of Existing Patient As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_090">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_090"/>
+    </classes>
+     </test>
+
+<!--Verify Add,Edit And Delete Of Existing Other Person As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_091">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_091"/>
+    </classes>
+     </test>	 
+	 
+ <!--Verify Add,Edit And Delete Of Existing Physician As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_092">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_092"/>
+    </classes>
+     </test>
+     
+ <!--Verify Add,Edit And Delete Of Existing Witness As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_093">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_093"/>
+    </classes>
+       </test>
+       
+ <!--Verify That Litigation Can Be Added To A Workers Comp Claim-->
+    <test name="RMA_TC_094">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_094"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of Existing Employee As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_095">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_095"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of Existing Medical Staff As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_096">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_096"/>
+    </classes>
+       </test>
+       
+ <!--Verify Adding,Editing And Deleting Of An Existing Driver As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_097">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_097"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of An Existing Other Person As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_098">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_098"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of An Existing Patient As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_099">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_099"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of An Existing Physician As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_100">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_100"/>
+    </classes>
+       </test>
+       
+ <!--Verify Adding,Editing And Deleting Of An Existing Witness As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_101">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_101"/>
+    </classes>
+       </test>  
+	   
+<!--Verify That Litigation Can Be Added To A Vehicle Accident Claim-->
+    <test name="RMA_TC_102">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_102"/>
+    </classes>
+  </test> 
+
+<!--Verify Add,Edit And Delete Of Existing Employee As Person Involved In Litigation In Vehicle Accident Claim.-->
+    <test name="RMA_TC_103">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_103"/>
+    </classes>
+  </test> 
+  
+  <!--Verify Add,Edit And Delete Of Existing Medical Staff As Person Involved In Litigation In Vehicle Accident Claim.-->
+    <test name="RMA_TC_104">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_104"/>
+    </classes>
+  </test> 
+  
+  <!--Verify Add,Edit And Delete Of Existing Driver As Person Involved In Litigation In Vehicle Accident Claim.-->
+    <test name="RMA_TC_105">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_105"/>
+    </classes>
+  </test> 
+  
+  <!--Verify Add,Edit And Delete Of Existing Other Person As Person Involved In Litigation In Vehicle Accident Claim.-->
+    <test name="RMA_TC_106">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_106"/>
+    </classes>
+  </test> 
+  
+  <!--Verify Add,Edit And Delete Of Existing Patient As Person Involved In Litigation In Vehicle Accident Claim.-->
+    <test name="RMA_TC_107">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_107"/>
+    </classes>
+  </test> 
+  
+  <!--Verify Add,Edit And Delete Of Existing Physician As Person Involved In Litigation In Vehicle Accident Claim.-->
+    <test name="RMA_TC_108">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_108"/>
+    </classes>
+  </test> 
+  
+  <!--Verify Add,Edit And Delete Of Existing Witness As Person Involved In Litigation In Vehicle Accident Claim.-->
+    <test name="RMA_TC_109">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_109"/>
+    </classes>
+  </test> 
+  
+<!--Verify That Litigation Can Be Added To A Non Occupational Claim-->
+    <test name="RMA_TC_110">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_110"/>
+    </classes>
+       </test>
+         
+<!--Verify Adding,Editing And Deleting Of Existing Employee As Person Involved In Litigation For Non Occupational Claim-->
+    <test name="RMA_TC_111">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_111"/>
+    </classes>
+       </test>
+
+<!--Verify Adding,Editing And Deleting Of Existing Medical Staff As Person Involved In Litigation For Non Occupational Claim-->
+    <test name="RMA_TC_112">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_112"/>
+    </classes>
+       </test>
+      
+<!--Verify Adding,Editing And Deleting Of Existing Driver As Person Involved In Litigation For Non Occupational Claim-->
+    <test name="RMA_TC_113">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_113"/>
+    </classes>
+       </test>
+	   
+<!--Verify Adding,Editing And Deleting Of Existing Other Person As Person Involved In Litigation For Non Occupational Claim-->
+    <test name="RMA_TC_114">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_114"/>
+    </classes>
+       </test>
+	   
+<!--Verify Adding,Editing And Deleting Of Existing Patient As Person Involved In Litigation For Non Occupational Claim-->
+    <test name="RMA_TC_115">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_115"/>
+    </classes>
+       </test>
+	   
+<!--Verify Adding,Editing And Deleting Of Existing Physician As Person Involved In Litigation For Non Occupational Claim-->
+    <test name="RMA_TC_116">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_116"/>
+    </classes>
+       </test>
+	   
+<!--Verify Add,Edit And Delete Of Existing Witness As Person Involved In Litigation For Non Occupational Claims-->
+    <test name="RMA_TC_117">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_117"/>
+    </classes>
+       </test>
+       
+<!--Verify That Litigation Can Be Added To A Property Claim-->
+    <test name="RMA_TC_118">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_118"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of Existing Employee As Person Involved In Litigation For Property Claim-->
+    <test name="RMA_TC_119">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_119"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of Existing Medical Staff As Person Involved In Litigation For Property Claim-->
+    <test name="RMA_TC_120">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_120"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of Existing Driver As Person Involved In Litigation For Property Claim-->
+    <test name="RMA_TC_121">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_121"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of Existing Other Person As Person Involved In Litigation For Property Claim-->
+    <test name="RMA_TC_122">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_122"/>
+    </classes>
+       </test>
+       
+<!--Verify Add,Edit And Delete Of Existing Patient As Person Involved In Litigation For Property Claims-->
+    <test name="RMA_TC_123">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_123"/>
+    </classes>
+       </test>
+       
+       
+<!--Verify Add,Edit And Delete Of Existing Physician As Person Involved In Litigation For Property Claims-->
+    <test name="RMA_TC_124">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_124"/>
+    </classes>
+       </test>
+       
+<!--Verify Verify Add,Edit And Delete Of Existing Witness As Person Involved In Litigation For Property Claims-->
+    <test name="RMA_TC_125">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_125"/>
+    </classes>
+       </test>
+
+	   
+ </suite> 

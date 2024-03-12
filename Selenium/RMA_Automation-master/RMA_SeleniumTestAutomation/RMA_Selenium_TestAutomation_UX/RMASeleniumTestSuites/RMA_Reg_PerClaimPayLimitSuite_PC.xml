@@ -1,0 +1,220 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_PerClaimPayLimitSuite_PC" />
+	<parameter name="DataSourceRow" value="1" /><!--To Set The DataSource 
+		Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData -->
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="3" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify that Per Claim Pay Limits Can Be Set At User Level In User Privileges 
+		Setup -->
+	<!--To Set The LOB Based on claim -->
+	<parameter name="LOB" value="PC - Property Claims" />
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_001">
+	<parameter name="LimitFactor" value="10" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_001" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate Property Claim Creation On Providing Mandatory 
+		Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit 
+		Of Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_PC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_PC" />
+		</classes>
+	</test>
+
+	<!--Verify That Payment Goes On Hold If Per Claim Pay Limit Is Exceeded -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_002" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate Property Claim Creation On Providing Mandatory Data, 
+		Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of 
+		Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_PC_4">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_PC" />
+		</classes>
+	</test>
+
+	<!--Verify When "Disable Diary Notification To Supervisor" Is Checked For 
+		Per Claim Pay Limit, Diary Is NOT Sent To Supervisor When Payment Goes On 
+		Hold -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_018">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_018" />
+		</classes>
+	</test>
+
+	<!--Verify That The Manager Can Have The Authority To Either Approve Or 
+		Not Approve The Payment Based On Per Claim Pay Limit And Diary Notification -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_003" />
+		</classes>
+	</test>
+
+	<!--Verify That Any Other Manager From SuperVisory Chain Can Approve Payment 
+		Which Are On Hold -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_004" />
+		</classes>
+	</test>
+
+	<!-- Verify When "Prevent Payments Above Limits" Is Checked, User Is Not 
+		Able To Create A Transaction Which Is Beyond The Limit Amount -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_005" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate Property Claim Creation On Providing Mandatory 
+		Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit 
+		Of Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_PC_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_PC" />
+		</classes>
+	</test>
+
+	<!--Verify When "Prevent Payments Above Limits" Is Checked, User Is Not 
+		Able To Create A Transaction Which Is Beyond The Limit Amount -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_006" />
+		</classes>
+	</test>
+
+	<!--Verify Per Claim Pay Limit Is Working Only For The Reserve Type And 
+		Claim Type For Which Limit Is Set -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_007" />
+		</classes>
+	</test>
+
+	<!-- Verify User Is Able To Check Override Authority CheckBox On User Privileges 
+		Page -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_016" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate Property Claim Creation On Providing Mandatory 
+		Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit 
+		Of Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_PC_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_PC" />
+		</classes>
+	</test>
+
+	<!--Verify User Has Override Authority Settings Checked In User Privileges, 
+		Setting Is Working Fine For It -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_017" />
+		</classes>
+	</test>
+
+	<!--Verify When "Enable Per Claim Pay Limits" Is UnChecked, Per Claim Pay 
+		Limit Does Not Apply -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_008" />
+		</classes>
+	</test>
+
+	<!--Successful Revert Setting From Utilities Page Is Validated -->
+	<test name="RMA_Reg_Super_DeSelectALLSetting_TC_001">
+	<parameter name="LOB" value="PC - Property Claims" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_DeSelectALLSetting_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify Specific Transaction Type Codes Setting Is Working Fine -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_009" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate Property Claim Creation On Providing Mandatory 
+		Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit 
+		Of Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_PC_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_PC" />
+		</classes>
+	</test>
+
+	<!--Verify That When User Makes A Payment On Selected Transaction Type, 
+		Transaction Goes On Hold, Even If In User Privilege No Limit Is There -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_010" />
+		</classes>
+	</test>
+
+	<!--Verify User Having The Authority Of Approving Payments Hold Due To "Transaction 
+		On Hold" Can Approve Transaction -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_011" />
+		</classes>
+	</test>
+
+	<!--Verify Once The Payment Is Approved, It Is Not Seen In My Pending Transactions 
+		Of The User Who Created The Payment -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_012" />
+		</classes>
+	</test>
+
+	<!--Verify When \'Per Claim Pay Limits Are Exceeded: \' Setting Is Off In 
+		Supervisor Approval Configuration, User Is Not Allowed To Save The Payment 
+		Which Is Beyond The Per Claim Pay Limit. -->
+	<test name="RMA_Reg_Super_ClaimPayLimit_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ClaimPayLimit_TC_015" />
+		</classes>
+	</test>
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

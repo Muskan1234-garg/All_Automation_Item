@@ -1,0 +1,63 @@
+{
+  "loginName": "uf1",
+  "password": "uf1",
+  "userPermId": 770,
+  "forcePwdChange": false,
+  "permExpires": false,
+  "expdate": null,
+  "days": [
+    {
+      "day": "mon",
+      "value1": "12:00 AM",
+      "value2": "12:00 AM",
+      "dayAccess": true
+    },
+    {
+      "day": "tue",
+      "value1": "12:00 AM",
+      "value2": "12:00 AM",
+      "dayAccess": true
+    },
+    {
+      "day": "wed",
+      "value1": "12:00 AM",
+      "value2": "12:00 AM",
+      "dayAccess": true
+    },
+    {
+      "day": "thu",
+      "value1": "12:00 AM",
+      "value2": "12:00 AM",
+      "dayAccess": true
+    },
+    {
+      "day": "fri",
+      "value1": "12:00 AM",
+      "value2": "12:00 AM",
+      "dayAccess": true
+    },
+    {
+      "day": "sat",
+      "value1": "12:00 AM",
+      "value2": "12:00 AM",
+      "dayAccess": true
+    },
+    {
+      "day": "sun",
+      "value1": "12:00 AM",
+      "value2": "12:00 AM",
+      "dayAccess": true
+    }
+  ],
+  "isPasswordPolicyEnabled": true,
+  "isPasswordChanged": false,
+  "userId": 770,
+  "dsnId": 5,
+  "expDateReadOnly": null,
+  "selectedModuleGroupId": "154",
+  "isExistModuleGrouptToBeDeleted": false,
+  "existingModuleGroupId": "0",
+  "error": null,
+  "allData": true,
+  "tabEnable": true
+}

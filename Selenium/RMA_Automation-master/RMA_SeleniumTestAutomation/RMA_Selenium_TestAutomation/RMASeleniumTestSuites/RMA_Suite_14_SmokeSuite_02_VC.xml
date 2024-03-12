@@ -1,0 +1,272 @@
+
+<suite name="RMA_Suite_14_SmokeSuite_02_VC" parallel="none" allow-return-values="true">
+
+<!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="3" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_14_SmokeSuite_02_VC" />
+
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	  <!--RMA_Smoke_TC_002_GC_To Create General Claim For Test-cases RMA_Smoke_TC_062,RMA_Smoke_TC_076 and RMA_Smoke_TC_079 -->
+     <test name="RMA_Smoke_TC_002_Veh">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_Veh"/>
+   		 </classes>
+      </test>
+      
+	  <!-- Successful Policy Creation On Policy Tracking Is Validated-->
+     <test name="RMA_Smoke_TC_051">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_051"/>
+   		 </classes>
+     	 </test>
+     <!-- Successful Coverage can be added, edited and deleted from Policy Is Validated-->
+     <test name="RMA_Smoke_TC_052">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_052"/>
+   		 </classes>
+     </test>
+     
+      <!-- Successful Policy MCO Can Be Added, Edited And Deleted From Policy Is Validated-->
+     <test name="RMA_Smoke_TC_053">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_053"/>
+   		 </classes>
+     </test>
+     
+      <!-- Successful Clone Policy button Is Validated-->
+     <test name="RMA_Smoke_TC_054">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_054"/>
+   		 </classes>
+     </test>
+     
+       <!-- Policy Can Not be able to attached on Property Claim, Hence Commented the case-->
+      <!-- Successful Attach a Policy to a Claim Is Validated
+     <test name="RMA_Smoke_TC_055_Veh">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_055_Veh"/>
+   		 </classes>
+     </test>-->
+     
+      <!-- Successful Policy Creation On Policy Tracking Is Validated-->
+     <test name="RMA_Smoke_TC_056">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_056"/>
+   		 </classes>
+     </test>
+     
+      <!-- Successful Created, Edited And Deleted Of Employee From Maintenance Is Validated-->
+     <test name="RMA_Smoke_TC_057">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_057"/>
+   		 </classes>
+     </test>
+      <!-- Successful Created, Edited And Deleted  Catastrophe From Maintenance Is Validated-->
+     <test name="RMA_Smoke_TC_058">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_058"/>
+   		 </classes>
+     </test>
+     
+      <!--  Successful Creation, Edited And Deleted Of Driver From Maintenance Is Validated-->
+     <test name="RMA_Smoke_TC_059">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_059"/>
+   		 </classes>
+     </test>
+     
+      <!-- Successful Creation, Edited And Deleted Of Medical Staff From Maintenance Is Validated-->
+     <test name="RMA_Smoke_TC_060">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_060"/>
+   		 </classes>
+     </test>
+     
+      <!-- Successful Event Number Prefix Utility And Include Year Utility Setting Is Validated-->
+     <test name="RMA_Smoke_TC_061">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_061"/>
+   		 </classes>
+      </test>      
+       
+       <!-- Successful Creation Of  Vehicle Accident Claim By Entering All Mandatory Fields Is Validated.-->
+     <test name="RMA_Smoke_TC_063">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_063"/>
+   		 </classes>
+      </test>
+      
+       <!-- Successful Creation Of  NonOccupational Claim By Entering All Mandatory Fields Is Validated.-->
+     <test name="RMA_Smoke_TC_064">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_064"/>
+   		 </classes>
+      </test>
+      
+       <!-- Successful Creation Of  Property Claim By Entering All Mandatory Fields Is Validated.-->
+     <test name="RMA_Smoke_TC_065">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_065"/>
+   		 </classes>
+      </test>
+      
+       <!--Successful Add,Edit And Delete Of New Bank Account Is Validated-->
+     <test name="RMA_Smoke_TC_066">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_066"/>
+   		 </classes>
+      </test>
+      
+       <!-- Successful Add,Edit And Delete Patient from Maintenance Page And Also Successfully Add, Edit And Delete Procedure On That Patient Is Validated-->
+     <test name="RMA_Smoke_TC_067">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_067"/>
+   		 </classes>
+      </test>
+      
+       <!-- Successful Add And Edit Physician From Maintenance-->
+     <test name="RMA_Smoke_TC_068">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_068"/>
+   		 </classes>
+      </test>
+      
+        <!-- Successful Add, Edit And Delete Contracts From A Physician-->
+     <test name="RMA_Smoke_TC_069">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_069"/>
+   		 </classes>
+      </test>
+      
+        <!-- Successful Add, Edit And Delete Privileges From A Physician -->
+     <test name="RMA_Smoke_TC_070">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_070"/>
+   		 </classes>
+      </test>
+      
+        <!--Successful Add, Edit And Delete Certifications From A Physician -->
+     <test name="RMA_Smoke_TC_071">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_071"/>
+   		 </classes>
+      </test>
+      
+        <!-- Successful Add, Edit And Delete Education From A Physician -->
+     <test name="RMA_Smoke_TC_072">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_072"/>
+   		 </classes>
+      </test>
+      
+        <!-- Successful Add, Edit And Delete Previous Hospital From A Physician And Delete Created Physician Also -->
+     <test name="RMA_Smoke_TC_073">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_073"/>
+   		 </classes>
+      </test>
+      
+       <!-- Successful Add, Edit And Delete Property From Maintenance -->
+     <test name="RMA_Smoke_TC_074">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_074"/>
+   		 </classes>
+      </test>
+      
+       <!-- RMA_Smoke_TC_075_Successfully Create And Edit A Sub Bank Account -->
+     <test name="RMA_Smoke_TC_075">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_075"/>
+   		 </classes>
+      </test>
+    
+       <!--RMA_Smoke_TC_076_Successfully Select Sub Bank Account From Funds Window -->
+     <test name="RMA_Smoke_TC_076">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_076"/>
+   		 </classes>
+      </test>
+         <!--RMA_Smoke_TC_077_Successfully Verify Functionality Of View/Update Portal Logo & Create, Edit and Delete Portlet Using Portal Settings  -->
+     <test name="RMA_Smoke_TC_077">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_077"/>
+   		 </classes>
+      </test>
+         <!--RMA_Smoke_TC_078_Successfully Verify Functionality Of Script Editor -->
+     <test name="RMA_Smoke_TC_078">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_078"/>
+   		 </classes>
+      </test>
+     	
+       <!--RMA_Smoke_TC_079_Successfully Add Claimant Functionality On Enabling Person Involved Check Box-->  
+     <test name="RMA_Smoke_TC_079">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_079"/>
+   		 </classes>
+      </test>
+      
+      <!--RMA_Smoke_TC_080_ Successfully Create, Edit and Delete WPA Auto dairies  -->
+     <test name="RMA_Smoke_TC_080">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_080"/>
+   		 </classes>
+      </test>
+           <!--RMA_Smoke_TC_081_Successfully Create, Edit and Delete Power View  -->
+     <test name="RMA_Smoke_TC_081">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_081"/>
+   		 </classes>
+      </test>
+           <!--RMA_Smoke_TC_082_Successfully Create, Edit and Delete Web Link -->
+     <test name="RMA_Smoke_TC_082">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_082"/>
+   		 </classes>
+      </test>
+           <!--RMA_Smoke_TC_083_Successfully Create, Edit and Delete A Search Query Using Query Designer-->
+     <test name="RMA_Smoke_TC_083">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_083"/>
+   		 </classes>
+      </test>
+             <!--RMA_Smoke_TC_084_Successfully Create A Record Using XML Import Functionality -->
+     <test name="RMA_Smoke_TC_084">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_084"/>
+   		 </classes>
+      </test>
+             <!--RMA_Smoke_TC_085_Successfully Create, Edit And Delete Vehicle From Maintenance & Create, Edit And Delete Inspections From Vehicle  -->
+     <test name="RMA_Smoke_TC_085">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_085"/>
+   		 </classes>
+      </test>
+             <!--RMA_Smoke_TC_086_Successfully Add A New Data Source-->
+     <test name="RMA_Smoke_TC_086">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_086"/>
+   		 </classes>
+      </test>
+      
+      <!-- Successful Use Account owner for Funds utility Setting Is Validated-->
+     <test name="RMA_Smoke_TC_062">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_Smoke_TC_062"/>
+   		 </classes>
+      </test>
+</suite>
+
+

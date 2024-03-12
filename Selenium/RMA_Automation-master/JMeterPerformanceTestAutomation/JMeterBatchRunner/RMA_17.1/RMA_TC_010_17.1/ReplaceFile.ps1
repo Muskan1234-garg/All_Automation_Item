@@ -1,0 +1,1 @@
+(Get-Content D:\apache-jmeter-3.0\apache-jmeter-3.0\extras\RMA_JMeterTestData\TC10.csv) | -Tail 10 file.txt | Set-Content D:\apache-jmeter-3.0\apache-jmeter-3.0\extras\RMA_JMeterTestData\TC10.csv

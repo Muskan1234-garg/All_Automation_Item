@@ -1,0 +1,99 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- From General System Parameters, uncheck 'Default "Assigned to" in Create Diary to Current User' Before Execution Of This Suite -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Diary_ViewRecordDiaries_Claims" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Diary Creation with Notify When -->
+	<test name="RMA_Regression_Diary_TC_05_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_05" />
+		</classes>
+	</test>
+
+	<!-- Corporate Worker's Compensation Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+
+	<!--Diary Creation with Notify When -->
+	<test name="RMA_Regression_Diary_TC_05_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_05" />
+		</classes>
+	</test>
+
+	<!-- Corporate Property Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_PC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_PC" />
+		</classes>
+	</test>
+
+	<!--Diary Creation with Notify When -->
+	<test name="RMA_Regression_Diary_TC_05_PC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_05" />
+		</classes>
+	</test>
+	
+	<!-- Corporate Vehicle Accident Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_VC" />
+		</classes>
+	</test>
+
+	<!--Diary Creation with Notify When -->
+	<test name="RMA_Regression_Diary_TC_05_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_05" />
+		</classes>
+	</test>
+	
+	<!-- Corporate Non-Occupational (DI) Claim Creation In RMA Application -->
+	<test name="RMA_SeleniumRegression_TC_042">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_042" />
+		</classes>
+	</test>
+
+	<!--Diary Creation with Notify When -->
+	<test name="RMA_Regression_Diary_TC_05_NonOcc">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_05" />
+		</classes>
+	</test>
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,101 @@
+<suite name="RMA_suite_BankAccount_Management" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_BankAccountManagement" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+ 	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--Navigation Screen Validation Pre-requisite For Smoke Suite 12 Test Cases Is Validated -->
+	<!--<test name="RMA_Smoke_TC_041_I">
+	<classes>
+		<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+		</test>-->
+		<!--Verify The Master Bank Dropdown And Set Master Bank-->
+		<test name="RMA_Reg_Funds_BankAccount_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_004" />
+		</classes>
+	</test>
+	
+	<!--Create New Bank Account-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Verify Existing Bank Through Lookup-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Verify Next Check # Is 1 For New Bank Account-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_003" />
+		</classes>
+	</test>
+	
+	<!--Verify Next Check # Is Disabled When Select Master Bank From Bank Account-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_005" />
+		</classes>
+	</test>
+	
+	<!--Verify Master Account Is Not Visible For Bank Which Is Already A Master Bank For Any Bank-->
+	 <test name="RMA_Reg_Funds_BankAccount_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_006" />
+		</classes>
+	</test>
+	
+	<!--Verify Record Summary Of Bank Account-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_007" />
+		</classes>
+	</test>
+	
+	<!--Create Multiple Banks-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_010" />
+		</classes>
+	</test>
+	
+	<!--Verify Bank Account should Not Be Displayed When Bank And Claim's Departments Are Different-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_008" />
+		</classes>
+	</test>
+	
+	<!--Verify Account Owner For Bank Account-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_009" />
+		</classes>
+	</test>
+		<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

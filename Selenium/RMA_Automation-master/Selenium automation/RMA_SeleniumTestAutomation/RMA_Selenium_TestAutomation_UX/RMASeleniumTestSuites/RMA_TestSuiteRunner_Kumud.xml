@@ -1,0 +1,29 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="5" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_QTPRegression_TC_052_I" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>	
+	
+
+	<!--To Reset The Payment Parameter, General System Parameter And User Privilege Settings After Suite32 Is Validated Limits Is Validated -->
+	<test name="RMA_QTPRegression_TC_029_C">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_029_C" />
+		</classes>
+	</test>
+
+</suite>

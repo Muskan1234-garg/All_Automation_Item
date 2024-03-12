@@ -1,0 +1,135 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Regs_PrintChecks" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Setting Up A Bank account With Check Stock Is Validated -->
+	<test name="RMA_Reg_Funds_BankAccount_TC_029">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_029" />
+		</classes>
+	</test>
+
+
+    <!--Successful Corporate General Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Data Entry Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+	
+    <!-- Successful Reserve Creation, Reserve Grid Value Verification, Color Code Change And Tool Tip Amount Of Reserve Progress Image On Claim Screen Is Validated -->
+	<test name="RMA_Smoke_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_009" />
+		</classes>
+	</test>
+
+
+	<!-- To Mark A Payment As Printed (Printing Checks From Payment Screen) 
+		Is Validated -->
+	<test name="RMA_Reg_PrintChecks_TC_01">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_01" />
+		</classes>
+	</test>
+
+	<!-- Roll Up A Payment For The Same Payee , Printing Roll Up Checks From 
+		Funds>Print Checks Is Validated -->
+	<test name="RMA_Reg_PrintChecks_TC_02">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_02" />
+		</classes>
+	</test>
+
+	<!-- Printing Checks When Printing Option Is Set To Printer And File Only 
+		From Funds->Print Checks -->
+	<test name="RMA_Reg_PrintChecks_TC_03">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_03" />
+		</classes>
+	</test>
+
+	<!-- Printing Checks When Printing Option Is Set To File Only From Funds->Print 
+		Checks -->
+	<test name="RMA_Reg_PrintChecks_TC_04">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_04" />
+		</classes>
+	</test>
+
+	<!-- Printing Checks When Printing Option Is Set To Custom File Only From 
+		Funds->Print Checks -->
+	<test name="RMA_Reg_PrintChecks_TC_05">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_05" />
+		</classes>
+	</test>
+
+	<!-- Printing Checks When Printing Option Is Set To Printer And Custom File 
+		Only From Funds->Print Checks -->
+	<test name="RMA_Reg_PrintChecks_TC_06">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_06" />
+		</classes>
+	</test>
+
+	<!-- Printing EFT Checks From Funds -> Print Checks -->
+	<test name="RMA_Reg_PrintChecks_TC_07">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Printing EFT Checks From Payment Screen -->
+	<test name="RMA_Reg_PrintChecks_TC_08">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_08" />
+		</classes>
+	</test>
+
+	<!-- Printing Auto Checks From Funds>Prints Checks Is Validated -->
+	<test name="RMA_Reg_PrintChecks_TC_10">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_10" />
+		</classes>
+	</test>
+
+<!-- Commented as Sub bank Account Scenarios as failing due to enhancement RMA-82813 & RMA-82716 -->
+<!-- 	<test name="RMA_Reg_Funds_BankAccount_TC_022"> --> 
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_022" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+	<!-- Printing Checks When Sub Bank Account Is On In General System Settings 
+		From Funds->Print Check -->
+<!-- 	<test name="RMA_Reg_PrintChecks_TC_09"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_09" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

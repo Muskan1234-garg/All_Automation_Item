@@ -1,0 +1,80 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="6" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite02_Funds_Withholding_ERON" />
+	<!-- This suite will run on ER ON DSN only. So to make this suite run on any server, please change DSN name in DataSheet "RMA_Suite02_Funds_Withholding_ERON.xlsx" for test 
+		cases RMA_Reg_Funds_Withholding_TC019,020,024 -->
+	
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Enable Required SMS And Utility Settings For Suite RMA_Suite02_Funds_Withholding_ERON -->
+	<test name="RMA_Reg_Funds_Withholding_TC_024">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_024" />
+		</classes>
+	</test>
+	
+	<!--Verify That Withholding CheckBox And All Its Child Nodes Backup Withholding, Create, Update And View CheckBoxes Are Available For Entity Maintenance And Organization Hierarchy And Not Available For Employee, Driver, Medical Staff, Patient, Physician, People Maintenance In SMS On ER ON Environment -->
+	<test name="RMA_Reg_Funds_Withholding_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_020" />
+		</classes>
+	</test>
+	
+	<!--Verify Maintenance Screen Navigation In RMA Application -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+	
+	<!--Verify The All Validation Messages Of Save Button On Withholding Screen.-->
+	<test name="RMA_Reg_Funds_Withholding_RecipientCreation">
+	<parameter name="NoOfWithholdingRecipient" value="1" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_RecipientCreation" />
+		</classes>
+	</test>		
+	
+	<!--Verify Withholding Setup Done For Org. Hierarchy On ER ON Environment And Withholding Payment Created On Corporate Worker's Comp Claim And Verify That On Voiding The Main Transaction Withholding Transactions Gets Voided -->
+	<test name="RMA_Reg_Funds_Withholding_TC_018">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_018" />
+		</classes>
+	</test>
+
+	<!--Verify Withholding Setup Done With Voucher Payment For Entity On ER ON Environment And Withholding Payment Created On Carrier General Claim And Verify That On Clearing The Main Transaction Withholding Transactions Gets Cleared -->
+	<test name="RMA_Reg_Funds_Withholding_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_017" />
+		</classes>
+	</test>
+
+	<!--Verify The Create, Update And View Permission Of Withholding Setup on Entity Maintenance Screen On Check/UnCheck Of All The Check Boxes Under Withholding In SMS On ER ON Environment -->
+	<test name="RMA_Reg_Funds_Withholding_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_019" />
+		</classes>
+	</test>
+
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

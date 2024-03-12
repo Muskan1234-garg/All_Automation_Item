@@ -1,0 +1,119 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_DailySmoke_EnhancedNotes" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of An Enhanced Note On A Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_057">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_057_Event" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of An Enhanced Note On A General Claim Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_058_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_058" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of An Enhanced Note On A Adjuster For A General 
+		Claim Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_061_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_061" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of An Enhanced Note On A Claimant For A General 
+		Claim Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_062_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_062" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of An Enhanced Note On A PI(MedicalStaff) For 
+		An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_067_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_067" />
+		</classes>
+	</test>
+
+	<!-- Successful Corporate General Claim Creation -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Creation of Enhanced Notes On A Claim Then On Its Corresponding Event -->
+	<test name="RMA_Reg_EnhancedNotes_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_001" />
+		</classes>
+	</test>
+
+	<!-- Creation of Enhanced Notes On Claim From The Event Screen -->
+	<test name="RMA_Reg_EnhancedNotes_TC_ClaimFromEvent">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_ClaimFromEvent" />
+			<methods>
+				<include name="RMA_Reg_EnhancedNotes_TC_GCClaimFromEvent" />
+			</methods>
+		</classes>
+	</test>
+
+	<!-- Verification Of Advanced Search(Check All/Uncheck All) Functionality 
+		of Enhanced Notes -->
+	<test name="RMA_Reg_EnhancedNotes_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Verification Of View All Notes Functionality Of Enhanced Notes -->
+	<test name="RMA_Reg_EnhancedNotes_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_003" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation -->
+	<test name="RMA_Smoke_TC_002_GC_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Verification Of Creating Note Template Of Enhanced Notes -->
+	<test name="RMA_Reg_EnhancedNotes_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_004" />
+		</classes>
+	</test>
+	
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>

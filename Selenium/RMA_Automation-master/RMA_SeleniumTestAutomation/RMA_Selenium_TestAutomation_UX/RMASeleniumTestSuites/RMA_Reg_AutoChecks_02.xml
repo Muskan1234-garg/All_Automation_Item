@@ -1,0 +1,111 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- Change The System Time To Eastern Standard Time Before Execution Of 
+		This Suite -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_AutoChecks_02" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data, 
+		Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of 
+		Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Funds_AutoChecks_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_005" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Funds_AutoChecks_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_006" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Funds_AutoChecks_TC_007">
+		<parameter name="LOB" value="GC - General Claims" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_007" />
+		</classes>
+	</test>	
+	
+		<!--Successful Corporate General Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>	
+
+	<test name="RMA_Reg_Funds_AutoChecks_TC_008">
+	<parameter name="LOB" value="GC - General Claims" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_008" />
+		</classes>
+	</test>
+	
+		<test name="RMA_Reg_Funds_AutoChecks_TC_009">
+	<parameter name="LOB" value="GC - General Claims" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_009" />
+		</classes>
+	</test>
+	
+	<test name="RMA_Reg_Funds_AutoChecks_TC_010">
+	<parameter name="LOB" value="GC - General Claims" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_010" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Funds_AutoChecks_TC_019">
+	<parameter name="LOB" value="GC - General Claims" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_019" />
+		</classes>
+	</test>
+
+		<!--Successful Corporate General Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>	
+	
+	<test name="RMA_Reg_Funds_AutoChecks_TC_020">
+	<parameter name="LOB" value="GC - General Claims" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoChecks_TC_020" />
+		</classes>
+	</test>
+	
+	<!--Verify That User Can Logged out From Application -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+
+	
+
+
+</suite>

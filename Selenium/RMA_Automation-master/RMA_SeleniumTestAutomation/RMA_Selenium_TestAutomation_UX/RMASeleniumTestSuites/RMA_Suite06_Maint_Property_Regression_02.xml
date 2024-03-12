@@ -1,0 +1,96 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite06_Maint_Property_Regression_02" />
+
+	
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+		<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="1" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That A PowerView Is Created And Created User Is Given Permission 
+		To That PowerView -->
+	<test name="RMA_Reg_PowerviewCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001" />
+		</classes>
+	</test>
+	
+    <!--Maintenance Screen Navigation In RMA Application -->
+	
+	<!--Verify When User Changes The Order Of ToolbarButton In UX PV On Property MAintenance Screen-->
+	<test name="RMA_Reg_Maint_Property_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_006" />
+		</classes>
+	</test>
+	
+	<!--Verify That When User Changes The ToolTip From Old UI By Selecting Setting Update UX View Then The Same Is Updated On Property Maintenance Screen -->
+<!-- 	<test name="RMA_Reg_Maint_Property_TC_005"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_005" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+	
+	<!--Verify In General System Parameters When AutoNumber Property ID (PIN) Is Checked Then Property Id Is Automatically Generated On Property Creation Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_020" />
+		</classes>
+	</test>
+    
+    <!-- Verify In General System Parameters When AutoNumber Property ID (PIN) Is Unchecked Then Property Id Is Given Manually On Property Creation Screen  -->
+	<test name="RMA_Reg_Maint_Property_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_021" />
+		</classes>
+	</test>
+	
+    <!--Verify The Functionality Of View SMS Permission Setting For Property  -->
+    <test name="RMA_Reg_Maint_Property_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_017" />
+		</classes>
+	</test>
+
+    <!--Verify The Functionality Of Update SMS Permission Setting For Property-->
+	<test name="RMA_Reg_Maint_Property_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_019" />
+		</classes>
+	</test>
+
+<!--Verify The Functionality Of Tool Bar Buttons From From Maintenance Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_004" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

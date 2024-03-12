@@ -1,0 +1,106 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Funds_PrintChecks_01" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Setting Up A Bank account With Check Stock Is Validated -->
+	<test name="RMA_Reg_Funds_BankAccount_TC_029">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_029" />
+		</classes>
+	</test>
+
+
+    <!--Successful Corporate General Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Data Entry Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+	
+    <!-- Successful Reserve Creation, Reserve Grid Value Verification, Color Code Change And Tool Tip Amount Of Reserve Progress Image On Claim Screen Is Validated -->
+<!-- 	<test name="RMA_Smoke_TC_009"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_009" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+	<test name="RMA_Reg_PrintChecks_TC_19">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_19" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_PrintChecks_TC_20">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_20" />
+		</classes>
+	</test>
+	
+	<test name="RMA_Reg_PrintChecks_TC_18">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_18" />
+		</classes>
+	</test>
+	
+	<test name="RMA_Reg_PrintChecks_TC_24">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_24" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_PrintChecks_TC_25">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_25" />
+		</classes>
+	</test>
+	
+	<test name="RMA_Reg_PrintChecks_SMS_Permission_01">
+	<parameter name="Permission" value="Revoke" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_SMS_Permission" />
+		</classes>
+	</test>	
+	
+	
+	<test name="RMA_Reg_PrintChecks_TC_12">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_12" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_PrintChecks_SMS_Permission_02">
+	<parameter name="Permission" value="Grant" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_SMS_Permission" />
+		</classes>
+	</test>	
+	
+	<test name="RMA_Reg_PrintChecks_TC_13">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_13" />
+		</classes>
+	</test>
+	
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

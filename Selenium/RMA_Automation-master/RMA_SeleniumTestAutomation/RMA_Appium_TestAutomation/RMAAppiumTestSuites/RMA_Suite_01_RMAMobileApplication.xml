@@ -1,0 +1,33 @@
+
+<suite name="RMA_Suite_01_RMAMobileApplication" parallel="none" allow-return-values="true">
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_01_RMAMobileApplication" />
+<test name="RMA_TC_001">
+		<classes>
+			<class name="rma_appiumtestcases.RMA_TC_001" />
+		</classes>
+</test>
+<test name="RMA_TC_002">
+		<classes>
+			<class name="rma_appiumtestcases.RMA_TC_002" />
+		</classes>
+</test>
+<test name="RMA_TC_003">
+		<classes>
+			<class name="rma_appiumtestcases.RMA_TC_003" />
+		</classes>
+</test>
+<test name="RMA_TC_005">
+		<classes>
+			<class name="rma_appiumtestcases.RMA_TC_005" />
+		</classes>
+</test>
+<test name="RMA_TC_004">
+		<classes>
+			<class name="rma_appiumtestcases.RMA_TC_004" />
+		</classes>
+</test>
+</suite>
+
+

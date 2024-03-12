@@ -1,0 +1,22 @@
+<suite name="RMA_SampleSuite" parallel="none">
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test> 
+  <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+  </test>
+   <test name="RMA_TC_003">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I"/>
+    </classes>
+  </test>
+   <test name="RMA_TC_004">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_001"/>
+    </classes>
+  </test>
+  </suite>

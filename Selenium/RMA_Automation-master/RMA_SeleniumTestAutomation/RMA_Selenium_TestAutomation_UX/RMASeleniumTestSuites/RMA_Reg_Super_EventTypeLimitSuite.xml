@@ -1,0 +1,240 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Super_EventLimitSuite_GC" />
+
+	<parameter name="DataSourceRow" value="1" /><!--To Set The Datasource 
+		Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Super_EventLimitSuite_GC" />
+
+	<parameter name="DataSourceRow" value="1" /><!--To Set The Datasource 
+		Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData -->
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--Successful New Users For Supervisory Chain Creation Is Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="1" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 1 Started here -->
+
+	<!-- Verify the scenario-Select a Event type- Check with Allow access(Checked) 
+		and Allow Create(Checked) -->
+	<!--To Set The LOB Based on Event -->
+	<test name="RMA_Reg_Super_EventLimitAllowCreateUpdateAllowAccessSettings1_1">
+		<parameter name="AllowCreateUpdateOption" value="check" />
+		<parameter name="AllowAcessOption" value="check" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_001">
+				<methods>
+					<include
+						name="RMA_Reg_Super_EventLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Super_EventLimitEventCreationUpdate1_1_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_001" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Super_AccessEvent1_1_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_AccessEvent" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 1 Ended here -->
+	<!-- Run Independently Test Scenario 2 Started here -->
+	<!-- Verify the scenario-Select a Event type- Check with Allow access(Checked) 
+		and Allow Create(Unchecked) -->
+
+	<test name="RMA_Reg_Super_EventLimitNotAllowCreateUpdateButAllowAccess1_2">
+		<parameter name="AllowCreateUpdateOption" value="uncheck" />
+		<parameter name="AllowAcessOption" value="check" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_001">
+				<methods>
+					<include
+						name="RMA_Reg_Super_EventLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_EventLimitNoEventCreation1_2_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_EventNotAbleToCreateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test name="RMA_Reg_Super_AccessEvent1_2_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_AccessEvent" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_NotAbleToUpdateEventVerification1_2_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_EventNotAbleToUpdateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 2 Ended here -->
+
+	<!-- Run Independently Test Scenario 3 Started Here -->
+	<!-- Verify the scenario-Select a Event type- Check with Allow access(UnChecked) 
+		and Allow Create(checked) -->
+
+	<test name="RMA_Reg_Super_EventLimitAllowCreateUpdateNotAllowAccess1_3">
+		<parameter name="AllowCreateUpdateOption" value="check" />
+		<parameter name="AllowAcessOption" value="uncheck" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_001">
+				<methods>
+					<include
+						name="RMA_Reg_Super_EventLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_EventLimitCreateEventButNotAcess1_3_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_003">
+				<methods>
+					<include
+						name="RMA_Reg_Super_EventAbleToCreateButNotAccessVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_Super_EventLimit_TC_001_NotAccess1_3_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_NotAccessEvent" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<!-- Run Independently Test Scenario 3 Ended Here -->
+
+	<!-- Run Independently Test Scenario 4 Started here -->
+	<!-- Verify the scenario-Select a Event type- Check with Allow access(UnChecked) 
+		and Allow Create(Unchecked) -->
+
+	<test name="RMA_Reg_Super_EventLimitNotAllowCreateUpdateNotAllowAccess1_4">
+		<parameter name="AllowCreateUpdateOption" value="uncheck" />
+		<parameter name="AllowAcessOption" value="uncheck" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_001">
+				<methods>
+					<include
+						name="RMA_Reg_Super_EventLimitAllowCreateUpdateAllowAccessSettings" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_EventLimitNoEventCreation1_4_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_003">
+				<methods>
+					<include name="RMA_Reg_Super_EventNotAbleToCreateVerification" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_EventLimit_NotAccess1_4_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_NotAccessEvent" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!-- Run Independently Test Scenario 4 Ended here -->
+
+	<!-- Run Independently Test Scenario 5 Ended here -->
+
+	<!-- Verify the scenario-Select a Event type- Check with Allow access(unChecked) 
+		and Allow Create(unChecked) Event Limits Do Not Work When Event Limit Flag 
+		Is OFF In User Privilege -->
+
+	<test name="RMA_Reg_Super_EventLimitFlagOff">
+		<parameter name="LimitFlag" value="Off" />
+		<parameter name="AllowCreateUpdateOption" value="uncheck" />
+		<parameter name="AllowAcessOption" value="uncheck" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_001">
+				<methods>
+					<include name="RMA_Reg_Super_EventLimitFlagOff" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_EventLimitEventCreationUpdate_EventLimitFlagOff">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_001" />
+		</classes>
+	</test>
+	<test name="RMA_Reg_Super_AccessEvent_EventLimitFlagOff">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_EventLimit_TC_002">
+				<methods>
+					<include name="RMA_Reg_Super_AccessEvent" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<!--Successful Verify When Reserve Limits Are Exceeded CheckBox is OFF, 
+		Reserves Do Not Go On Hold Is Validated -->
+	<!-- Run Independently Test Scenario 5 Ended here -->
+	<!-- Deleted Created Users -->
+	<test name="RMA_Reg_Super_UserDeletion_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserDeletion_TC_001" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

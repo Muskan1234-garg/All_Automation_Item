@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="RMA_Suite01_Funds_Deposit_Regression_01" parallel="none"
+	allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite01_Funds_Deposit_Regression_01" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Creating Deposit From BankAccounts Link, Verify Record Summary And Multiple 
+		Clear Are Validated -->
+	<test name="RMA_Smoke_075">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Deposit_TC_001" />
+		</classes>
+	</test>
+	<!--Creating Deposit From BankAccounts Link, Look Up Verification, Account 
+		Balance Verification And Void Of Deposits Are Validated -->
+	<test name="RMA_Smoke_076">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Deposit_TC_002" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

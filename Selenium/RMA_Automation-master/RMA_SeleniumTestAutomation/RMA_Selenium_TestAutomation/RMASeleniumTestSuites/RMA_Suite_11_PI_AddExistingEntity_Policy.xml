@@ -1,0 +1,136 @@
+<suite name="RMA_Suite_11_PI_AddExistingEntity_Policy" parallel="none" allow-return-values="true">
+
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_11_PI_AddExistingEntity_Policy " />
+
+	<!--Verify That RMA Application Is Logged In-->
+  	<test name="RMA_TC_001">
+    	<classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_001"/>
+   		</classes>
+ 	 </test> 
+
+	<!--Verify That Required DSN Is Selected In RMA Application-->
+    <test name="RMA_TC_002">
+   	 	<classes>
+     		 <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    	</classes>
+    </test>
+
+    <!-- Verify That Person Involved Link Is Present In Created General Claim Policy & Also Catering Addition And Deletion Of Witness For Future Reference-->
+       <test name="RMA_TC_260">
+    	<classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_260"/>
+    	</classes>
+     </test>
+     
+    <!--Verify Adding,Editing And Deleting Of An Existing Employee As Person Involved on General Claim Policy -->
+     <test name="RMA_TC_261">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_261"/>
+   		 </classes>
+     </test>
+     
+    <!--Verify Adding,Editing And Deleting Of An Existing Medical Staff As Person Involved on General Claim Policy -->
+     <test name="RMA_TC_262">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_262"/>
+   		 </classes>
+     </test>
+     
+     <!--Verify Adding,Editing And Deleting Of An Existing Driver As Person Involved on General Claim Policy -->
+     <test name="RMA_TC_263">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_263"/>
+   		 </classes>
+     </test>
+     
+	<!--Verify Adding,Editing And Deleting Of An Existing Other Person As Person Involved on General Claim Policy -->
+     <test name="RMA_TC_264">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_264"/>
+   		 </classes>
+     </test>
+     
+     <!--Verify Adding,Editing And Deleting Of An Existing Patient As Person Involved on General Claim Policy -->
+      <test name="RMA_TC_265">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_265"/>
+   		 </classes>
+     </test>
+     
+     <!--Verify Adding,Editing And Deleting Of An Existing Physician As Person Involved on General Claim Policy -->
+      <test name="RMA_TC_266">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_266"/>
+   		 </classes>
+     </test>
+     
+     <!--Verify Adding,Editing And Deleting Of An Existing Witness As Person Involved on General Claim Policy -->
+      <test name="RMA_TC_267">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_267"/>
+   		 </classes>
+     </test>
+     
+       <!-- Verify That Person Involved Link Is Present In Created Workers' comp Claim Policy & Also Catering Addition And Deletion Of Witness For Future Reference-->
+       <test name="RMA_TC_268">
+    	<classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_268"/>
+    	</classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of Existing Employee As Person Involved on Workers' comp Claim Policy -->
+      <test name="RMA_TC_269">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_269"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of Existing Medical Staff As Person Involved on Workers' comp Claim Policy -->
+      <test name="RMA_TC_270">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_270"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of Existing Driver As Person Involved on Workers' comp Claim Policy -->
+      <test name="RMA_TC_271">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_271"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of Existing An Other Person, As Person Involved on Workers' comp Claim Policy -->
+      <test name="RMA_TC_272">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_272"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of Existing Patient As Person Involved on Workers' comp Claim Policy -->
+      <test name="RMA_TC_273">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_273"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of Existing Physician As Person Involved on Workers' comp Claim Policy -->
+      <test name="RMA_TC_274">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_274"/>
+   		 </classes>
+     </test>
+      <!--Verify Adding,Editing And Deleting Of Existing Witness As Person Involved on Workers' comp Claim Policy -->
+     
+      <test name="RMA_TC_275">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_275"/>
+   		 </classes>
+     </test>
+     
+ </suite> 
+ 

@@ -1,0 +1,98 @@
+
+<suite name="RMA_Suite_13_SmokeSuite_03_WC" parallel="none" allow-return-values="true">
+
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="2" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_13_SmokeSuite_03_WC" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Successfully Policy Is Attached On Workers Claim Is Validated -->
+	<test name="RMA_Smoke_TC_045_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_045_WC" />
+		</classes>
+	</test>
+
+	<!--Successful Reserve Creation Is Validated On Carrier Claim -->
+	<test name="RMA_Smoke_TC_046">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_046" />
+		</classes>
+	</test>
+
+	<!-- Successful Payment Creation Against An Already Created Reserve Is Validated -->
+	<test name="RMA_Smoke_TC_047">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_047" />
+		</classes>
+	</test>
+
+	<!-- Successful Collection Addition On An Already Created Reserve Is Validated 
+		On Carrier Claim -->
+	<test name="RMA_Smoke_TC_048">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_048" />
+		</classes>
+	</test>
+
+	<!--Verify User Can Create Schedule Check Of 5 Split Successfully Through Financial Reserve On Carrier Claim -->
+	<test name="RMA_Smoke_TC_049">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_049" />
+		</classes>
+	</test>
+
+	<!--Successful First and Final Payment Creation Is Validated -->
+	<test name="RMA_Smoke_TC_050">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_050" />
+		</classes>
+	</test>
+
+	<test name="RMA_Smoke_TC_087_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_087_WC" />
+		</classes>
+	</test>
+	<test name="RMA_Smoke_TC_088_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_088_WC" />
+		</classes>
+	</test>
+	<test name="RMA_Smoke_TC_089">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_089" />
+		</classes>
+	</test>
+	<test name="RMA_Smoke_TC_090">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_090" />
+		</classes>
+	</test>
+	<test name="RMA_Smoke_TC_091">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_091" />
+		</classes>
+	</test>
+	-->
+	<test name="RMA_Smoke_TC_092_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_092_WC" />
+		</classes>
+	</test>
+</suite>

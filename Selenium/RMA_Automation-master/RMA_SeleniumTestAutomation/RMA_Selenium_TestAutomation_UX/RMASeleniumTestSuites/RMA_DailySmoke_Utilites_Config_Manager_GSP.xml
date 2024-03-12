@@ -1,0 +1,100 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="2" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_DailySmoke_Utilites_Config_Manager_GSP" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002_Configuration_Manager">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002_Configuration_Manager" />
+		</classes>
+	</test>
+	
+<!--Verification OF Auto Populate Claim Date Reported Dropdown Field Functionality When Populate Claim Date Reported with Date of Claim Option Is Selected On System Settings Tab Of General System Parameter Setup On Configuration Manager -->
+	<test name="RMA_Reg_Config_Manager_GSP_TC01">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Config_Manager_GSP_TC01" />
+			<parameter name="LOBTest" value="GC" />
+
+			<!-- <parameter name="LOBTest" value="VC" />	
+		 	<parameter name="LOBTest" value="WC" />
+ -->
+			
+		</classes>
+	</test>
+<!--   	Verify That RMA Application Is Logged In -->
+  <test name="RMA_TC_001_a">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--  Verify That Required DSN Is Selected In RMA Application-->
+	<test name="RMA_TC_002_Configuration_Manager_a">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002_Configuration_Manager" />
+		</classes>
+	</test>
+
+	<!--Verification OF Auto Populate Claim Date Reported Dropdown Field Functionality When Populate Claim Date Reported with Date of System Option Is Selected On System Settings Tab Of General System Parameter Setup On Configuration Manager. -->
+	<test name="RMA_Reg_Config_Manager_GSP_TC02">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Config_Manager_GSP_TC02" />
+			<parameter name="LOBTest" value="GC" />
+			<parameter name="LOBTest" value="VC" />
+			<parameter name="LOBTest" value="WC" /> 				
+		</classes>
+	</test>
+
+	<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001_b">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002_Configuration_Manager_b">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002_Configuration_Manager" />
+		</classes>
+	</test>
+
+<!--   	Verification OF Auto Populate Claim Date Reported Dropdown Field Functionality When None Option Is Selected On System Settings Tab Of General System Parameter Setup On Configuration Manager  -->
+	<test name="RMA_Reg_GSP_TC03">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Config_Manager_GSP_TC03" />
+		<parameter name="LOBTest" value="GC" />
+		</classes>
+	</test>
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001_c">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002_Configuration_Manager_c">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002_Configuration_Manager" />
+		</classes>
+	</test>
+
+	<!-- Verification Of Whether Quality Management Tab Is Displayed On Event Screen When The Given Setting "Use Quality Management for Events" Is Enabled / Disabled In Event Section Of System Tab  On Configuration Manager -->
+ <test name="RMA_Reg_GSP_TC04">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Config_Manager_GSP_TC04" />
+		</classes>
+	</test>
+
+</suite>

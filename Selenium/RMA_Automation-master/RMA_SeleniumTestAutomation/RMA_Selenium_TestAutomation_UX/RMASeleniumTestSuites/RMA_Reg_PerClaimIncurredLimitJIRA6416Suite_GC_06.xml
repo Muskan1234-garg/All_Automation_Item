@@ -1,0 +1,547 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_PerClaimIncurredLimitJIRA6416Suite_GC_06" />	
+	
+	<parameter name="DataSourceRow" value="1" /><!--To Set The Datasource 
+		Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData -->	
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Successful New Users For Supervisory Chain Creation Is Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="3" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Successful Revert Setting From Utilities Page Is Validated  -->
+	<test name="RMA_Reg_Super_DeSelectALLSetting_TC_001">
+	<parameter name="LOB" value="GC - General Claims" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_DeSelectALLSetting_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful Set Reserve Limit At User And Validate It On Supervisory Chain -->
+	<!--To Set The LOB Based on claim -->
+	<test name="RMA_Reg_Super_ReserveLimit_TC_001">
+	<parameter name="LOB" value="GC - General Claims" />
+	<parameter name="LimitFactor" value="10" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_ReserveLimit_TC_001" />
+		</classes>
+	</test>
+		
+	<!--Successful Set Per Claim Incurred Limits At User And Validate It On Supervisory Chain -->
+	<!--To Set The LOB Based on claim -->
+	<test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_001">
+	<parameter name="LOB" value="GC - General Claims" />
+	<parameter name="LimitFactor" value="12" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_001" />
+		</classes>
+	</test>			
+	
+	<!-- RMA-6416 Test Case TC_INCL_037 Is Started-->
+	
+	<!--Successful Selection Of Required Settings In User Privilege SetUp Page And Payment Parameter Setup Page Is Validated -->
+	 <test name="RMA_Reg_SuperGen_UtilityAndSecuritySettingsForIncurred_TC_001_02">
+	 <parameter name="ReserveLimit_Exceeded" value="uncheck" />
+	 <parameter name="SupervisoryApproval_Reserve" value="check" />
+	 <parameter name="GroupOf_Supervisor" value="uncheck" />
+	 <parameter name="Immediate_Supervisor" value="check" />
+	 <parameter name="Adjuster_Chain" value="uncheck" />
+	 <parameter name="IncurredLimit_Exceeded" value="check" />
+	 <parameter name="Enable_ReserveLimit" value="check" />
+	 <parameter name="Enable_IncurredLimit" value="uncheck" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_UtilityAndSecuritySettingsForIncurred_TC_001" />
+		</classes>
+	</test>		
+		
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>	
+	
+	<!--Successful 1st Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_12">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully" />
+	 <parameter name="ClassNameForFirstReserveCreation" value="Yes" />
+	 <parameter name="ClassNameForReserveType" value="1" />
+	 <parameter name="ClassNameForReserveAmount" value="10" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful 2nd Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_13">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully And Is Not Put On Hold Due To Per Claim Incurred Limit As Enable Incurred Limit Setting Is OFF On User Privileges Screen" />
+	 <parameter name="ClassNameForReserveType" value="2" />
+	 <parameter name="ClassNameForReserveAmount" value="10" />	 
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>	
+		
+	<!--Successful Verify 3rd Reserve Is Not Created and Is Not Put On Hold As Reserve Limit Is Breached Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_14">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Not Created and Is Not Put On Hold As Reserve Limit Is Breached" />
+	 <parameter name="ClassNameForReserveType" value="3" />
+	 <parameter name="ClassNameForReserveAmount" value="12" />
+	 <parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::ErrorMessageWhenRerserveLimitExceededSettingIsOFF" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful Logout And Login With Selected Zone Is Validated -->
+	 <test name="RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001_01">
+	 <parameter name="ClassNameForUserName" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::UserFirstName[2]" />
+	 <parameter name="ClassNameForPassword" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::SupervisoryUserPassword" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001" />
+		</classes>
+	</test>	
+	
+	<!-- RMA-6416 Test Case TC_INCL_037 Is Ended-->
+	
+	<!-- Common Settings for RMA-6416 Test Case TC_INCL_038 to TC_INCL_042 -->	
+	<!--Successful Selection Of Required Settings In User Privilege SetUp Page And Payment Parameter Setup Page Is Validated -->
+	 <test name="RMA_Reg_SuperGen_UtilityAndSecuritySettingsForIncurred_TC_001_01">
+	 <parameter name="ReserveLimit_Exceeded" value="uncheck" />
+	 <parameter name="SupervisoryApproval_Reserve" value="check" />
+	 <parameter name="GroupOf_Supervisor" value="uncheck" />
+	 <parameter name="Immediate_Supervisor" value="check" />
+	 <parameter name="Adjuster_Chain" value="uncheck" />
+	 <parameter name="IncurredLimit_Exceeded" value="check" />
+	 <parameter name="Enable_ReserveLimit" value="check" />
+	 <parameter name="Enable_IncurredLimit" value="check" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_UtilityAndSecuritySettingsForIncurred_TC_001" />
+		</classes>
+	</test>	
+	
+	<!-- RMA-6416 Test Case TC_INCL_038 Is Started-->
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>	
+	
+	<!--Successful 1st Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_01">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully" />
+	 <parameter name="ClassNameForFirstReserveCreation" value="Yes" />
+	 <parameter name="ClassNameForReserveType" value="1" />
+	 <parameter name="ClassNameForReserveAmount" value="5" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful 2nd Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_02">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully" />
+	 <parameter name="ClassNameForReserveType" value="2" />
+	 <parameter name="ClassNameForReserveAmount" value="5" />	 
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful Verify 3rd Reserve Goes On Hold As Per Claim Incurred Limit Is Breached Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_03">
+	 <parameter name="ClassNameForHeader" value="Reserve Goes On Hold As Per Claim Incurred Limit Is Breached" />
+	 <parameter name="ClassNameForReserveType" value="3" />
+	 <parameter name="ClassNameForReserveAmount" value="10" />
+	 <parameter name="ClassNameForHoldStatus" value="Yes" />
+	 <parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::ExceedPerClaimIncurredLimitsOnHold" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful Verify 4th Reserve Is Not Created and Is Not Put On Hold As Reserve Limit Is Breached Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_04">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Not Created and Is Not Put On Hold As Reserve Limit Is Breached" />
+	 <parameter name="ClassNameForReserveType" value="4" />
+	 <parameter name="ClassNameForReserveAmount" value="12" />
+	 <parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::ErrorMessageWhenRerserveLimitExceededSettingIsOFF" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful Verify 2nd Reserve Is Not Updated and Is Not Put On Hold As Reserve Limit Is Breached Is Validated -->
+	 <test name="RMA_Reg_SuperGen_EditReserve_TC_001_01">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Not Updated and Is Not Put On Hold As Reserve Limit Is Breached" />
+	 <parameter name="ClassNameForEditReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[2]" />
+	 <parameter name="ClassNameForEditReserveAmount" value="15" />
+	 <parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::ErrorMessageWhenRerserveLimitExceededSettingIsOFF" />
+	  	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_EditReserve_TC_001" />
+		</classes>
+	</test>		
+	
+	<!--Successful Logout And Login With Selected Zone Is Validated -->
+	 <test name="RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001_02">
+	 <parameter name="ClassNameForUserName" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::UserFirstName[1]" />
+	 <parameter name="ClassNameForPassword" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::SupervisoryUserPassword" />
+	 <parameter name="ClassNameForZoneName" value="Claims" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001" />
+		</classes>
+	</test>		
+	
+	<!--Successful Verify 3rd Hold Reserve Is Available To Approve On Supervisory Approval Grid And Approved By Manager Is Validated -->
+	<test name="RMA_Reg_SuperGen_ReserveApproval_TC_001_01">
+	<parameter name="ClassNameForHeader" value="Reserve Is Available To Approve On Supervisory Approval Grid And Approved By Manager" />
+	<parameter name="ClassNameForReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[3]" />
+	<parameter name="ClassNameForReserveAmount" value="10" />
+	<parameter name="ClassNameForIncurredAmount" value="10" />
+ 	<parameter name="ClassNameForHoldReason" value="Exceeded Per Claim Incurred Limit" />
+ 	<parameter name="ClassNameForSubmittedByUser" value="2" />
+ 	<parameter name="ClassNameForSubmittedToUser" value="1" />
+ 	<parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::ApproveReserveBySupervisoryManager" />
+	  	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveApproval_TC_001" />
+		</classes>
+	</test>			
+	
+	<!--Successful Logout And Login With Selected Zone Is Validated -->
+	 <test name="RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001_03">
+	 <parameter name="ClassNameForUserName" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::UserFirstName[2]" />
+	 <parameter name="ClassNameForPassword" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::SupervisoryUserPassword" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001" />
+		</classes>
+	</test>	
+	
+	<!-- RMA-6416 Test Case TC_INCL_038 Is Ended-->
+	
+	<!-- RMA-6416 Test Case TC_INCL_039 Is Started-->
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>		
+	
+	<!--Successful 1st Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_05">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully" />
+	 <parameter name="ClassNameForFirstReserveCreation" value="Yes" />
+	 <parameter name="ClassNameForReserveType" value="1" />
+	 <parameter name="ClassNameForReserveAmount" value="5" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>		
+		
+	<!--Successful 2nd Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_06">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully" />
+	 <parameter name="ClassNameForReserveType" value="2" />
+	 <parameter name="ClassNameForReserveAmount" value="3" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful 3rd Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_09">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully" />
+	 <parameter name="ClassNameForReserveType" value="3" />
+	 <parameter name="ClassNameForReserveAmount" value="3" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>	
+		
+	<!--Successful 1st Reserve Edit Is Validated -->
+	 <test name="RMA_Reg_SuperGen_EditReserve_TC_001_02">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Updated Successfully" />
+	 <parameter name="ClassNameForEditReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[1]" />
+	 <parameter name="ClassNameForEditReserveAmount" value="6" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_EditReserve_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful Verify On 2nd Reserve Edit Reserve Goes On Hold As Per Claim Incurred Limit Is Breached Is Validated -->
+	 <test name="RMA_Reg_SuperGen_EditReserve_TC_001_03">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Updated And Goes On Hold As Per Claim Incurred Limit is Breached" />
+	 <parameter name="ClassNameForEditReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[2]" />
+	 <parameter name="ClassNameForEditReserveAmount" value="10" />
+	 <parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::ExceedPerClaimIncurredLimitsOnHold" />
+	 <parameter name="ClassNameForHoldStatus" value="Yes" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_EditReserve_TC_001" />
+		</classes>
+	</test>		
+
+	<!--Successful Verify 3rd Reserve Is Not Updated And Reserve Do Not Go On Hold As Reserve Limit Is Breached Is Validated -->
+	 <test name="RMA_Reg_SuperGen_EditReserve_TC_001_04">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Not Updated And Is Not Put On Hold As Reserve Limit Is Breached" />
+	 <parameter name="ClassNameForEditReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[3]" />
+	 <parameter name="ClassNameForEditReserveAmount" value="12" />
+	 <parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::ErrorMessageWhenRerserveLimitExceededSettingIsOFF" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_EditReserve_TC_001" />
+		</classes>
+	</test>		
+	
+	<!--Successful Verify On 3rd Reserve Edit Reserve Goes On Hold As Per Claim Incurred Limit Is Breached Is Validated -->
+	 <test name="RMA_Reg_SuperGen_EditReserve_TC_001_05">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Updated And Goes On Hold As Per Claim Incurred Limit is Breached" />
+	 <parameter name="ClassNameForEditReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[3]" />
+	 <parameter name="ClassNameForEditReserveAmount" value="10" />
+	 <parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::ExceedPerClaimIncurredLimitsOnHold" />
+	 <parameter name="ClassNameForHoldStatus" value="Yes" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_EditReserve_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful Logout And Login With Selected Zone Is Validated -->
+	 <test name="RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001_04">
+	 <parameter name="ClassNameForUserName" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::UserFirstName[1]" />
+	 <parameter name="ClassNameForPassword" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::SupervisoryUserPassword" />
+	 <parameter name="ClassNameForZoneName" value="Claims" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001" />
+		</classes>
+	</test>		
+	
+	<!--Successful Verify 2nd Hold Reserve Is Available To Approve On Supervisory Approval Grid And Approved By Manager Is Validated -->
+	<test name="RMA_Reg_SuperGen_ReserveApproval_TC_001_02">
+	<parameter name="ClassNameForHeader" value="Reserve Is Available To Approve On Supervisory Approval Grid And Approved By Manager" />
+	<parameter name="ClassNameForReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[2]" />
+	<parameter name="ClassNameForReserveAmount" value="10" />
+	<parameter name="ClassNameForIncurredAmount" value="10" />
+ 	<parameter name="ClassNameForHoldReason" value="Exceeded Per Claim Incurred Limit" />
+ 	<parameter name="ClassNameForSubmittedByUser" value="2" />
+ 	<parameter name="ClassNameForSubmittedToUser" value="1" />
+ 	<parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::PerClaimIncurredLimitExceedForSupervisoryManager" />
+	  	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveApproval_TC_001" />
+		</classes>
+	</test>		
+	
+	<!--Successful Verify 3rd Hold Reserve Is Available To Approve On Supervisory Approval Grid And Approved By Manager Is Validated -->
+	<test name="RMA_Reg_SuperGen_ReserveApproval_TC_001_03">
+	<parameter name="ClassNameForHeader" value="Reserve Is Available To Approve On Supervisory Approval Grid And Approved By Manager" />
+	<parameter name="ClassNameForReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[3]" />
+	<parameter name="ClassNameForReserveAmount" value="10" />
+	<parameter name="ClassNameForIncurredAmount" value="10" />
+ 	<parameter name="ClassNameForHoldReason" value="Exceeded Per Claim Incurred Limit" />
+ 	<parameter name="ClassNameForSubmittedByUser" value="2" />
+ 	<parameter name="ClassNameForSubmittedToUser" value="1" />
+ 	<parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::PerClaimIncurredLimitExceedForSupervisoryManager" />
+	  	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveApproval_TC_001" />
+		</classes>
+	</test>			
+	
+	<!--Successful Logout And Login With Selected Zone Is Validated -->
+	 <test name="RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001_09">
+	 <parameter name="ClassNameForUserName" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::UserFirstName[0]" />
+	 <parameter name="ClassNameForPassword" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::SupervisoryUserPassword" />
+	 <parameter name="ClassNameForZoneName" value="Claims" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001" />
+		</classes>
+	</test>		
+	
+	<!--Successful Verify 3rd Hold Reserve Is Available To Approve On Supervisory Approval Grid And Approved By Manager Is Validated -->
+	<test name="RMA_Reg_SuperGen_ReserveApproval_TC_001_04">
+	<parameter name="ClassNameForHeader" value="Reserve Is Submitted To Senior Manager And Available To Approve On Supervisory Approval Grid And Approved Successfully By Senior Manager" />
+	<parameter name="ClassNameForReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[3]" />
+	<parameter name="ClassNameForReserveAmount" value="10" />
+	<parameter name="ClassNameForIncurredAmount" value="10" />
+ 	<parameter name="ClassNameForHoldReason" value="Exceeded Per Claim Incurred Limit" />
+ 	<parameter name="ClassNameForSubmittedByUser" value="2" />
+ 	<parameter name="ClassNameForSubmittedToUser" value="0" />
+ 	<parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::ApproveReserveBySupervisoryManager" />
+	  	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveApproval_TC_001" />
+		</classes>
+	</test>		
+	<!--Successful Logout And Login With Selected Zone Is Validated -->
+	 <test name="RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001_05">
+	 <parameter name="ClassNameForUserName" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::UserFirstName[2]" />
+	 <parameter name="ClassNameForPassword" value="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001::SupervisoryUserPassword" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_LogoutLoginWithZone_TC_001" />
+		</classes>
+	</test>	
+	
+	<!-- RMA-6416 Test Case TC_INCL_039 Is Ended-->
+	
+	<!-- RMA-6416 Test Case TC_INCL_042 Is Started-->
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>		
+	
+	<!--Successful 1st Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_07">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully" />
+	 <parameter name="ClassNameForFirstReserveCreation" value="Yes" />
+	 <parameter name="ClassNameForReserveType" value="1" />
+	 <parameter name="ClassNameForReserveAmount" value="6" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>		
+	
+	<!--Successful 2nd Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_08">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully" />
+	 <parameter name="ClassNameForReserveType" value="2" />
+	 <parameter name="ClassNameForReserveAmount" value="6" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>		
+		
+	<!--Successful Payment Creation On 2nd Reserve Is Validated -->
+	 <test name="RMA_Reg_SuperGen_PaymentCreation_TC_001_02">	
+	 <parameter name="ClassNameForHeader" value="Payment Is Created Successfully" /> 
+	 <parameter name="ClassNameForPaymentAmount" value="6" />	 
+	 <parameter name="ClassNameForReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[2]" />
+	 <parameter name="ClassNameForTransactionType" value="1" />
+	  	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_PaymentCreation_TC_001" />
+		</classes>
+	</test>		
+	
+	<!--Successful Verify Payment Is Not Offset As Reserve Limit Breached Is Validated -->
+	 <test name="RMA_Reg_SuperGen_PaymentOffset_TC_001_01">	 
+	 <parameter name="ClassNameForControlNumber" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_PaymentCreation_TC_001::StrControlNumber" />	 
+	 <parameter name="ClassNameForOffsetCase" value="Payment Is Not Offset As Reserve Limit Breached" />
+	   	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_PaymentOffset_TC_001" />
+		</classes>
+	</test>		
+	
+	<!-- RMA-6416 Test Case TC_INCL_042 Is Ended-->
+	
+	<!-- RMA-6416 Test Case TC_INCL_041 Is Started-->
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>		
+	
+	<!--Successful 1st Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_10">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully" />
+	 <parameter name="ClassNameForFirstReserveCreation" value="Yes" />
+	 <parameter name="ClassNameForReserveType" value="1" />
+	 <parameter name="ClassNameForReserveAmount" value="6" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>		
+	
+	<!--Successful 2nd Reserve Creation Is Validated -->
+	 <test name="RMA_Reg_SuperGen_ReserveCreation_TC_001_11">
+	 <parameter name="ClassNameForHeader" value="Reserve Is Created Successfully" />
+	 <parameter name="ClassNameForReserveType" value="2" />
+	 <parameter name="ClassNameForReserveAmount" value="6" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001" />
+		</classes>
+	</test>	
+			
+	<!--Successful Verify On 1st Reserve, Payment Creation With Insufficient Reserve With Set Reserve Option, A Message Is Displayed As Transaction cannot be made as Per Claim Incurred Limit is exceeded And On Continue Payment Is Created Is Validated -->
+	 <test name="RMA_Reg_SuperGen_PaymentWithInsufficientReserve_TC_001">
+	 <parameter name="ClassNameForHeader" value="Payment Creation With Insufficient Reserve With Set Reserve Option, A Message Is Displayed As Transaction Cannot Be Made As Per Claim Incurred Limit is Exceeded And On Continue Payment Is Created" />	 
+	 <parameter name="ClassNameForLOB" value="GC - General Claims"/>
+	 <parameter name="ClassNameForPaymentAmount" value="20" />	 
+	 <parameter name="ClassNameForBalanceAmount" value="14" />	
+	 <parameter name="ClassNameForReserveType" value="rmaseleniumtestscripts.RMA_Reg_SuperGen_ReserveCreation_TC_001::CreatedReserveType[1]" />
+	 <parameter name="ClassNameForTransactionType" value="1" />
+	 <parameter name="ClassNameForInsufficientCase" value="Payment With Per Claim Incurred Limit" />	  	
+	 <parameter name="ClassNameForInsufficientSubCase" value="Set Reserve And Continue" />	
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SuperGen_PaymentWithInsufficientReserve_TC_001" />
+		</classes>
+	</test>		
+	
+	<!-- RMA-6416 Test Case TC_INCL_041 Is Ended-->
+	
+	<!-- RMA-6416 Test Case TC_INCL_040 Is Started-->
+		
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>			
+	
+	<!--Successful Verify First & Final Payment Is Not Created As Per Claim Incurred Limit Is Exceeded And Reserve Limit Is Enabled Is Validated -->
+	<test name="RMA_Reg_SuperGen_PaymentCreation_TC_001_01">
+		<parameter name="ClassNameForHeader" value="First And Final Payment Is Not Created As Per Claim Incurred Limit Is Exceeded And Reserve Limit Is Enabled" />
+		<parameter name="ClassNameForFirstAndFinalPayment" value="true" />
+		<parameter name="ClassNameForPaymentAmount" value="30" />
+		<parameter name="ClassNameForReserveType" value="1" />
+		<parameter name="ClassNameForTransactionType" value="1" />
+		<parameter name="ClassNameForVerificationMessage" value="rmaseleniumPOM_UX.RMA_Selenium_POM_VerificationMessage::ErrorMessageWhenRerserveLimitExceededSettingIsOFF" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_SuperGen_PaymentCreation_TC_001" />
+		</classes>
+	</test>	
+	<!-- RMA-6416 Test Case TC_INCL_040 Is Ended-->
+	
+	<!--Successful Revert Setting From Utilities Page Is Validated -->
+	<test name="RMA_Reg_Super_DeSelectALLSetting_TC_001_01">
+	<parameter name="LOB" value="GC - General Claims" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_DeSelectALLSetting_TC_001" />
+		</classes>
+	</test>	
+	
+	<!-- Successful Verify Existing Users For Supervisory Chain Deletion Is Validated -->
+	 <test name="RMA_Reg_Super_UserDeletion_TC_001">
+			<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserDeletion_TC_001" />
+		</classes>
+	</test>
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

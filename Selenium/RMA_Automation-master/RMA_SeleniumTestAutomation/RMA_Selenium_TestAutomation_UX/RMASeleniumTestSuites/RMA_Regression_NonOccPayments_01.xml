@@ -1,0 +1,92 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+ <!-- Change The System Time To Eastern Standard Time Before Execution Of This Suite -->
+ <!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Regression_NonOccPayments_01" />
+ 		
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>		
+	
+	<!--Verify The Mapping Of Offset And Tax through Utilities To Be Used In Non-Occupational Payments -->
+	<test name="RMA_Reg_Funds_NonOccPay_OffsetTaxMapping">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPay_OffsetTaxMapping" />
+		</classes>
+	</test>	
+	
+	<!--Details Filled In The Class(Week Plan) Associated With A NonOcc Plan When Attached To A Claim Is Validated -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_004" />
+		</classes>
+	</test>	
+	
+	<!--"Check Prints Before End Of Pay Day" CheckBox Functionality On Plan->Class(Week Type) Is Validated -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_011" />
+		</classes>
+	</test>
+	
+	<!--Offsets Applied To Plan Are Deducted From Gross Payments And Value In Net Amount And Gross Amount Net Offsets Will Be Displayed After Deducing Offsets Values Is Validated -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_012" />
+		</classes>
+	</test>
+	
+	<!--Post Offset Applied On The Plan Will Get Deducted Only After Deducting Tax and Final Amount Will Get Displayed In Net Amount Is Validated -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_013" />
+		</classes>
+	</test>
+	
+	<!--'Deduct Offsets Only For Full Payment Periods' CheckBox Functionality Is Validated Over A Disability Plan Of Week Type Is Validated -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_014" />
+		</classes>
+	</test>
+	
+	<!--'Pro-Rate All Offset Deductions' CheckBox Functionality Is Validated Over A Disability Plan Of Week Type Is Validated -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_015" />
+		</classes>
+	</test>
+	
+	<!--Verification Of Non-Occupational Payments From Financial/Reserves Screen Are Validated -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_017" />
+		</classes>
+	</test>
+	
+		<!--Multiple Disability Class Settings Are Validated -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_016" />
+		</classes>
+	</test>
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

@@ -1,0 +1,72 @@
+ <!-- Bank account used is "Bank for Duplicacy" which is already created in 
+	the DB except for the case RMA_QTPRegression_TC_008 -->
+
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="4" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_03_QTPRegression_02" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- '8 - Payment Total, Invoice Number, and Trans Date within X Days' Duplicate Payment Criteria Is Validated -->
+	<test name="RMA_QTPRegression_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_010" />
+		</classes>
+	</test>
+
+	<!-- '7 - Claims with same claimant SSN & From - To Date Range' Duplicate Payment Criteria Is Validated -->
+	<test name="RMA_QTPRegression_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_009" />
+		</classes>
+	</test>
+
+	<!-- '10 - Claims with same Claimant SSN, Amount, From - To Date Range, and Invoice Number' Duplicate Payment Criteria Is Validated -->
+	<test name="RMA_QTPRegression_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_011" />
+		</classes>
+	</test>
+
+	<!-- '12 - Payment Total, Invoice Number, Split Amt and Trans Date within X Days' Duplicate Payment Criteria Is Validated -->
+	<test name="RMA_QTPRegression_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_012" />
+		</classes>
+	</test>
+
+	<!-- '14 - Current Claim with same Claimant SSN, Amount, From - To Date Range, and Invoice Number' Duplicate Payment Criteria Is Validated -->
+	<test name="RMA_QTPRegression_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_014" />
+		</classes>
+	</test>
+	
+	<!-- '3 - From and To Date Range' Duplicate Payment Criteria Is Validated -->
+	<test name="RMA_QTPRegression_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_008" />
+		</classes>
+	</test>
+
+<!-- '13 - Claims with same Payee SSN, Amount, From - To Date Range, and Invoice Number' Duplicate Payment Criteria Is Validated-->
+	<test name="RMA_QTPRegression_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_013" />
+		</classes>
+	</test>
+</suite>

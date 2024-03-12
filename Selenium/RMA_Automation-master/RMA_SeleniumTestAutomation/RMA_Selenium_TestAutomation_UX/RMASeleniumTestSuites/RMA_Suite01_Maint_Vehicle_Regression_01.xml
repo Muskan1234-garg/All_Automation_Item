@@ -1,0 +1,139 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite01_Maint_Vehicle_Regression_01" />
+
+	<!-- Test Case RMA_QTPRegression_TC_029_C Is Required To Reset The OLD UI Settings After The Execution Of RMA_QTPRegression_TC_027 & RMA_QTPRegression_TC_029 -->
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+<!-- Check The Functionality Of Accident Child Menu From Vehicle Maintenance -->
+ 	<test name="RMA_reg_Maint_Vehicle_TC009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_009" />
+		</classes>
+	</test>
+	 
+<!-- Verification Of Claim Number And Accident Date From Accident Child Record From Vehicle -->
+	<test name="RMA_reg_Maint_Vehicle_TC010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_010" />
+		</classes>
+	</test>
+	 
+	<!--Add And Edit A Vehicle On Maintenance Screen-->
+	<test name="RMA_Reg_Maint_Vehicle_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_003" />
+		</classes>
+	</test> 
+	<!--Add And Delete A Vehicle On Maintenance Screen-->
+	<test name="RMA_Reg_Maint_Vehicle_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_004" />
+		</classes>
+	</test> 
+	
+	<!--Verify The Weight Field From Vehicle Allowing Decimal Values -->
+	<test name="RMA_reg_Maint_Vehicle_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_005" />
+		</classes>
+	</test>
+<!--Verify Functionality Of Lease Check Box On Vehicle Screen -->
+	 <test name="RMA_reg_Maint_Vehicle_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_006" />
+		</classes>
+	</test>
+
+	<!--Verify Addition Of Inspection Child Record For Vehicle -->
+	<test name="RMA_reg_Maint_Vehicle_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_007" />
+		</classes>
+	</test>
+	<!--Verify The Validation Message For Vehicle Year -->
+	<test name="RMA_reg_Maint_Vehicle_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_008" />
+		</classes>
+	</test>
+	<!--Attachments SMS Permission From Vehicle Maintenance -->
+	<test name="RMA_reg_Maint_Vehicle_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_019" />
+		</classes>
+	</test>
+	<!--Create New Vehicle SMS Permission -->
+	<test name="RMA_reg_Maint_Vehicle_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_020" />
+		</classes>
+	</test>
+	<!--Delete SMS Permission From Vehicle Maintenance -->
+	<test name="RMA_reg_Maint_Vehicle_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_021" />
+		</classes>
+	</test>
+	<!--Supplementals SMS Permission From Vehicle Maintenance-->
+	<test name="RMA_reg_Maint_Vehicle_TC_022">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_022" />
+		</classes>
+	</test>
+	<!--View SMS Permission From Vehicle Maintenance -->
+	<test name="RMA_reg_Maint_Vehicle_TC_023">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_023" />
+		</classes>
+	</test>
+	<!-- Update SMS Permission From Vehicle Maintenance -->
+	<test name="RMA_reg_Maint_Vehicle_TC_025">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_025" />
+		</classes>
+	</test>
+	<!--Add A Vehicle Whose Vehicle Id Is Auto Generated -->
+	 
+	<test name="RMA_Reg_Maint_Vehicle_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_002" />
+		</classes>
+	</test> 
+	
+	<!--Navigate To Maintenance Screen -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test> 
+	
+	<!--Verify The Functionality Of ToolBar Buttons From Vehicle Maintenance Screen-->
+	<test name="RMA_Reg_Maint_Vehicle_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_001" />
+		</classes>
+	</test> 
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

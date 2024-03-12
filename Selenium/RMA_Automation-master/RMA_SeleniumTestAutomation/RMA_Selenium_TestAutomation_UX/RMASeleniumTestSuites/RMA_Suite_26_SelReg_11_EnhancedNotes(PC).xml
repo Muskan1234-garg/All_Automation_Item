@@ -1,0 +1,170 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_26_SelReg_11_EnhancedNotes(PropertyClaim)" />
+	
+	<!-- This Suite Contains TestCase RMA_SeleniumRegession_TC_084 at The End Of All the Person Involved As It Contains Code To Delete The Created Litigation At The End -->
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>	
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Property Claim Is Validated -->
+ 	<test name="RMA_SeleniumRegression_TC_163_PC"> 
+		<classes> 
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_163" /> 
+		</classes> 
+ 	</test> 
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Adjuster For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_061_PC"> 
+ 		<classes> 
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_061" /> 
+ 		</classes> 
+ 	</test> 
+<!--'Create, Edit And Delete Of An Enhanced Note On A Claimant For A Property Claim Is Validated --> -->
+	<test name="RMA_SeleniumRegressiom_TC_062_PC"> 
+ 		<classes> 
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_062" /> 
+		</classes> 
+	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A Defendant For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_063_PC"> 
+		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_063" /> 
+ 		</classes> 
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A Subrogation For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_064_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_064" /> 
+ 		</classes> 
+ 	</test> 
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(MedicalStaff) For A Property Claim Is Validated --> 
+	<test name="RMA_SeleniumRegressiom_TC_067_PC"> 
+ 		<classes> 
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_067" /> 
+ 		</classes> 
+ 	</test> 
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Employee) For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_068_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_068" /> 
+ 		</classes> 
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Physician) For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_069_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_069" /> 
+ 		</classes> 
+ 	</test> 
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Patient) For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_070_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_070" /> 
+ 		</classes> 
+	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Driver) For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_071_PC"> 
+ 		<classes> 
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_071" />
+ 		</classes> 
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Witness) For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_072_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_072" /> 
+ 		</classes>
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(OtherPerson) For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_073_PC">
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_073" /> 
+ 		</classes> 
+ 	</test> 
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Payment For A Property Claim Is Validated --> 
+	<test name="RMA_SeleniumRegressiom_TC_076_PC"> 
+ 		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_076" /> 
+ 		</classes> 
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A Collection For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_077_PC"> 
+ 		<classes> 
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_077" /> 
+		</classes> 
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A Demand Offer On Subrogation Page For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_086_PC">
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_086" /> 
+ 		</classes> 
+ 	</test>	
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A Financial/Reserve For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_087_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_087" /> 
+ 		</classes> 
+ 	</test> 
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Patient) On Injury For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_091_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_091" /> 
+ 		</classes> 
+ 	</test> 
+	<!--'Create, Edit And Delete Of An Enhanced Note On An Accommodation For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_098_PC">
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_098" /> 
+ 		</classes> 
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A DemandOffer(Injury/Illness) For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_097_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_097" /> 
+ 		</classes> 
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A Case Management For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_125_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_125" /> 
+ 		</classes> 
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A Vocational Rehabilitation For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_126_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_126" /> 
+ 		</classes> 
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A Case Manager For A Property Claim Is Validated -->
+ 	<test name="RMA_SeleniumRegressiom_TC_127_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_127" /> 
+ 		</classes> 
+ 	</test> 
+ 	<!--'Create, Edit And Delete Of An Enhanced Note On A Case Manager Notes For A Property Claim Is Validated --> 
+ 	<test name="RMA_SeleniumRegressiom_TC_108_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_108" /> 
+ 		</classes> 
+ 	</test> 
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Demand Offer On Claimant Page For A Property Claim Is Validated -->
+ 	<test name="RMA_SeleniumRegressiom_TC_130_PC"> 
+ 		<classes> 
+ 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_130" /> 
+ 		</classes> 
+ 	</test> 
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

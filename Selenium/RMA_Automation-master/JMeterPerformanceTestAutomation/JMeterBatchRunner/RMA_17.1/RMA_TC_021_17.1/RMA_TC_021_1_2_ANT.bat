@@ -1,0 +1,2 @@
+cd D:\apache-jmeter-3.0\apache-jmeter-3.0\extras
+call ANT  -Druncount=2 -Dusers=1 -Drampup= 1 -Dtest=RMA_TC_021_17.1

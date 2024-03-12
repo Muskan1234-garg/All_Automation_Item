@@ -1,0 +1,122 @@
+<suite name="RMA_Suite_10_PI_AddExisting_AddNewEntity_Event " parallel="none" allow-return-values="true">
+
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_10_PI_AddExisting_AddNewEntity_Event " />
+
+	<!--Verify That RMA Application Is Logged In-->
+  	<test name="RMA_TC_001">
+    	<classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_001"/>
+   		</classes>
+ 	 </test> 
+
+	<!--Verify That Required DSN Is Selected In RMA Application-->
+    <test name="RMA_TC_002">
+   	 	<classes>
+     		 <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    	</classes>
+    </test>
+
+    <!-- Verify that Persons Involved Link/Option Is Present For Event-->
+     <test name="RMA_TC_246">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_TC_246"/>
+   		 </classes>
+     </test>
+     
+    <!--Verify Adding,Editing And Deleting Of An Existing Employee As Person Involved on Event -->
+     <test name="RMA_TC_247">
+    	<classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_247"/>
+    	</classes>
+     </test>
+     
+    <!--Verify Adding,Editing And Deleting Of An Existing Medical Staff As Person Involved on Event -->
+      <test name="RMA_TC_248">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_248"/>
+   		 </classes>
+     </test>
+     
+     <!--Verify Adding,Editing And Deleting Of An Existing Driver As Person Involved on Event -->
+      <test name="RMA_TC_249">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_249"/>
+   		 </classes>
+     </test>
+     
+	<!--Verify Adding,Editing And Deleting Of An Existing Other Person As Person Involved on Event -->
+      <test name="RMA_TC_250">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_250"/>
+   		 </classes>
+     </test>
+     
+     <!--Verify Adding,Editing And Deleting Of An Existing Patient As Person Involved on Event -->
+      <test name="RMA_TC_251">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_251"/>
+   		 </classes>
+     </test>
+     
+     <!--Verify Adding,Editing And Deleting Of An Existing Physician As Person Involved on Event -->
+      <test name="RMA_TC_252">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_252"/>
+   		 </classes>
+     </test>
+     
+     <!--Verify Adding,Editing And Deleting Of An Existing Witness As Person Involved on Event -->
+      <test name="RMA_TC_253">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_253"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of New Employee As Person Involved on Event -->
+      <test name="RMA_TC_254">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_254"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of New Medical Staff As Person Involved on Event -->
+      <test name="RMA_TC_255">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_255"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of New Driver As Person Involved on Event -->
+      <test name="RMA_TC_256">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_256"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of New Other Person, As Person Involved on Event -->
+      <test name="RMA_TC_257">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_257"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of New Patient As Person Involved on Event -->
+      <test name="RMA_TC_258">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_258"/>
+   		 </classes>
+     </test>
+     
+      <!--Verify Adding,Editing And Deleting Of New Physician As Person Involved on Event -->
+      <test name="RMA_TC_259">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_259"/>
+   		 </classes>
+     </test>
+     
+ </suite> 
+ 

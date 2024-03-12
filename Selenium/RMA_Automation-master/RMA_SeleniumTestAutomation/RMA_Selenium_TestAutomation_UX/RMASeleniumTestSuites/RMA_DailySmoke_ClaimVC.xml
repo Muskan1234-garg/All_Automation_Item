@@ -1,0 +1,92 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="2" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_DailySmoke_ClaimVC" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+<!-- Verification Of Claim Number And Accident Date From Accident Child Record From Vehicle -->
+<!-- Note: For this case to Execute The Financial Key Should be at Claimant Level -->
+	<test name="RMA_reg_Maint_Vehicle_TC010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Vehicle_TC_010" />
+		</classes>
+	</test>	
+
+<!--Successful Corporate Vehicle Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Data Entry Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_002_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_VC" />
+		</classes>
+	</test>
+	
+<!--Verify Attachment of Documents Happens In Claim Successfully Along-with NG Grid Search Filter Functionalities-->
+	 <test name="RMA_Smoke_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_021" />
+		</classes>
+</test> 
+
+<!-- Successful Reserve Creation, Reserve Grid Value Verification, Color Code Change And Tool Tip Amount Of Reserve Progress Image On Claim Screen Is Validated -->
+	 <test name="RMA_Smoke_TC_009_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_009" />
+		</classes>
+</test>
+	
+<!--Successful Payment Addition Is Validated -->
+	 <test name="RMA_Smoke_TC_011_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_011" />
+		</classes>
+</test>
+
+<!--Verify Attachment of Documents Happens In Payment Successfully Along-with NG Grid Search Filter Functionalities-->
+	 <test name="RMA_Smoke_TC_032">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_032" />
+		</classes>
+</test> 
+
+<!--Successful Payment Addition Is Validated -->
+	 <test name="RMA_Smoke_TC_011GridVerification_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_011GridVerification" />
+		</classes>
+</test>
+
+
+<!--Successful Collection Addition Is Validated -->
+	 <test name="RMA_Smoke_TC_014_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_014" />
+		</classes>
+</test>
+
+<!--Verify Attachment of Documents Happens In Collection Successfully Along-with NG Grid Search Filter Functionalities-->
+	 <test name="RMA_Smoke_TC_036">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_036" />
+		</classes>
+</test>
+
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>

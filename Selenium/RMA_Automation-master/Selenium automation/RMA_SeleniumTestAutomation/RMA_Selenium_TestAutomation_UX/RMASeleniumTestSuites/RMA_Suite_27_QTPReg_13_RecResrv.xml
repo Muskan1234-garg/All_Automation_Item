@@ -1,0 +1,74 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="3" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite27_QTPReg_13_RecResrv"/>
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!-- Verify That You Can Setup Recovery Reserve Types On Financials From Utilities Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_105">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_105" />
+		</classes>
+	</test>	
+	<!-- Verify Reserve Is Added Successfully Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_106">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_106" />
+		</classes>
+	</test>	
+	<!-- Verify Payment against Recovery reserve cannot be done Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_107">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_107" />
+		</classes>
+	</test>	
+	<!-- Verify Collection Happen Successfully Is Validated  --> 	
+	 <test name="RMA_QTPRegression_TC_108">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_108" />
+		</classes>
+	</test> 
+	<!-- Verify Payment History Display All The Transaction Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_109">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_109" />
+		</classes>
+	</test>
+	<!-- Verify The Setting "Set Reserve Balance To Zero" Is Not In Effect For The Recovery Reserve Is Validated  --> 	
+	 <test name="RMA_QTPRegression_TC_110">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_110" />
+		</classes>
+	</test>	
+		<!-- Verify The Setting 'Set Negative Reserve Balance To Zero' Is Not In Effect For The Recovery Reserve Is Validated  --> 	
+	 <test name="RMA_QTPRegression_TC_111">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_111" />
+		</classes>
+	</test>	 
+	<!-- Verify The Setting 'Calculate Collections In Reserve Balance(All Claims)' Is Not In Effect For The Recovery Reserve Is Validated  --> 	
+	 <test name="RMA_QTPRegression_TC_112">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_112" />
+		</classes>
+	</test>	
+	<!-- Verify The Setting 'Calculate Collections In Incurred Balance(All Claims):' Is Not In Effect For The Recovery Reserve Is Validated  --> 	
+	 <test name="RMA_QTPRegression_TC_113">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_113" />
+		</classes>
+	</test>	
+</suite>

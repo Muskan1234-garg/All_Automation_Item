@@ -1,0 +1,1368 @@
+package rmaseleniumPOM_UX;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+//Default Package Import Completed
+
+import rmaseleniumtestscripts.RMA_TC_BaseTest;
+
+public class RMA_Selenium_POM_Home extends RMA_TC_BaseTest{
+	public static WebElement Element = null;
+	public static List<WebElement> ElementList = null;
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_DefaultView_Img_Reload
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Reload Image On RMA Application Default View Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-05-22-2017                                 
+	//============================================================================================
+	public static WebElement RMAApp_DefaultView_Img_Reload(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@ng-click='main.reLoadScreen($root.selectedId)']"));//Unique Id  Of Reload Image On RMA Application Default View Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_DefaultView_Img_Close
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Reload Image On RMA Application Default View Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-05-22-2017                                 
+	//============================================================================================
+	public static WebElement RMAApp_DefaultView_Img_Close(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@ng-click='main.closeScreen($root.selectedId)']"));//Unique Id  Of Reload Image On RMA Application Default View Page Is Fetched
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_Maint_Generic_Save
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Save Image On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-05-22-2017  
+	//ModifiedBy			: 0.1 - RenuVerma-05-22-2017 Save ID for Utility Pages
+
+	//============================================================================================
+	public static WebElement RMAApp_Generic_Img_Save(WebDriver driver)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[contains(@id,'save') or contains(@id,'Save')]")); //Unique Id Of Save Image On RMA Application Page Is Fetched
+		}catch (Exception|Error e){	 
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_ModalDialog
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Generic Modal Dialog On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-05-22-2017     
+	//ModifyBy				: 0.0 - RenuVerma-09-13-2017 : added @class='modal-content']  in xpath as few of the model popup is not having class property as @class='modal-dialog'                        
+	//============================================================================================
+	public static WebElement RMAApp_Generic_ModalDialog(WebDriver driver)
+	{
+		Element = null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[@class='modal-dialog' or @class='modal-content']"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} //Unique Id Of Generic Modal Dialog On RMA Application Page Is Fetched
+		return Element;
+	}
+
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericBtn_ModalDialogOK
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which OK Button On Generic Modal Dialog On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-05-22-2017                                
+	//============================================================================================
+	public static WebElement RMAApp_GenericBtn_ModalDialogOK(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[(@id='btnRoll' or @id='btn_del') and (@aria-label = 'ok' or @name= 'btn_ok') or (@aria-label = 'Ok') or (@aria-label = 'OK')]")); //Unique Id Of OK Button On Generic Modal Dialog On RMA Application Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericBtn_ModalDialogCancel
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Cancel Button On Generic Modal Dialog On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-05-22-2017    
+	//ModifyBy				: 0.0 - RenuVerma-09-13-2017 : added id=btn_cancel  in xpath as few of the model popup is not having class property as id=btnCancel                          
+	//============================================================================================
+	public static WebElement RMAApp_GenericBtn_ModalDialogCancel(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@id='btnCancel' or @id='btn_cancel']")); //Unique Id Of Cancel Button On Generic Modal Dialog On RMA Application Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericToast_ErrorMsg
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Error Toast Message On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-05-22-2017                                
+	//============================================================================================
+	public static WebElement RMAApp_GenericToast_ErrorMsg(WebDriver driver)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[@class='toast toast-error']")); //Unique Id Of Error Toast Message On RMA Application Page Is Fetched
+		}catch (Exception|Error e){	 
+		}
+		return Element;
+
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericBtn_ErrorToastMsgClose
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Close Button On Error Toast Message On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-05-22-2017                                
+	//============================================================================================
+	public static WebElement RMAApp_GenericBtn_ErrorToastMsgClose(WebDriver driver)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[@class='toast-close-button ng-scope']")); //Unique Id Of Close Button On Error Toast Message On RMA Application Page Is Fetched
+		}catch (Exception|Error e){	 
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericBtn_SubEntityAdd
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Add Button To Add Sub Entities Like Person Involved (Which Display Option To Add New Or Add Existing) On RMA Application Claim Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-08-06-2017                                
+	//============================================================================================
+	public static WebElement RMAApp_GenericBtn_SubEntityAdd(WebDriver driver,String Entity)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[contains(text(),'"+Entity+"')]/ancestor::div[4]//*[@uib-tooltip='Add New']/i")); // Unique Id Of Add Button To Add Sub Entities Like Person Involved (Which Display Option To Add New Or Add Existing) On RMA Application Claim Page Is Fetched
+		}catch (Exception|Error e){	 
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericBtn_SubEntitySearch
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Search Button To Add Sub Entities Like Person Involved (Which Display Option To Add New Or Add Existing) On RMA Application Claim Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-08-09-2017                                
+	//============================================================================================
+	public static WebElement RMAApp_GenericBtn_SubEntitySearch(WebDriver driver,String Entity)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[contains(text(),'"+Entity+"')]/ancestor::div[4]//*[@uib-tooltip='Search']/i")); // Unique Id Of Search Button To Add Sub Entities Like Person Involved (Which Display Option To Add New Or Add Existing) On RMA Application Claim Page Is Fetched
+		}catch (Exception|Error e){	 
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_LinkExistance
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Link Existence/Not Existence On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-05-31-2017 
+	//ModifiedBy			: 0.0 - RenuVerma-08-07-2017
+	//============================================================================================
+	public static WebElement RMAApp_Generic_RMAAppLink(WebDriver driver, String LinkText)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[contains(text(),'"+LinkText+"') and contains(@ng-click,'grid.appScope.columnClick')]"));
+		} catch (Exception|Error e) {			
+		}
+		return Element;
+	}	
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_RMAAppLinkRightHandSide
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Link Existence/Not Existence On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-04-07-2020 
+	//============================================================================================
+	public static WebElement RMAApp_Generic_RMAAppLinkRightHandSide(WebDriver driver, String LinkText)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[@role='link' and contains(text(),'"+LinkText+"')]"));
+		} catch (Exception|Error e) {			
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_RMAAppPartialLink
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Partial LinkExistence/Not Existence On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-05-31-2017                                  
+	//============================================================================================
+	public static WebElement RMAApp_Generic_RMAAppPartialLink(WebDriver driver, String LinkText)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[contains(text(),'"+LinkText+"') and contains(@ng-click,'grid.appScope.columnClick')]"));
+		} catch (Exception|Error e) {
+
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_RMAAppText
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Link Not Exist On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 -RenuVerma-05-31-2017                                                                   
+	//============================================================================================
+	public static WebElement RMAApp_Generic_RMAAppText(WebDriver driver, String Text)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[contains(text(),'"+Text+"')]"));
+		} catch (Exception|Error e) {			
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_RMAAppExactText
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Link Not Exist On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 -NikitaThani-01-31-2020                                                                   
+	//============================================================================================
+	public static WebElement RMAApp_Generic_RMAAppExactText(WebDriver driver, String Text)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[normalize-space(text())='"+Text+"']"));
+		} catch (Exception|Error e) {			
+		}
+		return Element;
+	}
+
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_RMAAttachAppLink
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Link Not Exist On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 -NikitaThani-01-31-2020                                                             
+	//============================================================================================
+	public static WebElement RMAApp_Generic_RMAAttachAppLink(WebDriver driver, String Text)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[contains(@ng-click,'grid.appScope.columnClick')]/span[contains(text(),'"+Text+"')]"));
+		} catch (Exception|Error e) {			
+		}
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_RMAObjectTagFrame
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Frame Of Object Tag On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 -RenuVerma-06-02-2017                                                                   
+	//============================================================================================
+	public static WebElement RMAApp_Generic_RMAObjectTagFrame(WebDriver driver)
+	{
+		Element = null;
+		try{
+			Element= driver.findElement(By.xpath(".//*[@id='MemoDiv']/div/object"));
+		} catch (Exception|Error e) {	
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_CancelCloseButton
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Cancel/Close Image Button On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 -RenuVerma-06-02-2017                                                                   
+	//============================================================================================
+	public static WebElement RMAApp_Generic_CancelCloseButton(WebDriver driver)
+	{Element = null;
+
+	//Element= driver.findElement(By.name("btnCancelmemo"));
+	Element = driver.findElement(By.xpath(".//*[@name='btnCancelmemo' and @role='button']"));
+	return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Maint_Generic_DeleteRecord
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Delete Record Image Button On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		  
+	//Revision				: 0.0 - KumudNaithani-06-02-2017 
+	//============================================================================================
+	public static WebElement RMAApp_Generic_Img_DeleteRecord(WebDriver driver)
+	{
+		Element = null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[@id='Delete Record']"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} //Unique Id Of Delete Record Image Button On RMA Application Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericBtn_EnityAdd
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Add Button To Add Entities Like Person Involved, Arbitration On Created, Events, Claims Etc On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver	, Entity Corresponding 	To Which The Add Button Needs To Be Clicked
+	//Revision				: 0.0 - KumudNaithani-05-22-2017                                
+	//============================================================================================
+	//public static WebElement RMAApp_GenericBtn_EnityAdd(WebDriver driver, String Entity)
+	//{
+	//Element = null;
+	//try{
+	//Element = driver.findElement(By.xpath(".//*[contains(text(),'"+Entity+"')]/ancestor::div[1]/span[1]/i")); //Unique Id Of dd Button To Add Entities Like Person Involved, Arbitration On Created, Events, Claims Etc On RMA Application Page Is Fetched
+	//}catch (Exception|Error e){	 
+	//}
+	//return Element;
+	//}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericBtn_EnityAdd
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Add Button To Add Entities Like Person Involved, Arbitration On Created, Events, Claims Etc On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver	, Entity Corresponding 	To Which The Add Button Needs To Be Clicked
+	//Revision				: 0.0 - KumudNaithani-05-22-2017                                
+	//ModifyBy				: 0.0 - RenuVerma-09-01-2017  : To make More Unique added tooltip value in addnew object xpath
+	//============================================================================================
+	public static WebElement RMAApp_GenericBtn_EnityAdd(WebDriver driver, String Entity)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[contains(text(),'"+Entity+"')]/ancestor::div[1]/*[@uib-tooltip='Add']")); //Unique Id Of dd Button To Add Entities Like Person Involved, Arbitration On Created, Events, Claims Etc On RMA Application Page Is Fetched
+		}catch (Exception|Error e){	 
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_DefaultView_Img_Back
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Back Image On RMA Application Default View Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-06-02-2017                                 
+	//============================================================================================
+	public static WebElement RMAApp_DefaultView_Img_Back(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@ng-click='main.previousScreen($root.selectedId)']"));//Unique X-Path Of Back Image On RMA Application Default View Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_DefaultView_Lbl_BreadcrumbName
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which breadcrumbName On RMA Application Default View Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver,String breadcrumbName		 
+	//Revision				: 0.0 - RenuVerma-06-07-2017                                 
+	//============================================================================================ 
+	public static WebElement RMAApp_DefaultView_Lbl_BreadcrumbName(WebDriver driver,String breadcrumbName)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@id='dvbreadcrumb']//*[contains(text(),'"+breadcrumbName+"')]"));//Unique X-Path Of breadcrumbName On RMA Application Default View Page Is Fetched
+		return Element;
+	} 
+	//============================================================================================
+	//FunctionName 			: RMAApp_NGGrid_ReserveNGGridCheckUnCheckClmNames
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Column Names In Column Selection List of  NG Grid Table (Containing Search Text Boxes) On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver, ColName Of The Type String Signifying The Column Of NG Grid To Which The WebElement Refers To		 
+	//Revision				: 0.0 - RenuVerma-06-06-2017                                      
+	//============================================================================================
+	public static WebElement RMAApp_NGGrid_ReserveNGGridCheckUnCheckClmNames(WebDriver driver, String colName)
+	{
+		Element=null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[contains(@id,'menuitem')]//i[@class='ui-grid-icon-cancel']/parent::*[contains(text(),'"+colName+"')]")); //Unique Id Of Column Names In Column Selection List of NG Grid Table (Containing Search Text Boxes) On RMA Application Page Is Fetched
+		}catch (Exception e) {
+		}
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_NGGrid_Btn_NGGridColumnSort
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Column Header of NG Grid Table (Containing Search Text Boxes) On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver, Col Of The Type Integer Signifying The Column Of NG Grid To Which The WebElement Refers To		 
+	//Revision				: 0.0 - RenuVerma-06-06-2017                                  
+	//============================================================================================
+	public static WebElement RMAApp_NGGrid_Btn_NGGridColumnSort(WebDriver driver)
+	{
+		Element=null;
+		Element = driver.findElement(By.xpath(".//*[contains(@id,'-grid-menu')]/i")); //Unique Id Of Column Header of NG Grid Table  On RMA Application Page Is Fetched
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_Img_Attach
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Attach Image On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-06-15-2017                             
+	//============================================================================================
+	public static WebElement RMAApp_Generic_Img_Attach(WebDriver driver)
+	{
+		Element=null;
+		Element = driver.findElement(By.id("Attach Documents")); 
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_Msg_ToastMessage
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which SelectRowMark Image  On Attachment Document Properties Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-06-15-2017                                        
+	// ============================================================================================
+	public static WebElement RMAApp_Generic_Msg_ToastMessage(WebDriver driver,String Message)
+	{
+		Element=null;
+		Element = driver.findElement(By.xpath(".//*[@class='toast-message']//*[contains(text(),'"+Message+"')]")); //Unique className Of Toast Message On RMA Application UX Page Is Fetched; 
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName                        : RMAApp_Generic_ModelPopup_Img_Close
+	//Description                         : To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Close Button On Model Popup Can Be Identified
+	//Input Parameter             : Driver Variable Of The Type WebDriver              
+	//Revision                            : 0.0 - RenuVerma-06-15-2017                                    
+	// ============================================================================================
+	public static WebElement RMAApp_Generic_ModelPopup_Img_Close(WebDriver driver)
+	{ 
+		Element = null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[(@id='P1' and @class='lg-modal-rm hidden-sm hidden-xs glyphicon glyphicon-remove modalcloseBtn paddingHeaderAppPopup') or (@class='lg-modal-rm hidden-sm hidden-xs glyphicon glyphicon-remove modalcloseBtn')]"));
+			//Element = driver.findElement(By.xpath(".//*[@class='lg-modal-rm hidden-sm hidden-xs glyphicon glyphicon-remove modalcloseBtn']"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		return Element;
+	}
+
+
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_ModelUXDialog_Img_Close
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Close Button On Model UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-01-02-2018                                    
+	// ============================================================================================
+	public static WebElement RMAApp_Generic_ModelUXDialog_Img_Close(WebDriver driver)
+	{ 
+		Element = null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-remove closeBtn']"));
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_Img_SendMail
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Attach Image On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-06-23-2017                             
+	//============================================================================================
+	public static WebElement RMAApp_Generic_Img_SendMail(WebDriver driver)
+	{
+		Element=null;
+		Element = driver.findElement(By.id("Send Mail")); 
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_GeneralClaim_Img_ExecSummary
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Executive Summary Image On RMA Application Claim Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-06-23-2017                            
+	//============================================================================================
+	public static WebElement RMAApp_Generic_Img_ExecSummary(WebDriver driver)
+	{
+		Element=null;
+		Element = driver.findElement(By.id("Executive Summary")); //Unique Id Of Executive Summary Image On RMA Application  Claim Page Is Fetched
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_Pdf_ExecSummary
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Executive Summary Image On RMA Application Claim Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-06-23-2017                            
+	//============================================================================================
+	public static WebElement RMAApp_Generic_Pdf_ExecSummary(WebDriver driver)
+	{
+		Element=null;
+		Element = driver.findElement(By.xpath(".//*[text()='Executive Summary']")); //Unique Id Of Executive Summary Image On RMA Application  Claim Page Is Fetched
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericClaim_Btn_CommentSummary
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Comment Summary Image  Button On RMA Claims Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-02-02-2017                                 
+	//============================================================================================
+	public static WebElement RMAApp_GenericClaim_Btn_CommentSummary(WebDriver driver)
+	{
+		Element = null;
+		try {
+			Element = driver.findElement(By.id("Claim Comment Summary")); //Unique Id Of CommentsSummary Image Button On RMA Application Claim Page Is Fetched
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericClaim_Btn_EnhancedNotes
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Enhanced Notes Image Button On RMA Claims Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-06-14-2017                                 
+	//============================================================================================
+	public static WebElement RMAApp_GenericClaim_Btn_EnhancedNotes(WebDriver driver)
+	{
+		Element = null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[contains(@id,'Enhanced Notes') or contains(@id,'EnhancedNotes')]/i")); //Unique Id Of Enhanced Notes Image Button On RMA Application Claim Page Is Fetched
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericClaim_Btn_Diary
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Diary Image Button On RMA Claims Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-06-14-2017                                 
+	//============================================================================================
+	public static WebElement RMAApp_GenericClaim_Btn_Diary(WebDriver driver)
+	{
+		Element = null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[@id='Diary']/i"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} //Unique Id Of Diary Image Button On RMA Application Claim Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericClaim_Btn_Comments
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Comments Image  Button On RMA Claims Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-02-02-2017                                 
+	//============================================================================================
+	public static WebElement RMAApp_GenericClaim_Btn_Comments(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.id("Comments")); //Unique Id Of Comments TextBox On RMA Application Claim Page Is Fetched
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_Btn_ClaimantHistory
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Claimant History Button On RMA Application Claimant Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-07-03-2017                                 
+	//============================================================================================
+	public static WebElement RMAApp_Generic_Btn_ClaimantHistory(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.id("Claim History")); //Unique Id Of Claimant History Button On RMA Application Claimant Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_Tbl_ClaimantHistory
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Claimant History Table On RMA Application Claimant History Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-07-03-2017                                               
+	//============================================================================================
+	public static WebElement RMAApp_Generic_Tbl_ClaimantHistory(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath("html/body/div[2]/table")); //Unique Id Of Claimant History Table On RMA Application Claimant History Page Is Fetched
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_Img_ViewRecordDiaries
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Claimant History Table On RMA Application Claimant History Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-07-03-2017                                               
+	//============================================================================================
+	public static WebElement RMAApp_Generic_Img_ViewRecordDiaries(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.id("View Record Diaries")); //Unique Id Of Claimant History Table On RMA Application Claimant History Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_QuickLookup_Generic_Btn_AddNew
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Add New Button On Quick Lookup Result Page On RMA Application Is Fetched 
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-10-17-2016                                
+	//============================================================================================
+	public static WebElement RMAApp_QuickLookup_Generic_Btn_AddNew(WebDriver driver)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[@value='Add New']")); 
+		}catch (Exception|Error e) {	
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericUXWindow_Btn_Save
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Save Button On RMA Application UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - NidhiJha-07-17-2017                                 
+	// ============================================================================================
+	public static WebElement RMAApp_GenericUXWindow_Btn_Save(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@ng-click='ConfirmationSave()']")); //Unique Id Of Save Button On RMA Application UX Window Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericUXWindow_Btn_Cancel
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Save Button On RMA Application UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - NidhiJha-07-17-2017                                 
+	// ============================================================================================
+	public static WebElement RMAApp_GenericUXWindow_Btn_Cancel(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@ng-click=' ConfirmationCancel()']")); //Unique Id Of Save Button On RMA Application UX Window Is Fetched
+		return Element;
+	}
+
+	//================================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_GenericUIWindow_Img_Home
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Home Image On RMA Application UI Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - NidhiJha-07-19-2017                                 
+	// ================================================================================================================================================================================================================
+	public static WebElement RMAApp_DefaultUIWindow_Img_Home(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@id='cphMainBody_backToDashboard']/img")); //Unique Id Of Home Image On RMA Application UI Window Is Fetched
+		return Element;
+	}
+
+	//================================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_GenericUXWindow_Tbl
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Table On RMA Application UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - NidhiJha-07-19-2017                                 
+	// ================================================================================================================================================================================================================
+	public static WebElement RMAApp_GenericUXWindow_Tbl(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@class='table table-hover filterPadd ng-scope']")); //Unique Id Of Table On RMA Application UX Window Is Fetched
+		return Element;
+	}
+
+	//================================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_GenericUXWindowDupClaim_Tbl
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Table On RMA Application Duplicate Claim UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - AbhishekRai-07-27-2017                                 
+	// ================================================================================================================================================================================================================
+	public static WebElement RMAApp_GenericUXWindowDupClaim_Tbl(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@class='table table-hover filterPadd']")); //Unique Id Of Table On RMA Application Duplicate Claim UX Window Is Fetched
+		return Element;
+	}
+
+	//================================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_GenericUXWindowDupClaim_Btn_Save
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Save Button On RMA Application Duplicate Claim UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - AbhishekRai-07-27-2017                                 
+	// ================================================================================================================================================================================================================
+	public static WebElement RMAApp_GenericUXWindowDupClaim_Btn_Save(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@ng-click='save()']")); //Unique Id Of Save Button On RMA Application Duplicate Claim UX Window Is Fetched
+		return Element;
+	}
+
+	//================================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_GenericUXWindowDupClaim_Btn_Cancel
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Save Button On RMA Application Duplicate Claim UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - AbhishekRai-07-27-2017                                 
+	// ================================================================================================================================================================================================================
+	public static WebElement RMAApp_GenericUXWindowDupClaim_Btn_Cancel(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@ng-click='cancel()']")); //Unique Id Of Save Button On RMA Application Duplicate Claim UX Window Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_PersonInvolvedWindow_Btn_Close
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Close Image Button On Person Involved Window Displayed On Clicking Add New Button For Person Involved On RMA Application Claim/Event/Litigation Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-09-14-2017                                  
+	// ============================================================================================
+	public static WebElement RMAApp_PersonInvolvedWindow_Btn_Close(WebDriver driver)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[@value='Add New']")); //Unique X-Path Of Close Image Button On Person Involved Window Displayed On Clicking Add Button For Person Involved On RMA Application Claim/Event/Litigation Page
+		}catch (Exception|Error e) {	
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericBtn_EnityViewAll
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which View All Button To Add Entities Like Person Involved, Arbitration On Created, Events, Claims Etc On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver	, Entity Corresponding 	To Which The View All Button Needs To Be Clicked
+	//Revision				: 0.0 - RenuVerma-08-03-2017                                
+	//============================================================================================
+	public static WebElement RMAApp_GenericBtn_EnityViewAll(WebDriver driver, String Entity)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[contains(text(),'"+Entity+"')]/ancestor::div[1]/*[@uib-tooltip='View All']")); //Unique Id Of View All Button To Add Entities Like Person Involved, Arbitration On Created, Events, Claims Etc On RMA Application Page Is Fetched
+		}catch (Exception|Error e){	 
+		}
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericBtn_ViewAllPopup_AddNew
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which View Add New On View All Screen Of Entities Like Person Involved, Arbitration On Created, Events, Claims Etc On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver	, Entity Corresponding 	To Which The Add New On View All Screen Of Entities Needs To Be Clicked
+	//Revision				: 0.0 - RenuVerma-08-03-2017                                
+	//============================================================================================
+	public static WebElement RMAApp_GenericBtn_ViewAllPopup_AddNew(WebDriver driver)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[@id='addicon']/i")); //Unique Id Of Add New On View All Screen Of Entities Like Person Involved, Arbitration On Created, Events, Claims Etc On RMA Application Page Is Fetched
+		}catch (Exception|Error e){	 
+		}
+		return Element;
+	}
+
+	//================================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_GenericUXWindowReserve_Tbl
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Table On RMA Application Reserve UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - AbhishekRai-09-05-2017                                 
+	// ================================================================================================================================================================================================================
+	public static WebElement RMAApp_GenericUXWindowReserve_Tbl(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@class='table table-hover']")); //Unique Id Of Table On RMA Application Duplicate Claim UX Window Is Fetched
+		return Element;
+	}
+
+	//================================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_ClaimReserveSummary_Btn_Close
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Table On RMA Application Reserve UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - AbhishekRai-09-05-2017                                 
+	// ================================================================================================================================================================================================================
+	public static WebElement RMAApp_ClaimReserveSummary_Btn_Close(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@class='lg-modal-rm hidden-sm hidden-xs glyphicon glyphicon-remove modalcloseBtn']")); //Unique Id Of Table On RMA Application Duplicate Claim UX Window Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName                  : RMAApp_Generic_Tbl_QuickSummary
+	//Description                   : To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Quick Summary Table On RMA Application Claim Page Can Be Identified
+	//Input Parameter               : Driver Variable Of The Type WebDriver         
+	//Revision                              : 0.0 - AbhishekRai-10-31-2017                                               
+	//============================================================================================
+	public static WebElement RMAApp_Generic_Tbl_QuickSummary(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@class='table table-hover filterPadd ng-scope']")); //Unique Id Of Claimant History Table On RMA Application Claimant History Page Is Fetched//commented this line as xpath for this element is different from actual
+		//Element = driver.findElement(By.xpath(".//*[@class='table table-hover ng-scope']")); //Unique Id Of Claimant History Table On RMA Application Claimant History Page Is Fetched
+		return Element;
+	}
+
+
+	//================================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_OrgHierarchy_List_OrgLevel
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Table On RMA Application Reserve UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - AbhishekRai-10-11-2017                                 
+	// ================================================================================================================================================================================================================
+	public static WebElement RMAApp_OrgHierarchy_List_OrgLevel(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath("html/body/div[2]/form/uib-accordion/div/div/div[2]/div/div[2]/div[3]/div[1]/select")); //Unique Id Of Table On RMA Application Duplicate Claim UX Window Is Fetched
+		return Element;
+	}	
+
+	//================================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_OrgHierarchy_Lnk_LastName
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Table On RMA Application Reserve UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - AbhishekRai-10-10-2017                                 
+	// ================================================================================================================================================================================================================
+	public static WebElement RMAApp_OrgHierarchy_Lnk_LastName(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@id='orgpanel']/div/div[2]/ul/li/treeitem/ul/li[1]/div/span")); //Unique Id Of Table On RMA Application Duplicate Claim UX Window Is Fetched
+		return Element;
+	}
+
+	//================================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_GenericUXTable_Btn_Close
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Table On RMA Application Reserve UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - AbhishekRai-10-10-2017                                 
+	// ================================================================================================================================================================================================================
+	public static WebElement RMAApp_GenericUXTable_Btn_Close(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@class='glyphicon glyphicon-remove closeBtn']")); //Unique Id Of Table On RMA Application Duplicate Claim UX Window Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_DefaultView_Err_StaticErrorText
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Generic Static Error Message On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-10-16-2015         
+	//Note						:0.1- RenuVerma-02-20-2017 Another POM RMAApp_ErrorMessage_Heading Can Used as This is General For All Screen Error Message
+	//============================================================================================
+	public static WebElement RMAApp_DefaultView_Err_StaticErrorText(WebDriver driver)
+	{
+		WebElement ErrElement = null;
+		try {
+			ErrElement = driver.findElement(By.xpath(".//*[@id='lblError']/font")); //Unique Id Of Generic Static Error Message On RMA Application Is Fetched	
+		} catch (Exception|Error e) {	
+		}
+		return ErrElement;	
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericClaim_Btn_InjuryIllness
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Enhanced Notes Image Button On RMA Claims Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - KumudNaithani-12-22-2017                                 
+	//============================================================================================
+	public static WebElement RMAApp_GenericClaim_Btn_InjuryIllness(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@id='Injury/Illness']/i")); //Unique Id Of Injury/Illness Image Button On RMA Application Claim Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Unit_Img_Salvage
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Salvage Image Button On RMA Application Unit Creation Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-03-01-2018                                 
+	// ============================================================================================
+	public static WebElement RMAApp_Unit_Img_Salvage(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@id='Salvage']/i")); //Unique Id  Of Salvage Image Button On RMA Application Unit Creation Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName                  : RMAApp_Unit_Img_CaseManagement
+	//Description                   : To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Case Management/RTW Image Button On RMA Application Injury Creation Page Can Be Identified
+	//Input Parameter               : Driver Variable Of The Type WebDriver         
+	//Revision                              : 0.0 - ShrutiShruti-03-01-2018                                 
+	// ============================================================================================
+	public static WebElement RMAApp_Unit_Img_CaseManagement(WebDriver driver)
+	{
+		Element = null;
+		//   Element = driver.findElement(By.xpath(".//*[@id='Case Mgt/RTW']/i")); //Unique Id  Of Case Management/RTW Image Button On RMA Application Injury Creation Page Is Fetched
+		Element = driver.findElement(By.xpath(".//*[@id='Case Management']/i")); //Unique Id  Of Case Management/RTW Image Button On RMA Application Injury Creation Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Unit_Img_VocationalRehab
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Vocational Rehabilitation Image Button On RMA Application Case Management Creation Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-03-01-2018                                 
+	// ============================================================================================
+	public static WebElement RMAApp_Unit_Img_VocationalRehab(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@id='Vocational Rehabilitation']/i")); //Unique Id  Of Vocational Rehabilitation Image Button On RMA Application Case Management Creation Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Employee_Img_WithHolding
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Withholding Image Button On RMA Application Employee Creation Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-02-07-2018                                 
+	// ============================================================================================
+	public static WebElement RMAApp_Employee_Img_WithHolding(WebDriver driver)
+	{
+		Element = null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[@id='Withholding']/i"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} //Unique Id  Of Withholding Image Button On RMA Application Employee Creation Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericClaim_Btn_RecordSummary
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Record Summary Image Button On RMA Application Generic Claim Creation Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-02-08-2018                                 
+	// ============================================================================================
+	public static WebElement RMAApp_GenericClaim_Btn_RecordSummary(WebDriver driver)
+	{
+		Element = null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[@id='Record Summary']/i"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} //Unique Id  Of Record Summary Image Button On RMA Application Generic Claim Creation Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericClaim_Btn_MailMerge
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Mail Merge Image Button On RMA Application Generic Claim Creation Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-02-08-2018                                 
+	// ============================================================================================
+	public static WebElement RMAApp_GenericClaim_Btn_MailMerge(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@id='Mail Merge']/i")); //Unique Id  Of Mail Merge Image Button On RMA Application Generic Claim Creation Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_RecordSummary_Btn_Close
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Close Image Button On RMA Application Record Summary Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-02-09-2018                                 
+	// ============================================================================================
+	public static WebElement RMAApp_RecordSummary_Btn_Close(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@id='btnclose' and @ng-click='cancel()']/i")); //Unique Id  Of Close Image Button On RMA Application Record Summary Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName                    : RMAApp_RecordSummary_Txt_Data
+	//Description                     : To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Data Of Record Summary On RMA Application Employee Page Can Be Identified
+	//Input Parameter                 : Driver Variable Of The Type WebDriver       
+	//Revision                        : 0.0 - ShrutiShruti-02-14-2018                            
+	//============================================================================================
+	public static WebElement RMAApp_RecordSummary_Txt_Data(WebDriver driver,String StrMsg)
+	{
+		Element=null;
+		Element = driver.findElement(By.xpath(".//*[contains(text(),'"+StrMsg+"')]")); //Unique Id Data Of Record Summary On RMA Application Employee Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericToast_ErrorMessage
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Generic Static Error Message On RMA Application Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - NikitaThani-02-26-2018                                 
+	//============================================================================================ 
+	public static WebElement RMAApp_GenericToast_ErrorMessage(WebDriver driver)
+	{
+		Element = null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[@class='ng-binding toast-message']"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}//Unique X-Path Of Of Generic Static Error Message On RMA Application Is Fetched	
+		return Element;
+	} 
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericClaim_Btn_Lookup
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Lookup Image Button On RMA Application Generic Claim Creation Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-04-12-2018                                 
+	// ============================================================================================
+	public static WebElement RMAApp_GenericClaim_Btn_Lookup(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@uib-tooltip='Lookup']")); //Unique Id  Of Lookup Image Button On RMA Application Generic Claim Creation Page Is Fetched
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName                    : RMAApp_Maintenance_Physician_Txt_Link
+	//Description                     : To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Physician in Maintenance On RMA Application Employee Page Can Be Identified
+	//Input Parameter                 : Driver Variable Of The Type WebDriver       
+	//Revision                        : 0.0 - ShrutiShruti-04-06-2018                            
+	//============================================================================================
+	public static WebElement RMAApp_Maintenance_Physician_Link(WebDriver driver)
+	{
+		Element=null;
+		Element = driver.findElement(By.xpath(".//*[@id='menu_MaintenanceRoot']/li[12]/a")); //Unique Id Of Physician in Maintenance On RMA Application Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName                    : RMAApp_Maintenance_Physician_Txt_Link
+	//Description                     : To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Physician in Maintenance On RMA Application Employee Page Can Be Identified
+	//Input Parameter                 : Driver Variable Of The Type WebDriver       
+	//Revision                        : 0.0 - ShrutiShruti-04-06-2018                            
+	//============================================================================================
+	public static WebElement RMAApp_Maintenance_Physician_Txt_Link(WebDriver driver)
+	{
+		Element=null;
+		try {
+			Element = driver.findElement(By.linkText("Physician"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} //Unique Id Of Physician in Maintenance On RMA Application Is Fetched
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName                    : RMAApp_Maintenance_Txt_Link
+	//Description                     : To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Maintenance Link On RMA Application Can Be Identified
+	//Input Parameter                 : Driver Variable Of The Type WebDriver       
+	//Revision                        : 0.0 - NikitaThani-04-06-2018                            
+	//============================================================================================
+	public static WebElement RMAApp_Maintenance_Txt_Link(WebDriver driver,String StrMsg)
+	{
+		Element=null;
+		Element = driver.findElement(By.linkText("Maintenance")); //Unique Id Data Of Maintenance Link On RMA Application Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName                    : RMAApp_Funds_Txt_Link
+	//Description                     : To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Maintenance Link On RMA Application Can Be Identified
+	//Input Parameter                 : Driver Variable Of The Type WebDriver       
+	//Revision                        : 0.0 - NikitaThani-04-06-2018                            
+	//============================================================================================
+	public static WebElement RMAApp_Funds_Txt_Link(WebDriver driver,String StrMsg)
+	{
+		Element=null;
+		Element = driver.findElement(By.linkText("Funds")); //Unique Id Data Of Maintenance Link On RMA Application Is Fetched
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenericToast_ErrorMsg
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Error Toast Message On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-07-10-2018                                
+	//============================================================================================
+	public static WebElement RMAApp_GenericToast_WarningMsg(WebDriver driver)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[@class='toast toast-warning]")); //Unique Id Of Warning Toast Message On RMA Application Page Is Fetched
+		}catch (Exception|Error e){	 
+		}
+		return Element;
+
+	}
+	//=================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_Generic_Txt_LookupLastName
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which LastName TextBox On Lookup Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - DebasmitaPati-06-18-2018                                  
+	//================================================================================================================================================================================================
+	public static WebElement RMAApp_Generic_Txt_LookupLastName(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@class='ui-grid-filter-container ng-scope']/div[@class='ng-scope']/input ")); //Unique Id Of LastName TextBox On Lookup Window Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Utilities_Img_Home
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Back Image On RMA Application Default View Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-08-08-2018                                 
+	//============================================================================================
+	public static WebElement RMAApp_Utilities_Img_Home(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@class='user-profile']/i[contains(text(),'home')]"));//Unique X-Path Of Back Image On RMA Application Default View Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_CurrencyTypeField
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Currency Type Field On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - DebasmitaPati-08-14-2018                             
+	//============================================================================================
+	public static WebElement RMAApp_Generic_CurrencyTypeField(WebDriver driver,String LableName)
+	{
+		Element = null;
+		try{
+			Element = driver.findElement(By.xpath(".//*[text()='"+LableName+"']/following-sibling::rmacurrencycontrol[@type='currency']")); //Unique Id Of Currency Type Field On RMA Application Page Is Fetched
+		}catch (Exception|Error e){	 
+		}
+		return Element;
+
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_Img_ModalClose
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Close Image On Modal UX Window Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - DebasmitaPati-08-20-2018                                    
+	// ============================================================================================
+	public static WebElement RMAApp_Generic_Img_ModalClose(WebDriver driver)
+	{ 
+		Element = null;
+		try {
+			Element = driver.findElement(By.xpath(".//*[@class='cancel-modal-rm']/span"));//Unique X-Path Of Close Image On Modal UX Window Is Fetched
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		return Element;
+	}
+
+	//=================================================================================================================================================================================================
+	//FunctionName 			: RMAApp_Generic_Txt_UXGrid_FilterTextBox
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Filter TextBox On UX Grid (like Search Result, Any Lookup Screen, Search Entity/Plan Screen) Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver, FilterBoxName Of The Type String Signifying The FilterBox Of UX Grid To Which The WebElement Refers To		 
+	//Revision				: 0.0 - DebasmitaPati-08-23-2018                                  
+	//================================================================================================================================================================================================
+	public static WebElement RMAApp_Generic_Txt_UXGrid_FilterTextBox(WebDriver driver, String FilterBoxName)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//span[text()='"+FilterBoxName+"']/following::input[@type='text'][1]")); //Unique Id Of Filter TextBox On UX Grid Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_Btn_FilterSearch
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Filter Search Button On UX Grid Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - DebasmitaPati-08-28-2018                                         
+	// ============================================================================================
+	public static WebElement RMAApp_Generic_Btn_FilterSearch(WebDriver driver, String FilterBoxName)
+	{ 
+		Element = null;
+		Element = driver.findElement(By.xpath(".//span[text()='"+FilterBoxName+"']/following::input[@type='text'][1]/following::span[1]")); 
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Generic_Lbl_Header
+	//Description  			: To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Filter Search Button On UX Grid Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-09-11-2018                                         
+	// ============================================================================================
+	public static WebElement RMAApp_Generic_Lbl_Header(WebDriver driver)
+	{ 
+		Element = null;
+		Element = driver.findElement(By.id("DivHeader")); 
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Img_CaseManagement
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Case Management/RTW Image Button On RMA Application Claim(WC) Creation Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - NikitaThani-03-01-2018                                 
+	// ============================================================================================
+
+	public static WebElement RMAApp_Img_CaseManagement(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@id='Case Management']/i")); //Unique Id  Of Case Management/RTW Image Button On RMA Application Claim(WC) Creation Page Is Fetched
+		return Element;
+	} 
+
+	//=================================================================================================================================================================================================
+	//FunctionName           : RMAApp_Btn_LookupLastPage
+	//Description            : To Fetch Unique Property (Such As Id, X-path, Name ) On The Basis Of Which Last Page Button On Lookup Page Can Be Identified
+	//Input Parameter        : Driver Variable Of The Type WebDriver                
+	//Revision               : 0.0 - NikitaThani-04-10-2018                                  
+	//================================================================================================================================================================================================
+	public static WebElement RMAApp_Btn_LookupLastPage(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@class='ui-grid-pager-last']")); //Unique Id Of Last Page Button On Lookup Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_DefaultView_Lbl_RecentlyViewed
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which breadcrumbName On RMA Application Default View Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver,String breadcrumbName		 
+	//Revision				: 0.0 - RenuVerma-06-07-2017                                 
+	//============================================================================================ 
+	public static WebElement RMAApp_DefaultView_Lbl_RecentlyViewed(WebDriver driver,String LblName)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@class='RecentlyViewedDot ng-binding' and contains(text(),'"+LblName+"')]"));//Unique X-Path Of breadcrumbName On RMA Application Default View Page Is Fetched
+		return Element;
+	} 
+	//============================================================================================
+	//FunctionName 			: RMAApp_DefaultView_Lnk_RightZoneMenuNavigation
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Zone Name Combo Box On RMA Application DSN Selection Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-01-22-2019                                 
+	// ============================================================================================
+	//Note: Following Function Only Helps The User To Click On Zone Selection Combo Box. To Select Any Zone Name Please Refer Function: RMAApp_DSNSelect_Cmb_DSNSourceSelection
+
+	public static WebElement RMAApp_DefaultView_Lnk_RightZoneMenuNavigation(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@uib-tooltip='Zone']/i")); //Unique Id  Of Zone Name Combo Box On RMA Application DSN Selection Page Is Fetched
+		return Element;
+	}
+	//============================================================================================
+	//FunctionName 			: RMAApp_DefaultView_Lnk_RightZoneMenuOption
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Zone Name Combo Box On RMA Application DSN Selection Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - RenuVerma-01-22-2019                                 
+	// ============================================================================================
+	//Note: Following Function Only Helps The User To Click On Zone Selection Combo Box. To Select Any Zone Name Please Refer Function: RMAApp_DSNSelect_Cmb_DSNSourceSelection
+
+	public static WebElement RMAApp_DefaultView_Lnk_RightZoneMenuOption(WebDriver driver,String MenuName)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@role='menuitem' and @aria-label='"+MenuName+"']//ancestor::a[1]"));			
+		return Element;
+	}
+
+	//============================================================================================
+	//Function Name               : RMAApp_Generic_Lnk_ThreeDotVertical
+	//Description                 : To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Three Dot Vertical Image On RMA Application UX Page other Than Dashboard Page Can Be Identified
+	//Input Parameter             : Driver Variable Of The Type WebDriver            
+	//Revision                    : 0.0 - DebasmitaPati-02-21-2019                                 
+	// ============================================================================================
+	public static WebElement RMAApp_Generic_Lnk_ThreeDotVertical(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@tooltip-placement='bottom']/*[text()='more_vert']")); //Unique Id  Of Three Dot Vertical Image On RMA Application UX Page other Than Dashboard Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_NGGrid_Btn_EditColumn
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which  Edit Column Button On RMA Application NG Grid Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - DebasmitaPati-04-23-2019                                  
+	//============================================================================================
+	public static WebElement RMAApp_NGGrid_Btn_EditColumn(WebDriver driver)
+	{
+		Element=null;
+		Element = driver.findElement(By.xpath(".//*[@class='grid-column-edit ng-scope']")); //Unique Id  Of Edit Column Button On RMA Application NG Grid Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_NGGrid_Txt_EditColumnName
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Specific Edit Column TextBox On RMA Application NG Grid Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - DebasmitaPati-04-23-2019                                  
+	//============================================================================================
+	public static WebElement RMAApp_NGGrid_Txt_EditColumName(WebDriver driver, String EditColumnName)
+	{
+		Element=null;
+		Element = driver.findElement(By.xpath(".//*[@class='ng-binding'][contains(text(),'"+EditColumnName+"')]//ancestor::div[1]/input")); //Unique Id Of Specific Edit Column TextBox On RMA Application NG Grid Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_GenSysParaSetup_Chk_AllowInternalPolicySearch
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Default "Assigned to" in Create Diary to Current User CheckBox On RMA Application General System Parameter Setup Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - NikitaThani-05-17-2019                              
+	// ============================================================================================
+	public static WebElement RMAApp_GenSysParaSetup_Chk_AllowInternalPolicySearch(WebDriver driver)
+	{
+		Element = driver.findElement(By.id("AllowPolicySearch")); 
+		return Element;
+	}
+
+	/*============================================================================================
+	FunctionName 			: RMAApp_Txt_GenericTextComments
+	Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Content Of Any HTML Text Field On RMA Application Page Can Be Identified
+	Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	Revision				:  0.0 - DebasmitaPati-05-22-2019                               
+============================================================================================ */
+	public static WebElement RMAApp_Txt_GenericTextComments(WebDriver driver)
+	{
+		Element = driver.findElement(By.id("newTextComments")); //Unique ID Of Content Of Any HTML Text Field On RMA Application Page Is Fetched
+		return Element;
+	}
+
+	/*============================================================================================
+	FunctionName 			: RMAApp_Btn_GenericOK
+	Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Ok Button On RMA Application Page Can Be Identified
+	Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	Revision				:  0.0 - DebasmitaPati-05-22-2019                               
+============================================================================================ */
+	public static WebElement RMAApp_Btn_GenericOK(WebDriver driver)
+	{
+		Element = driver.findElement(By.xpath(".//*[@uib-tooltip='Ok']")); //Unique ID Of Ok Button On RMA Application Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Img_RemoveSelectedValue
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Remove Image Of Selected Value From Multi Selection Field On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - DebasmitaPati-05-28-2019                                 
+	// ============================================================================================
+	public static WebElement RMAApp_Img_RemoveSelectedValue(WebDriver driver, String SelectedValue)
+	{
+		Element=null;
+		//Element = driver.findElement(By.xpath(".//*[contains(text(),'"+SelectedValue+"')]/ancestor::li//following-sibling::a[contains(@class, 'ui-select-match-close')]")); //Unique Id  Of Remove Image Of Selected Value From Multi Selection Field On RMA Application Page Is Fetched
+		Element = driver.findElement(By.xpath(".//*[contains(text(),'"+SelectedValue+"')]//preceding::span[contains(@class, 'ui-select-match-close')]")); //Unique Id  Of Remove Image Of Selected Value From Multi Selection Field On RMA Application Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_InnerHeader_Title
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Inner Header Title On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - DebasmitaPati-10-17-2019                                 
+	// ============================================================================================
+	public static WebElement RMAApp_InnerHeader_Title(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@id='frmData']/div[1]/div[1]/div/span/b")); //Unique Id Of Inner Header Title On RMA Application Claim Page Is Fetched
+		return Element;
+	}
+
+	//============================================================================================
+	//FunctionName 			: RMAApp_Txt_link
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Inner Header Title On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-06-30-2020                                
+	// ============================================================================================
+	public static WebElement RMAApp_Txt_link(WebDriver driver, String String)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//span[contains(text(),'"+String+"')]")); //Unique Id Of Inner Header Title On RMA Application Claim Page Is Fetched
+		return Element;
+	}
+	
+	//============================================================================================
+	//FunctionName 			: RMAApp_FirstLnk_Grid
+	//Description  			: To Fetch Unique Property (Such As Id, Xpath, Name ) On The Basis Of Which Inner Header Title On RMA Application Page Can Be Identified
+	//Input Parameter 		: Driver Variable Of The Type WebDriver		 
+	//Revision				: 0.0 - ShrutiShruti-11-19-2020                                
+	// ============================================================================================
+	public static WebElement RMAApp_FirstLnk_Grid(WebDriver driver)
+	{
+		Element = null;
+		Element = driver.findElement(By.xpath(".//*[@class='ui-grid-cell-contents ng-scope']/*")); //Unique Id Of Inner Header Title On RMA Application Claim Page Is Fetched
+		return Element;
+	}
+}

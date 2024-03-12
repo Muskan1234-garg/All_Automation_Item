@@ -1,0 +1,232 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="2" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite16_EnhancedNotes_Policy" />
+
+<!--Verify That RMA Application Is Logged In-->
+<test name="RMA_TC_001">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_001"/>
+</classes>
+</test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application-->  
+<test name="RMA_TC_002">
+<classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+</classes>
+ </test>
+     
+<!-- Successful Creation Of Worker's Compensation Claim With Attached Policy Is Validated--> -->
+ <test name="RMA_TC_335_WCPol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_335_WCPol"/>
+</classes>
+</test>
+     
+<!-- Creation, Edit And Deletion Of Enhanced Notes For Policy Attached With A Claim--> -->
+ <test name="RMA_TC_366_WCPol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_366"/>
+</classes>
+</test>
+     
+<!-- Successful Creation, Edit And Deletion Of Enhanced Notes For An Employee (Policy -Person Involved) Associated With A Claim Is Validated -->
+  <test name="RMA_TC_367_WCPol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_367"/>
+</classes>
+</test>
+     
+ <!--Successful Creation, Edit And Deletion Of Enhanced Notes For A Medical Staff (Policy-Person Involved) Associated With A Claim Is Validated-->
+ <test name="RMA_TC_368_WCPol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_368"/>
+</classes>
+</test>
+     
+ <!--Successful Creation, Edit And Deletion Of Enhanced Notes For A Driver (Policy -Person Involved) Associated With A Claim Is Validated-->
+ <test name="RMA_TC_369_WCPol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_369"/>
+</classes>
+</test>
+
+<!-- Creation, Edit And Deletion Of Enhanced Notes For An Injury (Person Involved) Associated With A Claim -->   
+ <test name="RMA_TC_374_WC_Pol_PI">
+ <classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_374"/>
+ </classes>
+ </test>
+    
+<!-- Creation, Edit And Deletion Of Enhanced Notes For A Demand Offer (Added To Injury) Associated With A Claim -->   
+<test name="RMA_TC_375_WC_Pol_PI">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_375"/>
+</classes>
+</test>
+  
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For Case Management System (Injury) Associated With A Claim -->   
+<test name="RMA_TC_376_WC_Pol_PI">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_376"/>
+</classes>
+</test>
+     
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For Case Manager (Case Management System) Associated With A Claim -->   
+<test name="RMA_TC_377_WC_Pol_PI">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_377"/>
+</classes>
+</test>
+     
+<!-- Creation, Edit And Deletion Of Enhanced Notes For Accommodation (Case Management System) Associated With A Claim -->   
+<test name="RMA_TC_378_WC_Pol_PI">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_378"/>
+</classes>
+</test>
+     
+<!-- Creation, Edit And Deletion Of Enhanced Notes For Vocational Rehab (Case Management System) Associated With A Claim -->   
+<test name="RMA_TC_379_WC_Pol_PI">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_379"/>
+</classes>
+</test>   
+   
+ <!--Successful Creation, Edit And Deletion Of Enhanced Notes For An Other Person (Policy-Person Involved) Associated With A Claim Is Validated-->
+<test name="RMA_TC_370_WCPol">
+<classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_370"/>
+</classes>
+</test>
+     
+ <!--Successful Creation, Edit And Deletion Of Enhanced Notes For A Patient (Policy-Person Involved) Associated With A Claim Is Validated-->
+ <test name="RMA_TC_371_WCPol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_371"/>
+</classes>
+</test>
+ 
+<!--Successful Creation, Edit And Deletion Of Enhanced Notes For A Physician (Policy-Person Involved) Associated With A Claim Is Validated-->
+<test name="RMA_TC_372_WCPol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_372"/>
+</classes>
+</test>
+     
+ <!--Successful Creation, Edit And Deletion Of Enhanced Notes For A Witness (Policy-Person Involved) Associated With A Claim Is Validated-->
+<test name="RMA_TC_373_WCPol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_373"/>
+</classes>
+</test>
+     
+  
+ <!--Successful Creation Of General Claim With Attached Policy Is Validated-->      
+<test name="RMA_TC_335_GC_Pol">
+ <classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_335_GC_Pol"/>
+ </classes>
+</test>
+     
+<!--Creation, Edit And Deletion Of Enhanced Notes For Policy Attached With A Claim-->
+ <test name="RMA_TC_366_GC_Pol">
+<classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_366"/>
+</classes>
+</test>
+     
+<!--Successful Creation, Edit And Deletion Of Enhanced Notes For An Employee (Policy-Person Involved) Associated With A Claim Is Validated-->
+ <test name="RMA_TC_367_GC_Pol">
+<classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_367"/>
+</classes>
+</test>
+
+<!--Successful Creation, Edit And Deletion Of Enhanced Notes For A Medical Staff (Policy-Person Involved) Associated With A Claim Is Validated-->
+<test name="RMA_TC_368_GC_Pol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_368"/>
+</classes>
+</test>
+     
+<!--Successful Creation, Edit And Deletion Of Enhanced Notes For A Driver (Policy-Person Involved) Associated With A Claim Is Validated-->              
+<test name="RMA_TC_369_GC_Pol">
+<classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_369"/>
+</classes>
+ </test>
+ 
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For An Injury (Person Involved) Associated With A Claim -->   
+ <test name="RMA_TC_374_GC_Pol_PI">
+<classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_374"/>
+</classes>
+ </test>
+    
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For A Demand Offer (Added To Injury) Associated With A Claim -->   
+<test name="RMA_TC_375_GC_Pol_PI">
+<classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_375"/>
+</classes>
+ </test>
+  
+<!-- Creation, Edit And Deletion Of Enhanced Notes For Case Management System (Injury) Associated With A Claim -->   
+<test name="RMA_TC_376_GC_Pol_PI">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_376"/>
+</classes>
+ </test>
+     
+ <!-- Creation, Edit And Deletion Of Enhanced Notes For Case Manager (Case Management System) Associated With A Claim -->   
+<test name="RMA_TC_377_GC_Pol_PI">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_377"/>
+</classes>
+ </test>
+
+<!-- Creation, Edit And Deletion Of Enhanced Notes For Accommodation (Case Management System) Associated With A Claim -->   
+<test name="RMA_TC_378_GC_Pol_PI">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_378"/>
+</classes>
+ </test>
+ 
+<!-- Creation, Edit And Deletion Of Enhanced Notes For Vocational Rehab (Case Management System) Associated With A Claim -->   
+<test name="RMA_TC_379_GC_Pol_PI">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_379"/>
+</classes>
+ </test>   
+
+<!--Successful Creation, Edit And Deletion Of Enhanced Notes For An Other Person (Policy-Person Involved) Associated With A Claim Is Validated-->
+ <test name="RMA_TC_370_GC_Pol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_370"/>
+</classes>
+</test>
+     
+ <!--Successful Creation, Edit And Deletion Of Enhanced Notes For A Physician (Policy-Person Involved) Associated With A Claim Is Validated-->
+<test name="RMA_TC_371_GC_Pol">
+<classes>
+<class name="rmaseleniumtestscripts.RMA_TC_371"/>
+</classes>
+</test>
+     
+<!--Successful Creation, Edit And Deletion Of Enhanced Notes For A Witness (Policy-Person Involved) Associated With A Claim Is Validated-->
+ <test name="RMA_TC_372_GC_Pol">
+<classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_372"/>
+</classes>
+</test>
+     
+<!--Successful Creation, Edit And Deletion Of Enhanced Notes For Witness (Policy-->Person Involved) Associated With A Claim Is Validated-->
+<test name="RMA_TC_373_GC_Pol">
+<classes>
+ <class name="rmaseleniumtestscripts.RMA_TC_373"/>
+</classes>
+</test>
+      
+</suite>

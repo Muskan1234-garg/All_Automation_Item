@@ -1,0 +1,1 @@
+cd D:\apache-jmeter-3.0\apache-jmeter-3.0\extras   && ANT  -Druncount=3 -Dusers=1 -Drampup= 1 -Dtest=RMA_TC_006_17.1 -Ddatasheetname=TC6_1-3

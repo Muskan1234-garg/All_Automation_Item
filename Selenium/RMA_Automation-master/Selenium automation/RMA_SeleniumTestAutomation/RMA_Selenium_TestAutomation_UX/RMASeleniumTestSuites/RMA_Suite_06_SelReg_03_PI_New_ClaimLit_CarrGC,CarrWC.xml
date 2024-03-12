@@ -1,0 +1,264 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="2" />
+<!--Please do not change the data-source, carrier specific code-->
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_06_SelReg_03_PI_New_ClaimLit_CarrGC,CarrWC" />
+<!--NOTE:: Other People Add New Person Involved Script (RMA_SeleniumRegression_TC_027) Should Be Run At The End Of Each Suite Execution As It Contains The Code To Close The Claim Screen -->
+<!-- NOTE: Add New PI To Claim Level, Please Make Sure That No PI Is Already Added TO GC Claim:: 000523 And WC Claim: WC1990000002 -->
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved Carrier General Claim Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_025_CarrierGeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_025" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of MedicalStaff As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_027_CarrierGeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_027" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Employee As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_028_CarrierGeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_028" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Patient As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_029_CarrierGeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_029" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Physician As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_030_CarrierGeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_030" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Driver As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_031_CarrierGeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_031" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Witness As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_032_CarrierGeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_032" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Other Person As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_033_CarrierGeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_033" />
+		</classes>
+	</test>
+	
+
+<!--Existence Of Person Involved Entity Option For Saved Carrier WC Claim Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_026_CarrierWCClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_026" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of MedicalStaff As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_027_CarrierWCClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_027" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Employee As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_028_CarrierWCClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_028" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Patient As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_029_CarrierWCClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_029" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Physician As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_030_CarrierWCClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_030" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Driver As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_031_CarrierWCClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_031" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Witness As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_032_CarrierWCClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_032" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Other Person As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_033_CarrierWCClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_033" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved CarrierGeneralClaim_Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_025_CarrierGeneralClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_025" />
+		</classes>
+	</test>
+	
+	<!--Existence Of Person Involved Entity Option For Saved CarrierGeneralClaim_Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_024_CarrierGeneralClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_024" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of MedicalStaff As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_027_CarrierGeneralClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_027" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Employee As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_028_CarrierGeneralClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_028" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Patient As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_029_CarrierGeneralClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_029" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Physician As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_030_CarrierGeneralClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_030" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Driver As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_031_CarrierGeneralClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_031" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Witness As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_032_CarrierGeneralClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_032" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Other Person As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_033_CarrierGeneralClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_033" />
+		</classes>
+	</test>
+	
+
+<!--Existence Of Person Involved Entity Option For Saved Carrier WC Claim Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_026_CarrierWCClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_026" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved Carrier WC Claim Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_024_CarrierWCClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_024" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of MedicalStaff As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_027_CarrierWCClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_027" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Employee As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_028_CarrierWCClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_028" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Patient As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_029_CarrierWCClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_029" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Physician As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_030_CarrierWCClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_030" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Driver As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_031_CarrierWCClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_031" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Witness As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_032_CarrierWCClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_032" />
+		</classes>
+	</test>
+
+<!--Create, Edit And Delete Of Other Person As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_033_CarrierWCClaim_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_033" />
+		</classes>
+	</test>
+	
+
+</suite>

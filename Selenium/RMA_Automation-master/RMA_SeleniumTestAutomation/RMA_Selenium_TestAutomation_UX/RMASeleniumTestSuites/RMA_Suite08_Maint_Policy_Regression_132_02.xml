@@ -1,0 +1,50 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite08_Maint_Policy_Regression_132_02" />
+
+    <!-- This Suite will Execute On http://170.30.17.188/RiskmasterUX/ Server DSN - RMA181_MCOFF_ERON  -->
+	
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+ 	</test> 
+	<!-- Create Policy And Verify Units Tab,Coverage Tab And Whether Units Downloaded From External Policy Is In Read Only Mode-->
+ 	<test name="RMA_Reg_Maint_PolicyTracking_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_PolicyTracking_TC_013" />
+		</classes>
+ 	</test> 
+ 
+<!--  Search, Inquire And Download External Policy From Policy System Download-->
+<!-- 	<test name="RMA_Reg_Maint_PolicyTracking_TC_007">  -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_PolicyTracking_TC_007" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+<!-- Verify User Is Able To Add Reserve,Payment And Collection On The Claim With Added Policy-->
+	<!--  <test name="RMA_Reg_Maint_PolicyTracking_TC_009">  -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_PolicyTracking_TC_009" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+	
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

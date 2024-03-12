@@ -1,0 +1,89 @@
+<suite name="RMA_suite_BankAccount_CheckStocks" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="1" />
+
+<!-- Execute this test case with either "abk" or "dxc" users -->
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_CheckStocks" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+ 	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--Navigation Screen Validation Pre-requisite For Smoke Suite 12 Test Cases Is Validated -->
+	<!--<test name="RMA_Smoke_TC_041_I">
+	<classes>
+		<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+		</test>-->
+		
+		<!--Verify Prompt Is Displayed When  Made Changes And Click On Any Tool Bar Button On Check Stock-->
+		<test name="RMA_Reg_Funds_BankAccount_TC_014"> 
+		<classes> 
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_014" /> 
+		</classes> 
+	</test> 
+	
+	<!--Print The Simple Copy Of The Check With Check Stock Details-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_015" />
+		</classes>
+	</test>
+	
+	<!--Clone Should Not Work For Blank Check Stock-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_016"> 
+ 		<classes> -->
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_016" /> 
+ 		</classes> 
+	</test> 
+	
+	<!--Verify The Clone Check Functionality-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_012" />
+		</classes>
+	</test>
+	
+	<!--Clone Check Stock And Print The Sample Check With Cloned Details-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_019" />
+		</classes>
+	</test>
+	
+	<!--Print Sample Check After Advanced Options, Alignment Options Changes From Check Stock-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_018">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_018" />
+		</classes>
+	</test>
+	
+	<!--Create Multiple Check Stocks For Same Bank-->
+	<test name="RMA_Reg_Funds_BankAccount_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_013" />
+		</classes>
+	</test>
+	
+	<!--Make Payment And Print The Check With Newly Created Check Stock  -->
+	<test name="RMA_Reg_Funds_BankAccount_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_017" />
+		</classes>
+	</test>
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

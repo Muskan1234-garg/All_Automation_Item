@@ -1,0 +1,187 @@
+
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_PayDetailLimitSuite_GC" />
+	
+	<parameter name="DataSourceRow" value="1" /><!--To Set The Datasource 
+		Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData -->
+	
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="3" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+		<test name="RMA_Reg_Super_DeSelectALLSetting_TC_001">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Super_DeSelectALLSetting_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Successful Set Reserve Limits At User And Validate It On Supervisory Chain -->
+	<!--To Set The LOB Based on claim -->
+	<!--Successful Set Reserve Limits At User And Validate It On Supervisory Chain -->
+	<!--To Set The LOB Based on claim -->
+<!--Successful Set Reserve Limits At User And Validate It On Supervisory Chain -->
+	<!--To Set The LOB Based on claim -->
+	<parameter name="LOB" value="WC - Workers&#39; Compensation" />
+	<parameter name="LimitFactor" value="10" />
+	<test name="RMA_Reg_Super_PaymentLimit_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PaymentLimit_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+		 <test name="RMA_Smoke_TC_002_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+
+	
+	<!-- Created Payment On Hold When Pay Detail Limits Exceed -->
+	<test name="RMA_Reg_Super_PayDetailLimit_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_002" />
+		</classes>
+	</test>
+
+	<!--Manager's Authority To Either Able To Approve Or Not The Payment Based On Payment Limit -->
+	<test name="RMA_Reg_Super_PayDetailLimit_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_003" />
+		</classes>
+	</test>
+	<!--User of Managerial Chain, Who Can See Payment In Its Supervisory Approval View Can Reject the Payment Based On Its Limit-->
+	 <test name="RMA_Reg_Super_PayDetailLimit_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_004" />
+		</classes>
+	</test>
+	<!-- Changed The Payment Status And Payment Editable Settings As Payment Is Approved Or Rejected -->
+	<test name="RMA_Reg_Super_PayDetailLimit_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_005" />
+		</classes>
+	</test>
+	<!-- Status Changed To Released From Hold When User Edit The Amount Less Than The Limit And Manager Is Authorized/Not Authorized To Reject The Payment -->
+	<test name="RMA_Reg_Super_PayDetailLimit_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_010" />
+		</classes>
+	</test>
+	<!-- User Can Approve/Deny The Transaction From Transaction Screen By Changing The Check Status -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_006" />
+		</classes>
+	</test>
+	<!-- Payment Limit Does Not Apply To Schedule Checks -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_008" />
+		</classes>
+	</test>
+	<!-- Manager Can Void The Transaction -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_009" />
+		</classes>
+	</test>
+	<!-- Payments Do Not Go On Hold When Pay Detail Limits Are Exceeded CheckBox is OFF And Deselect All Settings -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_007" />
+		</classes>
+	</test>
+	
+	<!-- Payments Do Not Go On Hold When Pay Detail Limits Are Exceeded CheckBox is OFF And Deselect All Settings -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_012" />
+		</classes>
+	</test>
+	
+	<!-- Payments Do Not Go On Hold When Pay Detail Limits Are Exceeded CheckBox is OFF And Deselect All Settings -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_013" />
+		</classes>
+	</test>
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+		 <test name="RMA_Smoke_TC_002_WC_01">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+	
+	<!-- Payments Do Not Go On Hold When Pay Detail Limits Are Exceeded CheckBox is OFF And Deselect All Settings -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_014" />
+		</classes>
+	</test>
+	
+	<!-- Payments Do Not Go On Hold When Pay Detail Limits Are Exceeded CheckBox is OFF And Deselect All Settings -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_015" />
+		</classes>
+	</test>
+	
+	<!-- Payments Do Not Go On Hold When Pay Detail Limits Are Exceeded CheckBox is OFF And Deselect All Settings -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_016" />
+		</classes>
+	</test>
+<!-- Payments Do Not Go On Hold When Pay Detail Limits Are Exceeded CheckBox is OFF And Deselect All Settings -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_017">
+			
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_017" />
+		</classes>
+	</test><!-- Payments Do Not Go On Hold When Pay Detail Limits Are Exceeded CheckBox is OFF And Deselect All Settings -->
+		<test name="RMA_Reg_Super_PayDetailLimit_TC_018">
+			
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_018" />
+		</classes>
+	</test>	
+	
+	<!-- Deletion of Existing Users From Supervisory Chain Is Validated -->
+<test name="RMA_Reg_Super_UserDeletion_TC_001">
+<parameter name="ClassName" value="rmaseleniumtestscripts.RMA_Reg_Super_PayDetailLimit_TC_017" />
+	
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserDeletion_TC_001" />
+		</classes>
+	</test> 
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

@@ -1,0 +1,88 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="2" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName"
+		value="RMA_Suite01_Funds_VoidCheck_Regression_Corporate_WC" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Creation of New Worker's Compensation Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+
+	<!--Creation Of Released Payments/Collection And Their Voiding And Financial 
+		Details History Is Validated -->
+	<test name="RMA_Reg_Funds_VoidCheck_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_001" />
+		</classes>
+	</test>
+
+	<!--Creation Of Printed Payments/Collection And Their Voiding And Transaction 
+		History Is Validated -->
+	<test name="RMA_Reg_Funds_VoidCheck_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_002" />
+		</classes>
+	</test>
+
+	<!--Creation Of Printed/Released Payments/Collection And Voided From Funds=>Void 
+		Checks Is Validated -->
+	<test name="RMA_Reg_Funds_VoidCheck_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_003" />
+		</classes>
+	</test>
+
+	<!--Various Filters Like Bank account, Company, From Date, To Date and Include 
+		Collections On Void Checks Are Validated -->
+	<test name="RMA_Reg_Funds_VoidCheck_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_004" />
+		</classes>
+	</test>
+
+	<!--After voiding Of Payment, Payment Amount Is Added Back To Reserve Balance 
+		Is Validated -->
+	<test name="RMA_Reg_Funds_VoidCheck_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_005" />
+		</classes>
+	</test>
+
+	<!--Void Check Reason Functionality Is Validated -->
+	<test name="RMA_Reg_Funds_VoidCheck_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_006" />
+		</classes>
+	</test>
+
+	<!--SMS Validation For Void Checks Is Validated -->
+	<test name="RMA_Reg_Funds_VoidCheck_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_007" />
+		</classes>
+	</test>
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

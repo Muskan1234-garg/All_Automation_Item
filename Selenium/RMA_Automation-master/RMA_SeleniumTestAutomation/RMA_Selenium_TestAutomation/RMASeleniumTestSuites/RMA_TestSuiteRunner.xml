@@ -1,0 +1,58 @@
+<suite name="RMA_SampleSuite" parallel="none">
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test> 
+  <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+  </test>
+  <test name="RMA_TC_PreConditionCheck">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_PreConditionCheck"/>
+    </classes> 
+   </test>
+   <test name="RMA_TC_003">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_003"/>
+    </classes> 
+   </test>
+   <test name="RMA_TC_004">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_004"/>
+    </classes> 
+   </test>
+   <test name="RMA_TC_005">
+  	<parameter name="ReserveType" value="M Medical"/> 
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_005"/>
+    </classes>
+  </test>
+     <test name="RMA_TC_006">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_006"/>
+    </classes>
+  </test>
+     <test name="RMA_TC_007">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_007"/>
+    </classes>
+  </test>
+       <test name="RMA_TC_009">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_009"/>
+    </classes>
+  </test>
+         <test name="RMA_TC_010">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_010"/>
+    </classes>
+  </test>
+    <test name="RMA_TC_008">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_008"/>
+    </classes>
+  </test>
+</suite>

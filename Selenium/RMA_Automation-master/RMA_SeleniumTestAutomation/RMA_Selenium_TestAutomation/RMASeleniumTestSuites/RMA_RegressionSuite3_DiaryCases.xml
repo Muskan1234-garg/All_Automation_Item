@@ -1,0 +1,165 @@
+
+<suite name="RMA_RegressionSuite3_DiaryCases" parallel="none"
+	allow-return-values="true">
+
+	<!--To Set The Row Of The Used DataSourceName -->
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_RegressionSuite3_DiaryCases" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of Diary With Verification Of Active Diary And Diary Notes On Diary List Page Is Validated -->
+	<test name="REGRESSION.RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!-- Successfully Edit The Diary On Diary List Page Is Validated -->
+	<test name="REGRESSION.RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Successfully Mark Diary As Completed And Also Checked Diary Existence On Diary History Page -->
+	<test name="REGRESSION.RMA_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_003" />
+		</classes>
+	</test>
+
+	<!-- Successfully Route Diary To a Specific User On Diary List Page Is Validated -->
+	<test name="REGRESSION.RMA_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_004" />
+		</classes>
+	</test>
+
+	<!-- Successfully Roll A Diary On Diary List Page Is Validated -->
+	<test name="REGRESSION.RMA_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_005" />
+		</classes>
+	</test>
+
+	<!-- Successfully Display A Diary Based On Criteria On Diary List Page Is Validated -->
+	<test name="REGRESSION.RMA_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_006" />
+		</classes>
+	</test>
+
+	<!-- Successfully Void A Diary On Diary List Page Is Validated -->
+	<test name="REGRESSION.RMA_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_007" />
+		</classes>
+	</test>
+
+	<!-- Successful Peek The Diary On Diary List Page Is Validated -->
+	<test name="REGRESSION.RMA_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_008" />
+		</classes>
+	</test>
+
+	<!-- Verify That General Claim Is Created Successfully -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Adjuster Is Validated -->
+	<test name="REGRESSION.RMA_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_009" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Claimant Is Validated -->
+	<test name="REGRESSION.RMA_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_010" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Defendant Is Validated -->
+	<test name="REGRESSION.RMA_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_011" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Litigation Is Validated -->
+	<test name="REGRESSION.RMA_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_012" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Subrogation Is Validated -->
+	<test name="REGRESSION.RMA_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_013" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Person Involved Is Validated -->
+	<test name="REGRESSION.RMA_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_014" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Funds Is Validated -->
+	<test name="REGRESSION.RMA_TC_018">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_018" />
+		</classes>
+	</test>
+
+	<!-- Verify Event Is Created By Providing Data In All Mandatory Fields -->
+	<test name="RMA_Smoke_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_001" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Event Is Validated -->
+	<test name="REGRESSION.RMA_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_016" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Dated Text Is Validated -->
+	<test name="REGRESSION.RMA_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_015" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From OSHA Is Validated -->
+	<test name="REGRESSION.RMA_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_017" />
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,145 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--PreRequisite #1: Execution should be done in active screen mode -->
+	<!--PreRequisite #2: Loggedin user should have email mentioned in SMS -->
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Regression_Attachments_01" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Attach Documents And Verify All These Document Are Available In User 
+		Documents -->
+	<test name="RMA_Regression_Attachments_TC_01">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_01" />
+		</classes>
+	</test>
+
+	<!-- Add,Edit Documents From User Document Screen And Verify The Properties 
+		And Download The Attached Document -->
+	<test name="RMA_Regression_Attachments_TC_02">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_02" />
+		</classes>
+	</test>
+
+	<!-- Add And Delete A Document And Verify The Document In Recycle Bin Folder,Preview 
+		Of the Attached Document -->
+	<test name="RMA_Regression_Attachments_TC_03">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_03" />
+		</classes>
+	</test>
+
+	<!-- Attach Document Of Size Between 20-25 MB And Verify The Subject While 
+		Sending Mail Through Claims Is Attachment for <Claim Number> -->
+	<test name="RMA_Regression_Attachments_TC_05">
+
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_05" />
+		</classes>
+	</test>
+
+	<!-- Add And Email A Document From User Documents And Verify File Size And 
+		Functionality Of Select All Button and De-Select All Button -->
+	<test name="RMA_Regression_Attachments_TC_04">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_04" />
+		</classes>
+	</test>
+
+	<!-- Transfer The Document To Another User And Verify It is Present There -->
+	<test name="RMA_Regression_Attachments_TC_06">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_06" />
+		</classes>
+	</test>
+
+	<!-- Copy The Document To Another User And Verify It is Present There
+	<test name="RMA_Regression_Attachments_TC_07">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_07" />
+		</classes>
+	</test> -->
+
+	<!-- Verify Correct Validation Message Appear When A Folder Name Having 
+		Only White Spaces Is Attempted To Be Created -->
+	<test name="RMA_Regression_Attachments_TC_08">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_08" />
+		</classes>
+	</test>
+
+	<!-- Verify User Is Getting Confirmation PopUp When Expanding 2nd Window 
+		Of Attachment -->
+	<test name="RMA_Regression_Attachments_TC_09">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_09" />
+		</classes>
+	</test>
+
+	<!-- Verify That PopUp Is Displayed When User Close Parent Window Without 
+		Closing Expanded Attachments PopUp Window -->
+	<test name="RMA_Regression_Attachments_TC_10">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_10" />
+		</classes>
+	</test>
+
+	<!--General Claim Creation
+	<test name="RMA_Smoke_TC_002_GC_Smoke_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC_Smoke" />
+		</classes>
+	</test> -->
+
+
+	<!--Move Functionality Implementation
+	<test name="RMA_Regression_Attachments_TC_11">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_11" />
+		</classes>
+	</test> -->
+
+	<!-- Move Multiple Document Functionality Implementation
+	<test name="RMA_Regression_Attachments_TC_12">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_12" />
+		</classes>
+	</test> -->
+
+	<!-- Enable/Disable Attachment SMS Setting On Claim
+	<test name="RMA_Regression_Attachments_TC_13">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_13" />
+		</classes>
+	</test> -->
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

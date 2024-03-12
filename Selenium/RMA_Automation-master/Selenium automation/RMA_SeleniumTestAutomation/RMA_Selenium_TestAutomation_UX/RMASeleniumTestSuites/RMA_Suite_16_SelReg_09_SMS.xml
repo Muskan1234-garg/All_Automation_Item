@@ -1,0 +1,130 @@
+<suite name="RMA_SeleniumRegressionSuite9" parallel="none" allow-return-values="true">
+
+<parameter name="DataSourceRow" value="1" />
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_16_SelReg_09_SMS" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+  <!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+		<!--General Claim Permission Setting Validation -->
+		<test name="RMA_SeleniumRegression_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Worker's Comp Claim Permission Setting Validation -->
+	<test name="RMA_SeleniumRegression_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Property Claim Permission Setting Validation -->
+	<!--Failed As Prop Claim is Not Implemented yet in 17.2 rma version -->
+		<!-- <test name="RMA_SeleniumRegression_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_003" />
+		</classes>
+	</test> -->
+	
+	<!--Non-occupational Claim Permission Setting Validation -->
+	<!--Failed As Non Occ Claim is Not Implemented yet in 17.2 rma version -->
+	<test name="RMA_SeleniumRegression_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004" />
+		</classes>
+	</test>
+	
+	<!-- Functionality of Adjuster Creation Permission Setting For General Claim On Security Management System Is Validated -->
+		<test name="RMA_SeleniumRegression_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005" />
+		</classes>
+	</test>
+	
+	<!-- Functionality of Adjuster Creation Permission Setting For Worker's Comp. Claim On Security Management System Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006" />
+		</classes>
+	</test>
+	
+	<!--Functionality of Adjuster Creation Permission Setting For NonOcc Claim On Security Management System Is Validated -->
+	<!--Failed As Non Occ Claim is Not Implemented yet in 17.2 rma version -->
+		<test name="RMA_SeleniumRegression_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007" />
+		</classes>
+	</test>
+	
+	<!-- UI Controls On Security Management System Page Are Validated -->
+	<test name="RMA_SeleniumRegression_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008" />
+		</classes>
+	</test>
+	
+	<!-- On Clicking Edit Datasource Screen Gets Open And Editable -->
+		<test name="RMA_SeleniumRegression_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009" />
+		</classes>
+	</test>
+	
+	<!-- Set, Update And Check 'Update License Info' Function On SMS -->
+		<test name="RMA_SeleniumRegression_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010" />
+		</classes>
+	</test>	
+	
+		<!--  Add And Rename Module From SMS Page -->
+		<test name="RMA_SeleniumRegression_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011" />
+		</classes>
+	</test>
+	
+	<!-- Depends On RMA_SeleniumRegression_TC_011-->
+	<!-- Successfully User Can Give Module Access Permissions Of A Group in SMS Is Validated -->
+		<!-- <test name="RMA_SeleniumRegression_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_015" />
+		</classes>
+	</test> -->
+	
+	<!--  Add, Edit And Delete User And Assign and Delete User from A DataSource From SMS Page -->
+		<test name="RMA_SeleniumRegression_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012" />
+		</classes>
+	</test>	
+	
+	<!-- SeleniumRegression_TC_013_ Set User To Add Up In Selected Time Intervals -->
+	<test name="RMA_SeleniumRegression_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013" />
+		</classes>
+	</test>
+	
+	<!-- Depends On RMA_SeleniumRegression_TC_013-->
+	<!--  The Functionality Of Permission Expiration Of User Access Permissions -->
+		<test name="RMA_SeleniumRegression_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014" />
+		</classes>
+	</test>	 	
+	 	
+	</suite>

@@ -1,0 +1,297 @@
+<suite name="RMA_Suite_07_PI_AddNew_Litigation" parallel="none" allow-return-values="true">
+
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_07_PI_AddNew_Litigation" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test> 
+
+<!--Verify That Required DSN Is Selected In RMA Application-->
+    <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+     </test>
+
+<!--Verify That Litigation Can Be Added To A General Claim-->
+    <test name="RMA_TC_126">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_126"/>
+    </classes>
+     </test>
+     
+<!--Verify Add,Edit And Delete Of New Employee As Person Involved In Litigation In General Claim-->
+    <test name="RMA_TC_127">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_127"/>
+    </classes>
+     </test>
+	 
+<!--Verify Add,Edit And Delete Of New Medical Staff As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_128">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_128"/>
+    </classes>
+     </test>
+	 
+<!--Verify Add,Edit And Delete Of New Driver As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_129">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_129"/>
+    </classes>
+     </test>
+	
+<!--Verify Add,Edit And Delete Of New Other Person As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_130">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_130"/>
+    </classes>
+     </test>
+	 
+<!--Verify Add,Edit And Delete Of New Patient As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_131">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_131"/>
+    </classes>
+     </test>
+
+ <!--Verify Add,Edit And Delete Of New Physician As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_132">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_132"/>
+    </classes>
+     </test>
+     
+ <!--Verify Add,Edit And Delete Of New Witness As Person Involved In Litigation For General Claims-->
+    <test name="RMA_TC_133">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_133"/>
+    </classes>
+       </test>
+       
+<!--Verify That Litigation Can Be Added To A Workers Comp Claim-->
+    <test name="RMA_TC_134">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_134"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of New Employee As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_135">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_135"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of New Medical Staff As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_136">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_136"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of New Driver As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_137">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_137"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of New Other Person As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_138">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_138"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of New Patient As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_139">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_139"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of New Physician As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_140">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_140"/>
+    </classes>
+       </test>
+       
+<!--Verify Adding,Editing And Deleting Of New Witness As Person Involved In Litigation For Workers Comp Claim-->
+    <test name="RMA_TC_149">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_149"/>
+    </classes>
+       </test>
+ <!--Verify That Litigation Can Be Added To A Property Claim -->
+	<test name="RMA_TC_141">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_141" />
+		</classes>
+	</test>
+	<!--Verify Adding,Editing And Deleting Of New Employee As Person Involved In Litigation For Property Claim -->
+	<test name="RMA_TC_142">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_142" />
+		</classes>
+	</test>
+	<!--Verify Adding,Editing And Deleting Of New Medical Staff  As Person Involved In Litigation For Property Claim-->
+	<test name="RMA_TC_143">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_143" />
+		</classes>
+	</test>
+	<!--Verify Adding,Editing And Deleting Of New Patient  As Person Involved In Litigation For Property Claim -->
+	<test name="RMA_TC_144">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_144" />
+		</classes>
+	</test>
+	<!--Verify Adding,Editing And Deleting Of New Physician  As Person Involved	In Litigation For Property Claim -->
+	<test name="RMA_TC_145">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_145" />
+		</classes>
+	</test>
+	<!--Verify Adding,Editing And Deleting Of New Driver  As Person Involved In Litigation For Property Claim -->
+	<test name="RMA_TC_146">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_146" />
+		</classes>
+	</test>
+	<!--Verify Adding,Editing And Deleting Of New Witness As Person Involved In Litigation For Property Claim -->
+	<test name="RMA_TC_147">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_147" />
+		</classes>
+	</test>
+	<!--Verify Adding,Editing And Deleting Of New Other Person As Person Involved	In Litigation For Property Claim -->
+	<test name="RMA_TC_148">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_148" />
+		</classes>
+	</test>
+	
+	<!--Verify That Litigation Can Be Added To A Vehicle Accident Claim-->
+    <test name="RMA_TC_150">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_150"/>
+    </classes>
+     </test>
+     
+<!--Verify Add,Edit And Delete Of New Employee As Person Involved In Litigation In Vehicle Accident Claim-->
+    <test name="RMA_TC_151">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_151"/>
+    </classes>
+     </test>
+	 
+<!--Verify Add,Edit And Delete Of New Medical Staff As Person Involved In Litigation For Vehicle Accident Claim-->
+    <test name="RMA_TC_152">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_152"/>
+    </classes>
+     </test>
+	 
+<!--Verify Add,Edit And Delete Of New Driver As Person Involved In Litigation For Vehicle Accident Claim-->
+    <test name="RMA_TC_153">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_153"/>
+    </classes>
+     </test>
+	
+<!--Verify Add,Edit And Delete Of New Other Person As Person Involved In Litigation For Vehicle Accident Claim-->
+    <test name="RMA_TC_154">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_154"/>
+    </classes>
+     </test>
+	 
+<!--Verify Add,Edit And Delete Of New Patient As Person Involved In Litigation For Vehicle Accident Claim-->
+    <test name="RMA_TC_155">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_155"/>
+    </classes>
+     </test>
+
+ <!--Verify Add,Edit And Delete Of New Physician As Person Involved In Litigation For Vehicle Accident Claim-->
+    <test name="RMA_TC_156">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_156"/>
+    </classes>
+     </test>
+     
+ <!--Verify Add,Edit And Delete Of New Witness As Person Involved In Litigation For Vehicle Accident Claim-->
+    <test name="RMA_TC_157">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_157"/>
+    </classes>
+  </test>
+	
+<!--Verify That Litigation Can Be Added To A NonOccupational Claim -->
+	<test name="RMA_TC_158">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_158" />
+		</classes>
+	</test>
+	
+<!--Verify Adding,Editing And Deleting Of New Employee As Person Involved In Litigation For NonOccupational Claim -->
+	<test name="RMA_TC_159">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_159" />
+		</classes>
+	</test>
+	
+<!--Verify Adding,Editing And Deleting Of New Medical Staff As Person Involved In Litigation For NonOccupational Claim -->
+	<test name="RMA_TC_160">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_160" />
+		</classes>
+	</test>
+	
+<!--Verify Adding,Editing And Deleting Of New Driver As Person Involved In Litigation For NonOccupational Claim -->
+	<test name="RMA_TC_161">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_161" />
+		</classes>
+	</test>
+		
+<!--Verify Adding,Editing And Deleting Of New Other Person As Person Involved In Litigation For NonOccupational Claim-->
+	<test name="RMA_TC_162">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_162" />
+		</classes>
+	</test>
+		
+<!--Verify Adding,Editing And Deleting Of New Patient As Person Involved In Litigation For NonOccupational Claim-->
+	<test name="RMA_TC_163">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_163" />
+		</classes>
+	</test>
+		
+<!--Verify Adding,Editing And Deleting Of New Physician As Person Involved In Litigation For Workers Comp Claim-->
+	<test name="RMA_TC_164">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_164" />
+		</classes>
+	</test>
+		
+<!--Verify Adding,Editing And Deleting Of New Witness As Person Involved In Litigation For NonOccupational Claim-->
+	<test name="RMA_TC_165">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_165" />
+		</classes>
+	</test>
+
+
+ </suite> 
+ 

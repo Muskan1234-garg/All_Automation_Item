@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RMA_SampleSuite]" allow-return-values="true">
+  <parameter name="ZoneName" value="Dashboard"/>
+  <parameter name="LineOfBusiness" value="GC - General Claims"/>
+  <parameter name="ExecutedSuiteName" value="RMA_DailySmokeSuite_Funds1"/>
+  <parameter name="DataSourceRow" value="1"/>
+  <test name="RMA_TC_001(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMAApp_login"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+    </classes>
+  </test> <!-- RMA_TC_001(failed) -->
+  <test name="RMA_TC_002(failed)">
+    <parameter name="ZoneName" value="Dashboard"/>
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMAApp_DSNSelection"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+    </classes>
+  </test> <!-- RMA_TC_002(failed) -->
+  <test name="RMA_Smoke_TC_002_GC(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC">
+        <methods>
+          <include name="RMA_Smoke_TC_002_GC_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_002_GC -->
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+    </classes>
+  </test> <!-- RMA_Smoke_TC_002_GC(failed) -->
+  <test name="RMA_Smoke_TC_009(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_009">
+        <methods>
+          <include name="RMA_Smoke_TC_009_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_009 -->
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+    </classes>
+  </test> <!-- RMA_Smoke_TC_009(failed) -->
+  <test name="RMA_Reg_Funds_VoidCheck_TC_003(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_003">
+        <methods>
+          <include name="RMA_Reg_Funds_VoidCheck_TC_003_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_003 -->
+    </classes>
+  </test> <!-- RMA_Reg_Funds_VoidCheck_TC_003(failed) -->
+  <test name="RMA_Reg_Funds_VoidCheck_TC_004(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_004">
+        <methods>
+          <include name="RMA_Reg_Funds_VoidCheck_TC_004_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_004 -->
+    </classes>
+  </test> <!-- RMA_Reg_Funds_VoidCheck_TC_004(failed) -->
+  <test name="RMA_Reg_Funds_VoidCheck_TC_005(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_005">
+        <methods>
+          <include name="RMA_Reg_Funds_VoidCheck_TC_005_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_VoidCheck_TC_005 -->
+    </classes>
+  </test> <!-- RMA_Reg_Funds_VoidCheck_TC_005(failed) -->
+  <test name="RMA_Reg_Funds_BankAccount_TC_029(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_029">
+        <methods>
+          <include name="RMA_Reg_Funds_BankAccount_TC_029_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_BankAccount_TC_029 -->
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+    </classes>
+  </test> <!-- RMA_Reg_Funds_BankAccount_TC_029(failed) -->
+  <test name="RMA_Reg_PrintChecks_TC_06(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_06">
+        <methods>
+          <include name="RMA_Reg_PrintChecks_TC_06_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_06 -->
+    </classes>
+  </test> <!-- RMA_Reg_PrintChecks_TC_06(failed) -->
+  <test name="RMA_Reg_PrintChecks_TC_10(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_10">
+        <methods>
+          <include name="RMA_Reg_PrintChecks_TC_10_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_PrintChecks_TC_10 -->
+    </classes>
+  </test> <!-- RMA_Reg_PrintChecks_TC_10(failed) -->
+  <test name="RMA_Smoke_TC_002_GC_4(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC">
+        <methods>
+          <include name="RMA_Smoke_TC_002_GC_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Smoke_TC_002_GC -->
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+    </classes>
+  </test> <!-- RMA_Smoke_TC_002_GC_4(failed) -->
+  <test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_001(failed)">
+    <parameter name="LineOfBusiness" value="GC - General Claims"/>
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+        <methods>
+          <include name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_001_Test"/>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001 -->
+    </classes>
+  </test> <!-- RMA_Reg_Funds_AllocatedBucketForPayments_TC_001(failed) -->
+</suite> <!-- Failed suite [RMA_SampleSuite] -->

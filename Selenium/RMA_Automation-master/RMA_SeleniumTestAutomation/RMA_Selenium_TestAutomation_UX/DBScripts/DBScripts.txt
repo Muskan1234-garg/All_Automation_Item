@@ -1,0 +1,548 @@
+
+/*===============Bank Account Type Value START==========*/
+begin 
+declare @value int;
+declare @date varchar(14);
+declare @codevalue int;
+declare @tableid int;
+select @tableid = TABLE_ID from glossary where SYSTEM_TABLE_NAME ='ACCOUNT_TYPE'
+select @date = FORMAT(getdate(),'yyyyMMddhhmmss')
+select @codevalue = max(CODE_ID)+1 from CODES
+select @value = count(*) from codes where SHORT_CODE = 'CA' and TABLE_ID= @tableid and DELETED_FLAG = '0' and CODE_ID in 
+(select CODE_ID from CODES_TEXT where CODE_DESC = 'Checking Account')
+if @value = 0
+begin
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,0,@codevalue,@tableid,'CA',0,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@codevalue,1033,'CA','Checking Account',@date,@date,'dxc','dxc')
+end
+end
+/*==================END==================================*/
+
+
+/*====================Bank Account Status Value START=======================*/
+begin 
+declare @accountvalue int;
+declare @acccodevalue int;
+declare @acctableid int;
+select @acccodevalue = max(CODE_ID)+1 from CODES
+select @acctableid = TABLE_ID from glossary where SYSTEM_TABLE_NAME = 'EFT_BANKING_STATUS'
+select @accountvalue = count(*) from codes where SHORT_CODE = 'A' and TABLE_ID= @acctableid and DELETED_FLAG = '0' and CODE_ID in 
+(select CODE_ID from CODES_TEXT where CODE_DESC = 'Active')
+if @accountvalue = 0
+begin
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,0,@acccodevalue,@acctableid,'A',0,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@acccodevalue,1033,'A','Active',@date,@date,'dxc','dxc')
+end
+end
+/*=======================END==============================================*/
+
+/*===============Driver Type Value START==========================*/
+begin 
+declare @drivervalue int;
+declare @drivercodevalue int;
+declare @drivertableid int;
+select @drivertableid = TABLE_ID from glossary where SYSTEM_TABLE_NAME = 'DRIVER_TYPE'
+select @drivercodevalue = max(CODE_ID)+1 from CODES
+select @drivervalue = count(*) from codes where SHORT_CODE = 'COMMERCIAL' and TABLE_ID= @drivertableid and DELETED_FLAG = '0' and CODE_ID in 
+(select CODE_ID from CODES_TEXT where CODE_DESC = 'Commercial')
+if @drivervalue = 0
+begin
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,0,@drivercodevalue,@drivertableid,'COMMERCIAL',0,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@drivercodevalue,1033,'COMMERCIAL','Commercial',@date,@date,'dxc','dxc')
+end
+end
+/*==================END========================================*/
+
+
+/*==================Creation Of Department START========================*/
+begin
+declare @deptentid int;
+declare @depttableid int;
+select @depttableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'DEPARTMENT'
+select @deptentid = count(Entity_Id) from ENTITY where LAST_NAME = 'Street Department' and ENTITY_TABLE_ID= @depttableid and DELETED_FLAG = 0
+if @deptentid=0
+begin
+declare @nametypecode int;
+declare @entityCode int;
+declare @clienttableid int;
+select @clienttableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'CLIENT'
+select @entityCode = max(ENTITY_ID)+1 from ENTITY
+select @nametypecode = CODE_ID from codes where Short_Code = 'BUS' and TABLE_ID = (select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME like '%ENTITY_NAME_TYPE%')
+
+insert into ENTITY (LAST_NAME,NAME_TYPE,ENTITY_ID,ENTITY_TABLE_ID,LAST_NAME_SOUNDEX,ABBREVIATION,DTTM_RCD_LAST_UPD,
+UPDATED_BY_USER,DTTM_RCD_ADDED,ADDED_BY_USER,DELETED_FLAG)
+values ('TestingClientForDBFromDB',@nametypecode,@entityCode,@clienttableid,'T234','STCL',@date,'dxc',@date,'dxc',0)
+
+declare @entitycode1 int
+declare @clientid int
+declare @companytableid int
+select @companytableid = table_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'COMPANY'
+select @clientid = Entity_ID from ENTITY where LAST_NAME = 'TestingClientForDBFromDB'
+select @entitycode1 = max(Entity_ID)+1 from ENTITY
+insert into ENTITY (LAST_NAME,NAME_TYPE,ENTITY_ID,ENTITY_TABLE_ID,LAST_NAME_SOUNDEX,ABBREVIATION,DTTM_RCD_LAST_UPD,
+UPDATED_BY_USER,DTTM_RCD_ADDED,ADDED_BY_USER,DELETED_FLAG,PARENT_EID)
+values ('TestingCompanyForDBFromDB',@nametypecode,@entityCode1,@companytableid,'T234','STCM',@date,'dxc',@date,'dxc',0,@clientid)
+
+declare @entitycode2 int
+declare @companyid int
+declare @opertableid int
+select @opertableid = table_id from GLOSSARY where SYSTEM_TABLE_NAME = 'OPERATION'
+select @companyid = Entity_ID from ENTITY where LAST_NAME = 'TestingCompanyForDBFromDB'
+select @entitycode2 = max(Entity_ID)+1 from ENTITY
+insert into ENTITY (LAST_NAME,NAME_TYPE,ENTITY_ID,ENTITY_TABLE_ID,LAST_NAME_SOUNDEX,ABBREVIATION,DTTM_RCD_LAST_UPD,
+UPDATED_BY_USER,DTTM_RCD_ADDED,ADDED_BY_USER,DELETED_FLAG,PARENT_EID)
+values ('TestingOperationForDBFromDB',@nametypecode,@entityCode2,@opertableid,'T234','STOP',@date,'dxc',@date,'dxc',0,@companyid)
+
+declare @entitycode3 int
+declare @operationid int
+declare @regiontableid int
+select @regiontableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'REGION'
+select @operationid = Entity_ID from ENTITY where LAST_NAME = 'TestingOperationForDBFromDB'
+select @entitycode3 = max(Entity_ID)+1 from ENTITY
+insert into ENTITY (LAST_NAME,NAME_TYPE,ENTITY_ID,ENTITY_TABLE_ID,LAST_NAME_SOUNDEX,ABBREVIATION,DTTM_RCD_LAST_UPD,
+UPDATED_BY_USER,DTTM_RCD_ADDED,ADDED_BY_USER,DELETED_FLAG,PARENT_EID)
+values ('TestingRegionForDBFromDB',@nametypecode,@entityCode3,@regiontableid,'T234','STRE',@date,'dxc',@date,'dxc',0,@operationid)
+
+declare @entitycode4 int
+declare @regionid int
+declare @divisiontableid int
+select @divisiontableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'DIVISION'
+select @regionid = Entity_ID from ENTITY where LAST_NAME = 'TestingRegionForDBFromDB'
+select @entitycode4 = max(Entity_ID)+1 from ENTITY
+insert into ENTITY (LAST_NAME,NAME_TYPE,ENTITY_ID,ENTITY_TABLE_ID,LAST_NAME_SOUNDEX,ABBREVIATION,DTTM_RCD_LAST_UPD,
+UPDATED_BY_USER,DTTM_RCD_ADDED,ADDED_BY_USER,DELETED_FLAG,PARENT_EID)
+values ('TestingDivisionForDBFromDB',@nametypecode,@entityCode4,@divisiontableid,'T234','STDV',@date,'dxc',@date,'dxc',0,@regionid)
+
+declare @entitycode5 int
+declare @divisionid int
+declare @locationtableid int
+select @locationtableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'LOCATION'
+select @divisionid = Entity_ID from ENTITY where LAST_NAME = 'TestingDivisionForDBFromDB'
+select @entitycode5 = max(Entity_ID)+1 from ENTITY
+insert into ENTITY (LAST_NAME,NAME_TYPE,ENTITY_ID,ENTITY_TABLE_ID,LAST_NAME_SOUNDEX,ABBREVIATION,DTTM_RCD_LAST_UPD,
+UPDATED_BY_USER,DTTM_RCD_ADDED,ADDED_BY_USER,DELETED_FLAG,PARENT_EID)
+values ('TestingLocationForDBFromDB',@nametypecode,@entityCode5,@locationtableid,'T234','STLC',@date,'dxc',@date,'dxc',0,@divisionid)
+
+declare @entitycode6 int
+declare @locationid int
+declare @facilitytableid  int
+select @facilitytableid = TABLE_ID from glossary where SYSTEM_TABLE_NAME = 'FACILITY'
+select @locationid = Entity_ID from ENTITY where LAST_NAME = 'TestingLocationForDBFromDB'
+select @entitycode6 = max(Entity_ID)+1 from ENTITY
+insert into ENTITY (LAST_NAME,NAME_TYPE,ENTITY_ID,ENTITY_TABLE_ID,LAST_NAME_SOUNDEX,ABBREVIATION,DTTM_RCD_LAST_UPD,
+UPDATED_BY_USER,DTTM_RCD_ADDED,ADDED_BY_USER,DELETED_FLAG,PARENT_EID)
+values ('TestingFacilityForDBFromDB',@nametypecode,@entityCode6,@facilitytableid,'T234','STFC',@date,'dxc',@date,'dxc',0,@locationid)
+
+declare @entitycode7 int
+declare @facilityid int
+select @facilityid = Entity_ID from ENTITY where LAST_NAME = 'TestingFacilityForDBFromDB'
+select @entitycode7 = max(Entity_ID)+1 from ENTITY
+insert into ENTITY (LAST_NAME,NAME_TYPE,ENTITY_ID,ENTITY_TABLE_ID,LAST_NAME_SOUNDEX,ABBREVIATION,DTTM_RCD_LAST_UPD,
+UPDATED_BY_USER,DTTM_RCD_ADDED,ADDED_BY_USER,DELETED_FLAG,PARENT_EID)
+values ('Street Department',@nametypecode,@entityCode7,@depttableid,'T234','ST',@date,'dxc',@date,'dxc',0,@facilityid)
+
+insert into ORG_HIERARCHY(DEPARTMENT_EID, FACILITY_EID, LOCATION_EID, DIVISION_EID, REGION_EID, OPERATION_EID, COMPANY_EID, CLIENT_EID)
+values (@entitycode7, @facilityid, @locationid, @divisionid, @regionid, @operationid, @companyid, @clientid)
+end end
+/*==============================END===========================================================*/
+
+
+/*===========================GC Claim type START===================================*/
+begin
+declare @code int;
+select @code = count(code_id) from codes where DELETED_FLAG =0 and CODE_ID in
+(select code_id from CODES_TEXT where CODE_DESC = 'Discrim-Sex' and short_code = 'DIS')
+
+if @code = 0
+begin
+declare @parentcoverageID int;
+declare @GCclaimcodevalue int;
+declare @GCclaimtableid int
+declare @covtableid  int
+declare @GCLOBid int;
+select @GCLOBid = CODE_ID from CODES_TEXT where SHORT_CODE = 'GC' and CODE_ID in 
+(select CODE_ID from CODES where TABLE_ID in (select TABLE_ID from GLOSSARY where 
+SYSTEM_TABLE_NAME = 'LINE_OF_BUSINESS'))
+select @covtableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'COVERAGE_TYPE'
+select @GCclaimtableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'CLAIM_TYPE'
+select @GCclaimcodevalue = max(CODE_ID)+1 from CODES
+select @parentcoverageID = min(code_ID) from codes where TABLE_ID = @covtableid and DELETED_FLAG =0
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,@GCLOBid,@GCclaimcodevalue,@GCclaimtableid,'DIS',@parentcoverageID,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@GCclaimcodevalue,1033,'DIS','Discrim-Sex',@date,@date,'dxc','dxc')
+end
+end
+/*=========================END===================================*/
+
+/*=====================GC Policy LOB START===================================*/
+begin
+declare @GCpolcode int;
+select @GCpolcode = count(code_id) from codes where deleted_FLAG= 0 and CODE_ID in
+(select code_id from CODES_TEXT where CODE_DESC = 'GeneralClaim' and SHORT_CODE = 'GCC')
+if @GCpolcode = 0
+begin
+declare @parentPolicyLOBID int;
+declare @GCpolicycodevalue int;
+declare @GCpolicytableid int
+declare @poltableid int
+select @GCpolicytableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'POLICY_CLAIM_LOB'
+select @poltableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'BASE_LOB_LINE'
+select @GCpolicycodevalue = max(CODE_ID)+1 from CODES
+select @parentPolicyLOBID = min(code_ID) from codes where TABLE_ID = @poltableid and SHORT_CODE='AL' and DELETED_FLAG =0
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,@GCLOBid,@GCpolicycodevalue,@GCpolicytableid,'GCC',@parentPolicyLOBID,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@GCpolicycodevalue,1033,'GCC','GeneralClaim',@date,@date,'dxc','dxc')
+end
+end
+/*===================END===============================================================*/
+
+
+/*===================CODE MAPPING FOR CLAIM TYPE AND POLICY LOB START======================================*/
+begin 
+declare @relcodeid int;
+select @relcodeid = CODE_ID from CODES_TEXT where SHORT_CODE = 'POLTOCT' and CODE_DESC = 'Policy LOB And Claim Type' and CODE_ID in 
+(select CODE_ID from codes where DELETED_FLAG = 0 and TABLE_ID in(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'CODE_REL_TYPE'))
+declare @claimtypeid int;
+select @claimtypeid = CODE_ID from CODES_TEXT where SHORT_CODE = 'DIS' and CODE_DESC = 'Discrim-Sex' and CODE_ID in
+(select CODE_ID from codes where DELETED_FLAG = 0 and TABLE_ID in(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'CLAIM_TYPE'))
+declare @policylobid int;
+select @policylobid = CODE_ID from CODES_TEXT where SHORT_CODE = 'GCC' and CODE_DESC = 'GeneralClaim' and CODE_ID in
+(select CODE_ID from codes where DELETED_FLAG = 0 and TABLE_ID in(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'POLICY_CLAIM_LOB'))
+declare @rowid int;
+select @rowid = NEXT_UNIQUE_ID From GLOSSARY where SYSTEM_TABLE_NAME = 'CODE_X_CODE'
+declare @nextuniqueid int;
+select @nextuniqueid = @rowid+1;
+declare @count int;
+select @count = count(*) from CODE_X_CODE where CODE1 in(@policylobid,@claimtypeid) and CODE2 in(@claimtypeid,@policylobid) and REL_TYPE_CODE = @relcodeid
+if @count = 0
+BEGIN
+INSERT INTO CODE_X_CODE(ROW_ID,CODE1,CODE2,REL_TYPE_CODE,DELETED_FLAG,ADDED_BY_USER,UPDATED_BY_USER,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD)
+VALUES (@rowid,@policylobid,@claimtypeid,@relcodeid,0,'dxc',NULL,@date,NULL)
+UPDATE GLOSSARY SET NEXT_UNIQUE_ID = @nextuniqueid WHERE SYSTEM_TABLE_NAME = 'CODE_X_CODE' AND NEXT_UNIQUE_ID = @rowid
+END
+end
+/*========================END======================================================*/
+
+/*==============Reserve type START===============================*/
+begin
+declare @rescode int;
+select @rescode = count(code_id) from codes where DELETED_FLAG =0 and TABLE_ID in
+(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'RESERVE_TYPE') and CODE_ID in
+(select code_id from CODES_TEXT where CODE_DESC = 'Expense' and short_code = 'E')
+
+if @rescode = 0
+begin
+declare @parentreserveID int;
+declare @rescodevalue int;
+declare @restableid int
+declare @resid  int
+select @resid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'MASTER_RESERVE'
+select @restableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'RESERVE_TYPE'
+select @rescodevalue = max(CODE_ID)+1 from CODES
+select @parentreserveID = (code_ID) from codes where TABLE_ID = @resid and DELETED_FLAG =0 and SHORT_CODE = 'E'
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,0,@rescodevalue,@restableid,'E',@parentreserveID,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@rescodevalue,1033,'E','Expense',@date,@date,'dxc','dxc')
+end
+end
+/*===============END=====================================*/
+
+/*==============Transaction type START=========================================*/
+begin
+declare @transcode int;
+select @transcode = count(code_id) from codes where deleted_FLAG= 0 and TABLE_ID in
+(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'TRANS_TYPES') and
+CODE_ID in(select code_id from CODES_TEXT where CODE_DESC = 'Court Reporting Fees' and SHORT_CODE = 'CRF')
+if @transcode = 0
+begin
+declare @transid int;
+declare @transcodevalue int;
+declare @transtableid int
+select @transtableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'TRANS_TYPES'
+select @transcodevalue = max(CODE_ID)+1 from CODES
+select @transid = (code_ID) from codes where TABLE_ID in(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME= 'RESERVE_TYPE') 
+and SHORT_CODE='E' and DELETED_FLAG =0 and CODE_ID in (select CODE_ID from CODES_TEXT where CODE_DESC = 'Expense')
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,0,@transcodevalue,@transtableid,'CRF',@transid,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@transcodevalue,1033,'CRF','Court Reporting Fees',@date,@date,'dxc','dxc')
+end
+end
+/*===================END===========================================*/	
+
+
+/*==============Reserve status START=========================================*/
+begin
+declare @resstatus int;
+select @resstatus = count(code_id) from codes where deleted_FLAG= 0 and TABLE_ID in
+(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'RESERVE_STATUS') and
+CODE_ID in(select code_id from CODES_TEXT where CODE_DESC = 'Open' and SHORT_CODE = 'O')
+if @resstatus = 0
+begin
+declare @resstatusid int;
+declare @resstatuscodevalue int;
+declare @resstatustableid int
+select @resstatustableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'RESERVE_STATUS'
+select @resstatuscodevalue = max(CODE_ID)+1 from CODES
+select @resstatusid = (code_ID) from codes where TABLE_ID in(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME= 'RESERVE_STATUS_PARENT') 
+and SHORT_CODE='O' and DELETED_FLAG =0 and CODE_ID in (select CODE_ID from CODES_TEXT where CODE_DESC = 'Open')
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,0,@resstatuscodevalue,@resstatustableid,'O',@resstatusid,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@resstatuscodevalue,1033,'O','Open',@date,@date,'dxc','dxc')
+end
+end
+/*===================END===========================================*/	
+
+/*==============Entity for Payments START=========================================*/
+begin
+declare @entityexist int;
+select @entityexist = count(*) from ENTITY where LAST_NAME = 'Kemper' and DELETED_FLAG = 0
+if @entityexist = 0
+BEGIN
+declare @entitytableid int;
+select @entitytableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'HOSPITAL'
+declare @entityidtype int;
+select @entityidtype = CODE_ID from CODES where SHORT_CODE = 'S' and
+TABLE_ID in (select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'TAX_ID_TYPES')
+declare @entitynametypeid int;
+select @entitynametypeid = CODE_ID from codes where Short_Code = 'BUS' and 
+TABLE_ID = (select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME like '%ENTITY_NAME_TYPE%')
+declare @entityid int;
+declare @enteffectivedate varchar(8);
+select @enteffectivedate = FORMAT(GETDATE(),'yyyyMMdd')
+select @entityid = max(Entity_ID)+1 from ENTITY
+INSERT into ENTITY(LEGAL_NAME, DELETED_FLAG, LAST_NAME, NAME_TYPE, ID_TYPE, ENTITY_ID, ENTITY_TABLE_ID, EFFECTIVE_DATE, LAST_NAME_SOUNDEX, ABBREVIATION,
+DTTM_RCD_ADDED, DTTM_RCD_LAST_UPD, UPDATED_BY_USER, ADDED_BY_USER)
+values('Kemper', 0, 'Kemper', @entitynametypeid,@entityidtype,@entityid,@entitytableid,@enteffectivedate,'K123','K',
+@date,@date,'dxc','dxc')
+END
+END
+/*===================END===========================================*/	
+
+/*========================Enh Notes Start==================================*/
+BEGIN
+declare @enhnotesexist int;
+select @enhnotesexist =  count(*) from CODES_TEXT where SHORT_CODE = 'CL' and CODE_DESC = 'Claimant' and 
+CODE_ID in (select CODE_ID from CODES where DELETED_FLAG=0 and TABLE_ID in 
+(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'NOTE_TYPE_CODE'))
+if @enhnotesexist = 0
+BEGIN
+declare @enhnotesid int;
+select @enhnotesid = max(Code_Id)+1 from CODES
+declare @enhnotestableid int;
+select @enhnotestableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'NOTE_TYPE_CODE'
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,0,@enhnotesid,@enhnotestableid,'CL',0,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@enhnotesid,1033,'CL','Claimant',@date,@date,'dxc','dxc')
+
+END
+END
+/*=================END============================*/
+
+/*========================Event type Start==================================*/
+BEGIN
+declare @eventypeexist int;
+select @eventypeexist =  count(*) from CODES_TEXT where SHORT_CODE = 'CUS' and CODE_DESC = 'Customer Event' and 
+CODE_ID in (select CODE_ID from CODES where DELETED_FLAG=0 and TABLE_ID in 
+(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'EVENT_TYPE'))
+if @eventypeexist = 0
+BEGIN
+declare @eventtypeid int;
+select @eventtypeid = max(Code_Id)+1 from CODES
+declare @eventtypetableid int;
+select @eventtypetableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'EVENT_TYPE'
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,0,@eventtypeid,@eventtypetableid,'CUS',0,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@eventtypeid,1033,'CUS','Customer Event',@date,@date,'dxc','dxc')
+
+END
+END
+/*=================END============================*/
+
+/*========================Litigation type Start==================================*/
+BEGIN
+declare @littypeexist int;
+select @littypeexist =  count(*) from CODES_TEXT where SHORT_CODE = 'CM' and CODE_DESC = 'Complaint' and 
+CODE_ID in (select CODE_ID from CODES where DELETED_FLAG=0 and TABLE_ID in 
+(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'LIT_TYPE'))
+if @littypeexist = 0
+BEGIN
+declare @littypeid int;
+select @littypeid = max(Code_Id)+1 from CODES
+declare @littypetableid int;
+select @littypetableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'LIT_TYPE'
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,0,@littypeid,@littypetableid,'CM',0,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@littypeid,1033,'CM','Complaint',@date,@date,'dxc','dxc')
+
+END
+END
+/*=================END============================*/
+
+/*===========================WC Claim type START===================================*/
+begin
+declare @WCcode int;
+select @WCcode = count(code_id) from codes where DELETED_FLAG =0 and CODE_ID in
+(select code_id from CODES_TEXT where CODE_DESC = 'Lost Time' and short_code = 'LT')
+
+if @WCcode = 0
+begin
+declare @WCparentcoverageID int;
+declare @WCclaimcodevalue int;
+declare @WCclaimtableid int
+declare @WCcovtableid  int
+select @WCcovtableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'COVERAGE_TYPE'
+select @WCclaimtableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'CLAIM_TYPE'
+declare @WCLOBid int;
+select @WCLOBid = CODE_ID from CODES_TEXT where SHORT_CODE = 'WC' and CODE_ID in 
+(select CODE_ID from CODES where TABLE_ID in (select TABLE_ID from GLOSSARY where 
+SYSTEM_TABLE_NAME = 'LINE_OF_BUSINESS'))
+select @WCclaimcodevalue = max(CODE_ID)+1 from CODES
+select @WCparentcoverageID = min(code_ID) from codes where TABLE_ID = @WCcovtableid and DELETED_FLAG =0
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,@WCLOBid,@WCclaimcodevalue,@WCclaimtableid,'LT',@WCparentcoverageID,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@WCclaimcodevalue,1033,'LT','Lost Time',@date,@date,'dxc','dxc')
+end
+end
+/*=========================END===================================*/
+
+/*=====================WC Policy LOB START===================================*/
+begin
+declare @WCpolcode int;
+select @WCpolcode = count(code_id) from codes where deleted_FLAG= 0 and CODE_ID in
+(select code_id from CODES_TEXT where CODE_DESC = 'CorporateWC' and SHORT_CODE = 'WCC')
+if @WCpolcode = 0
+begin
+declare @WCparentPolicyLOBID int;
+declare @WCpolicycodevalue int;
+declare @WCpolicytableid int
+declare @WCpoltableid int
+select @WCpolicytableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'POLICY_CLAIM_LOB'
+select @WCpoltableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'BASE_LOB_LINE'
+select @WCpolicycodevalue = max(CODE_ID)+1 from CODES
+select @WCparentPolicyLOBID = min(code_ID) from codes where TABLE_ID = @WCpoltableid and SHORT_CODE='AL' and DELETED_FLAG =0
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,@WCLOBid,@WCpolicycodevalue,@WCpolicytableid,'WCC',@WCparentPolicyLOBID,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@WCpolicycodevalue,1033,'WCC','CorporateWC',@date,@date,'dxc','dxc')
+end
+end
+/*===================END===============================================================*/
+
+
+/*===================CODE MAPPING FOR WC CLAIM TYPE AND POLICY LOB START======================================*/
+begin 
+declare @WCrelcodeid int;
+select @WCrelcodeid = CODE_ID from CODES_TEXT where SHORT_CODE = 'POLTOCT' and CODE_DESC = 'Policy LOB And Claim Type' and CODE_ID in 
+(select CODE_ID from codes where DELETED_FLAG = 0 and TABLE_ID in(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'CODE_REL_TYPE'))
+declare @WCclaimtypeid int;
+select @WCclaimtypeid = CODE_ID from CODES_TEXT where SHORT_CODE = 'LT' and CODE_DESC = 'Lost Time' and CODE_ID in
+(select CODE_ID from codes where DELETED_FLAG = 0 and TABLE_ID in(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'CLAIM_TYPE'))
+declare @WCpolicylobid int;
+select @WCpolicylobid = CODE_ID from CODES_TEXT where SHORT_CODE = 'WCC' and CODE_DESC = 'CorporateWC' and CODE_ID in
+(select CODE_ID from codes where DELETED_FLAG = 0 and TABLE_ID in(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'POLICY_CLAIM_LOB'))
+declare @WCrowid int;
+select @WCrowid = NEXT_UNIQUE_ID From GLOSSARY where SYSTEM_TABLE_NAME = 'CODE_X_CODE'
+declare @WCnextuniqueid int;
+select @WCnextuniqueid = @WCrowid+1;
+declare @WCcount int;
+select @count = count(*) from CODE_X_CODE where CODE1 in(@WCpolicylobid,@WCclaimtypeid) and CODE2 in(@WCclaimtypeid,@WCpolicylobid) and REL_TYPE_CODE = @WCrelcodeid
+if @count = 0
+BEGIN
+INSERT INTO CODE_X_CODE(ROW_ID,CODE1,CODE2,REL_TYPE_CODE,DELETED_FLAG,ADDED_BY_USER,UPDATED_BY_USER,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD)
+VALUES (@WCrowid,@WCpolicylobid,@WCclaimtypeid,@WCrelcodeid,0,'dxc',NULL,@date,NULL)
+UPDATE GLOSSARY SET NEXT_UNIQUE_ID = @WCnextuniqueid WHERE SYSTEM_TABLE_NAME = 'CODE_X_CODE' AND NEXT_UNIQUE_ID = @WCrowid
+END
+end
+/*========================END======================================================*/
+
+/*===================Illness type START===============================*/
+begin
+declare @illnesscode int;
+select @illnesscode = count(code_id) from codes where DELETED_FLAG =0 and CODE_ID in
+(select code_id from CODES_TEXT where CODE_DESC = 'Skin Disease' and short_code = '1' and TABLE_ID in 
+(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'ILLNESS_TYPE'))
+if @illnesscode = 0
+begin
+declare @illnessrelid int;
+declare @illnesscodeid int;
+declare @illtableid int;
+select @illtableid = TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME='ILLNESS_TYPE'
+select @illnesscodeid = max(CODE_ID)+1 from CODES
+select @illnessrelid = CODE_ID from CODES where SHORT_CODE='01' and DELETED_FLAG=0 and TABLE_ID in 
+(select TABLE_ID from GLOSSARY where SYSTEM_TABLE_NAME = 'OSHA_ILLNESS')
+and CODE_ID in (select CODE_ID from CODES_TEXT where CODE_DESC = 'Skin Disease')
+
+INSERT INTO CODES (IND_STANDARD_CODE,LINE_OF_BUS_CODE,CODE_ID,TABLE_ID,SHORT_CODE,RELATED_CODE_ID,DELETED_FLAG,
+TRIGGER_DATE_FIELD,ORG_GROUP_EID,IS_DATA_FIELD,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(0,0,@illnesscodeid,@illtableid,'1',@illnessrelid,0,NULL,0,
+0,@date,@date,'dxc','dxc')
+
+INSERT INTO CODES_TEXT (CODE_ID,LANGUAGE_CODE,SHORT_CODE,CODE_DESC,DTTM_RCD_ADDED,DTTM_RCD_LAST_UPD,ADDED_BY_USER,UPDATED_BY_USER) 
+VALUES(@illnesscodeid,1033,'1','Skin Disease',@date,@date,'dxc','dxc')
+end
+end
+/*===============================END=============================*/

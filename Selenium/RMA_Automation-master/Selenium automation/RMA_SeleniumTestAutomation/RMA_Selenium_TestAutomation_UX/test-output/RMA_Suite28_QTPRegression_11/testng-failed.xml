@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RMA_Suite28_QTPRegression_11]" allow-return-values="true">
+  <parameter name="ExecutedSuiteName" value="RMA_UXSample"/>
+  <parameter name="DataSourceRow" value="4"/>
+  <test name="RMA_QTPRegression_TC_099(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_102">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_102 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_101">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_101 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_115">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_115 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_099">
+        <methods>
+          <include name="RMA_FailureReport"/>
+          <include name="RMA_QTPRegression_TC_099_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_099 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_116">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_116 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_114">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_114 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_100">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_100 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_104">
+        <methods>
+          <include name="RMA_FailureReport"/>
+          <include name="SetUp"/>
+          <include name="ExitSetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_104 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_QTPRegression_TC_099(failed) -->
+  <test name="RMA_QTPRegression_TC_101(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_101">
+        <methods>
+          <include name="RMA_FailureReport"/>
+          <include name="RMA_QTPRegression_TC_101_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_101 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_102">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_102 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_115">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_115 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_116">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_116 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_099">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_099 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_114">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_114 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_100">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_100 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_104">
+        <methods>
+          <include name="RMA_FailureReport"/>
+          <include name="SetUp"/>
+          <include name="ExitSetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_104 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_QTPRegression_TC_101(failed) -->
+  <test name="RMA_QTPRegression_TC_102(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_102">
+        <methods>
+          <include name="RMA_QTPRegression_TC_102_Test"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_102 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_101">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_101 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_115">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_115 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_116">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_116 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_099">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_099 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_114">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_114 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_100">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_100 -->
+      <class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_104">
+        <methods>
+          <include name="RMA_FailureReport"/>
+          <include name="SetUp"/>
+          <include name="ExitSetUp"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_QTPRegression_TC_104 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_QTPRegression_TC_102(failed) -->
+</suite> <!-- Failed suite [RMA_Suite28_QTPRegression_11] -->

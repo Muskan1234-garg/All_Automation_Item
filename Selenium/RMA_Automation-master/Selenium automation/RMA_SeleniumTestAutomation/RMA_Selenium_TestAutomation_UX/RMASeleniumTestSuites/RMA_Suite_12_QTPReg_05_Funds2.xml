@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="4" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_12_QTPReg_05_Funds2" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Sub Account Deposit Balances Can Be Checked While Making Checks Is Validated In RMA Application Is Validated -->
+	 <test name="RMA_QTPRegression_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_020" />
+		</classes>
+	</test> 
+
+	<!--Master Bank Account Can Be Set To A Bank Account Is Validated In RMA Application Is Validated -->
+	<test name="RMA_QTPRegression_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_021" />
+		</classes>
+	</test>
+
+	<!--Clone Of Check Stocks In RMA Application Is Validated -->
+	<test name="RMA_QTPRegression_TC_022">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_022" />
+		</classes>
+	</test>
+
+<!--Setting Of Bank Account Owner To Effective Trigger And Dates In RMA Application Is Validated -->
+ <test name="RMA_QTPRegression_TC_030">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_030" />
+		</classes>
+	</test>
+	
+	<!--Verify That Bank Account Owner Can Be Set To Line Of Business In RMA Application Is Validated -->
+	<test name="RMA_QTPRegression_TC_023">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_023" />
+		</classes>
+	</test>
+
+
+	<!--Setting Of Bank Account Owner To Service Code(s) In RMA Application Is Validated -->
+	<test name="RMA_QTPRegression_TC_025">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_025" />
+		</classes>
+	</test>
+ 
+	<!--Setting Of SubBank Account Owner To Effective Trigger and Dates In RMA Application Is Validated -->
+	<test name="RMA_QTPRegression_TC_031">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_031" />
+		</classes>
+	</test>
+
+	<!--Setting Of Sub Bank Account Owner To Line Of Business In RMA Application Is Validated -->
+	<test name="RMA_QTPRegression_TC_024">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_024" />
+		</classes>
+	</test>
+
+</suite>
+
+
+
+
+
+
+
+
+
+
+

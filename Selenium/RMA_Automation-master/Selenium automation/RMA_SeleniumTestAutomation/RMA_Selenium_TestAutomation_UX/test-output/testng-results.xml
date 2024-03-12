@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="4" total="15" passed="11">
+  <reporter-output>
+  </reporter-output>
+  <suite name="RMA_SeleniumRegressionSuite9" duration-ms="3105705" started-at="2018-04-09T08:35:04Z" finished-at="2018-04-09T09:26:50Z">
+    <groups>
+    </groups>
+    <test name="RMA_TC_001" duration-ms="35718" started-at="2018-04-09T08:35:04Z" finished-at="2018-04-09T08:35:40Z">
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <test-method status="PASS" signature="RMAApp_login()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_001@5442a311]" name="RMAApp_login" duration-ms="35405" started-at="2018-04-09T14:05:04Z" finished-at="2018-04-09T14:05:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMAApp_login -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_001@5442a311]" name="RMA_FailureReport" is-config="true" duration-ms="275" started-at="2018-04-09T14:05:40Z" finished-at="2018-04-09T14:05:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMAApp_login status=SUCCESS method=RMA_TC_001.RMAApp_login()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_001@5442a311] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+    </test> <!-- RMA_TC_001 -->
+    <test name="RMA_TC_002" duration-ms="23590" started-at="2018-04-09T08:35:40Z" finished-at="2018-04-09T08:36:03Z">
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <test-method status="PASS" signature="RMAApp_DSNSelection()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_002@4cf777e8]" name="RMAApp_DSNSelection" duration-ms="5343" started-at="2018-04-09T14:05:40Z" finished-at="2018-04-09T14:05:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMAApp_DSNSelection -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_002@4cf777e8]" name="RMA_FailureReport" is-config="true" duration-ms="18246" started-at="2018-04-09T14:05:45Z" finished-at="2018-04-09T14:06:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMAApp_DSNSelection status=SUCCESS method=RMA_TC_002.RMAApp_DSNSelection()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_002@4cf777e8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </test> <!-- RMA_TC_002 -->
+    <test name="RMA_SeleniumRegression_TC_001" duration-ms="358205" started-at="2018-04-09T08:36:03Z" finished-at="2018-04-09T08:42:02Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001">
+        <test-method status="PASS" signature="RMA_SeleniumRegression_TC_001_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001@5bcab519]" name="RMA_SeleniumRegression_TC_001_Test" duration-ms="358143" started-at="2018-04-09T14:06:03Z" finished-at="2018-04-09T14:12:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_001_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001@5bcab519]" name="RMA_FailureReport" is-config="true" duration-ms="59" started-at="2018-04-09T14:12:02Z" finished-at="2018-04-09T14:12:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_001_Test status=SUCCESS method=RMA_SeleniumRegression_TC_001.RMA_SeleniumRegression_TC_001_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001@5bcab519] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001 -->
+    </test> <!-- RMA_SeleniumRegression_TC_001 -->
+    <test name="RMA_SeleniumRegression_TC_002" duration-ms="362975" started-at="2018-04-09T08:42:02Z" finished-at="2018-04-09T08:48:05Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002">
+        <test-method status="PASS" signature="RMA_SeleniumRegression_TC_002_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002@27c20538]" name="RMA_SeleniumRegression_TC_002_Test" duration-ms="358824" started-at="2018-04-09T14:12:02Z" finished-at="2018-04-09T14:18:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_002_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002@27c20538]" name="RMA_FailureReport" is-config="true" duration-ms="4150" started-at="2018-04-09T14:18:01Z" finished-at="2018-04-09T14:18:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_002_Test status=SUCCESS method=RMA_SeleniumRegression_TC_002.RMA_SeleniumRegression_TC_002_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002@27c20538] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002 -->
+    </test> <!-- RMA_SeleniumRegression_TC_002 -->
+    <test name="RMA_SeleniumRegression_TC_004" duration-ms="342708" started-at="2018-04-09T08:48:05Z" finished-at="2018-04-09T08:53:47Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004">
+        <test-method status="PASS" signature="RMA_SeleniumRegression_TC_004_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004@56ef9176]" name="RMA_SeleniumRegression_TC_004_Test" duration-ms="338492" started-at="2018-04-09T14:18:05Z" finished-at="2018-04-09T14:23:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_004_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004@56ef9176]" name="RMA_FailureReport" is-config="true" duration-ms="4215" started-at="2018-04-09T14:23:43Z" finished-at="2018-04-09T14:23:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_004_Test status=SUCCESS method=RMA_SeleniumRegression_TC_004.RMA_SeleniumRegression_TC_004_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004@56ef9176] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004 -->
+    </test> <!-- RMA_SeleniumRegression_TC_004 -->
+    <test name="RMA_SeleniumRegression_TC_005" duration-ms="450582" started-at="2018-04-09T08:53:48Z" finished-at="2018-04-09T09:01:18Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005">
+        <test-method status="FAIL" signature="RMA_SeleniumRegression_TC_005_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005@3159c4b8]" name="RMA_SeleniumRegression_TC_005_Test" duration-ms="421298" started-at="2018-04-09T14:23:48Z" finished-at="2018-04-09T14:30:49Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"FLD100"}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'CSCINDAE707498', ip: '20.198.112.132', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\arai24\AppData\Local\Temp\scoped_dir6620_27827}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 227519d19cd897230fe10bae1dcea43a
+*** Element info: {Using=id, value=FLD100}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"FLD100"}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.01 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'CSCINDAE707498', ip: '20.198.112.132', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\arai24\AppData\Local\Temp\scoped_dir6620_27827}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 227519d19cd897230fe10bae1dcea43a
+*** Element info: {Using=id, value=FLD100}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at rmaseleniumPOM_UX.RMA_Selenium_POM_Search.RMAApp_SearchClaims_Txt_ClaimNumber(RMA_Selenium_POM_Search.java:56)
+	at rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005.RMA_SeleniumRegression_TC_005_Test(RMA_SeleniumRegression_TC_005.java:265)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_005_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005@3159c4b8]" name="RMA_FailureReport" is-config="true" duration-ms="29278" started-at="2018-04-09T14:30:49Z" finished-at="2018-04-09T14:31:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_005_Test status=FAILURE method=RMA_SeleniumRegression_TC_005.RMA_SeleniumRegression_TC_005_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005@3159c4b8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005 -->
+    </test> <!-- RMA_SeleniumRegression_TC_005 -->
+    <test name="RMA_SeleniumRegression_TC_006" duration-ms="407372" started-at="2018-04-09T09:01:18Z" finished-at="2018-04-09T09:08:05Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006">
+        <test-method status="FAIL" signature="RMA_SeleniumRegression_TC_006_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006@49993335]" name="RMA_SeleniumRegression_TC_006_Test" duration-ms="378081" started-at="2018-04-09T14:31:18Z" finished-at="2018-04-09T14:37:36Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"FLD100"}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'CSCINDAE707498', ip: '20.198.112.132', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\arai24\AppData\Local\Temp\scoped_dir6620_27827}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 227519d19cd897230fe10bae1dcea43a
+*** Element info: {Using=id, value=FLD100}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"FLD100"}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.02 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'CSCINDAE707498', ip: '20.198.112.132', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\arai24\AppData\Local\Temp\scoped_dir6620_27827}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 227519d19cd897230fe10bae1dcea43a
+*** Element info: {Using=id, value=FLD100}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:453)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at rmaseleniumPOM_UX.RMA_Selenium_POM_Search.RMAApp_SearchClaims_Txt_ClaimNumber(RMA_Selenium_POM_Search.java:56)
+	at rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006.RMA_SeleniumRegression_TC_006_Test(RMA_SeleniumRegression_TC_006.java:265)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_006_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006@49993335]" name="RMA_FailureReport" is-config="true" duration-ms="29287" started-at="2018-04-09T14:37:36Z" finished-at="2018-04-09T14:38:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_006_Test status=FAILURE method=RMA_SeleniumRegression_TC_006.RMA_SeleniumRegression_TC_006_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006@49993335] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006 -->
+    </test> <!-- RMA_SeleniumRegression_TC_006 -->
+    <test name="RMA_SeleniumRegression_TC_007" duration-ms="152396" started-at="2018-04-09T09:08:06Z" finished-at="2018-04-09T09:10:38Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007">
+        <test-method status="FAIL" signature="RMA_SeleniumRegression_TC_007_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007@7e0b0338]" name="RMA_SeleniumRegression_TC_007_Test" duration-ms="123172" started-at="2018-04-09T14:38:06Z" finished-at="2018-04-09T14:40:09Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='lbldate_dateOfEvent']/following-sibling::zc-field-date-picker//input"}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'CSCINDAE707498', ip: '20.198.112.132', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\arai24\AppData\Local\Temp\scoped_dir6620_27827}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 227519d19cd897230fe10bae1dcea43a
+*** Element info: {Using=xpath, value=.//*[@id='lbldate_dateOfEvent']/following-sibling::zc-field-date-picker//input}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//*[@id='lbldate_dateOfEvent']/following-sibling::zc-field-date-picker//input"}
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'CSCINDAE707498', ip: '20.198.112.132', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\arai24\AppData\Local\Temp\scoped_dir6620_27827}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 227519d19cd897230fe10bae1dcea43a
+*** Element info: {Using=xpath, value=.//*[@id='lbldate_dateOfEvent']/following-sibling::zc-field-date-picker//input}
+	at sun.reflect.GeneratedConstructorAccessor54.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at rmaseleniumPOM_UX.RMA_Selenium_POM_Generic_Claims.RMAApp_GenericClaim_Txt_DateOfEvent(RMA_Selenium_POM_Generic_Claims.java:87)
+	at rmaseleniumutilties_UX.RMA_Functionality_Utility.RMA_NonOccClaimCreation(RMA_Functionality_Utility.java:8324)
+	at rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007.RMA_SeleniumRegression_TC_007_Test(RMA_SeleniumRegression_TC_007.java:182)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_007_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007@7e0b0338]" name="RMA_FailureReport" is-config="true" duration-ms="29222" started-at="2018-04-09T14:40:09Z" finished-at="2018-04-09T14:40:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_007_Test status=FAILURE method=RMA_SeleniumRegression_TC_007.RMA_SeleniumRegression_TC_007_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007@7e0b0338] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007 -->
+    </test> <!-- RMA_SeleniumRegression_TC_007 -->
+    <test name="RMA_SeleniumRegression_TC_008" duration-ms="56548" started-at="2018-04-09T09:10:38Z" finished-at="2018-04-09T09:11:35Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008">
+        <test-method status="PASS" signature="SeleniumRegression_TC_008_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008@31610302]" name="SeleniumRegression_TC_008_Test" duration-ms="51971" started-at="2018-04-09T14:40:38Z" finished-at="2018-04-09T14:41:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SeleniumRegression_TC_008_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008@31610302]" name="RMA_FailureReport" is-config="true" duration-ms="4575" started-at="2018-04-09T14:41:30Z" finished-at="2018-04-09T14:41:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SeleniumRegression_TC_008_Test status=SUCCESS method=RMA_SeleniumRegression_TC_008.SeleniumRegression_TC_008_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008@31610302] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008 -->
+    </test> <!-- RMA_SeleniumRegression_TC_008 -->
+    <test name="RMA_SeleniumRegression_TC_009" duration-ms="38036" started-at="2018-04-09T09:11:35Z" finished-at="2018-04-09T09:12:13Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009">
+        <test-method status="PASS" signature="RMA_SeleniumRegression_TC_009_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009@5ce81285]" name="RMA_SeleniumRegression_TC_009_Test" duration-ms="33492" started-at="2018-04-09T14:41:35Z" finished-at="2018-04-09T14:42:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_009_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009@5ce81285]" name="RMA_FailureReport" is-config="true" duration-ms="4543" started-at="2018-04-09T14:42:08Z" finished-at="2018-04-09T14:42:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_009_Test status=SUCCESS method=RMA_SeleniumRegression_TC_009.RMA_SeleniumRegression_TC_009_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009@5ce81285] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009 -->
+    </test> <!-- RMA_SeleniumRegression_TC_009 -->
+    <test name="RMA_SeleniumRegression_TC_010" duration-ms="161218" started-at="2018-04-09T09:12:13Z" finished-at="2018-04-09T09:14:54Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010">
+        <test-method status="PASS" signature="RMA_SeleniumRegression_TC_010_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010@6fc6f14e]" name="RMA_SeleniumRegression_TC_010_Test" duration-ms="121799" started-at="2018-04-09T14:42:13Z" finished-at="2018-04-09T14:44:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_010_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010@6fc6f14e]" name="RMA_FailureReport" is-config="true" duration-ms="39416" started-at="2018-04-09T14:44:14Z" finished-at="2018-04-09T14:44:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_010_Test status=SUCCESS method=RMA_SeleniumRegression_TC_010.RMA_SeleniumRegression_TC_010_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010@6fc6f14e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010 -->
+    </test> <!-- RMA_SeleniumRegression_TC_010 -->
+    <test name="RMA_SeleniumRegression_TC_011" duration-ms="85958" started-at="2018-04-09T09:14:54Z" finished-at="2018-04-09T09:16:20Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011">
+        <test-method status="PASS" signature="RMA_TC_011_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011@13a5fe33]" name="RMA_TC_011_Test" duration-ms="81338" started-at="2018-04-09T14:44:54Z" finished-at="2018-04-09T14:46:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_TC_011_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011@13a5fe33]" name="RMA_FailureReport" is-config="true" duration-ms="4617" started-at="2018-04-09T14:46:15Z" finished-at="2018-04-09T14:46:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_TC_011_Test status=SUCCESS method=RMA_SeleniumRegression_TC_011.RMA_TC_011_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011@13a5fe33] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011 -->
+    </test> <!-- RMA_SeleniumRegression_TC_011 -->
+    <test name="RMA_SeleniumRegression_TC_012" duration-ms="317030" started-at="2018-04-09T09:16:20Z" finished-at="2018-04-09T09:21:37Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012">
+        <test-method status="PASS" signature="RMA_SeleniumRegression_TC_012_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012@18eed359]" name="RMA_SeleniumRegression_TC_012_Test" duration-ms="312918" started-at="2018-04-09T14:46:20Z" finished-at="2018-04-09T14:51:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_012_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012@18eed359]" name="RMA_FailureReport" is-config="true" duration-ms="4111" started-at="2018-04-09T14:51:33Z" finished-at="2018-04-09T14:51:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_012_Test status=SUCCESS method=RMA_SeleniumRegression_TC_012.RMA_SeleniumRegression_TC_012_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012@18eed359] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012 -->
+    </test> <!-- RMA_SeleniumRegression_TC_012 -->
+    <test name="RMA_SeleniumRegression_TC_013" duration-ms="272811" started-at="2018-04-09T09:21:37Z" finished-at="2018-04-09T09:26:10Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013">
+        <test-method status="PASS" signature="RMA_SeleniumRegression_TC_013_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013@eec5a4a]" name="RMA_SeleniumRegression_TC_013_Test" duration-ms="268614" started-at="2018-04-09T14:51:37Z" finished-at="2018-04-09T14:56:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_013_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013@eec5a4a]" name="RMA_FailureReport" is-config="true" duration-ms="4195" started-at="2018-04-09T14:56:05Z" finished-at="2018-04-09T14:56:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_013_Test status=SUCCESS method=RMA_SeleniumRegression_TC_013.RMA_SeleniumRegression_TC_013_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013@eec5a4a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013 -->
+    </test> <!-- RMA_SeleniumRegression_TC_013 -->
+    <test name="RMA_SeleniumRegression_TC_014" duration-ms="40110" started-at="2018-04-09T09:26:10Z" finished-at="2018-04-09T09:26:50Z">
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014">
+        <test-method status="PASS" signature="SetUp(int, java.lang.String)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014@369f73a2]" name="SetUp" is-config="true" duration-ms="11678" started-at="2018-04-09T14:04:52Z" finished-at="2018-04-09T14:05:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[RMA_Suite_16_SelReg_09_SMS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="FAIL" signature="RMA_SeleniumRegression_TC_014_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014@369f73a2]" name="RMA_SeleniumRegression_TC_014_Test" duration-ms="21115" started-at="2018-04-09T14:56:10Z" finished-at="2018-04-09T14:56:31Z">
+          <exception class="org.openqa.selenium.InvalidElementStateException">
+            <message>
+              <![CDATA[invalid element state: Element must be user-editable in order to clear it.
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 33 milliseconds
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'CSCINDAE707498', ip: '20.198.112.132', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\arai24\AppData\Local\Temp\scoped_dir7836_6058}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 6e1767300bb803a7e63a6afd0e190618]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.InvalidElementStateException: invalid element state: Element must be user-editable in order to clear it.
+  (Session info: chrome=65.0.3325.181)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 33 milliseconds
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'CSCINDAE707498', ip: '20.198.112.132', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\arai24\AppData\Local\Temp\scoped_dir7836_6058}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=65.0.3325.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 6e1767300bb803a7e63a6afd0e190618
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:114)
+	at rmaseleniumutilties_UX.RMA_Input_Utility.RMA_SetValue_Utility(RMA_Input_Utility.java:96)
+	at rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014.RMA_SeleniumRegression_TC_014_Test(RMA_SeleniumRegression_TC_014.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1137)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:753)
+	at org.testng.TestRunner.run(TestRunner.java:607)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:368)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:363)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:321)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.InvalidElementStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_SeleniumRegression_TC_014_Test -->
+        <test-method status="PASS" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014@369f73a2]" name="RMA_FailureReport" is-config="true" duration-ms="18993" started-at="2018-04-09T14:56:31Z" finished-at="2018-04-09T14:56:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RMA_SeleniumRegression_TC_014_Test status=FAILURE method=RMA_SeleniumRegression_TC_014.RMA_SeleniumRegression_TC_014_Test()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014@369f73a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+        <test-method status="PASS" signature="ExitSetUp()[pri:0, instance:rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014@369f73a2]" name="ExitSetUp" is-config="true" duration-ms="9256" started-at="2018-04-09T14:56:50Z" finished-at="2018-04-09T14:56:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExitSetUp -->
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014 -->
+    </test> <!-- RMA_SeleniumRegression_TC_014 -->
+  </suite> <!-- RMA_SeleniumRegressionSuite9 -->
+</testng-results>

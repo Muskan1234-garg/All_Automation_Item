@@ -1,0 +1,36 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="UserDeletionUtilities" />
+<parameter name="DataSourceRow" value="1" /><!--To Set The Datasource Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData-->
+ 
+ <!--Verify That RMA Application Is Logged In-->
+  <test name="UserForm">
+    <classes>
+      <class name="rmaseleniumtestscripts.UserForm"/>
+    </classes>
+  </test>
+  
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<parameter name="ZoneName" value="Security" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>	
+	
+<!--Successful Deletion Existing Users For Supervisory Chain Creation Is Validated  -->
+
+	 <test name="UserDeletionUtility">
+			<classes>
+			<class name="rmaseleniumtestscripts.UserDeletionUtility" />
+		</classes>
+	</test> 
+	</suite>

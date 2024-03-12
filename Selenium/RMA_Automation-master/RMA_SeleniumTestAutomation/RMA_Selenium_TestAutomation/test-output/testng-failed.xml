@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RMA_SampleSuite]">
+  <parameter name="ReserveType" value="M Medical"/>
+  <test name="RMA_TC_001(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMAApp_login"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+    </classes>
+  </test> <!-- RMA_TC_001(failed) -->
+  <test name="RMA_TC_002(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMAApp_DSNSelection"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_TC_002(failed) -->
+  <test name="RMA_TC_PreConditionCheck(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_PreConditionCheck">
+        <methods>
+          <include name="RMAApp_TC_PreCondition"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_PreConditionCheck -->
+    </classes>
+  </test> <!-- RMA_TC_PreConditionCheck(failed) -->
+  <test name="RMA_TC_005(failed)">
+    <parameter name="ReserveType" value="M Medical"/>
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_005">
+        <methods>
+          <include name="ReserveCreation"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_005 -->
+    </classes>
+  </test> <!-- RMA_TC_005(failed) -->
+  <test name="RMA_TC_007(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_007">
+        <methods>
+          <include name="RMAApp_AddressCreation"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_007 -->
+    </classes>
+  </test> <!-- RMA_TC_007(failed) -->
+  <test name="RMA_TC_009(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_009">
+        <methods>
+          <include name="Address_AddressSearch"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_009 -->
+    </classes>
+  </test> <!-- RMA_TC_009(failed) -->
+  <test name="RMA_TC_010(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_010">
+        <methods>
+          <include name="Address_AddressSearch"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_010 -->
+    </classes>
+  </test> <!-- RMA_TC_010(failed) -->
+  <test name="RMA_TC_008(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_008">
+        <methods>
+          <include name="EventAndGCCreation"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_008 -->
+    </classes>
+  </test> <!-- RMA_TC_008(failed) -->
+</suite> <!-- Failed suite [RMA_SampleSuite] -->

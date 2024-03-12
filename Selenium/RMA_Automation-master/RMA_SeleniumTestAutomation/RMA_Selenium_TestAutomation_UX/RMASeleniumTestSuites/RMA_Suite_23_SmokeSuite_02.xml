@@ -1,0 +1,187 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="2" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_01_SmokeSuite02" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Navigation Screen Validation Pre-requisite For Smoke Suite 2 Test Cases 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of Employee From Maintenance Screen Is Validated -->
+	<test name="RMA_Smoke_TC_041">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of Medical Staff From Maintenance Screen Is 
+		Validated -->
+	<test name="RMA_Smoke_TC_042">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_042" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of Patient From Maintenance Screen Is Validated -->
+	<test name="RMA_Smoke_TC_043">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_043" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of Driver From Maintenance Screen Is Validated -->
+	<test name="RMA_Smoke_TC_044">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_044" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of Entity From Maintenance Screen Is Validated -->
+	<test name="RMA_Smoke_TC_045">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_045" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of Physician From Maintenance Screen Is Validated -->
+	<test name="RMA_Smoke_TC_046">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_046" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of People From Maintenance Screen Is Validated -->
+	<test name="RMA_Smoke_TC_047">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_047" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of Vehicle From Maintenance Screen Is Validated -->
+	<test name="RMA_Smoke_TC_066">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_066" />
+		</classes>
+	</test>
+
+	<!--Create And Edit Of Org. Hierarchy From Maintenance Screen Is Validated -->
+	<test name="RMA_Smoke_TC_060">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_060" />
+		</classes>
+	</test>
+
+	<!--Policy Is Getting Created By Entering All Mandatory Fields Is Validated -->
+	<test name="RMA_Smoke_TC_059">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_059" />
+		</classes>
+	</test>
+
+	<!--Coverage Can Be Added, Edited And Deleted From Policy Is Validated -->
+	<test name="RMA_Smoke_TC_061">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_061" />
+		</classes>
+	</test>
+
+	<!--Policy MCO Can Be Added, Edited And Deleted From Policy Is Validated -->
+	<test name="RMA_Smoke_TC_062">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_062" />
+		</classes>
+	</test>
+
+	<!-- Functionality Of Clone Policy Button Is Validated -->
+	<test name="RMA_Smoke_TC_063">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_063" />
+		</classes>
+	</test>
+
+<!-- Debasmita - Weblinks Test Case Is Not Designed As Per The Current Workflow So Commented Below Testcase-->
+	<!-- Successful Setup Of WebLinks Is Validated -->
+<!-- 	<test name="RMA_Smoke_TC_065"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_065" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+	<!-- Privileges can be added , edited and deleted from a Physician Is Validated -->
+	<test name="RMA_Smoke_TC_068">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_068" />
+		</classes>
+	</test>
+
+	<!--Certifications can be added , edited and deleted from a Physician Is 
+		Validated -->
+	<test name="RMA_Smoke_TC_069">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_069" />
+		</classes>
+	</test>
+
+	<!--Education can be added , edited and deleted from a Physician Is Validated -->
+	<test name="RMA_Smoke_TC_070">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_070" />
+		</classes>
+	</test>
+
+
+	<!-- Previous Hospitals can be added , edited and deleted from a Physician Is Validated -->
+	<test name="RMA_Smoke_TC_071">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_071" />
+		</classes>
+	</test>
+
+	<!--Pre-requisite for RMA_Smoke_TC_072 :In General System Parameter Settings the BRS (Bill Review System) Should Be Checked -->
+	<!--Contracts can be added , edited and deleted from a Physician Is Validated -->
+	<test name="RMA_Smoke_TC_072">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_072" />
+		</classes>
+	</test>
+
+	<!--Procedure can be added , edited and deleted from a patient Is Validated -->
+	<test name="RMA_Smoke_TC_073">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_073" />
+		</classes>
+	</test>
+	
+	<!--Property Claim Getting Created By Entering All Mandatory Fields Is Validated -->
+	<test name="RMA_Smoke_TC_002_PC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_PC" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

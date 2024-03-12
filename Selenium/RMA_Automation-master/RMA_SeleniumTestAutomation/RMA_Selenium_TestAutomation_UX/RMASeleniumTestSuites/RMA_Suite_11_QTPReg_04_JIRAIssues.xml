@@ -1,0 +1,65 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_11_QTPReg_04_JIRAIssues" />
+
+	<!-- Test Case RMA_QTPRegression_TC_029_C Is Required To Reset The OLD UI Settings After The Execution Of RMA_QTPRegression_TC_027 & RMA_QTPRegression_TC_029 -->
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Successful Payment Creation When Multiple Payees (Other People And Entities) Are Associated Is Validated -->
+	<test name="RMA_QTPRegression_TC_026">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_026" />
+		</classes>
+	</test>
+
+	<!--User Is Not Able To Edit The Enhanced Notes After X Number Of Hours As Per Setting Done In General System Parameter Is Validated -->
+	<test name="RMA_QTPRegression_TC_027">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_027" />
+		</classes>
+	</test>
+
+	<!--Verification Of Combined Payment Functionality In Case Of Multiple Payees -->
+	<test name="RMA_QTPRegression_TC_028">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_028" />
+		</classes>
+	</test>
+
+	<!--Queued Transaction For Both Not Approved Payee And Exceeded Payment Limits Is Validated -->
+	<test name="RMA_QTPRegression_TC_029">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_029" />
+		</classes>
+	</test>
+
+	<!--To Reset The Payment Parameter, General System Parameter And User Privilege Settings After Suite32 Is Validated Limits Is Validated -->
+	<test name="RMA_QTPRegression_TC_029_C">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_029_C" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

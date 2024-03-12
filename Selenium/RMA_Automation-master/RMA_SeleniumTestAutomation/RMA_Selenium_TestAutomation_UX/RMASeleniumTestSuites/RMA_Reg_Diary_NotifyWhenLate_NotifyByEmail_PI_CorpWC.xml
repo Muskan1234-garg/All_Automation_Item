@@ -1,0 +1,94 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- Change The System Time To Eastern Standard Time Before Execution Of 
+		This Suite -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName"
+		value="RMA_Reg_Diary_NotifyWhenLate_NotifyByEmail_PI_CorpWC" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_03_Driver_WC">
+		<parameter name="PersonInvolvedName" value="Driver" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_03" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_03_Employee_WC">
+		<parameter name="PersonInvolvedName" value="Employee" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_03" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_03_MedicalStaff_WC">
+		<parameter name="PersonInvolvedName" value="MedicalStaff" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_03" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_03_Patient_WC">
+		<parameter name="PersonInvolvedName" value="Patient" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_03" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_03_Physician_WC">
+		<parameter name="PersonInvolvedName" value="Physician" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_03" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_03_Witness_WC">
+		<parameter name="PersonInvolvedName" value="Witness" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_03" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_03_OtherPerson_WC">
+		<parameter name="PersonInvolvedName" value="OtherPerson" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_03" />
+		</classes>
+	</test>
+
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>

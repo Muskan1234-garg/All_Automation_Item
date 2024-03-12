@@ -1,0 +1,54 @@
+[debug (1/11/22, 10:07:07 AM)] Debug: setLogFile: C:\RMA_SeleniumTestAutomation\RMA_Selenium_TestAutomation_UX\Lib\SikuliX-1.1.3-SetupLog.txt
+[debug (1/11/22, 10:07:07 AM)] RunSetup: ... starting with no args given
+[debug (1/11/22, 10:07:07 AM)] RunSetup: Setup: 1.1.3 2018-07-11_08:19 in folder:
+C:\RMA_SeleniumTestAutomation\RMA_Selenium_TestAutomation_UX\Lib
+[debug (1/11/22, 10:07:07 AM)] RunSetup: RunningSystem: Windows 6.3
+[debug (1/11/22, 10:07:07 AM)] RunSetup: parent of jar/classes: C:\RMA_SeleniumTestAutomation\RMA_Selenium_TestAutomation_UX\Lib
+[debug (1/11/22, 10:07:07 AM)] RunSetup: RunningJava: Java 11 (amd64) 11.0.9+7-LTS
+[debug (1/11/22, 10:07:07 AM)] init user preferences
+[debug (1/11/22, 10:07:25 AM)] RunSetup: 
+popAsk: --------------------
+The following file(s) will be downloaded to
+C:\RMA_SeleniumTestAutomation\RMA_Selenium_TestAutomation_UX\Lib
+--- Native support libraries for Windows (sikulixlibs...)
+--- Package 2 ---
+sikulixsetupAPI-1.1.3-20180711.082046-40-forsetup.jar (Java API)
+Only click NO, if you want to terminate setup now!
+Click YES even if you want to use local copies in Downloads!
+--------------------
+[debug (1/11/22, 10:07:29 AM)] RunSetup: 
+popAsk: --------------------
+You have for Windows native libs
+C:\Users\Administrator\AppData\Roaming\Sikulix\SikulixDownloads\sikulixlibswin-1.1.1.jar
+Click YES, if you want to use this for setup processing
+... or click NO, to ignore it and download a fresh copy
+--------------------
+[debug (1/11/22, 10:07:40 AM)] RunSetup: Copied from Downloads: sikulixlibswin
+[debug (1/11/22, 10:07:40 AM)] FileManager: resetFolder:
+C:\RMA_SeleniumTestAutomation\RMA_Selenium_TestAutomation_UX\Lib\SetupStuff\sikulixlibs\windows
+jar:file:/C:/RMA_SeleniumTestAutomation/RMA_Selenium_TestAutomation_UX/Lib/sikulixlibswin.jar
+[debug (1/11/22, 10:07:41 AM)] RunSetup: 
+popAsk: --------------------
+You have for Java API package
+C:\Users\Administrator\AppData\Roaming\Sikulix\SikulixDownloads_201807110819\sikulixsetupAPI-1.1.3-20180711.082046-40-forsetup.jar
+Click YES, if you want to use this for setup processing
+... or click NO, to ignore it and download a fresh copy
+--------------------
+[debug (1/11/22, 10:07:44 AM)] RunSetup: Copied from Downloads: sikulixapi
+[debug (1/11/22, 10:07:44 AM)] RunSetup: Download ended
+[debug (1/11/22, 10:07:44 AM)] RunSetup: Downloads for selected options:
+sikulixlibswin-1.1.1.jar sikulixsetupAPI-1.1.3-20180711.082046-40-forsetup.jar 
+[debug (1/11/22, 10:07:44 AM)] RunSetup: adding needed stuff to sikulixapi.jar
+[debug (1/11/22, 10:07:44 AM)] FileManager: buildJar: sikulixtemp.jar
+[debug (1/11/22, 10:07:44 AM)] FileManager: buildJar: adding: sikulixapi.jar
+[debug (1/11/22, 10:07:48 AM)] FileManager: buildJar: adding: sikulixlibswin.jar
+[debug (1/11/22, 10:07:50 AM)] FileManager: buildJar: adding sikulixcontent at sikulixlibswin
+[debug (1/11/22, 10:07:51 AM)] FileManager: buildJar: completed
+[debug (1/11/22, 10:07:51 AM)] RunSetup: renaming sikulixtemp.jar to target jar: sikulixapi.jar
+[debug (1/11/22, 10:07:51 AM)] RunSetup: Trying to run functional test: JAVA-API *** on Java8+ *** 
+[error (1/11/22, 10:07:56 AM)] RunTimeSETUP: *** Java 8+: setup API test - with ProcessRunner
+[debug (1/11/22, 10:08:29 AM)] RunSetup: setup API test: success
+[debug (1/11/22, 10:08:34 AM)] RunSetup: ... SikuliX Setup seems to have ended successfully ;-)
+[debug (1/11/22, 10:08:34 AM)] RunTimeSETUP: final cleanup
+[debug (1/11/22, 10:08:34 AM)] FileManager: deleteFileOrFolder:
+C:\Users\ADMINI~1\AppData\Local\Temp\2\Sikulix_2126924892

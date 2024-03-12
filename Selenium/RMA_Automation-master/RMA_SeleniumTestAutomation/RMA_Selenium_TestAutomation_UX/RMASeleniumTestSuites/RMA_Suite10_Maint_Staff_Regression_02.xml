@@ -1,0 +1,80 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite10_Maint_Staff_Regression _02" />
+
+	<!-- Test Case RMA_QTPRegression_TC_029_C Is Required To Reset The OLD UI Settings After The Execution Of RMA_QTPRegression_TC_027 & RMA_QTPRegression_TC_029 -->
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+<!-- Verification of Changes On Adding/Removing Fields On Staff Maintenance From Powerview -->
+	<test name="RMA_Reg_Maint_Staff_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Staff_TC_012" />
+		</classes>
+	</test> 
+	
+<!-- 	Verify That When User Changes The ToolTip Of Any ToolBar Button Then The Same Is Updated In UX On Staff Maintenance Page -->
+	<test name="RMA_Reg_Maint_Staff_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Staff_TC_013" />
+		</classes>
+	</test> 
+	
+<!-- 	Verify That Page Cannot Be Found In Power View Message Must Be Displayed When User Has Removed Staff Maintenance Screen From Power View -->
+    <test name="RMA_Reg_Maint_Staff_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Staff_TC_014" />
+		</classes>
+	</test> 
+	
+<!-- 	Verify That Staff Maintenance Screen Is Opening Without Any Error When Respective Screen Is Added In Power View -->
+	<test name="RMA_Reg_Maint_Staff_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Staff_TC_015" />
+		</classes>
+	</test> 
+	
+<!-- 	Verify That Sequence Of ToolBar Buttons Are Getting Changed Via UX Power View On Staff Maintenance Page -->
+	<test name="RMA_Reg_Maint_Staff_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Staff_TC_016" />
+		</classes>
+	</test> 
+	
+<!-- 	Verify That Page Cannot Be Found In PowerView Message Is Displayed When User Removes Pages Of Right Navigation Link(Staff Privileges Page) From Staff Maintenance -->
+	<test name="RMA_Reg_Maint_Staff_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Staff_TC_017" />
+		</classes>
+	</test> 
+	
+<!-- 	Verify That User Is Able To Make Any Field As Required and Validation Message Is Displayed In UX PowerView On Staff Maintenance -->
+	<test name="RMA_Reg_Maint_Staff_TC_018">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Staff_TC_018" />
+		</classes>
+	</test>  
+	
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

@@ -1,0 +1,34 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+  <test name="RMA_TC_007">
+    <classes>
+      <class name="rma_appiumtestcases.RMA_TC_007"/>
+    </classes>
+  </test>
+  <!--  <test name="RMA_TC_002">
+    <classes>
+      <class name="rma_appiumtestcases.RMA_TC_002"/>
+    </classes>
+  </test>
+   <test name="RMA_TC_003">
+    <classes>
+      <class name="rma_appiumtestcases.RMA_TC_003"/>
+    </classes>
+  </test>
+ <test name="RMA_TC_004">
+    <classes>
+      <class name="rma_appiumtestcases.RMA_TC_004"/>
+    </classes>
+  </test>
+  
+   <test name="RMA_TC_005">
+    <classes>
+      <class name="rma_appiumtestcases.RMA_TC_005"/>
+    </classes>
+  </test>
+  
+      <test name="RMA_TC_006">
+    <classes>
+      <class name="rma_appiumtestcases.RMA_TC_006"/>
+    </classes>
+  </test>-->
+</suite>

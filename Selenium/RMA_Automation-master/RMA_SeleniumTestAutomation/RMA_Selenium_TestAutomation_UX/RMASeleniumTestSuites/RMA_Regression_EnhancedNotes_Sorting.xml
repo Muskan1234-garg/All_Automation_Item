@@ -1,0 +1,86 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- Note to execute this suite -->
+	<!-- Set Note type 1 - Confidential -->
+	<!-- Set Note type 2 - Action Plan -->
+	<!-- Set Note type 1 - Claimant -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Regression_EnhancedNotes_Sorting" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required"RMASeleniumTestSuites/RMA_Maint_Physican_ERON.xml" 
+		DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!-- Successful Corporate General Claim Creation -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Creation of Enhanced Notes On 2 Claims and Event -->
+	<test name="RMA_Reg_EnhancedNotes_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_001" />
+		</classes>
+	</test>
+
+	<!-- Creation of Enhanced Notes On Claim From The Event Screen -->
+	<test name="RMA_Reg_EnhancedNotes_TC_ClaimFromEvent">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_ClaimFromEvent" />
+			<methods>
+				<include name="RMA_Reg_EnhancedNotes_TC_GCClaimFromEvent" />
+			</methods>
+		</classes>
+	</test>
+
+	<!-- Verification Of Advanced Search Based On Notes Level & Notes Type(s) 
+		Functionality of Enhanced Notes -->
+	<!-- <test name="RMA_Reg_EnhancedNotes_TC_008"> -->
+	<!-- <classes> -->
+	<!-- <class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_008" /> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
+	<!-- Verification Of Sorting the Enhanced Notes based On Note Type -->
+	<test name="RMA_Reg_EnhancedNotes_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_009" />
+		</classes>
+	</test>
+
+	<!-- Verification Of Sorting the Enhanced Notes based On Activity Date -->
+	<test name="RMA_Reg_EnhancedNotes_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_010" />
+		</classes>
+	</test>
+
+	<!-- Verification Of Sorting the Enhanced Notes based On Entered By -->
+	<test name="RMA_Reg_EnhancedNotes_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_EnhancedNotes_TC_011" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

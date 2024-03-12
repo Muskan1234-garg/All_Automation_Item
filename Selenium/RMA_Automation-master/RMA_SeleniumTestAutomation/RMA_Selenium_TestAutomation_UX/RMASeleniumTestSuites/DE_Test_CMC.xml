@@ -1,0 +1,17 @@
+<suite name="DE_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+ <!-- Change The System Time To Eastern Standard Time Before Execution Of This Suite -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="DE_Test_CMC" />
+
+	
+	<!-- Created Payment On Hold When Pay Detail Limits Exceed -->
+  	<test name="DE_Test_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.DE_Test_001" />
+		</classes>
+	</test>
+</suite>
+

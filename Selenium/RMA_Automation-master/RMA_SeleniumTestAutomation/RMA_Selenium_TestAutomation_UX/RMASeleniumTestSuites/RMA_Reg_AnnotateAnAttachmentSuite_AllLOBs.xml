@@ -1,0 +1,129 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_AnnotateAnAttachmentSuite_AllLOBs" />
+
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_AnnotateAnAttachment_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AnnotateAnAttachment_TC_013" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_AnnotateAnAttachment_TC_014_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AnnotateAnAttachment_TC_014" />
+		</classes>
+	</test>
+	
+	
+	<!--Successful Corporate Worker's Comp Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_AnnotateAnAttachment_TC_014_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AnnotateAnAttachment_TC_014" />
+		</classes>
+	</test>
+	
+
+<!--Successful Corporate Property Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_PC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_PC" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_AnnotateAnAttachment_TC_014_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AnnotateAnAttachment_TC_014" />
+		</classes>
+	</test>
+	
+	<!--Successful Corporate Vehicle Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_VC" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_AnnotateAnAttachment_TC_014_4">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AnnotateAnAttachment_TC_014" />
+		</classes>
+	</test>
+	
+	<!--Successful Corporate NonOcc Claim Creation Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_042">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_042" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_AnnotateAnAttachment_TC_014_5">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AnnotateAnAttachment_TC_014" />
+		</classes>
+	</test>
+	
+	<!--Successful Event Creation On Providing Mandatory Data Is Validated -->
+	<test name="RMA_Smoke_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_001" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_AnnotateAnAttachment_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AnnotateAnAttachment_TC_014" />
+		</classes>
+	</test>
+
+	<test name="RMA_Reg_AnnotateAnAttachment_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_AnnotateAnAttachment_TC_015" />
+		</classes>
+	</test>
+
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>
+

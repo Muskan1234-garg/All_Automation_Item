@@ -1,0 +1,104 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_SupplementalGroupassociation_Creation" />
+
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<parameter name="ZoneName" value="Utilities" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	<!-- Verify That User Is Able To Add New Supplemental Fields Along With Group Association Field For Claim Screen -->
+	<test name="RMA_Reg_SupplementalGroupAssociationCreation_01">
+	<parameter name="MultipleGroupAssociation" value="true" />
+	<parameter name="SheetTabName" value="Claim Supplemental" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_Creation" />
+		</classes>
+	</test>	
+	
+	<!-- Verify That User Is Able To Add New Supplemental Fields Along With Group Association Field For Event Screen -->
+	<test name="RMA_Reg_SupplementalGroupAssociationCreation_02">
+	<parameter name="SheetTabName" value="Event Supplemental" />
+	<parameter name="AdditionalParam" value="Users" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_Creation" />
+		</classes>
+	</test>	
+	
+	<!-- Verify That User Is Able To Add New Supplemental Fields Along With Group Association Field For Employee Screen -->
+	<test name="RMA_Reg_SupplementalGroupAssociationCreation_03">
+	<parameter name="SheetTabName" value="Employee Supplemental" />
+	<parameter name="AdditionalParam" value="Groups" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_Creation" />
+		</classes>
+	</test>	
+	
+	<!-- Verify That User Is Able To Add New Supplemental Fields Along With Group Association Field For Entity Screen -->
+	<test name="RMA_Reg_SupplementalGroupAssociationCreation_04">
+	<parameter name="SheetTabName" value="Entity Supplemental" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_Creation" />
+		</classes>
+	</test>	
+	
+	<!-- Verify That User Is Able To Add New Supplemental Fields Along With Group Association Field For Person Involved Screen -->
+	<test name="RMA_Reg_SupplementalGroupAssociationCreation_05">
+	<parameter name="SheetTabName" value="PI Supplemental" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_Creation" />
+		</classes>
+	</test>	
+		
+	<!-- Verify That User Is Able To Add New Supplemental Fields Along With Group Association Field For Reserve Screen -->
+	<test name="RMA_Reg_SupplementalGroupAssociationCreation_06">
+	<parameter name="SheetTabName" value="Reserve Supplemental" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_Creation" />
+		</classes>
+	</test>	
+	
+	<!-- Verify That User Is Able To Add New Supplemental Fields Along With Group Association Field For Litigation Screen -->
+	<test name="RMA_Reg_SupplementalGroupAssociationCreation_07">
+	<parameter name="SheetTabName" value="Litigation Supplemental" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_Creation" />
+		</classes>
+	</test>	
+			
+	<!-- Verify That User Is Able To Add New Supplemental Fields Along With Group Association Field For Vehicle Screen -->
+	<test name="RMA_Reg_SupplementalGroupAssociationCreation_08">
+	<parameter name="SheetTabName" value="Vehicle Supplemental" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_Creation" />
+		</classes>
+	</test>		
+	
+	<!-- Verify That Group Association Is Not Applicable For Field Type Supplemental History Grid And Admin Tracking Lookup -->
+	<test name="RMA_Reg_SupplementalGroupAssociation_TC_011">
+	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_SupplementalGroupAssociation_TC_011" />
+		</classes>
+	</test>		
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

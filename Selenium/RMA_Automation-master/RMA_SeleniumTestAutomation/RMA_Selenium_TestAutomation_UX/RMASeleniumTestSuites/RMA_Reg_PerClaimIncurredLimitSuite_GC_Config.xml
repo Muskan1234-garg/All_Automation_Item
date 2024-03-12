@@ -1,0 +1,177 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_PerClaimIncurredLimitSuite_GC_Config" />
+	
+	<parameter name="DataSourceRow" value="1" /><!--To Set The Datasource 
+		Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData -->
+	
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="3" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Successful Revert Setting From Utilities Page Is Validated  -->
+	<test name="RMA_Reg_Super_DeSelectALLSetting_TC_001_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_DeSelectALLSetting_TC_001_Config" />
+		</classes>
+	</test>	
+	
+	<!--Successful Set Per Claim Incurred Limits At User And Validate It On Supervisory Chain -->
+	<!--To Set The LOB Based on claim -->
+	<parameter name="LOB" value="GC - General Claims" />
+	<parameter name="LimitFactor" value="10" />
+	<test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_001_Config">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_001_Config" />
+		</classes>
+	</test>
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+	
+	<!--Successful Verify That The Manager Can Have The Authority To Either	Approve Or Not Approve The Reserve Based On Per Claim Incurred Limit Is Validated -->
+	 <test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_003_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_003_Config" />
+		</classes>
+	</test>	
+	
+	<!--Successful Verify Any User In Managerial Chain, Who Can See Reserve In Its Supervisory Approval View Can Reject the Reserve Irrespective Of Its	Per Claim Incurred Limit Is Validated -->
+	 <test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_004_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_004_Config" />
+		</classes>
+	</test>	
+	
+	<!-- Successful Verify Change Of Reserve Status As 'Open' When Manager Approve/Reject The Reserve And Also Manager Can Reject The Reserve Based On Per Claim Incurred Limit Is Validated -->
+	<test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_005_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_005_Config" />
+		</classes>
+	</test>	
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>	
+		
+	<!-- Successful Verify Payment Creation For A New Reserve Type As Per Claim Incurred Limit Is Exceeded -->
+	<test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_007_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_007_Config" />
+		</classes>
+	</test>	
+	
+	<!-- Successful Verify Recovery Reserve Do Not Go On Hold In Case Of Per Claim Incurred Limit Exceeded -->
+	<test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_008_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_008_Config" />
+		</classes>
+	</test>		
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+	
+	<!-- Successful Verify When Incurred Limits Are Exceeded CheckBox Is OFF In Payment Parameter Setup, Reserve Is Not Created -->
+	<!-- <test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_009_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_009_Config" />
+		</classes>
+	</test>	 -->
+	
+	<!--Successful Verify 'Restrict Unspecified Users' Setting For Per Claim Incurred Limit -->
+	<test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_010_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_010_Config" />
+		</classes>
+	</test>		
+	
+	<!--Successful Verify When Enable Per Claim Incurred Limits CheckBox Is OFF, Reserves Do Not Go On Hold Is Validated -->
+	<test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_011_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_011_Config" />
+		</classes>
+	</test>	
+	
+	<!--Successful Verify When "Disable Diary Notification To Supervisor" Is Checked For Reserve, Diary Is NOT Sent To Supervisor When Reserve Goes On Hold Is Validated -->
+	<test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_012_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_012_Config" />
+		</classes>
+	</test>	
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+	
+	<!-- Successful Verify top level and LOB level additional settings for Supervisory Approval Application when Notify Immediate supervisor setting is ON Is Validated -->
+	<test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_013_Config">
+	<parameter name="LOB" value="General Claim" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_013_Config" />
+		</classes>
+	</test>	
+	
+	<!--Successful Verify top level and LOB level additional settings for Supervisory Approval Application when Notify Immediate supervisor setting is OFF Is Validated -->
+	<test name="RMA_Reg_Super_PerClaimIncurredLimit_TC_014_Config">
+	<parameter name="LOB" value="General Claim" />
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_014_Config" />
+		</classes>
+	</test>	
+	
+	<!--Successful Revert Setting From Utilities Page Is Validated -->
+	<test name="RMA_Reg_Super_DeSelectALLSetting_TC_001_01_Config">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_DeSelectALLSetting_TC_001_Config" />
+		</classes>
+	</test>	
+	
+	<!-- Successful Verify Existing Users For Supervisory Chain Deletion Is Validated -->
+	 <test name="RMA_Reg_Super_UserDeletion_TC_001">
+	 <parameter name="ClassName" value="rmaseleniumtestscripts.RMA_Reg_Super_PerClaimIncurredLimit_TC_013_Config" />
+			<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserDeletion_TC_001" />
+		</classes>
+	</test>
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

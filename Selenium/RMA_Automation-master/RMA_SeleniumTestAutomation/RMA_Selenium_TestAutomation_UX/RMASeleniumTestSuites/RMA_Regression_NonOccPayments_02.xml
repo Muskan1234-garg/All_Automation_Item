@@ -1,0 +1,127 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+ <!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Regression_NonOccPayments_02" />
+ 		
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>		
+	
+	<!--Verify That After Attaching Plan Only User Can Proceed For Non Occ Payments -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Verify That After Entering Data In All The Mandatory Fields , Validation Is Getting Displayed For Date Hired While Clicking On Non Occ Payment -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Verify That After Entering Data In All The Mandatory Fields, Validation Is Getting Displayed For Plan Class While Clicking On Non Occ Payment -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_003" />
+		</classes>
+	</test>
+	
+	<!--Verify Non Occ Payment On Non Occ Claim Associated With A Bi-Weekly Plan With Flat Amount Option -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_010" />
+		</classes>
+	</test>
+	
+	<!--Verify Alternate Waiting Period Functionality On Non Occ Payment For Non Occ Claim Associated With A BiWeekly Plan With Flat Amount Option -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_018">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_018" />
+		</classes>
+	</test>
+	
+	<!--Verify The Print Date When Check Prints Before End Of Pay Period Is Enabled In A BiWeekly Plan With Flat Amount Option -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_019" />
+		</classes>
+	</test>
+	
+	<!--Verify Non Occ Payment On Non Occ Claim Associated With A Bi-Weekly Plan With Table Driven Option With Supplement -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_022">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_022" />
+		</classes>
+	</test>
+	
+	<!--Verify Non Occ Payment On Non Occ Claim Associated With A Monthly Plan With Percentage Of Monthly Wage Option -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_005" />
+		</classes>
+	</test>
+	
+	<!--Verify Eligibility Of An Employee On Non Occ Payment Screen As Per The Through Age Set In The Plan Class -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_006" />
+		</classes>
+	</test>
+	
+	<!--Verify Eligibility Of An Employee On Non Occ Payment Screen As Per The Over Age Set In The Plan Class -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_007" />
+		</classes>
+	</test>
+	
+	<!--Verify Supplement Benefit Amounts Are Appearing Separately When Separate Payment For Supplement Benefit Setting Is Enabled With Percentage Of Monthly Wage Option In A Monthly Plan -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_008" />
+		</classes>
+	</test>
+	
+	<!--Verify Offset, Tax, Gross And Net Payment Amount On Non Occ Payment When Separate Supplement Payment Setting Is Enabled With Percentage Of Monthly Wage Option In A Monthly Plan -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_009" />
+		</classes>
+	</test>	
+		
+	<!--Verify Offset, Tax, Gross And Net Payment Amount On Non Occ Payment After Editing Of Payment From Future Payment Screen When Separate Supplement Payment Setting Is Enabled With Percentage Of Monthly Wage Option In A Monthly Plan -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_020" />
+		</classes>
+	</test>
+	
+	<!--Verify Non Occ Payment When There Is A Value In Taxable Portion Field For A Non Occ Claim Associated With A Monthly Plan With Flat Amount Option -->
+	<test name="RMA_Reg_Funds_NonOccPayments_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_NonOccPayments_TC_021" />
+		</classes>
+	</test>	
+	
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

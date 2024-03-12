@@ -1,0 +1,171 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName"
+		value="RMA_Funds_Suite_AllocatedBucketForPayments_CorporateGC" />
+
+	<parameter name="DataSourceRow" value="1" /><!--To Set The Datasource 
+		Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData -->
+
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<parameter name="ZoneName" value="Dashboard" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Verifying Allocated Amount Column For Released/Printed Payment -->
+	<test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_001">
+		<parameter name="LineOfBusiness" value="GC - General Claims" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_001" />
+		</classes>
+	</test>
+
+	<!-- Verifying Allocated Amount Column For Released/Printed Final Payment -->
+	<test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_002">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_002" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Verifying Allocated Amount Column For Released/Printed Supplemental 
+		Payment -->
+	<test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_003">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_003" />
+		</classes>
+	</test>
+
+	<!-- Verifying Allocated Amount Column For Released, Printed And Voided 
+		Payment -->
+	<test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_004">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_004" />
+		</classes>
+	</test>
+
+	<!-- Verifying Allocated Amount Column For Stop Pay And Reset Printed Payment -->
+	<test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_005">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_005" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC_2">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Verifying Allocated Amount Column For Control Request Operation -->
+	<test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_006">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_006" />
+		</classes>
+	</test>
+
+	<!-- Verifying Allocated Amount Column For Insufficient Reserve Funds Operation -->
+	<test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_007">
+		<parameter name="LineOfBusiness" value="GC - General Claims" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_007" />
+		</classes>
+	</test>
+
+	<!-- Verifying Allocated Amount Column For Auto-Adjust Negative Reserves 
+		Operation -->
+	<test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_008">
+		<parameter name="LineOfBusiness" value="GC - General Claims" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_008" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC_3">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Verifying Allocated Amount Column For Queued Payments And Released 
+		Payments Through Bulk Check Release Operation -->
+	<test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_009">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_009" />
+		</classes>
+	</test>
+
+	<!-- Navigation To Maintenance Screen -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+
+	<!-- Verify Recipient (Tax Collecting Entity) Created For Withholding Setup -->
+	<test name="RMA_Reg_Funds_Withholding_RecipientCreation">
+		<parameter name="NoOfWithholdingRecipient" value="1" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_RecipientCreation" />
+		</classes>
+	</test>
+
+	<!-- Verifying Allocated Amount Column For Withholding Payments -->
+	<test name="RMA_Reg_Funds_AllocatedBucketForPayments_TC_010">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_AllocatedBucketForPayments_TC_010" />
+		</classes>
+	</test>
+	
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>

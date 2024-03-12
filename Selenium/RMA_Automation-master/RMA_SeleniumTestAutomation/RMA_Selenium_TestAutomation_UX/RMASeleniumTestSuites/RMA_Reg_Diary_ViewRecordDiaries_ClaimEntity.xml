@@ -1,0 +1,204 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- Change The System Time To Eastern Standard Time Before Execution Of This Suite -->
+	<!-- From General System Parameters, uncheck 'Default "Assigned to" in Create Diary to Current User' Before Execution Of This Suite -->
+	
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Diary_ViewRecordDiaries_ClaimEntity" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Create Claimant & Attach Diary over created Corporate General Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Claimant_GC">
+		<parameter name="EntityName" value="Claimant" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Defendant & Attach Diary over created Corporate General Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Litigation_GC">
+		<parameter name="EntityName" value="Litigation" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Adjuster & Attach Diary over created Corporate General Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Adjuster_GC">
+		<parameter name="EntityName" value="Adjuster" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Defendant & Attach Diary over created Corporate General Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Defendant_GC">
+		<parameter name="EntityName" value="Defendant" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Corporate Worker's Compensation Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+
+	<!-- Create Litigation & Attach Diary over created Worker's Compensation Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Litigation_WC">
+		<parameter name="EntityName" value="Litigation" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Adjuster & Attach Diary over created Worker's Compensation Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Adjuster_WC">
+		<parameter name="EntityName" value="Adjuster" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Defendant & Attach Diary over created Worker's Compensation Claim  In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Defendant_WC">
+		<parameter name="EntityName" value="Defendant" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Corporate Property Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_PC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_PC" />
+		</classes>
+	</test>
+
+	<!-- Create Litigation & Attach Diary over created Property Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Litigation_PC">
+		<parameter name="EntityName" value="Litigation" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Adjuster & Attach Diary over created Property Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Adjuster_PC">
+		<parameter name="EntityName" value="Adjuster" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Defendant & Attach Diary over created Property Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Defendant_PC">
+		<parameter name="EntityName" value="Defendant" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Corporate Vehicle Accident Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_VC" />
+		</classes>
+	</test>
+
+	<!-- Create Claimant & Attach Diary over created Vehicle Accident Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Claimant_VC">
+		<parameter name="EntityName" value="Claimant" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Litigation & Attach Diary over created Vehicle Accident Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Litigation_VC">
+		<parameter name="EntityName" value="Litigation" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Adjuster & Attach Diary over created Vehicle Accident Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Adjuster_VC">
+		<parameter name="EntityName" value="Adjuster" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Defendant & Attach Diary over created Vehicle Accident Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Defendant_VC">
+		<parameter name="EntityName" value="Defendant" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Corporate Non-Occupational (DI) Claim Creation In RMA Application -->
+	<test name="RMA_SeleniumRegression_TC_042">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_042" />
+		</classes>
+	</test>
+
+	<!-- Create Litigation & Attach Diary over created Non-Occupational(DI)Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Litigation_NonOcc">
+		<parameter name="EntityName" value="Litigation" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- Create Defendant & Attach Diary over created Non-Occupational(DI) Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Defendant_NonOcc">
+		<parameter name="EntityName" value="Defendant" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+	<!-- CCreate Adjuster & Attach Diary over created Non-Occupational(DI) Claim In RMA Application -->
+	<test name="RMA_Regression_Diary_TC_07_Adjuster_NonOcc">
+		<parameter name="EntityName" value="Adjuster" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_07" />
+		</classes>
+	</test>
+
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+
+</suite>

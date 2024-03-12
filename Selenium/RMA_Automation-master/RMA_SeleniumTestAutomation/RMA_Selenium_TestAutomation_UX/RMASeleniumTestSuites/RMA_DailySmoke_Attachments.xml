@@ -1,0 +1,88 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--PreRequisite #1: Execution should be done in active screen mode -->
+	<!--PreRequisite #2: Loggedin user should have email mentioned in SMS -->
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_DailySmoke_Attachments" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of An Attachment On General Claim Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_102_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_102" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of An Attachment On Claimant On GC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_106_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_106" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of An Attachment On Litigation On GC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_109_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_109" />
+		</classes>
+	</test>
+
+	<!--Create, Edit And Delete Of An Attachment On PI(Physician) On GC Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_114_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_114" />
+		</classes>
+	</test>
+
+	<!-- Attach Documents And Verify All These Document Are Available In User 
+		Documents -->
+	<test name="RMA_Regression_Attachments_TC_01">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_01" />
+		</classes>
+	</test>
+
+	<!-- Add,Edit Documents From User Document Screen And Verify The Properties 
+		And Download The Attached Document -->
+	<test name="RMA_Regression_Attachments_TC_02">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_02" />
+		</classes>
+	</test>
+
+	<!-- Add And Email A Document From User Documents And Verify File Size And 
+		Functionality Of Select All Button and De-Select All Button -->
+	<test name="RMA_Regression_Attachments_TC_04">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_04" />
+		</classes>
+	</test>
+
+	<!-- Transfer The Document To Another User And Verify It is Present There -->
+	<test name="RMA_Regression_Attachments_TC_06">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Attachments_TC_06" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,137 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_PrintCheckLimitSuite_GC" />
+
+	<parameter name="DataSourceRow" value="1" /><!--To Set The Datasource 
+		Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData -->
+
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="3" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+<!--Successful Revert Setting From Utilities Page Is Validated  -->
+	<test name="RMA_Reg_Super_DeSelectALLSetting_TC_001">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_DeSelectALLSetting_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Verify that Print Check Limits Can Be Set At User Level In User Privileges 
+		Setup -->
+	<parameter name="LOB" value="GC - General Claims" />
+	<test name="RMA_Reg_Super_PrintCheckLimit_TC_001">
+	<parameter name="LimitFactor" value="10" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PrintCheckLimit_TC_001" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Print Check Functionality Limits At User Level -->
+	<test name="RMA_Reg_Super_PrintCheckLimit_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PrintCheckLimit_TC_002" />
+		</classes>
+	</test>
+
+	<!--Verify That Manager Can Print The Transaction Which Are In Its Limit -->
+	<test name="RMA_Reg_Super_PrintCheckLimit_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PrintCheckLimit_TC_003" />
+		</classes>
+	</test>
+
+	<!--Verify That Senior Manager Is Able To Print Transaction In Their Limit -->
+	<test name="RMA_Reg_Super_PrintCheckLimit_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PrintCheckLimit_TC_004" />
+		</classes>
+	</test>
+
+	<!--Verify Print Check Limit Does Apply To Auto Checks -->
+	<test name="RMA_Reg_Super_PrintCheckLimit_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PrintCheckLimit_TC_005" />
+		</classes>
+	</test>
+
+	<!-- Verify That When Check User's Limits For Manual Payments Setting Is 
+		Off, Then Print Check Limits Do Not Apply On Manual Printed Payments -->
+	<test name="RMA_Reg_Super_PrintCheckLimit_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PrintCheckLimit_TC_007" />
+		</classes>
+	</test>
+
+	<!-- Verify When Print Check Limits Are Exceeded CheckBox is OFF, Payments 
+		Can Be Printed By User -->
+	<test name="RMA_Reg_Super_PrintCheckLimit_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_PrintCheckLimit_TC_006" />
+		</classes>
+	</test>
+	
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data,Existence 
+		of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+	
+	<!-- Verify After Auto Checks Batch task, Print Check limit Is applicable on the Released Auto Check Payment -->
+	<test name="RMA_Reg_Funds_AutoCheckBatchWithPrintCheckLimit_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_AutoCheckBatchWithPrintCheckLimit_TC_001" />
+		</classes>
+	</test>
+
+<!--Successful Revert Setting From Utilities Page Is Validated  -->
+	<test name="RMA_Reg_Super_DeSelectALLSetting_TC_001_1">
+	 	<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_DeSelectALLSetting_TC_001" />
+		</classes>
+	</test>	
+	
+	<!-- Deletion of Existing Users From Supervisory Chain Is Validated -->
+	<test name="RMA_Reg_Super_UserDeletion_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserDeletion_TC_001" />
+		</classes>
+	</test>
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

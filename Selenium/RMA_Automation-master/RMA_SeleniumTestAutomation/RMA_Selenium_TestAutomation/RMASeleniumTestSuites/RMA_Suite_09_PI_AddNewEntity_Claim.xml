@@ -1,0 +1,302 @@
+<suite name="RMA_Suite_09_PI_AddNewEntity_Claim" parallel="none" allow-return-values="true">
+
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_09_PI_AddNewEntity_Claim"/>
+
+	<!--Verify That RMA Application Is Logged In-->
+  	<test name="RMA_TC_001">
+    	<classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_001"/>
+   		</classes>
+ 	 </test> 
+
+	<!--Verify That Required DSN Is Selected In RMA Application-->
+    <test name="RMA_TC_002">
+   	 	<classes>
+     		 <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    	</classes>
+    </test>
+
+    <!-- Verify A Property Claim can be created-->
+     <test name="RMA_TC_206">
+   		 <classes>
+     		 <class name="rmaseleniumtestscripts.RMA_TC_206"/>
+   		 </classes>
+     </test>
+     
+    <!--Verify Adding,Editing And Deleting Of New Employee As Person Involved on Property Claim -->
+     <test name="RMA_TC_207">
+    	<classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_207"/>
+    	</classes>
+     </test>
+     
+    <!--Verify Adding,Editing And Deleting Of New Medical Staff As Person Involved on Property Claim -->
+      <test name="RMA_TC_208">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_208"/>
+   		 </classes>
+     </test>
+     
+     <!--Verify Adding,Editing And Deleting Of New Driver As Person Involved on Property Claim -->
+      <test name="RMA_TC_209">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_209"/>
+   		 </classes>
+     </test>
+     
+	<!--Verify Adding,Editing And Deleting Of Other Person As Person Involved on Property Claim -->
+      <test name="RMA_TC_210">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_210"/>
+   		 </classes>
+     </test>
+     
+     <!--Verify Adding,Editing And Deleting Of New Patient As Person Involved on Property Claim -->
+      <test name="RMA_TC_211">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_211"/>
+   		 </classes>
+     </test>
+     <!--Verify Adding,Editing And Deleting Of New Physician As Person Involved on Property Claim -->
+      <test name="RMA_TC_212">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_212"/>
+   		 </classes>
+     </test>
+     <!--Verify Adding,Editing And Deleting Of New Witness As Person Involved on Property Claim -->
+      <test name="RMA_TC_213">
+   		 <classes>
+      		<class name="rmaseleniumtestscripts.RMA_TC_213"/>
+   		 </classes>
+     </test>
+
+    <!-- Verify A General Claim Can Be Created-->
+    <test name="RMA_TC_214">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_214"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Employee As Person Involved on General Claim -->
+      <test name="RMA_TC_215">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_215"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Medical Staff As Person Involved on General Claim -->
+      <test name="RMA_TC_216">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_216"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of Other Person As Person Involved on General Claim -->
+      <test name="RMA_TC_217">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_217"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Patient As Person Involved on General Claim -->
+      <test name="RMA_TC_218">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_218"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Physician As Person Involved on General Claim -->
+      <test name="RMA_TC_219">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_219"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Physician As Person Involved on General Claim -->
+      <test name="RMA_TC_220">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_220"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Witness As Person Involved on General Claim -->
+      <test name="RMA_TC_221">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_221"/>
+        </classes>
+      </test>
+      
+       <!--Verify That Person Involved Link Is Present In Created Workers Compensation Claim-->
+      <test name="RMA_TC_222">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_222"/>
+        </classes>
+      </test>
+      
+       <!--Verify Adding,Editing And Deleting Of new Employee As Person Involved  For Workers Comp Claim-->
+      <test name="RMA_TC_223">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_223"/>
+        </classes>
+      </test>
+      
+       <!--Verify Adding,Editing And Deleting Of New Medical Staff As Person Involved For Workers Comp Claim-->
+      <test name="RMA_TC_224">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_224"/>
+        </classes>
+      </test>
+      
+       <!--Verify Adding,Editing And Deleting Of New Driver As Person Involved on Workers Comp Claim-->
+      <test name="RMA_TC_225">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_225"/>
+        </classes>
+      </test>
+      
+       <!--Verify Adding,Editing And Deleting Of New Other Person As Person Involved on Workers Comp Claim-->
+      <test name="RMA_TC_226">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_226"/>
+        </classes>
+      </test>
+      
+       <!--Verify Add,Edit And Delete Of New Patient As Person Involved For Workers Comp Claims-->
+      <test name="RMA_TC_227">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_227"/>
+        </classes>
+      </test>
+      
+       <!--Verify Add,Edit And Delete Of New Physician As Person Involved For Workers Comp Claims-->
+      <test name="RMA_TC_228">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_228"/>
+        </classes>
+      </test>
+      
+       <!--Verify Add,Edit And Delete Of New Witness As Person Involved For Workers Comp Claims-->
+      <test name="RMA_TC_229">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_229"/>
+        </classes>
+      </test>
+      
+     <!--Verify That Person Involved Link Is Present In Created Non Occupational Claim-->
+      <test name="RMA_TC_230">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_230"/>
+        </classes>
+      </test>
+      
+    <!--Verify Adding,Editing And Deleting Of new Employee As Person Involved  For Non Occupational Claim-->
+      <test name="RMA_TC_231">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_231"/>
+        </classes>
+      </test>
+      
+       <!--Verify Adding,Editing And Deleting Of New Medical Staff As Person Involved For Non Occupational Claim-->
+      <test name="RMA_TC_232">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_232"/>
+        </classes>
+      </test>
+      
+       <!--Verify Adding,Editing And Deleting Of New Driver As Person Involved on Non Occupational Claim-->
+      <test name="RMA_TC_233">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_233"/>
+        </classes>
+      </test>
+      
+      <!--Verify Adding,Editing And Deleting Of New Other Person As Person Involved on Non Occupational Claim-->
+      <test name="RMA_TC_234">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_234"/>
+        </classes>
+      </test>
+
+	<!--Verify Adding,Editing And Deleting Of New Patient As Person Involved on Non Occupational Claim-->
+      <test name="RMA_TC_235">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_235"/>
+        </classes>
+      </test>
+      
+      <!--Verify Adding,Editing And Deleting Of New Physician As Person Involved on Non Occupational Claim-->
+      <test name="RMA_TC_236">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_236"/>
+        </classes>
+      </test>
+      
+       <!--Verify Adding,Editing And Deleting Of New Witness As Person Involved on Non Occupational Claim-->
+      <test name="RMA_TC_237">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_237"/>
+        </classes>
+      </test>
+      
+      <!-- Verify A Vehicle Accident Claim can be created-->
+      <test name="RMA_TC_238">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_238"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Employee As Person Involved on Vehicle Accident Claim -->
+      <test name="RMA_TC_239">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_239"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Medical Staff As Person Involved on Vehicle Accident Claim -->
+      <test name="RMA_TC_240">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_240"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of Driver As Person Involved on Vehicle Accident Claim -->
+      <test name="RMA_TC_241">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_241"/>
+        </classes>
+      </test>
+  
+      <!--Verify Adding,Editing And Deleting Of Other Person As Person Involved on Vehicle Accident Claim -->
+      <test name="RMA_TC_242">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_242"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Patient As Person Involved on Vehicle Accident Claim -->
+      <test name="RMA_TC_243">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_243"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Physician As Person Involved on Vehicle Accident Claim -->
+      <test name="RMA_TC_244">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_244"/>
+        </classes>
+      </test>
+
+      <!--Verify Adding,Editing And Deleting Of New Witness As Person Involved on Vehicle Accident Claim -->
+      <test name="RMA_TC_245">
+        <classes>
+          <class name="rmaseleniumtestscripts.RMA_TC_245"/>
+        </classes>
+      </test>
+
+</suite> 
+ 

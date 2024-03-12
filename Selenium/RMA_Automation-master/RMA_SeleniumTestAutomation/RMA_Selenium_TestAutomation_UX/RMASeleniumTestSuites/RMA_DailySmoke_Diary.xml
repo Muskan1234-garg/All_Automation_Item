@@ -1,0 +1,180 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_DailySmoke_Diary" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Diary Creation with Notify When -->
+	<test name="RMA_Regression_Diary_TC_01_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_01" />
+		</classes>
+	</test>
+
+	<!-- Depends on RMA_Smoke_TC_002_GC -->
+	<!-- Successful Creation Of A Diary From Adjuster -->
+	<test name="RMA_SeleniumRegression_TC_047">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_047" />
+		</classes>
+	</test>
+
+	<!-- Depends on RMA_Smoke_TC_002_GC -->
+	<!--Successful Creation Of A Diary From Claimant -->
+	<test name="RMA_SeleniumRegression_TC_048">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_048" />
+		</classes>
+	</test>
+
+	<!-- Depends on RMA_Smoke_TC_002_GC -->
+	<!-- Successful Creation Of A Diary From Litigation -->
+	<test name="RMA_SeleniumRegression_TC_050">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_050" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Person Involved -->
+	<test name="RMA_SeleniumRegression_TC_052">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_052" />
+		</classes>
+	</test>
+
+	<!-- Successful Creation Of A Diary From Dated Text -->
+	<test name="RMA_SeleniumRegression_TC_053">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_053" />
+		</classes>
+	</test>
+
+	<!--Depends on RMA_SeleniumRegression_TC_053 -->
+	<!--Successful Creation Of A Diary From Event -->
+	<test name="RMA_SeleniumRegression_TC_054">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_054" />
+		</classes>
+	</test>
+
+	<!-- Attach Diary On Medical Staff -->
+	<test name="RMA_Regression_Diary_TC_18_2">
+		<parameter name="PersonInvolvedName" value="MedicalStaff" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_18" />
+		</classes>
+	</test>
+
+
+	<!-- Successful Creation Of Diary With Verification Of Active Diary And 
+		Diary Notes On Diary List Page -->
+	<test name="RMA_SeleniumRegression_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_016" />
+		</classes>
+	</test>
+
+	<!-- Successfully Edit The Diary On Diary List Page -->
+	<test name="RMA_SeleniumRegression_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_017" />
+		</classes>
+	</test>
+
+	<!-- Successfully Mark Diary As Completed And Also Checked Diary Existence 
+		On Diary History Page -->
+	<test name="RMA_SeleniumRegression_TC_018">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_018" />
+		</classes>
+	</test>
+
+	<!--Successfully Route Diary To a Specific User On Diary List Page -->
+	<test name="RMA_SeleniumRegression_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_019" />
+		</classes>
+	</test>
+
+	<!-- Successfully Roll A Diary For Future Date And Not Roll For Past Date 
+		On Diary List Page -->
+	<test name="RMA_SeleniumRegression_TC_043">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_043" />
+		</classes>
+	</test>
+
+	<!-- Depends on RMA_SeleniumRegression_TC_043 -->
+	<!-- Successfully Display A Diary Based On Criteria On Diary List Page Is 
+		Validated -->
+	<test name="RMA_SeleniumRegression_TC_044">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_044" />
+		</classes>
+	</test>
+
+	<!-- Depends on RMA_SeleniumRegression_TC_043 -->
+	<!-- Successfully Void A Diary On Diary List Page -->
+	<test name="RMA_SeleniumRegression_TC_045">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_045" />
+		</classes>
+	</test>
+
+	<!--To Create New Users -->
+	<parameter name="NoOfUsers" value="2" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!-- Transfer Of Open Diaries And Closed Diaries -->
+	<test name="RMA_Regression_Diary_TC_20">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_20" />
+		</classes>
+	</test>
+
+	<!-- Purge Of Open Diaries And Closed Diaries -->
+	<test name="RMA_Regression_Diary_TC_21">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_21" />
+		</classes>
+	</test>
+
+	<!-- Successful Peek The Diary On Diary List Page -->
+	<test name="RMA_SeleniumRegression_TC_046">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_046" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>

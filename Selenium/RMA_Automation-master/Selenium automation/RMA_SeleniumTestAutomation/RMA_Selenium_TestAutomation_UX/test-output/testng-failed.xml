@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RMA_SeleniumRegressionSuite9]" allow-return-values="true">
+  <parameter name="ExecutedSuiteName" value="RMA_Suite_16_SelReg_09_SMS"/>
+  <parameter name="DataSourceRow" value="1"/>
+  <test name="RMA_SeleniumRegression_TC_005(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005">
+        <methods>
+          <include name="RMA_FailureReport"/>
+          <include name="RMA_SeleniumRegression_TC_005_Test"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014">
+        <methods>
+          <include name="SetUp"/>
+          <include name="ExitSetUp"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_SeleniumRegression_TC_005(failed) -->
+  <test name="RMA_SeleniumRegression_TC_006(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006">
+        <methods>
+          <include name="RMA_SeleniumRegression_TC_006_Test"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014">
+        <methods>
+          <include name="SetUp"/>
+          <include name="ExitSetUp"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_SeleniumRegression_TC_006(failed) -->
+  <test name="RMA_SeleniumRegression_TC_007(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007">
+        <methods>
+          <include name="RMA_SeleniumRegression_TC_007_Test"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014">
+        <methods>
+          <include name="SetUp"/>
+          <include name="ExitSetUp"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_SeleniumRegression_TC_007(failed) -->
+  <test name="RMA_SeleniumRegression_TC_014(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_008 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_007 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_010 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_002 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_006 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_012 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_011 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_013 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_005 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_001 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_004 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014">
+        <methods>
+          <include name="RMA_SeleniumRegression_TC_014_Test"/>
+          <include name="SetUp"/>
+          <include name="ExitSetUp"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_014 -->
+      <class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_SeleniumRegression_TC_009 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </classes>
+  </test> <!-- RMA_SeleniumRegression_TC_014(failed) -->
+</suite> <!-- Failed suite [RMA_SeleniumRegressionSuite9] -->

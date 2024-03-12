@@ -1,0 +1,228 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="3" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_19_QTPReg_06_PaymntPayee" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>	
+		<!-- Sub Bank Account On General System Parameter Setup Is Validated   --> 	
+	<test name="RMA_QTPRegression_TC_070_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_070_I" />
+		</classes>
+	</test>
+	<!-- Successful Workers Compensation Claim Creation Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_070_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_070_WC" />
+		</classes>
+	</test>
+<!-- Successful Payment For Other Payees Using Sub Bank Account Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_073_WC_OtherPayee">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_073" />
+		</classes>
+	</test>	
+	<!-- Successful Payment For Claimant Using Sub Bank Account Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_074_WC_Claimant">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_074" />
+		</classes>
+	</test>	
+	<!-- Successful Payment For Persons Involved Using Sub Bank Account Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_075_WC_PersonsInvolved">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_075" />
+		</classes>
+	</test>	
+	<!-- Successful Payment For Org Hierarchy Using Sub Bank Account Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_076_WC_OrgHierarchy">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_076" />
+		</classes>
+	</test>		
+	<!-- Successful General Claim Creation Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_071_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_071_GC" />
+		</classes>
+	</test>
+	<!-- Successful Payment For Other Payees Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_073_GC_OtherPayee">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_073" />
+		</classes>
+	</test>
+	<!-- Successful Payment For Claimant Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_074_GC_Claimant">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_074" />
+		</classes>
+	</test>
+	<!-- Successful Payment For Persons Involved Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_075_GC_PersonsInvolved">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_075" />
+		</classes>
+	</test>
+	
+	<!-- Successful Payment For Org Hierarchy Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_076_GC_OrgHierarchy">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_076" />
+		</classes>
+	</test>	
+	<!-- Successful Vehicle Claim Creation Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_072_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_072_VC" />
+		</classes>
+	</test>
+	<!-- Successful Payment For Other Payee Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_073_VC_OtherPayee">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_073" />
+		</classes>
+	</test>		
+	<!-- Successful Payment For Claimant Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_074_VC_Claimant">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_074" />
+		</classes>
+	</test>
+	<!-- Successful Payment For Persons Involved Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_075_VC_PersonsInvolved">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_075" />
+		</classes>
+	</test>	
+	<!-- Successful Payment For Org Hierarchy Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_076_VC_OrgHierarchy">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_076" />
+		</classes>
+	</test>			
+	<!-- Revert Sub Bank Account On General System Parameter Setup Is Validated   --> 	
+	<test name="RMA_QTPRegression_TC_070_C">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_070_C" />
+		</classes>
+	</test>
+	
+	
+	<!-- Sub Bank Account On General System Parameter Setup Is Validated   --> 	
+	<test name="RMA_QTPRegression_TC_070_I_Collection">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_070_I" />
+		</classes>
+	</test>
+	<!-- Successful Workers Compensation Claim Creation Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_070_WC_Collection">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_070_WC" />
+		</classes>
+	</test>
+<!-- Successful Collection For Other Payees Using Sub Bank Account Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_077_WC_OtherPayee">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_077" />
+		</classes>
+	</test>	
+	<!-- Successful Collection For Claimant Using Sub Bank Account Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_078_WC_Claimant">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_078" />
+		</classes>
+	</test>	
+	<!-- Successful Collection For Persons Involved Using Sub Bank Account Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_079_WC_PersonsInvolved">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_079" />
+		</classes>
+	</test>	
+	<!-- Successful Payment For Org Hierarchy Using Sub Bank Account Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_080_WC_OrgHierarchy">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_080" />
+		</classes>
+	</test>	
+	<!-- Successful General Claim Creation Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_071_GC_Collection">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_071_GC" />
+		</classes>
+	</test>
+	<!-- Successful Payment For Other Payees Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_077_GC_OtherPayee">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_077" />
+		</classes>
+	</test>
+	<!-- Successful Payment For Claimant Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_078_GC_Claimant">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_078" />
+		</classes>
+	</test>
+	<!-- Successful Payment For Persons Involved Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_079_GC_PersonsInvolved">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_079" />
+		</classes>
+	</test>
+	
+	<!-- Successful Payment For Org Hierarchy Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_080_GC_OrgHierarchy">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_080" />
+		</classes>
+	</test>	
+	<!-- Successful Vehicle Claim Creation Is Validated  --> 	
+	<test name="RMA_QTPRegression_TC_072_VC_Collection">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_072_VC" />
+		</classes>
+	</test>
+	<!-- Successful Payment For Other Payee Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_077_VC_OtherPayee">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_077" />
+		</classes>
+	</test>		
+	<!-- Successful Payment For Claimant Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_078_VC_Claimant">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_078" />
+		</classes>
+	</test>
+	<!-- Successful Payment For Persons Involved Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_079_VC_PersonsInvolved">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_079" />
+		</classes>
+	</test>	
+	<!-- Successful Payment For Org Hierarchy Using Sub Bank Account Is Validated--> 	
+	<test name="RMA_QTPRegression_TC_080_VC_OrgHierarchy">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_080" />
+		</classes>
+	</test>	
+	<!-- Revert Sub Bank Account On General System Parameter Setup Is Validated   --> 	
+	<test name="RMA_QTPRegression_TC_070_C_Collection">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_070_C" />
+		</classes>
+	</test>
+</suite>

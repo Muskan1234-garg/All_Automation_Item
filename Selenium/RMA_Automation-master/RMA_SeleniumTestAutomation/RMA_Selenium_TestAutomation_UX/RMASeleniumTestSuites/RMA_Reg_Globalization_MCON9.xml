@@ -1,0 +1,82 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Globalization_MCON" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+<!-- Successful Carrier General Claim Creation Is Validated In RMA Application -->
+	 <test name="RMA_Reg_Delete_Exchange_Rates">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Delete_Exchange_Rates" />
+		</classes>
+	</test>  
+	<!-- Successful Corporate General Claim Creation -->
+	<test name="RMA_Reg_Glb_TC01">
+		<parameter name="BaseCurrency" value="EUR" />
+		<parameter name="SourceCurrency" value="GBP" />
+		<parameter name="DestinationCurrency" value="USD" />
+		<parameter name="Claim_Base_Rate" value="1.18" />
+		<parameter name="Base_Base_Rate" value="1" />
+		<parameter name="Claim_Claim_Rate" value="1" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Glb_TC01" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data, 
+		Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of 
+		Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC_Smoke_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC_Smoke" />
+		</classes>
+	</test>
+
+	<!-- Search Claim Created By Above Testcase And Add claim Currency In Respective 
+		claim -->
+	<test name="RMA_Reg_Globalization_Financial_Verification1">
+		<parameter name="ClaimCurrency" value="GBP" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Globalization_Financial_Verification1" />
+		</classes>
+	</test>
+	<!--Verify That MC case -->
+ <!-- Successful Carrier General Claim Creation Is Validated In RMA Application -->
+	 <test name="RMA_Smoke_TC_058">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_058" />
+		</classes>
+	</test>  
+	
+	<!--Verify That MC case -->
+<test name="RMA_Reg_MC_Carrier_Claim_Financial_Verification">
+		<parameter name="Claim_Policy_Rate" value="1.31" />
+ 			<parameter name="Base_Policy_Rate" value="1.11" />
+ 			<parameter name="Policy_Policy_Rate" value="1" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_MC_Carrier_Claim_Financial_Verification" />
+		</classes>
+	</test>
+
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

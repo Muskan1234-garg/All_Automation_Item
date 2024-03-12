@@ -1,0 +1,397 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="2" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_01_SmokeSuite01" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+<!--Successful Event Creation On Providing Mandatory Data Is Validated--> 
+	<test name="RMA_Smoke_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_001" />
+		</classes>
+	</test>
+
+<!--Successful Corporate General Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_Smoke_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC_Smoke" />
+		</classes>
+	</test>
+	
+<!--Successful Adjuster Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit And Delete Of Created Adjuster Is Validated -->
+	<test name="RMA_Smoke_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_003" />
+		</classes>
+	</test>
+	
+<!--Successful Claimant Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claimant Is Validated -->
+	 <test name="RMA_Smoke_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_004" />
+		</classes>
+	</test>
+	
+<!--Successful Defendant Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claimant Is Validated -->
+	 <test name="RMA_Smoke_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_005" />
+		</classes>
+	</test>
+		
+<!--Successful Litigation Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit And Delete Of Created Litigation Is Validated-->
+	<test name="RMA_Smoke_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_006" />
+		</classes>
+	</test>
+	
+<!--Successful Subrogation Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit And Delete Of Created Subrogation Is Validated -->
+	<test name="RMA_Smoke_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_007" />
+		</classes>
+	</test>
+	
+<!--Successful Arbitration Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit And Delete Of Created Arbitration Is Validated -->
+	 <test name="RMA_Smoke_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_008" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of MedicalStaff As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	<!--  <test name="RMA_SeleniumRegression_TC_027">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_027" />
+		</classes>
+	</test>-->
+	
+<!-- Successful Claim Status Change Is Validated -->
+	 <test name="RMA_Smoke_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_016" />
+		</classes>
+</test>
+
+<!--Successful Comment Creation For An Already Created Claim, Close And Cancel Image Button Function On Comments Screen Is Validated -->
+	 <test name="RMA_Smoke_TC_024">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_024" />
+		</classes>
+	</test>
+	
+	<!--Comment Summary Screen Functionality Verification For An Already Created Claim, Close Image Button Both On The Header And Main screen Of Comment Summary, Print Image Button Functionality Is Validated-->
+	 <test name="RMA_Smoke_TC_027">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_027" />
+		</classes>
+	</test>
+
+<!--Verify That Enhanced Notes Can Be Created,Edited And Deleted Successfully From Claim Page Along-with Back To Notes, Note Type And NG Grid Search Filter Functionalities -->
+	 <test name="RMA_Smoke_TC_025">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_025" />
+		</classes>
+	</test>
+	
+<!--Diary Is Attached To Created Claim With DairyNotes, Priority, Work Activity (Validated Too), Task Name (Validated Too), Estimated Hours Values, Required Tab Existence Is Verified, Cancel And Save Button Functionality Is Validated--> -->
+	 <test name="RMA_Smoke_TC_022">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_022" />
+		</classes>
+	</test>
+	
+<!--Verify View Record Diary Is Showing Diary, Created For Claim Is Validated -->
+	<test name="RMA_Smoke_TC_023">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_023" />
+		</classes>
+	</test>
+	
+<!--Delete All Diary Is Validated -->
+	<test name="RMA_Smoke_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_010" />
+		</classes>
+	</test>
+
+<!--Iso Submission Is Validated -->
+	<test name="RMA_Smoke_TC_052">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_052" />
+		</classes>
+	</test>
+	
+<!--Verify Record Summary Displays Correct Details For A Claim -->
+<test name="RMA_Smoke_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_020" />
+		</classes>
+</test>
+
+<!-- Send Mail Functionality For A Claim Is Validated 
+	 <test name="RMA_Smoke_TC_028">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_028" />
+		</classes>
+</test>--> 
+
+<!--Successful Corporate General Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_002_GC_Smoke">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC_Smoke" />
+		</classes>
+	</test>
+	
+
+<!-- Successful Reserve Creation, Reserve Grid Value Verification, Color Code Change And Tool Tip Amount Of Reserve Progress Image On Claim Screen Is Validated -->
+	 <test name="RMA_Smoke_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_009" />
+		</classes>
+</test>
+
+<!--Successful Payment Creation Against An Already Created Reserve Is Validated -->
+	 <test name="RMA_Smoke_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_011" />
+		</classes>
+</test>
+
+<!--Verify That Enhanced Notes Can Be Created,Edited And Deleted Successfully From Payment Page Along-with Back To Notes, Note Type And NG Grid Search Filter Functionalities -->
+	 <test name="RMA_Smoke_TC_034">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_034" />
+		</classes>
+</test>
+
+<!-- Diary Is Attached To Created Payment With DairyNotes, Priority, Work Activity (Validated Too), Task Name (Validated Too), Estimated Hours Values, Required Tab Existence Is Verified, Cancel And Save Button Functionality Is Validated -->-->
+	 <test name="RMA_Smoke_TC_033">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_033" />
+		</classes>
+</test>
+
+	
+<!--Send Mail Functionality For A Payment Is Validated 
+	 <test name="RMA_Smoke_TC_035">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_035" />
+		</classes>
+	</test>-->
+
+<!--Successful Verification Payment Creation On NG Grid And Claim Progress Is Validated -->
+	 <test name="RMA_Smoke_TC_011GridVerification">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_011GridVerification" />
+		</classes>
+	</test>
+
+<!--Successful Collection Addition Is Validated -->
+	 <test name="RMA_Smoke_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_014" />
+		</classes>
+</test>
+
+
+<!--Diary Is Attached To Created Collection With DairyNotes, Priority, Work Activity (Validated Too), Task Name (Validated Too), Estimated Hours Values, Required Tab Existence Is Verified, Cancel And Save Button Functionality Is Validated-->
+	 <test name="RMA_Smoke_TC_037">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_037" />
+		</classes>
+</test>
+
+<!--Verify That Enhanced Notes Can Be Created,Edited And Deleted Successfully From Collection Page Along-with Back To Notes, Note Type And NG Grid Search Filter Functionalities -->
+	 <test name="RMA_Smoke_TC_038">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_038" />
+		</classes>
+</test>	
+
+<!--Send Mail Functionality For A Collection Is Validated
+	 <test name="RMA_Smoke_TC_039">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_039" />
+		</classes>
+</test> -->
+
+<!--Successful Collection Addition Is Validated -->
+	 <test name="RMA_Smoke_TC_014GridVerification">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_014GridVerification" />
+		</classes>
+</test>
+
+<!--Transaction History Displays All The Transactions Are Validated -->
+	 <test name="RMA_Smoke_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_013" />
+		</classes>
+</test>
+
+<!--Claim History Works Correctly On Claimant Screen Is Validated-->
+	 <test name="RMA_Smoke_TC_017">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_017" />
+		</classes>
+	</test>
+	
+<!--Claim History Works Correctly On Defendant Screen Is Validated-->
+	 <test name="RMA_Smoke_TC_018">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_018" />
+		</classes>
+	</test>
+<!--Comment below Executive Summary Test case as scripting is not done as per the current flow -->
+<!--Verify That Executive Summary Displays Correct Claim Details -->
+<!-- 	<test name="RMA_Smoke_TC_019"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_019" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+<!-- Successful Claim Search And Then Delete Of The Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_050">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_050" />
+		</classes>
+</test> 
+
+<!--Successful Workers Compensation Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Data Entry Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_002_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+	
+<!-- Debasmita - Commented Below Two Test cases as Work Loss and Restrictions buttons are no more available on Employment Info Tab and flow has been completely changed  -->
+<!-- Add And Delete Of Restriction Of WC Claim Is Validated -->
+<!-- 	 <test name="RMA_Smoke_TC_012"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_012" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+	
+<!-- Add And Delete Of Work Loss Of WC Claim Is Validated -->
+<!-- 	 <test name="RMA_Smoke_TC_030"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_030" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+	
+<!--Verify Claim Activity Log Working Is Validated -->
+	 <test name="RMA_Smoke_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_015" />
+		</classes>
+	</test>
+	
+<!-- Verify Claim Involvement History Functionality For WC Is Validated --> -->
+	 <test name="RMA_Smoke_TC_029">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_029" />
+		</classes>
+	</test>
+	
+<!-- Quick Summary For WC Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_051">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_051" />
+		</classes>
+	</test>
+	
+
+<!--Successful Corporate Vehicle Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Data Entry Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	 <test name="RMA_Smoke_TC_002_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_VC" />
+		</classes>
+	</test>
+	
+<!--Verify Attachment of Documents Happens In Claim Successfully Along-with NG Grid Search Filter Functionalities-->
+	 <test name="RMA_Smoke_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_021" />
+		</classes>
+</test> 
+
+<!-- Successful Reserve Creation, Reserve Grid Value Verification, Color Code Change And Tool Tip Amount Of Reserve Progress Image On Claim Screen Is Validated -->
+	 <test name="RMA_Smoke_TC_009_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_009" />
+		</classes>
+</test>
+	
+<!--Successful Payment Addition Is Validated -->
+	 <test name="RMA_Smoke_TC_011_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_011" />
+		</classes>
+</test>
+
+<!--Verify Attachment of Documents Happens In Payment Successfully Along-with NG Grid Search Filter Functionalities-->
+	 <test name="RMA_Smoke_TC_032">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_032" />
+		</classes>
+</test> 
+
+<!--Successful Payment Addition Is Validated -->
+	 <test name="RMA_Smoke_TC_011GridVerification_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_011GridVerification" />
+		</classes>
+</test>
+
+
+<!--Successful Collection Addition Is Validated -->
+	 <test name="RMA_Smoke_TC_014_VC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_014" />
+		</classes>
+</test>
+
+<!--Verify Attachment of Documents Happens In Collection Successfully Along-with NG Grid Search Filter Functionalities-->
+	 <test name="RMA_Smoke_TC_036">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_036" />
+		</classes>
+</test>
+
+<!--Print Preview Working On Payment Screen Is Validated -->
+	 <test name="RMA_Smoke_TC_040">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_040" />
+		</classes>
+</test>
+
+<!--Print Preview Working On Collection Screen Is Validated -->
+	 <test name="RMA_Smoke_TC_048">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_048" />
+		</classes>
+</test>
+	
+	<!--Successful Send Mail Send Mail After Suite Completion
+	 <test name="RMA_Smoke_TCCompletionMailReport">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TCCompletionMailReport" />
+		</classes>
+	</test>-->
+</suite>

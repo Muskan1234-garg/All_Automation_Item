@@ -1,0 +1,303 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_08_SelReg_05_PI_Exist_Event,GC,WC,VC" />
+<!-- NOTE: Other People Add New Person Involved Script (RMA_SeleniumRegression_TC_040) Should Be Run At The End Of Each Suite Execution As It Contains The Code To Close The Claim Screen -->
+<!-- NOTE: Add Existing Employee Code Fails Randomly (1 Out Of 5 Execution Runs) Due To Search Icon Not Being Clicked) As Such The Possible Solution Is To Remove_039 Test Case From All Four Places Mentioned And Test It Manually For GC,WC,VC In Case Of Add Existing -->
+
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved General Claim Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_022_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_022" />
+		</classes>
+	</test>
+	
+<!--New Person Involved For Created Claim/Event/Litigation Is Added To Be Used As Add Existing Person Involved Data For Other Entity Level Such As (For Instance: Employee Created As Person Involved For Event Will Be Used As Data For Add Existing Person Involved For General Claim) -->
+	 <test name="RMA_SeleniumRegression_TC_034_PI_DataCreation_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_034_PI_DataCreation" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved Event Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_020_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_020" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of MedicalStaff As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_034_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_034" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Patient As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_035_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_035" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Physician As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_036_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_036" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Driver As Person Involved For Created Claim/Event/Litigation Is Validated-->
+	 <test name="RMA_SeleniumRegression_TC_037_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_037" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Witness As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_038_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_038" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Employee As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_039_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_039" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Other Person As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_040_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_040" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved Event Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_020_GeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_020" />
+		</classes>
+	</test>
+	
+<!--  New Person Involved For Created Claim/Event/Litigation Is Added To Be Used As Add Existing Person Involved Data For Other Entity Level Such As (For Instance: Employee Created As Person Involved For Event Will Be Used As Data For Add Existing Person Involved For General Claim) -->
+	 <test name="RMA_SeleniumRegression_TC_034_PI_DataCreation_GeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_034_PI_DataCreation" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved GeneralClaim Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_021_GeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_021" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Medical Staff As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_034_GeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_034" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Patient As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_035_GeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_035" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Physician As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_036_GeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_036" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Driver As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_037_GeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_037" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Witness As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_038_GeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_038" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Employee As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_039_GeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_039" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Other Person As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_040_GeneralClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_040" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved Workers Compensation Claim Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_023_Vehicle Accident Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_023" />
+		</classes>
+	</test>
+	
+<!--New Person Involved For Created Claim/Event/Litigation Is Added To Be Used As Add Existing Person Involved Data For Other Entity Level Such As (For Instance: Employee Created As Person Involved For Event Will Be Used As Data For Add Existing Person Involved For General Claim) -->
+	 <test name="RMA_SeleniumRegression_TC_034_PI_DataCreation_Vehicle Accident Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_034_PI_DataCreation" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved Vehicle Accident Claim Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_022_Vehicle Accident Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_022" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of MedicalStaff As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_034_Vehicle Accident Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_034" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Patient As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_035_Vehicle Accident Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_035" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Physician As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_036_Vehicle Accident Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_036" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Driver As Person Involved For Created Claim/Event/Litigation Is Validated-->
+	 <test name="RMA_SeleniumRegression_TC_037_Vehicle Accident Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_037" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Witness As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_038_Vehicle Accident Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_038" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Employee As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_039_Vehicle Accident Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_039" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Other Person As Person Involved For Created Claim/Event/Litigation Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_040_Vehicle Accident Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_040" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved Vehicle Accident Claim Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_022_Workers Compensation Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_022" />
+		</classes>
+	</test>
+	
+<!--  New Person Involved For Created Claim/Event/Litigation Is Added To Be Used As Add Existing Person Involved Data For Other Entity Level Such As (For Instance: Employee Created As Person Involved For Event Will Be Used As Data For Add Existing Person Involved For General Claim) -->
+	 <test name="RMA_SeleniumRegression_TC_034_PI_DataCreation_Workers Compensation Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_034_PI_DataCreation" />
+		</classes>
+	</test>
+	
+<!--Existence Of Person Involved Entity Option For Saved Workers Compensation Claim Is Validated -->
+	 <test name="RMA_SeleniumRegression_TC_023_Workers Compensation Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_023" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Medical Staff As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_034_Workers Compensation Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_034" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Patient As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_035_Workers Compensation Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_035" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Physician As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_036_Workers Compensation Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_036" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Driver As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_037_Workers Compensation Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_037" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Witness As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_038_Workers Compensation Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_038" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Employee As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_039_Workers Compensation Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_039" />
+		</classes>
+	</test>
+	
+<!---Create, Edit And Delete Of Other Person As Person Involved For Created Claim/Event/Litigation Is Validated  -->
+	 <test name="RMA_SeleniumRegression_TC_040_Workers Compensation Claim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_040" />
+		</classes>
+	</test>
+</suite>

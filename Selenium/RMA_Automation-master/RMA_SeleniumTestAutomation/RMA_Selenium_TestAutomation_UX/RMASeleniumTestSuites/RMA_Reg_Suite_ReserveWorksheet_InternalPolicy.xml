@@ -1,0 +1,69 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--RMA_Reg_Funds_ReserveWorkSheet_TC_020 test case will be executed only 
+		on DSN where the financial key is Set On Policy LOB -->
+	<!-- Use DSN RMA_Automation_ACON on Automation server for its execution -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName"
+		value="RMA_Reg_Suite_ReserveWorksheet_InternalPolicy" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Reserve WorkSheet Settings From Line Of Business Setup And Reserve WorkSheet 
+		Configuration Setting From Utilities Is Validated -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_Settings">
+		<parameter name="LOB" value="GC - General Claims" />
+		<parameter name="numofreserves" value="2" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_Settings" />
+		</classes>
+	</test>
+
+	<!-- Verify That Carrier Reserve WorkSheet Should Work With Carrier Internal -->
+	<!-- Policy Is Validated -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_TC_020" />
+		</classes>
+	</test>
+
+	<!-- To Save a Carrier Reserve WorkSheet On A Claim -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_TC_009">
+		<parameter name="LOB" value="GC" />
+		<parameter name="PolicyType" value="Internal" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_TC_009" />
+		</classes>
+	</test>
+
+	<!-- Revert Reserve WorkSheet Settings From Line Of Business Setup -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_RevertSettings">
+		<parameter name="LOB" value="GC - General Claims" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_RevertSettings" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

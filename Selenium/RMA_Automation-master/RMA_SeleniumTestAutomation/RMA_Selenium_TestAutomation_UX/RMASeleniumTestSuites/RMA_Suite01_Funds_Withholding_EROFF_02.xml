@@ -1,0 +1,130 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite01_Funds_Withholding_EROFF_02" />
+	<!-- To make this suite run on any server, please change DSN name in DataSheet "RMA_Suite01_Funds_Withholding.xlsx" for test 
+		cases RMA_Reg_Funds_Withholding_TC001,003,006 -->
+	
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Enable Required SMS And Utility Settings For Suite RMA_Suite01_Funds_Withholding -->
+	<test name="RMA_Reg_Funds_Withholding_TC_025">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_025" />
+		</classes>
+	</test>
+	
+	<!--Verify Maintenance Screen Navigation In RMA Application -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>	
+	
+	<!--Verify The All Validation Messages Of Save Button On Withholding Screen.-->
+	<test name="RMA_Reg_Funds_Withholding_RecipientCreation">
+	<parameter name="NoOfWithholdingRecipient" value="1" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_RecipientCreation" />
+		</classes>
+	</test>	
+	
+	<!--Verify The All Validation Messages Of Save Button On Withholding Screen.-->
+	<test name="RMA_Reg_Funds_Withholding_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_007" />
+		</classes>
+	</test>
+	
+	<!-- Verify The Default Value Of All The Fields Available On Withholding Screen. -->
+	<test name="RMA_Reg_Funds_Withholding_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_008" />
+		</classes>
+	</test>
+	
+	<!--Verify That User Will Get A Validation Message On Clicking on Withholding Button On A New Record Is Validated -->
+	<test name="RMA_Reg_Funds_Withholding_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_009" />
+		</classes>
+	</test>
+	
+	<!--Verify That User Is Not Able To Update Existing Withholding Record But Able to Create & View When Update Setting Is Disabled In SMS Is Validated -->
+	<test name="RMA_Reg_Funds_Withholding_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_003" />
+		</classes>
+	</test>
+	
+	<!--Verify That User Is Not Able To View Existing Withholding Record But Able to Create New Withhold Record When View Setting Is Disabled In SMS Is Validated -->
+	<test name="RMA_Reg_Funds_Withholding_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_004" />
+		</classes>
+	</test>
+	
+	<!--Verify That User Is Not Able To Create Withholding Record But Able To View And Update Existing Withhold Record When Create Setting Is Disabled In SMS Is Validated -->
+	<test name="RMA_Reg_Funds_Withholding_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_005" />
+		</classes>
+	</test>
+			
+	<!--Verify Error Message "No View Permission" On Clicking Withholding Button On Employee Maintenance When Withholding Is Checked But Backup Withholding Is Not Checked In SMS -->
+	<test name="RMA_Reg_Funds_Withholding_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Withholding Button Existence On Employee Maintenance Screen Is Validated When Withholding Permission Is Revoked From SMS -->
+	<test name="RMA_Reg_Funds_Withholding_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="1" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That A PowerView Is Created And Created User Is Given Permission 
+		To That PowerView -->
+	<test name="RMA_Reg_PowerviewCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Verify That Withholding ToolBar Button Is Not Displayed When User Has Removed The Same From Powerview -->
+	<test name="RMA_Reg_Funds_Withholding_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_006" />
+		</classes>
+	</test>
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

@@ -1,0 +1,78 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+ <!-- Change The System Time To Eastern Standard Time Before Execution Of This Suite -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_GST_Suite_NonOcc" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Verify Entity Is Created Successfully With GST Details -->
+	<test name="RMA_Reg_GST_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful Corporate Non Occupational Claim Creation On Providing Mandatory Data And Having A Plan With GST Enabled Jurisdiction Is Validated -->
+	<test name="RMA_Reg_GST_TC_NonOccClaimCreation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_NonOccClaimCreation" />
+		</classes>
+	</test>
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is OFF And ITC Entitlement (Payor/Insurer) is 0% Is Validated-->
+	<test name="RMA_Reg_GST_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_005" />
+		</classes>
+	</test>	
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is ON And ITC Entitlement (Payee) is 100% With And Without Excess On Insurance Amount 100 Is Validated-->
+	<test name="RMA_Reg_GST_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_007" />
+		</classes>
+	</test>
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is ON And ITC Entitlement (Payee) is 70% With Excess On Insurance Amount 100 Is Validated-->
+	<test name="RMA_Reg_GST_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_010" />
+		</classes>
+	</test>	
+	
+	<!--Verify Details On GST Details Tab For A Collection Is Validated-->
+	<test name="RMA_Reg_GST_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_012" />
+		</classes>
+	</test>
+
+	<!--Verify No GST Related Fields Are Displayed On The Non-Occ Payment And Collection Screen Is Validated-->
+	<test name="RMA_Reg_GST_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_021" />
+		</classes>
+	</test>
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

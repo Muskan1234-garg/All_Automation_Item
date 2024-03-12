@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [RMA_RegressionSuite3_DiaryCases]" allow-return-values="true">
+  <parameter name="ExecutedSuiteName" value="RMA_RegressionSuite3_DiaryCases"/>
+  <parameter name="DataSourceRow" value="1"/>
+  <test name="REGRESSION.RMA_TC_001(failed)">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+      <class name="rmaseleniumtestscripts_REGRESSION.RMA_TC_031">
+        <methods>
+          <include name="RMA_TC_031_Test"/>
+          <include name="SetUp"/>
+          <include name="ExitSetUp"/>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts_REGRESSION.RMA_TC_031 -->
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <methods>
+          <include name="RMA_FailureReport"/>
+        </methods>
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+    </classes>
+  </test> <!-- REGRESSION.RMA_TC_001(failed) -->
+</suite> <!-- Failed suite [RMA_RegressionSuite3_DiaryCases] -->

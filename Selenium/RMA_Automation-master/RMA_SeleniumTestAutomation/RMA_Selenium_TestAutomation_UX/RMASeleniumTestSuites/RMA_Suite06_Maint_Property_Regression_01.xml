@@ -1,0 +1,148 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite06_Maint_Property_Regression_01" />
+
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+		<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="1" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That A PowerView Is Created And Created User Is Given Permission 
+		To That PowerView -->
+	<test name="RMA_Reg_PowerviewCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001" />
+		</classes>
+	</test>
+	
+	<!--Maintenance Screen Navigation In RMA Application -->
+
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+	<!--Add, Edit And Delete Property From Property Maintenance Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify User Is Not Able To Save Property Without Filling All Mandatory 
+		Fields On Property Maintenance Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Verify The Functionality Of Creating Property Claim With Property Created 
+		From Maintenance Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_003" />
+		</classes>
+	</test>
+
+	<!--Verify User Is Able To Make Any Field Required And ReadOnly From Utilities 
+		Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_009" />
+		</classes>
+	</test>
+
+	<!-- Verify User Is Not Able To Remove Required Field From PowerView Editor 
+		Property Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_008" />
+		</classes>
+	</test>
+
+	<!-- Verify That Help Is Displayed On Property Screen If Added Via PowerView 
+		For Any Field -->
+	<test name="RMA_Reg_Maint_Property_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_010" />
+		</classes>
+	</test>
+
+	<!-- Verify That Validation Is Displayed When User Has Not Entered Data 
+		In Any Required Field On Property Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_011" />
+		</classes>
+	</test>
+
+	<!-- Verify That ToolBar Buttons On Property Screen In PowerView Are Working 
+		Fine -->
+	<test name="RMA_Reg_Maint_Property_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_012" />
+		</classes>
+	</test>
+
+	<!--Verify When Main Attachment Node Setting Is Off In SMS Then Forbidden 
+		Message Must Be Displayed On Property Maintenance Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_013" />
+		</classes>
+	</test>
+
+	<!--Verify When Create New Setting Is Off Then No Create Permission Message 
+		Must Be Displayed When User Is Creating New Record On Property Maintenance 
+		Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_014" />
+		</classes>
+	</test>
+
+	<!--Verify That When Delete Setting is Off Then Delete Button Is Not Displayed 
+		In ToolBar On Property Maintenance Screen -->
+	<test name="RMA_Reg_Maint_Property_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_015" />
+		</classes>
+	</test>
+
+	<!--Verify Supplemental Tab Is Not Displayed On Property Maintenance When 
+		Supplemental Tab Setting Is Off -->
+	<test name="RMA_Reg_Maint_Property_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Property_TC_016" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

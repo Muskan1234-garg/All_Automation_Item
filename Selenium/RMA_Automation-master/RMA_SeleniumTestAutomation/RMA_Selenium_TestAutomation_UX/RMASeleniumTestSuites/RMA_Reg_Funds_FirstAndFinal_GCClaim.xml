@@ -1,0 +1,118 @@
+<suite name="RMA_Reg_FirstAndFinalPayments_GCClaim" parallel="none"
+	allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_FirstAndFinalPayments_GCClaim" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Verify Detailed Claimant Is Disabled After Saving First And Final Payment 
+		, F&F Payment Creation Is Not Possible For Schedule Checks , Printing Of 
+		F&F Payment -->
+	<test name="RMA_Reg_Funds_FirstAndFinalPayment_TC_005">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_FirstAndFinalPayment_TC_005" />
+		</classes>
+	</test>
+
+	<!--Void F&F Payment, System Should Allow The User To Create Multiple First 
+		And Final Payments With Same Claim,Claimant, Policy, Unit And Coverage But 
+		With Different Reserve Types -->
+	<test name="RMA_Reg_Funds_FirstAndFinalPayment_TC_004">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_FirstAndFinalPayment_TC_004" />
+		</classes>
+	</test>
+
+	<!--Create Multiple F&F Payments With Different Claimants -->
+	<test name="RMA_Reg_Funds_FirstAndFinalPayment_TC_013">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_FirstAndFinalPayment_TC_013" />
+		</classes>
+	</test>
+
+	<!-- Verify F&F Payment Is Not Allowed With Same Claim, Claimant, Policy, 
+		Coverage And Reserve Types After One Successful F&F Payment, Edit Of F&F 
+		Payment Amount Before Printing -->
+	<test name="RMA_Reg_Funds_FirstAndFinalPayment_TC_006">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_FirstAndFinalPayment_TC_006" />
+		</classes>
+	</test>
+
+	<!-- Verify System Should Not Allow The User To Add Multiple Transaction 
+		Split With The Same Policy, Coverage But With Different Reserve Type -->
+	<test name="RMA_Reg_Funds_FirstAndFinalPayment_TC_009">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_FirstAndFinalPayment_TC_009" />
+		</classes>
+	</test>
+
+	<!-- Verify First And Final Payment Functionality For WC Carrier -->
+	<test name="RMA_Reg_Funds_FirstAndFinalPayment_TC_015">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_FirstAndFinalPayment_TC_015" />
+		</classes>
+	</test>
+
+	<!-- Verify Void Of First And Final Payment For WC Carrier Claim Is Validated -->
+	<test name="RMA_Reg_Funds_FirstAndFinalPayment_TC_019">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_FirstAndFinalPayment_TC_019" />
+		</classes>
+	</test>
+
+	<!-- Verify F&F Payment Is Not Allowed With Same Claim, Claimant, Policy, 
+		Coverage And Reserve Types After One Successful F&F Payment, Edit Of F&F 
+		Payment Amount Before Printing on carrier WC -->
+	<test name="RMA_Reg_Funds_FirstAndFinalPayment_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_FirstAndFinalPayment_TC_020" />
+		</classes>
+	</test>
+
+	<!-- Verify System Should Not Allow The User To Add Multiple Transaction -->
+	<!-- Split With The Same Policy, Coverage But With Different Reserve Type -->
+	<!-- Before Saving The Payment On WC Carrier Claim. Is Validated -->
+	<test name="RMA_Reg_Funds_FirstAndFinalPayment_TC_023">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_FirstAndFinalPayment_TC_023" />
+		</classes>
+	</test>
+	
+	<!-- Verify That System Should Allow The User To Create Multiple First And -->
+	<!-- Final Payments With Same Claim,Claimant, Policy, Unit And Coverage -->
+	<!-- But With Different Reserve Types On WC Carrier Claim Is Validated -->
+	<test name="RMA_Reg_Funds_FirstAndFinalPayment_TC_026">
+	<classes>
+	<class name="rmaseleniumtestscripts.RMA_Reg_Funds_FirstAndFinalPayment_TC_026"/>
+	</classes>
+	</test>
+	
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

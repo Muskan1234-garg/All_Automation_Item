@@ -1,0 +1,56 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="Util_ClaimWithPolicy" />
+
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<parameter name="ZoneName" value="Utilities" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Verify That User Is Able To Delete Created Supplemental Fields On Selected 
+		Screen -->
+	<test name="Util_PolicySystemSetupUtility">
+		<classes>
+			<class name="rmaseleniumtestscripts.Util_PolicySystemSetupUtility" />
+		</classes>
+	</test>
+
+	<test name="Util_TableMaintAndFinancialKey">
+		<classes>
+			<class name="rmaseleniumtestscripts.Util_TableMaintAndFinancialKey" />
+		</classes>
+	</test>
+
+	<test name="Util_PolicyInterFaceCode">
+		<classes>
+			<class name="rmaseleniumtestscripts.Util_PolicyInterFaceCode" />
+		</classes>
+	</test>
+
+	<test name="Util_LossCodeMapping">
+		<classes>
+			<class name="rmaseleniumtestscripts.Util_LossCodeMapping" />
+		</classes>
+	</test>
+
+	<test name="Util_GCClaimWithPOINTPolicy">
+		<classes>
+			<class name="rmaseleniumtestscripts.Util_GCClaimWithPOINTPolicy" />
+		</classes>
+	</test>
+
+</suite>
+

@@ -1,0 +1,112 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="4" />
+
+	<!-- One Test Case Is Missing Due To Some Error -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite05_Maint_Physician_Regression_03" />
+
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	<!--Verify That Correct Validation Is Displayed When User Enters Any Date Before 1900 On Physician Maintenance -->
+	<test name="RMA_Reg_Maint_Physician_TC_064">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_064" />
+		</classes>
+	</test>
+	<!--Verify That Correct Validation Is Displayed When User Enters License Expire Date Less Than License Issue Date On Physician Maintenance-->
+
+	<test name="RMA_Reg_Maint_Physician_TC_065">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_065" />
+		</classes>
+	</test>
+	<!--Verify That When Delete Setting Is Off In SMS Then Delete Button Must Not Be Displayed On Physician Person Involved Screen-->
+	
+	<test name="RMA_Reg_Maint_Physician_TC_066">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_066" />
+		</classes>
+	</test>
+	<!--Verify That User Is Not Able To View Existing Added Physician PI Record When View Setting Is Disabled In SMS Is Validated-->
+	
+	<test name="RMA_Reg_Maint_Physician_TC_067">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_067" />
+		</classes>
+	</test>
+<!--Verify When Delete Setting Is Off Then Delete Button Is Not Displayed In ToolBar Of Physician Creation Page-->
+	
+	<test name="RMA_Reg_Maint_Physician_TC_060">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_060" />
+		</classes>
+	</test>
+<!-- Verify When Create New Setting Is Off Then No Create Permission Message Must Be Displayed When User Is Creating New Record On Physician Maintenance Screen-->
+	<test name="RMA_Reg_Maint_Physician_TC_061">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_061" />
+		</classes>
+	</test>
+	<!-- Verify When Main Attachment Node Setting Is Off In SMS Then Forbidden Message Must Be Displayed On Physician Maintenance Screen-->
+	<test name="RMA_Reg_Maint_Physician_TC_062">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_062" />
+		</classes>
+	</test>
+	<!-- Verify That When Main Physician Setting Is Off In SMS Then Physician Option Must Not Be Visible In Maintenance-->
+	<test name="RMA_Reg_Maint_Physician_TC_063">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_063" />
+		</classes>
+	</test>
+<!--Verify Supplemental Tab Is Not Displayed On Physician Maintenance When Supplemental Tab Setting Is Off-->
+	<test name="RMA_Reg_Maint_Physician_TC_050">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_050" />
+		</classes>
+	</test>
+	<!--Verify That User Is Not Able To Update Existing Physician Record When Update Setting Is Disabled In SMS -->
+	<test name="RMA_Reg_Maint_Physician_TC_051">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_051" />
+		</classes>
+	</test>
+	<!-- Verify That SSN Field Is Not Displayed On Physician Maintenance For Existing Record/Newly Created Record When Respective Setting Is Disabled In SMS-->
+	<test name="RMA_Reg_Maint_Physician_TC_053">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_053" />
+		</classes>
+	</test>
+	<!-- Verify When EFT Payments Setting Is Disabled Then Banking Information Tab In Right Side Panel Is Not Displayed-->
+	<test name="RMA_Reg_Maint_Physician_TC_054">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_054" />
+		</classes>
+	</test>
+	<!--Verify When EFT Payments Setting Is Disabled Then Banking Information Tab In Right Side Panel Is Not Displayed-->
+	<!-- <test name="RMA_Reg_Maint_Physician_TC_052"> -->
+	<!-- <classes> -->
+	<!-- <class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_TC_052" 
+		/> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

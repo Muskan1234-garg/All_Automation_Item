@@ -1,0 +1,27 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "@supercharge/strings": {
+      "integrity": "sha512-HHkFE4jdH+T5ZjD/DR98Gg01tmpBhm1hdo/+EoZlqPY+hnqPfv4CLcEc5reu/3a9VzsxA+j4ZPW29A7X0l/4dw==",
+      "requires": {
+        "uuid": "~8.2.0"
+      },
+      "resolved": "https://registry.npmjs.org/@supercharge/strings/-/strings-1.11.0.tgz",
+      "version": "1.11.0"
+    },
+    "Math": "0.0.1-security",
+    "faker": "^4.1.0",
+    "random-string": {
+      "integrity": "sha1-pG5DdTUr7amg17DRntbTIezR2C0=",
+      "resolved": "https://registry.npmjs.org/random-string/-/random-string-0.2.0.tgz",
+      "version": "0.2.0"
+    },
+    "testcafe-reporter-html": "^1.4.6",
+    "uuid": {
+      "integrity": "sha512-CYpGiFTUrmI6OBMkAdjSDM0k5h8SkkiTP4WAjQgDgNB1S3Ou9VBEvr6q0Kv2H1mMk7IWfxYGpMH5sd5AvcIV2Q==",
+      "resolved": "https://registry.npmjs.org/uuid/-/uuid-8.2.0.tgz",
+      "version": "8.2.0"
+    }
+  }
+}

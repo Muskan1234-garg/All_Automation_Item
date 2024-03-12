@@ -1,0 +1,691 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite15_Attachments_ALLLOB" />
+
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+    
+    <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+     </test>
+     
+    
+   <!--Attachment verification on GC LOB Screens-->
+   
+   <test name="RMA_TC_292_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_292_GC"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_293_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_293"/>
+    </classes>
+     </test>
+     
+    <test name="RMA_TC_294_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_294"/>
+    </classes>
+    </test>
+  
+    <test name="RMA_TC_295_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_295"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_296_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_296"/>
+    </classes>
+     </test>
+     
+   <test name="RMA_TC_297_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_297"/>
+    </classes>
+    </test>
+     
+   <test name="RMA_TC_298_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_298"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_299_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_299"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_300_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_300"/>
+    </classes>
+    </test>
+ 
+    <test name="RMA_TC_301_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_301"/>
+    </classes>
+    </test>
+ 
+    <test name="RMA_TC_302_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_302"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_303_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_303"/>
+    </classes>
+    </test>
+
+     <test name="RMA_TC_304_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_304"/>
+    </classes>
+    </test>
+   
+     <test name="RMA_TC_305_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_305"/>
+    </classes>
+    </test>
+
+     <test name="RMA_TC_306_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_306"/>
+    </classes>
+     </test>
+  
+     <test name="RMA_TC_307_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_307"/>
+    </classes>
+     </test>
+     
+     <test name="RMA_TC_308_GC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_308"/>
+    </classes>
+     </test>
+   
+    <!--Attachment verification on WC LOB Screens-->
+      
+        <test name="RMA_TC_292_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_292_WC"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_293_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_293"/>
+    </classes>
+     </test>
+  
+    <test name="RMA_TC_295_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_295"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_296_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_296"/>
+    </classes>
+     </test>
+     
+   <test name="RMA_TC_297_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_297"/>
+    </classes>
+    </test>
+     
+   <test name="RMA_TC_298_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_298"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_299_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_299"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_300_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_300"/>
+    </classes>
+    </test>
+ 
+    <test name="RMA_TC_301_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_301"/>
+    </classes>
+    </test>
+ 
+    <test name="RMA_TC_302_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_302"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_303_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_303"/>
+    </classes>
+    </test>
+
+     <test name="RMA_TC_304_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_304"/>
+    </classes>
+    </test>
+   
+     <test name="RMA_TC_305_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_305"/>
+    </classes>
+    </test>
+
+     <test name="RMA_TC_306_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_306"/>
+    </classes>
+     </test>
+  
+     <test name="RMA_TC_307_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_307"/>
+    </classes>
+     </test>
+     
+     <test name="RMA_TC_308_WC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_308"/>
+    </classes>
+     </test>
+ 
+ <!--Attachment verification on PC LOB Screens-->
+      
+        <test name="RMA_TC_292_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_292_PC"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_293_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_293"/>
+    </classes>
+     </test>
+     
+    <test name="RMA_TC_294_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_294"/>
+    </classes>
+     </test>
+  
+    <test name="RMA_TC_295_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_295"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_296_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_296"/>
+    </classes>
+     </test>
+     
+   <test name="RMA_TC_297_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_297"/>
+    </classes>
+    </test>
+     
+   <test name="RMA_TC_298_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_298"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_299_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_299"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_300_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_300"/>
+    </classes>
+    </test>
+ 
+    <test name="RMA_TC_301_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_301"/>
+    </classes>
+    </test>
+ 
+    <test name="RMA_TC_302_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_302"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_303_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_303"/>
+    </classes>
+    </test>
+
+     <test name="RMA_TC_304_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_304"/>
+    </classes>
+    </test>
+   
+     <test name="RMA_TC_305_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_305"/>
+    </classes>
+    </test>
+
+     <test name="RMA_TC_306_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_306"/>
+    </classes>
+     </test>
+  
+     <test name="RMA_TC_307_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_307"/>
+    </classes>
+     </test>
+     
+     <test name="RMA_TC_308_PC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_308"/>
+    </classes>
+     </test>
+ 
+ <!--Attachment verification on VC LOB Screens-->
+      
+        <test name="RMA_TC_292_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_292_VC"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_293_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_293"/>
+    </classes>
+     </test>
+     
+    <test name="RMA_TC_294_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_294"/>
+    </classes>
+     </test>
+  
+    <test name="RMA_TC_295_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_295"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_296_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_296"/>
+    </classes>
+     </test>
+     
+   <test name="RMA_TC_297_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_297"/>
+    </classes>
+    </test>
+     
+   <test name="RMA_TC_298_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_298"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_299_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_299"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_300_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_300"/>
+    </classes>
+    </test>
+ 
+    <test name="RMA_TC_301_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_301"/>
+    </classes>
+    </test>
+ 
+    <test name="RMA_TC_302_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_302"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_303_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_303"/>
+    </classes>
+    </test>
+
+     <test name="RMA_TC_304_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_304"/>
+    </classes>
+    </test>
+   
+     <test name="RMA_TC_305_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_305"/>
+    </classes>
+    </test>
+
+     <test name="RMA_TC_306_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_306"/>
+    </classes>
+     </test>
+  
+     <test name="RMA_TC_307_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_307"/>
+    </classes>
+     </test>
+     
+     <test name="RMA_TC_308_VC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_308"/>
+    </classes>
+     </test>
+ 
+  <!--Attachment verification on NOC LOB Screens-->
+      
+        <test name="RMA_TC_292_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_292_NOC"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_293_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_293"/>
+    </classes>
+     </test>
+  
+    <test name="RMA_TC_295_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_295"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_296_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_296"/>
+    </classes>
+     </test>
+     
+   <test name="RMA_TC_297_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_297"/>
+    </classes>
+    </test>
+     
+   <test name="RMA_TC_298_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_298"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_299_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_299"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_300_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_300"/>
+    </classes>
+    </test>
+ 
+    <test name="RMA_TC_301_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_301"/>
+    </classes>
+    </test>
+ 
+    <test name="RMA_TC_302_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_302"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_303_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_303"/>
+    </classes>
+    </test>
+
+     <test name="RMA_TC_304_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_304"/>
+    </classes>
+    </test>
+   
+     <test name="RMA_TC_305_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_305"/>
+    </classes>
+    </test>
+
+     <test name="RMA_TC_306_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_306"/>
+    </classes>
+     </test>
+  
+     <test name="RMA_TC_307_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_307"/>
+    </classes>
+     </test>
+     
+     <test name="RMA_TC_308_NOC" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_308"/>
+    </classes>
+     </test>
+ 
+  <!--Attachment verification on Event Screens-->
+      
+     <test name="RMA_TC_292_Event" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_292_Event"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_296_Event" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_296"/>
+    </classes>
+     </test>
+     
+   <test name="RMA_TC_297_Event" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_297"/>
+    </classes>
+    </test>
+     
+   <test name="RMA_TC_298_Event" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_298"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_299_Event" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_299"/>
+    </classes>
+    </test>
+
+    <test name="RMA_TC_300_Event" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_300"/>
+    </classes>
+    </test>
+    
+    <test name="RMA_TC_309_Event" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_309"/>
+    </classes>
+    </test>
+    
+    <!--Attachment verification on Maintenance Screens-->
+    
+     <test name="RMA_TC_310" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_310"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_311" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_311"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_312" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_312"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_313" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_313"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_314" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_314"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_315" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_315"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_316" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_316"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_317" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_317"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_318" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_318"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_319" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_319"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_320" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_320"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_321" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_321"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_322" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_322"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_323" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_323"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_324" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_324"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_325" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_325"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_326" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_326"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_327" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_327"/>
+    </classes>
+    </test>
+    
+     <test name="RMA_TC_328" allow-return-values="true">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_328"/>
+    </classes>
+    </test>
+    
+ 
+  
+</suite>

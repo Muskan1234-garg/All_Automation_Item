@@ -1,0 +1,80 @@
+<suite name="RMA_Suite_03_SprVsrApproval_02" parallel="none" allow-return-values="true">
+<!-- NOTE :::: TC_078 Has To Be  Last Test Case Of This Suite -->
+
+<!-- Following Is The User Detials and Should Follow Supervisor Heirarchy As Mentioned Below -->
+
+<!--  Users : loginuser>loginmgr1>loginmgr2, And They Should Belong To Module Groups LoginUserGroup, LoginMgr1Group1, LoginMgr2Group2 Respectively -->
+
+<!-- Users : userq1>userq2, And They Should Belong To Same Module Group As loginuser And loginmgr1 , That Is  LoginUserGroup, LoginMgr1Group1 Respectively-->
+
+<!--  Users : userb1>userb2, And They Should Belong To Module Group ModuleGroupB1 And ModuleGroupB2 Respectively -->
+
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="3" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_03_SprVsrApproval_02" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test> 
+
+<!--Verify That Required DSN Is Selected In RMA Application-->
+    <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+     </test>
+
+<!--Verify Module Group And Users Are Created-->
+    <test name="RMA_TC_UserCreationSASuite3_Updated">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_UserCreationSASuite3_Updated"/>
+    </classes>
+     </test>
+<!--Verify Payments Can Be Created And Is Going On Hold Because Of Exceeded Payment Limits-->
+    <test name="RMA_TC_075">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_075"/>
+    </classes>
+     </test>
+	 
+<!--Verify Multiple Hold Reasons Should Be Displayed On The App-->
+    <test name="RMA_TC_076">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_076"/>
+    </classes>
+     </test>
+	 
+<!--Verify Supervisor is able to Approve the Hold reason for which he has the authority in case of multiple hold reason-->
+    <test name="RMA_TC_077">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_077"/>
+    </classes>
+     </test>
+		
+<!--Verify Pending Transactions Functionality on Supervisory Approval Screen-->
+    <test name="RMA_TC_079">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_079"/>
+    </classes>
+     </test>
+
+<!--Verify User Is Able To Select Multiple Reserves And Payment For Approval/Rejection And Proceed With Approve And Reject Functions-->
+    <test name="RMA_TC_080">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_080"/>
+    </classes>
+     </test>	 
+	 
+ <!--Verify the functionalities availble over Supervisory approval screen-->
+    <test name="RMA_TC_078">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_078"/>
+    </classes>
+     </test>
+
+ </suite> 

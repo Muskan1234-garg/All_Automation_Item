@@ -1,0 +1,115 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+<!-- RMA_SeleniumRegression_TC_084 placed at last as it contains code to delete litigation created -->
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_26_SelReg_11_EnhancedNotes(EVENT)" />
+	
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>	
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>	
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_057">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_057_Event" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(MedicalStaff) For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_067_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_067" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Employee) For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_068_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_068" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Physician) For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_069_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_069" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Patient) For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_070_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_070" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Driver) For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_071_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_071" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Witness) For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_072_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_072" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A PI(Other Person) For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_073_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_073" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On An Injury PI(Medical Staff) For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_089_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_089" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On An Accommodation For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_098_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_098" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A DemandOffer(Injury/Illness) For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_097_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_097" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Case Management For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_125_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_125" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Vocational Rehabilitation For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_126_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_126" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Case Manager For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_127_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_127" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Case Manager Notes For An Event Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_108_EVENT">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_108" />
+		</classes>
+	</test>
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

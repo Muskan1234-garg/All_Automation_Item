@@ -1,0 +1,1016 @@
+package capturescreenshot;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.Test;
+
+import rmaseleniumautomationscreenshots.Screenshotutility;
+
+public class samplescreenshotcapture {
+	WebDriver driver; 
+	// it is defined here so that we can use in all the test and methods that we desire
+@Test
+	public void capturescreenshot() throws Exception
+	{
+		driver  = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get("http://www.facebook.com");
+		//Screenshotutility.capturescreenshot(driver, "Browser Started");
+		driver.findElement(By.xpath("ffg")).sendKeys("abk");
+		//Screenshotutility.capturescreenshot(driver, "UnameEntered");
+		//TakesScreenshot ts = (TakesScreenshot)driver;
+		//File filesource = ts.getScreenshotAs(OutputType.FILE);
+		//Since screenshot was stored in file, we have used file 
+		//FileUtils.copyFile(filesource, new File ("./Screenshots/facebook.png"));
+		//System.out.println("captured screenshot");
+	}
+
+@AfterMethod
+public void screenshotonfailure(ITestResult result)
+ //all the information associated with the test case is stored in result variable
+{
+	if (ITestResult.FAILURE == result.getStatus())
+		//internally ITestResult.FAILURE  failure will return 2
+	{	
+		Screenshotutility.capturescreenshot(driver, result.getName());
+	
+		
+	}
+	
+	driver.quit(); //we are closing driver.quit() here only as in every new test we are instansiating driver again
+}
+
+}
+-----------------------------------------------------------------------
+
+package extentreportpackage;
+
+import com.relevantcodes.extentreports.ExtentReports;
+
+public class ExtentReportsGeneral {
+	public static ExtentReports Instance()
+	{
+		ExtentReports extent;
+		String Path = "D:\\ExtentReports.html";
+		extent = new ExtentReports (Path, true);
+		extent.config().documentTitle("AutomationReport").reportName("Regression").reportHeadline("Regresssion Suite1");
+		return extent;
+	}
+
+}
+--------------------------------------------------------------
+package extentreportpackage;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+public class Verifytileandlogin2 {
+	
+	ExtentReports Reports;
+	ExtentTest logger; 
+	WebDriver driver;
+	
+	@BeforeClass
+	
+	public void BeforeClass()
+	{
+		Reports = ExtentReportsGeneral.Instance();
+		driver = new FirefoxDriver();
+	}
+	
+	
+	
+	@Test
+	
+	public void verifyTitle()
+	{
+		logger = Reports.startTest("VerifyTitle", "TitleisVerified").assignCategory("Regression", "BasicLogin");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		logger.log(LogStatus.INFO, "Browser started");
+		driver.manage().window().maximize();
+		driver.get("http://www.facebook.com");
+		logger.log(LogStatus.INFO, "Application is up and running");
+		String title = driver.getTitle();
+		Assert.assertTrue(title.contains("Facebook"));
+		logger.log(LogStatus.PASS, "Title is verified");
+		Reports.endTest(logger);
+		
+	}
+
+	
+	@Test
+	
+	public void verifyusername()
+	{
+		logger = Reports.startTest("VerifyTitle", "Sample");
+		driver.findElement(By.xpath(".//*[@id='email']")).sendKeys("abk");
+		logger.log(LogStatus.INFO, "Browser started");
+		Reports.endTest(logger);
+	}
+	
+	
+	@AfterClass
+	 public void tear()
+	 {
+		
+	  Reports.flush();
+	  Reports.close();
+	  driver.get("D:\\ExtentReports.html");
+	  
+	 }
+
+}
+----------------------------------------------------
+package extentreportpackage;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+import rmaseleniumautomationscreenshots.Screenshotutility;
+
+public class verifytitleandlogin
+{
+	ExtentReports Reports;
+	ExtentTest logger; 
+	WebDriver driver;
+
+	@Test
+	
+	public void verifyBlogTitle()
+	{
+		Reports = new ExtentReports("D:\\LearnAutomation.html");
+		logger = Reports.startTest("VerifyTitle", "TitleisVerified");
+		driver  = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		logger.log(LogStatus.INFO, "Browser started");
+		driver.manage().window().maximize();
+		driver.get("http://www.facebook.com");
+		logger.log(LogStatus.INFO, "Application is up and running");
+		String title = driver.getTitle();
+		Assert.assertTrue(title.contains("Facebook"));
+		logger.log(LogStatus.PASS, "Title is verified");
+	}
+	
+	  
+	@AfterMethod
+	public void tearDown(ITestResult result)
+	{
+		if (ITestResult.FAILURE == result.getStatus())
+		{
+			Screenshotutility.capturescreenshot(driver, result.getName());
+			logger.log(LogStatus.FAIL, "TitleVerificationfailed");
+		}
+		
+		Reports.endTest(logger);
+		Reports.flush();
+		driver.get("D:\\ExtentReports.html");
+	}
+}
+
+package rmaseleniumautomationpageobjectmodel;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class rmaapploginpom {
+		
+	public static WebElement element = null;
+		
+// a global  variable is created of WebElement Class as "element" and is initially assigned the value null. //To create a variable
+// of class WebElement we imported package "org.openqa.selenium.WebElement"
+		
+	public static WebElement rmaapploginusername(WebDriver driver)
+
+// a public static function is created with return type web Element and argument as driver variable of WebDriver class. For this
+//we imported package "org.openqa.selenium.WebDriver". The function has been intentionally declared static so that users are not 
+// able to create its instances and have to change the value used in this function,inspite of changing value in individual script
+		{
+			element = driver.findElement(By.id("cphMainBody_Login1_UserName"));
+// Here  we used the id of the user name text box to uniquely identify it, by using "driver.findElement(By.id())"
+	return element;
+			
+// the return type of the following function is return and hence we have returned the value of element which is a variable of 
+// WebElement class
+		}
+	
+	public static WebElement rmaapploginpassword(WebDriver driver)
+
+// a public static function is created with return type web Element and argument as driver variable of WebDriver class. For this
+//we imported package "org.openqa.selenium.WebDriver". The function has been intentionally declared static so that users are not 
+// able to create its instances and have to change the value used in this function,inspite of changing value in individual script
+		{
+		element = driver.findElement(By.xpath(".//*[@id='cphMainBody_Login1_Password']"));
+// Here  we used the name of the password text box to uniquely identify it, by using "driver.findElement(By.name())"
+		return element;
+			
+// the return type of the following function is return and hence we have returned the value of element which is a variable of 
+// WebElement class
+		}
+	
+	public static WebElement rmaapploginlogin(WebDriver driver)
+
+// a public static function is created with return type web Element and argument as driver variable of WebDriver class. For this
+//we imported package "org.openqa.selenium.WebDriver". The function has been intentionally declared static so that users are not 
+// able to create its instances and have to change the value used in this function,inspite of changing value in individual script
+		{
+		element = driver.findElement(By.xpath(".//*[@id='cphMainBody_Login1_Button1']"));
+// Here  we used the name of thelogin button to uniquely identify it, by using "driver.findElement(By.xpath())"
+		return element;
+				
+// the return type of the following function is return and hence we have returned the value of element which is a variable of 
+// WebElement class
+		}
+		
+
+	}
+package rmaseleniumautomationscreenshots;
+
+import java.io.File;
+import java.io.*;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+
+
+public class Screenshotutility {
+	static String destinationpath;
+	public static String capturescreenshot(WebDriver driver, String screenshotName)
+	{
+	try {
+		
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File filesource = ts.getScreenshotAs(OutputType.FILE);
+		//Since screenshot was stored in file, we have used file 
+		
+		 destinationpath = "C:\\" +screenshotName + ".png";
+		File destination = new File (destinationpath);
+		
+		FileUtils.copyFile(filesource, destination);
+		System.out.println("captured screenshot");
+		
+	} catch (Exception e) 
+	
+	//Since exception is the base class it will handle all type of exceptions
+	{
+		// TODO Auto-generated catch block
+		System.out.println("Exception while taking screenshot" + e.getMessage());
+	}
+	return destinationpath;
+
+
+	
+	
+	
+	}
+	}
+
+-----------------------------------------------------------------
+
+
+package rmaseleniumautomationtestdata;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.*;
+
+public class rmaapplogintestdata {
+	
+ XSSFWorkbook WorkBook;
+ 
+ // A global variable WorkBook is created of class XSSFWorkbook for that we imported package "org.apache.poi.xssf.usermodel.XSSFWorkbook"
+ 
+ XSSFSheet Sheet;
+ 
+ // A global variable Sheet is created of class XSSFSheet for that we imported package "org.apache.poi.xssf.usermodel.XSSFWorkbook"
+ 
+ 	public rmaapplogintestdata (String excelpath){
+ 
+ // Constructor of rmaapplogintestdata (same name as class name) is created with argument as excel path 
+
+ 		try {
+ 				File filepath = new File (excelpath);
+	 
+// Created an object of the class file and provided it argument as the excelpath. To use Class file we imported 
+// package "import java.io.File" so that the excel path can be provided in file format of java
+	 
+ 				FileInputStream fis = new FileInputStream (filepath);
+	 
+	 
+// Since we need to read data we provided the file path as an argument while creating new object of the class FilleInputOutputStream. For this we
+// imported package java.io.FileInputStream;
+	 
+ 				WorkBook = new XSSFWorkbook(fis);
+ 		} catch (Exception e) {
+// TODO Auto-generated catch block
+ 			System.out.println(e.getMessage());
+ 			} 
+ 		} 
+//  To the already created global variable Workbook of XSSFWorkBook type we assigned argument as fis variable of FileInputStream type.Since we are 
+// error of unhandled exception we surrounded the whole code till here in try catch block, two try catch blocks were added by default out of which we deleted one
+// used the most base Exception "Exception e" to handle all type of exceptions and whatever the message is there associated with the exception is printed
+ 
+ 
+    public String gettestData(int SheetNumber,int row,int column)
+    {
+    	Sheet = WorkBook.getSheetAt(SheetNumber);
+    	String testdata = Sheet.getRow(row).getCell(column).getStringCellValue();
+    	return testdata;
+    }
+    
+   
+ 
+ 
+} 
+
+------------------
+package rmaseleniumtestautomation;
+
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.By.ById;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.interactions.Actions;
+
+
+import rmaseleniumautomationpageobjectmodel.rmaapploginpom;
+import rmaseleniumautomationtestdata.rmaapplogintestdata;
+public class rmaapplogin {
+
+	public static void main(String[] args) {
+// TODO Auto-generated method stub
+		
+		WebDriver driver = new FirefoxDriver();
+// Initially we need to create an instance for the  Fire Fox browser in WebDriver, for which we need to create an
+//object of class Web Driver and call FireFox Driver method. As soon as we write this method first of all eclipse 
+//will prompt us to  import packages related to WebDriver and FireFox Driver if not already imported
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//An implicit wait is added using "driver.manage().timeouts().implicitlyWait(time to wait,time unit to wait".using driver 
+//variable created above which has the address of the instance of  the firefoxDriver user can access all the 
+//inbuilt methods ofWebdriver. To add implicit wait we imported package "java.util.concurrent.TimeUnit"
+		
+		driver.navigate().to("http://20.201.110.254/RiskmasterUI/UI/Home/Login.aspx/");
+	
+// user first of all needs to migrate to the URL of the RMA application, Here we used "navigate().to ()" to navigate  to the 
+// RMA Application URL
+		
+		driver.manage().window().maximize();
+
+//Once the application URL is launched we need to maximize the application URL window. For that we used "driver.manage().window().maximize()"
+		
+		rmaapplogintestdata excel = new rmaapplogintestdata("D:\\RMASeleniumTestData.xlsx");
+		String username = excel.gettestData(0, 0, 0);
+		String password = excel.gettestData(0, 0, 1);
+		rmaapploginpom.rmaapploginusername(driver).sendKeys(username);
+	
+//Here we used the rmaapploginusername function defined in class rmaapploginpom which returns a web element to set value abk using inbuilt
+//method "sendkeys" in username field. For this we imported package "rmaseleniumautomationpageobjectmodel.rmaapploginpom"
+
+		rmaapploginpom.rmaapploginpassword(driver).sendKeys(password);
+		
+		
+//Here we used the rmaapploginpassword function defined in class rmaapploginpom which returns a web element to set value abk using inbuilt
+//method "sendkeys" in password field. For this we imported package "rmaseleniumautomationpageobjectmodel.rmaapploginpom"
+
+		rmaapploginpom.rmaapploginlogin(driver).click();
+		
+//Here we used the rmaapploginlogin function defined in class rmaapploginpom which returns a web element to click Login button using inbuilt
+//method "submit". For this we imported package "rmaseleniumautomationpageobjectmodel.rmaapploginpom"
+		
+		//driver.findElement(By.id("cphMainBody_btnLogin")).click();
+		//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	
+		//WebElement E  = driver.findElement(ById.id("cphMainBody_uwtPortal_frame0"));
+		//driver.switchTo().frame(E);
+	
+		
+		//Actions action = new Actions (driver);
+		//action.moveToElement(driver.findElement(By.tagName(name)))).build().perform();
+		//driver.findElement(By.xpath(".//*[@id='MDIMenu_4_2']/tbody/tr/td[2]/nobr")).click();
+		
+		
+
+	
+	
+		
+
+}
+}
+-----------------------
+package rmaseleniumtestautomationtestng;
+
+import org.testng.annotations.Test;
+
+public class SampleTestNg {
+  @Test
+  public void f() {
+	  System.out.println("hellotestng");
+  }
+
+-----------------------------
+driver.findElement(By.id("cphMainBody_btnLogin")).click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	
+		WebElement E  = driver.findElement(By.id("cphMainBody_uwtPortal_frame0"));
+		driver.switchTo().frame(E);
+		System.out.println("switched");
+	
+		
+		//Actions action = new Actions (driver);
+		//action.moveToElement(driver.findElement(By.tagName(name)))).build().perform();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.findElement(By.xpath(".//*[@id='MDIMenu_3']/tbody/tr/td[2]/nobr")).click();
+		driver.findElement(By.xpath(".//*[@id='MDIMenu_3_5']/tbody/tr/td[2]/nobr")).click();
+		
+		driver.switchTo().defaultContent(); //returns back to the default content
+		
+		
+
+
+
+
+  
+}
+
+
+
+
+
+int IntRMAApp_EventCreation_Txt_TimeOfEvent;
+		int IntRMAApp_EventCreation_Txt_DateOfEvent;
+		String StrRMAApp_EventCreation_Txt_EventType;
+		//String StrRMAApp_EventCreation_Txt_EventStatus;
+		//int IntRMAApp_EventCreation_Txt_DateReported;
+		int IntRMAApp_EventCreation_Txt_TimeReported;
+		String StrRMAApp_EventCreation_Txt_DepteId;
+		
+		//Local Variable Declaration
+		
+		RMA_ExcelDataRetrieval_Utility ExcelData = new RMA_ExcelDataRetrieval_Utility("D:\\RMASeleniumAutomationTestData.xlsx"); //Excel WorkBook RMASeleniumAutomationTestData IS Fetched To Retrieve Data 
+		IntRMAApp_EventCreation_Txt_TimeOfEvent = ExcelData.RMA_ExcelNumDataRead_Utility(1, 1, 5); //TimeOfEvent Is Fetched From DataSheet RMA_TC_01
+		IntRMAApp_EventCreation_Txt_DateOfEvent = ExcelData.RMA_ExcelNumDataRead_Utility(1, 1, 4); //DateOfEvent Is Fetched From DataSheer RMA_TC_01
+		System.out.println(IntRMAApp_EventCreation_Txt_DateOfEvent);
+		
+		
+		StrRMAApp_EventCreation_Txt_EventType = ExcelData.RMA_ExcelDataRead_Utility(1, 1, 3); //TypeOfEvent Is Fetched From DataSheet RMA_TC_01
+		//StrRMAApp_EventCreation_Txt_EventStatus = ExcelData.RMA_ExcelDataRead_Utility(1, 1, 6); //EventStatus Is Fetched From DataSheet RMA_TC_01
+		//IntRMAApp_EventCreation_Txt_DateReported = ExcelData.RMA_ExcelNumDataRead_Utility(1, 1, 7); //DateOfReporting Is Fetched From DataSheet RMA_TC_01
+		IntRMAApp_EventCreation_Txt_TimeReported = ExcelData.RMA_ExcelNumDataRead_Utility(1, 1, 8); //TimeOfReporting Is Fetched From DataSheet RMA_TC_01
+		StrRMAApp_EventCreation_Txt_DepteId = ExcelData.RMA_ExcelDataRead_Utility(1, 1, 9); //TimeOfReporting Is Fetched From DataSheet RMA_TC_01
+		
+		
+		driver.switchTo().frame(RMA_Selenium_POM.RMAApp_DefaultView_Frm_MenuOptionFrame(driver)); //A Switch To The Frame Containing RMA Application Menu Option IS Done
+		RMA_Selenium_POM.RMAApp_DefaultView_Mnu_GeneralClaim(driver).click(); //Document Menu Option Is Selected
+		logger.log(LogStatus.INFO, "Document Menu Option Is Clicked On RISKMASTER Default View Page");
+		
+		RMA_Selenium_POM.RMAApp_DefaultView_Mnu_Event(driver).click(); //Event Menu Option Is Selected
+		logger.log(LogStatus.INFO, "Event Menu Option Is Clicked On RISKMASTER Default View Page");
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement E1  = driver.findElement(By.id("Document-1eventEventEvent (New)FalseFalse"));
+		driver.switchTo().frame(E1);
+		System.out.println("switched");
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		
+		//RMA_Selenium_POM.RMAApp_EventCreation_Txt_TimeOfEvent(driver).sendKeys(String.valueOf(IntRMAApp_EventCreation_Txt_TimeOfEvent));
+		//RMA_Selenium_POM.RMAApp_EventCreation_Txt_DepteId(driver).sendKeys(StrRMAApp_EventCreation_Txt_DepteId);
+		
+		RMA_Selenium_POM.RMAApp_EventCreation_Txt_DateOfEvent(driver).sendKeys(String.valueOf(IntRMAApp_EventCreation_Txt_DateOfEvent));
+		//RMA_Selenium_POM.RMAApp_EventCreation_Txt_DateReported(driver).sendKeys(String.valueOf(IntRMAApp_EventCreation_Txt_DateReported));
+		RMA_Selenium_POM.RMAApp_EventCreation_Txt_TimeReported(driver).sendKeys(String.valueOf(IntRMAApp_EventCreation_Txt_TimeReported));
+		RMA_Selenium_POM.RMAApp_EventCreation_Txt_EventType(driver).sendKeys(StrRMAApp_EventCreation_Txt_EventType);
+		//RMA_Selenium_POM.RMAApp_EventCreation_Btn_Save(driver).click();
+		reports.endTest(logger); frame: frame 0 (in which documnet ) 
+drdriver.switchto.defaultcontent
+
+
+
+
+
+//alert window: separate interface using alert windows
+switch to - used for alert, window handling, frame
+driver
+
+
+
+
+----------------------------------------------------------------------
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		driver.findElement(By.xpath(".//*[@id='MDIMenu_10']/tbody/tr/td[2]/nobr")).click();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.findElement(By.xpath(".//*[@id='MDIMenu_10_3']/tbody/tr/td[2]/nobr")).click();
+		driver.findElement(By.xpath(".//*[@id='MDIMenu_10_3_2']/tbody/tr/td[2]/nobr")).click();
+		
+		WebElement E1  = driver.findElement(By.id("UtilitieszLOBParametersLOBParametersLine Of Business Parameter SetupUI/Utilities/Manager/Line Of Business Parameter SetupFalseFalse"));
+		driver.switchTo().frame(E1);
+		System.out.println("switched");
+		driver.findElement(By.linkText("Claim Options")).click();
+		driver.findElement(By.id("chkCType")).click();
+		driver.findElement(By.id("Save")).click();
+		driver.navigate().refresh();
+		Alert alt = driver.switchTo().alert();
+		System.out.println("switchedTOALERT");
+		Thread.sleep(5000);
+		String alertmessage = alt.getText();
+		System.out.println(alertmessage);
+		alt.accept(); 
+		//driver.findElement(By.id("name")).sendKeys(Keys.ENTER);
+		//driver.sendKeys(Keys.F5);
+		//Thread.sleep(2000);
+		//driver.findElement(By.id("name")).sendKeys(Keys.ENTER);
+		//driver.switchTo().parentFrame();
+		//List<WebElement> ele  = driver.findElements(By.tagName("IFRAME"));
+		 //System.out.println("Number of frames in a page :" + ele.size());
+		    //for(WebElement el : ele)
+		   // {
+		      //Returns the Id of a frame.
+		        //System.out.println("Frame Id :" + el.getAttribute("id"));
+		      //Returns the Name of a frame.
+		       //System.out.println("Frame name :" + el.getAttribute("name"));
+		       //System.out.println("Frame name :" + el.getAttribute("title"));
+		       
+		   // }
+		//driver.switchTo().defaultContent();
+		//driver.findElement(By.id("cphMainBody_Loginstatus1")).click();
+	
+		
+		//Thread.sleep(5000);
+		//Alert alt = driver.switchTo().alert();
+		//String alertmessage = alt.getText();
+		//alt.accept(); //dismiss to cancel
+		//System.out.println(alertmessage);Document949838zreservelistingreservelistingFinancials/ReservesFinancials/ReservesTrueFalse
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+package crossbrowsers;
+import java.util.concurrent.TimeUnit;
+
+
+
+
+
+
+
+
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Assert;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+
+
+
+public class crossbrowsersample
+{
+		ExtentReports Reports;
+		ExtentTest logger; 
+		WebDriver driver;
+		
+		@Test
+		@Parameters("browser")
+		
+		public void verifyBlogTitle(String BrowserName)
+		{
+			if (BrowserName.equalsIgnoreCase("firefox"))
+			{
+				driver  = new FirefoxDriver();
+			}
+			else if (BrowserName.equalsIgnoreCase("Chrome"))
+			{   
+				System.setProperty("webdriver.chrome.driver", "");
+				driver = new ChromeDriver();
+			}
+			else if (BrowserName.equalsIgnoreCase("IE"))
+			{   
+				System.setProperty("webdriver.chrome.driver", "");
+				driver = new InternetExplorerDriver();
+			}
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().window().maximize();
+			driver.get("http://www.facebook.com");
+			String title = driver.getTitle();
+			Assert.assertTrue(title.contains("Facebook"));
+		}
+}
+
+
+
+		
+		
+		
+
+@Test (priority=2)
+	
+	public void EventCreation() throws InterruptedException
+	{
+		logger = reports.startTest("Event Creation", "Event Is Created And Saved And The Value Is Fetched In A Global Variable");
+		
+		String StrRMAApp_EventCreation_Txt_EventType;
+		int IntRMAApp_EventCreation_Txt_TimeOfEvent;
+		String StrRMAApp_EventCreation_Txt_DepteId;
+		int IntRMAApp_EventCreation_Txt_DateOfEvent;
+		int IntRMAApp_EventCreation_Txt_TimeReported;
+		int IntRMAApp_EventCreation_Txt_DateReported;
+		String StrRMAApp_EventCreation_Txt_EventStatus;
+		//Local Variable Declaration
+		
+		RMA_ExcelDataRetrieval_Utility ExcelData = new RMA_ExcelDataRetrieval_Utility("D:\\RMASeleniumAutomationTestData.xlsx"); //Excel WorkBook RMASeleniumAutomationTestData IS Fetched To Retrieve Data
+		StrRMAApp_EventCreation_Txt_EventType = ExcelData.RMA_ExcelDataRead_Utility(1, 1, 3); //TypeOfEvent Is Fetched From DataSheet RMA_TC_01
+		IntRMAApp_EventCreation_Txt_TimeOfEvent = ExcelData.RMA_ExcelNumDataRead_Utility(1, 1, 5); //TimeOfEvent Is Fetched From DataSheet RMA_TC_01
+		StrRMAApp_EventCreation_Txt_DepteId = ExcelData.RMA_ExcelDataRead_Utility(1, 1, 9); //Dept Id Is Fetched From DataSheet RMA_TC_01
+		IntRMAApp_EventCreation_Txt_DateOfEvent = ExcelData.RMA_ExcelNumDataRead_Utility(1, 1, 4); //DateOfEvent Is Fetched From DataSheer RMA_TC_01
+		IntRMAApp_EventCreation_Txt_TimeReported = ExcelData.RMA_ExcelNumDataRead_Utility(1, 1, 8); //TimeOfReporting Is Fetched From DataSheet RMA_TC_01
+		IntRMAApp_EventCreation_Txt_DateReported = ExcelData.RMA_ExcelNumDataRead_Utility(1, 1, 7); //DateOfReporting Is Fetched From DataSheet RMA_TC_01
+		StrRMAApp_EventCreation_Txt_EventStatus =  ExcelData.RMA_ExcelDataRead_Utility(1, 1, 6); //DateOfReporting Is Fetched From DataSheet RMA_TC_01
+		
+		driver.switchTo().frame(RMA_Selenium_POM.RMAApp_DefaultView_Frm_MenuOptionFrame(driver)); //A Switch To The Frame Containing RMA Application Menu Option IS Done
+		RMA_Selenium_POM.RMAApp_DefaultView_Mnu_GeneralClaim(driver).click(); //Document Menu Option Is Selected
+		logger.log(LogStatus.INFO, "Document Menu Option Is Clicked On RISKMASTER Default View Page");
+		
+		RMA_Selenium_POM.RMAApp_DefaultView_Mnu_Event(driver).click(); //Event Menu Option Is Selected
+		logger.log(LogStatus.INFO, "Event Menu Option Is Clicked On RISKMASTER Default View Page");
+		
+		driver.switchTo().frame(RMA_Selenium_POM.RMAApp_DefaultView_FrmEventCreation(driver)); //A Switch To The Frame Containing Event Creation Controls IS Done
+		
+		RMA_Selenium_POM.RMAApp_EventCreation_Txt_DepteId(driver).sendKeys(StrRMAApp_EventCreation_Txt_DepteId);
+		Thread.sleep(10000);
+		logger.log(LogStatus.INFO, "DeptId Is Typed In DeptId TextBox On Event Creation Page");
+		
+		RMA_Selenium_POM.RMAApp_EventCreation_Txt_TimeReported(driver).sendKeys(String.valueOf(IntRMAApp_EventCreation_Txt_TimeReported));
+		logger.log(LogStatus.INFO, "DateOfEvent Is Typed In DateOfEvent TextBox On Event Creation Page");
+		
+		RMA_Selenium_POM.RMAApp_EventCreation_Txt_EventType(driver).sendKeys(StrRMAApp_EventCreation_Txt_EventType);
+		logger.log(LogStatus.INFO, "Event Type Is Typed In Event Type TextBox On Event Creation Page");
+		Thread.sleep(10000);
+		
+		RMA_Selenium_POM.RMAApp_EventCreation_Txt_DateOfEvent(driver).sendKeys(String.valueOf(IntRMAApp_EventCreation_Txt_DateOfEvent));
+		logger.log(LogStatus.INFO, "DateOfEvent Is Typed In DateOfEvent TextBox On Event Creation Page");
+		Thread.sleep(10000);
+		
+		RMA_Selenium_POM.RMAApp_EventCreation_Txt_DateReported(driver).sendKeys(String.valueOf(IntRMAApp_EventCreation_Txt_DateReported));
+		logger.log(LogStatus.INFO, "DateReported Is Typed In DateReported TextBox On Event Creation Page");
+		Thread.sleep(10000);
+		
+		RMA_Selenium_POM.RMAApp_EventCreation_Txt_TimeOfEvent(driver).sendKeys(String.valueOf(IntRMAApp_EventCreation_Txt_TimeOfEvent));
+		logger.log(LogStatus.INFO, "TimeOfEvent Is Typed In TimeOfEvent TextBox On Event Creation Page");
+		
+		RMA_Selenium_POM.RMAApp_EventCreation_Txt_EventStatus(driver).sendKeys(StrRMAApp_EventCreation_Txt_EventStatus);
+		logger.log(LogStatus.INFO, "EventStatus Is Typed In EventStatus TextBox On Event Creation Page");
+		Thread.sleep(10000);
+		RMA_Selenium_POM.RMAApp_EventCreation_Btn_Save(driver).click();
+		
+	}
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                        RMA Selenium Test Automation	
+//=========================================================================
+//Test Name   	: RMA_TC_01
+//Author       	: Kumud Naithani
+//Description   : To Login RMA Application, Select Required DSN And Create An Event
+//Revision		: 0.0 - KumudNaithani-10-12-2015 
+//==========================================================================
+
+package rmaseleniumtestscripts;
+
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterClass;
+import org.testng.Assert;
+import org.testng.ITestResult;
+import org.openqa.selenium.support.ui.Select;
+import rmaseleniumPOM.RMA_Selenium_POM;
+import rmaseleniumutilties.RMA_ExcelDataRetrieval_Utility;
+import rmaseleniumutilties.RMA_ExtentReports_Utility;
+import rmaseleniumutilties.RMA_FailureScreenCapture_Utility;
+
+public class RMA_TC_01 {
+	WebDriver driver;
+	ExtentReports reports;
+	ExtentTest logger; 
+	
+	@BeforeClass
+		public void BeforeClass ()
+		{
+			driver = new FirefoxDriver(); //Firefox Driver Instance Creation
+			reports = RMA_ExtentReports_Utility.RMA_ExtentReportsInstance_Utility();
+		}
+	
+	
+	@Test
+		public void RMAApp_login()
+		{
+		logger = reports.startTest("RiskMaster Title Verification", "Application Is Logged And TiTle Is Verfied");
+		// Log Initialization
+		
+		String RMAApp_Login_Txt_UserName;
+		String RMAApp_Login_Txt_Password;
+		String StrRMAApplicationExpectedTitle;
+		String StrRMAApplicationActualTitle;
+		//Local Variable Declaration
+		
+		StrRMAApplicationExpectedTitle = "RISKMASTER Database and View Selection";
+		
+		RMA_ExcelDataRetrieval_Utility ExcelData = new RMA_ExcelDataRetrieval_Utility("D:\\RMASeleniumAutomationTestData.xlsx"); //Excel WorkBook RMASeleniumAutomationTestData IS Fetched To Retrieve Data 
+		RMAApp_Login_Txt_UserName = ExcelData.RMA_ExcelDataRead_Utility(1, 1, 0); //UserName Fetched From DataSheet RMA_TC_01
+		RMAApp_Login_Txt_Password = ExcelData.RMA_ExcelDataRead_Utility(1, 1, 1); //Password Fetched From DataSheet RMA_TC_01
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //Implicit Wait Added For The Page To Load Successfully
+		driver.navigate().to("http://20.201.110.254/RiskmasterUI/UI/Home/Login.aspx/"); //Navigation To The RMA Application Login Page
+		logger.log(LogStatus.INFO, "Rismaster Application URL Is Provided And Application Is Started");
+		
+		driver.manage().window().maximize(); //Maximizing The RMA Application Login Page
+		RMA_Selenium_POM.RMAApp_Login_Txt_UserName(driver).sendKeys(RMAApp_Login_Txt_UserName); //Enter UserName In UserName TextBox Of RMA Application Login Page
+		logger.log(LogStatus.INFO, "UserName Is Typed In UserName TextBox On RMA Application Login Page");
+		
+		RMA_Selenium_POM.RMAApp_Login_Txt_PassWord(driver).sendKeys(RMAApp_Login_Txt_Password); //Enter PassWord In PassWord TextBox Of RMA Application Login Page
+		logger.log(LogStatus.INFO, "PassWord Is Typed In PassWord TextBox On RMA Application Login Page");
+		
+		
+		RMA_Selenium_POM.RMAApp_Login_Btn_Login(driver).click(); // Click On The Login Button On RMA Application Login Page
+		logger.log(LogStatus.INFO, "Login Button Is Clicked On RMA Application Login Page");
+		
+		StrRMAApplicationActualTitle =  driver.getTitle();  //Derieve The Title Of The RMA Application Login Page
+		Assert.assertEquals( StrRMAApplicationExpectedTitle,StrRMAApplicationActualTitle);
+		logger.log(LogStatus.PASS, "Title Of The RMA Application Is As The Expected Title RISKMASTER Database and View Selection");
+		reports.endTest(logger);
+		
+		}
+	
+	@Test (priority=1)
+	public void RMAApp_DSNSelection()
+	{
+		logger = reports.startTest("RiskMaster DSN Selection", "Required DSN Is Selected And DataSource Label On the Default View Page Is Verified");
+		String RMAApp_DSNSelect_Lst_DataSourceName;
+		String StrDataSourceLabelActual;
+		//Local Variable Declaration
+		
+		RMA_ExcelDataRetrieval_Utility ExcelData = new RMA_ExcelDataRetrieval_Utility("D:\\RMASeleniumAutomationTestData.xlsx"); //Excel WorkBook RMASeleniumAutomationTestData IS Fetched To Retrieve Data 
+		RMAApp_DSNSelect_Lst_DataSourceName = ExcelData.RMA_ExcelDataRead_Utility(1, 1, 2); //Data Source Name Is Fetched From DataSheet RMA_TC_01
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //Implicit Wait Added For The Page To Load Successfully
+		Select dropdown = new Select (RMA_Selenium_POM.RMAApp_DSNSelect_Lst_DataSourceName(driver));
+		dropdown.selectByVisibleText(RMAApp_DSNSelect_Lst_DataSourceName);
+		logger.log(LogStatus.INFO, "Required Data Source Name Is Selected In Data Source Name List Box On RISKMASTER Database and View Selection Page");
+		
+		RMA_Selenium_POM.RMAApp_DSNSelect_Btn_Continue(driver).click();
+		logger.log(LogStatus.INFO, "Continue Button Is Clicked On RISKMASTER Database and View Selection Page");
+		
+		StrDataSourceLabelActual = RMA_Selenium_POM.RMAApp_DefaultView_Lbl_DataSource(driver).getText();
+		Assert.assertEquals(RMAApp_DSNSelect_Lst_DataSourceName,StrDataSourceLabelActual);
+		logger.log(LogStatus.PASS, "DataSource Name Label On Default View Page Displays The Same Name As Selected In DataSourceName ListBox RISKMASTER Database and View Selection");
+		reports.endTest(logger);
+		
+		}
+	
+	
+	@AfterMethod
+	
+	public void RMA_FailureReport(ITestResult result) //All The Information Associated With The Test Case Is Stored In Result Variable
+	{
+		String ScreenShotLocation;
+		if (ITestResult.FAILURE == result.getStatus())
+		{
+			ScreenShotLocation = RMA_FailureScreenCapture_Utility.RMA_ScreenShotCaptureOnFailure_Utility(driver, result.getName());
+			logger.log(LogStatus.FAIL, "TestCase RMA Application Login,DSN View Selection And Event Creation Failed");
+			logger.log(LogStatus.INFO, "ScreenShot Of The Application Is Stored At Path In Local Machine", ScreenShotLocation);
+			logger.log(LogStatus.INFO, logger.addScreenCapture(RMA_FailureScreenCapture_Utility.RMA_ScreenShotCaptureOnFailure_Utility(driver, result.getName())));
+		}
+	}
+	
+	
+	@AfterClass
+	
+	public void AfterClass()
+	{
+		
+		reports.flush();
+		reports.close();
+		
+	}
+		
+}
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+</test> 
+  <test name="RMAApp_TC_PreCondition()">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_PreCondition"/>
+    </classes>
+----------------------------------------------------------------------------------------
+
+@Test (priority=1, dependsOnMethods = "RMAApp_login") 
+
+	public void RMAApp_DSNSelection()
+	{
+		logger = reports.startTest("RiskMaster DSN Selection", "Required DSN Is Selected And DataSource Label On the Default View Page Is Verified");
+		
+		String RMAApp_DSNSelect_Lst_DataSourceName;
+		String StrDataSourceLabelActual;
+		//Local Variable Declaration
+		
+		RMA_ExcelDataRetrieval_Utility ExcelData = new RMA_ExcelDataRetrieval_Utility("D:\\RMASeleniumAutomationTestData.xlsx"); //Excel WorkBook RMASeleniumAutomationTestData IS Fetched To Retrieve Data 
+		RMAApp_DSNSelect_Lst_DataSourceName = ExcelData.RMA_ExcelDataRead_Utility(1, 1, 2); //Data Source Name Is Fetched From DataSheet RMA_TC_01
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //Implicit Wait Added For The Page To Load Successfully
+		Select dropdown = new Select (RMA_Selenium_POM.RMAApp_DSNSelect_Lst_DataSourceName(driver));
+		dropdown.selectByVisibleText(RMAApp_DSNSelect_Lst_DataSourceName);
+		logger.log(LogStatus.INFO, "Required Data Source Name Is Selected In Data Source Name List Box On RISKMASTER Database and View Selection Page Is" + " "+ RMAApp_DSNSelect_Lst_DataSourceName);
+		
+		RMA_Selenium_POM.RMAApp_DSNSelect_Btn_Continue(driver).click();
+		logger.log(LogStatus.INFO, "Continue Button Is Clicked On RISKMASTER Database and View Selection Page");
+		
+		StrDataSourceLabelActual = RMA_Selenium_POM.RMAApp_DefaultView_Lbl_DataSource(driver).getText();
+		Assert.assertEquals(RMAApp_DSNSelect_Lst_DataSourceName,StrDataSourceLabelActual);
+		logger.log(LogStatus.PASS, "DataSource Name Label On Default View Page Displays The Same Name As Selected In DataSourceName ListBox RISKMASTER Database and View Selection");
+		reports.endTest(logger);
+	}
+	
+
+---------------------------
+System.out.println("switched");
+				List<WebElement> ele  = driver.findElements(By.tagName("IFRAME"));
+				 System.out.println("Number of frames in a page :" + ele.size());
+				    for(WebElement el : ele)
+				    {
+				      //Returns the Id of a frame.
+				        System.out.println("Frame Id :" + el.getAttribute("id"));
+				      //Returns the Name of a frame.
+				       System.out.println("Frame name :" + el.getAttribute("name"));
+				       System.out.println("Frame name :" + el.getAttribute("title"));
+				       
+				   }
+				
+
+//driver.switchTo().frame("Document953842zreservelistingreservelistingFinancials/ReservesFinancials/ReservesTrueFalse"); //A Switch To The Frame Containing Financial Reserves Page Is Done
+//Citibank General Account
+
+O - Other Payees (People & Entities)
+
+
+ReserveTypeCodeFt_codelookup
+
+TransTypeCode_codelookup
+
+Amount
+
+btnOk
+cmdSubmit1
+
+.//*[@id='optResults']/option  optResults
+
+Funds Split Detail
+
+Document969985zreservelistingreservelistingFinancials/ReservesFinancials/ReservesTrueFalse	
+
+save
+
+-----------------------------------------------------------------
+StrPrimaryWindowHandle = driver.getWindowHandle(); //Window Handle Of The Current Window Is Fetched
+				System.out.println(StrPrimaryWindowHandle);
+				
+				StrMainWindowTitle = driver.getTitle();
+				System.out.println(StrMainWindowTitle);
+				
+				
+				Set<String> strHandles = driver.getWindowHandles();
+				Iterator<String>i = strHandles.iterator();
+				
+				while (i.hasNext())
+				{
+					String ChildWindow = i.next();
+					System.out.println(ChildWindow);
+					if (!StrPrimaryWindowHandle.equalsIgnoreCase(ChildWindow))
+					{
+						driver.switchTo().window(ChildWindow);
+						System.out.println("moved");
+						System.out.println(ChildWindow);
+						System.out.println(driver.getWindowHandle());
+						Thread.sleep(10000);
+					}
+				}
+					
+			
+			RMA_Selenium_POM.RMAApp_FundsSplitDetails_Lst_ReserveType(driver).sendKeys(RMAApp_FundsSplitDetails_Lst_ReserveType);
+				
+				
+				
+		
+				
+				
+				
+				
+				
+				
+				
+			} catch (Exception e) {
+				
+				System.out.println("Exception Occurred While Making A Payment" + e.getMessage()); //Try Catch Statement Is Used To Handle Any Type Of Unhandled Exception And Print Log Of It	
+			}
+			
+			reports.endTest(logger);
+		}
+
+
+
+
+
+export utility to excel : CSS SELECTOR; REFRESh and close
+
+
+
+//============================================================================================
+	//FunctionName 		: RMA_ExcelWriteAccess_Utility
+	//Description  		: To Access The Required Excel File In Wgich User Wants To Write The Test Values/results
+	//Input Parameter 	: StrExcelPath Of The Type String Providing The Path Of The Excel To Be Fetched	 
+	//Revision			: 0.0 - KumudNaithani-10-12-2015                                 
+	// ============================================================================================
+		
+		public void RMA_ExcelWriteAccess_Utility (String StrExcelPath) //Constructor Is Created To Access The Required Excel File
+		{
+			try
+			{
+				File FilePath = new File (StrExcelPath);
+				FileOutputStream FileOPStream = new FileOutputStream (FilePath);
+			} catch (Exception e) 
+			{
+				System.out.println("The ExcelFile Was Not Retrieved As" + e.getMessage()); //Try Catch Statement Is Used To Handle Any Type Of Unhandled Exception And Print Log Of It
+			}
+		}
+
+
+
+//System.out.println("pass");
+		
+		//driver.findElement(By.id("injfromdate")).sendKeys(Keys.F5);
+		//System.out.println("done");
+		//Actions action = new Actions (driver);
+		//action.sendKeys(Keys.ENTER);
+		//System.out.println("done1");
+		//Thread.sleep(20000);
+		//System.out.println("done3");
+		
+		//driver.switchTo().parentFrame();
+		//System.out.println("done2");		

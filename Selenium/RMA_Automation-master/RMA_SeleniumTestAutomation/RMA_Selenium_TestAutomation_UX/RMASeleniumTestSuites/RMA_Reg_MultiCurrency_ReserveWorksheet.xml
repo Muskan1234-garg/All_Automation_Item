@@ -1,0 +1,119 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- Change The System Time To Eastern Standard Time Before Execution Of 
+		This Suite -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_MultiCurrency_ReserveWorksheet" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Reserve WorkSheet Settings For GC From Line Of Business Setup And Reserve WorkSheet Configuration Setting From Utilities Is Validated -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_Settings">
+		<parameter name="LOB" value="GC - General Claims" />
+		<parameter name="numofreserves" value="2" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_Settings" />
+		</classes>
+	</test>
+
+	<!--Reserve WorkSheet Settings For WC From Line Of Business Setup And Reserve WorkSheet Configuration Setting From Utilities Is Validated -->
+<!-- 	<test name="RMA_Reg_Funds_ReserveWorkSheet_Settings_1"> -->
+<!-- 		<parameter name="LOB" value="WC - Worker's Compensation" /> -->
+<!-- 		<parameter name="numofreserves" value="2" /> -->
+<!-- 		<classes> -->
+<!-- 			<class -->
+<!-- 				name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_Settings" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+	
+	<test name="RMA_Reg_Globalization_TC01">
+		<parameter name="BaseCurrency" value="EUR" />
+		<parameter name="SourceCurrency" value="GBP" />
+		<parameter name="DestinationCurrency" value="USD" />
+		<parameter name="Claim_Base_Rate" value="1.18" />
+		<parameter name="Base_Base_Rate" value="1" />
+		<parameter name="Claim_Claim_Rate" value="1" />
+		<parameter name="Claim_Policy_Rate" value="1.24" />
+		<parameter name="Policy_Policy_Rate" value="1" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Globalization_TC01" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data, 
+		Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of 
+		Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Creation Of Reserve Work Sheet Is Validated -->
+	<test name="RMA_Reg_Globalization_ReserveWorksheet_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Globalization_ReserveWorksheet_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verification Of Created Reserve WorkSheet On FDH Screen -->
+	<test name="RMA_Reg_Globalization_ReserveWorkSheet_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Globalization_ReserveWorkSheet_TC_002" />
+		</classes>
+	</test>
+
+	<!--Verification Of Fields And Tabs In Case Of Clone Of Already Approved WorkSheet -->
+	<test name="RMA_Reg_Globalization_ReserveWorksheet_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Globalization_ReserveWorksheet_TC_003" />
+		</classes>
+	</test>
+
+	<!--Verification Of Fields Value On Reserve History After Creating Payments And Collections On Reserve WorkSheet -->
+	<test name="RMA_Reg_Globalization_ReserveWorksheet_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Globalization_ReserveWorksheet_TC_004" />
+		</classes>
+	</test>
+
+	<!-- Revert Reserve WorkSheet Settings From Line Of Business Setup -->
+	<test name="RMA_Reg_Funds_ReserveWorkSheet_RevertSettings">
+		<parameter name="LOB" value="GC - General Claims" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_RevertSettings" />
+		</classes>
+	</test>
+
+	<!-- Revert Reserve WorkSheet Settings From Line Of Business Setup -->
+<!-- 	<test name="RMA_Reg_Funds_ReserveWorkSheet_RevertSettings_1"> -->
+<!-- 		<parameter name="LOB" value="WC - Worker's Compensation" /> -->
+<!-- 		<classes> -->
+<!-- 			<class -->
+<!-- 				name="rmaseleniumtestscripts.RMA_Reg_Funds_ReserveWorkSheet_RevertSettings" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

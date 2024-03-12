@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="8" failed="0" total="8" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="RMA_SampleSuite" duration-ms="546" started-at="2018-03-23T04:37:51Z" finished-at="2018-03-23T04:37:52Z">
+    <groups>
+    </groups>
+    <test name="RMA_TC_001" duration-ms="31" started-at="2018-03-23T04:37:51Z" finished-at="2018-03-23T04:37:51Z">
+      <class name="rmaseleniumtestscripts.RMA_TC_001">
+        <test-method status="SKIP" signature="RMAApp_login()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_001@1bce4f0a]" name="RMAApp_login" duration-ms="0" started-at="2018-03-23T10:07:51Z" finished-at="2018-03-23T10:07:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMAApp_login -->
+        <test-method status="SKIP" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_001@1bce4f0a]" name="RMA_FailureReport" is-config="true" duration-ms="0" started-at="2018-03-23T10:07:51Z" finished-at="2018-03-23T10:07:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_001 -->
+    </test> <!-- RMA_TC_001 -->
+    <test name="RMA_TC_002" duration-ms="0" started-at="2018-03-23T04:37:52Z" finished-at="2018-03-23T04:37:52Z">
+      <class name="rmaseleniumtestscripts.RMA_TC_002">
+        <test-method status="SKIP" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_002@6eebc39e]" name="RMA_FailureReport" is-config="true" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+        <test-method status="SKIP" signature="RMAApp_DSNSelection()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_002@6eebc39e]" name="RMAApp_DSNSelection" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMAApp_DSNSelection -->
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_002 -->
+    </test> <!-- RMA_TC_002 -->
+    <test name="RMA_TC_PreConditionCheck" duration-ms="0" started-at="2018-03-23T04:37:52Z" finished-at="2018-03-23T04:37:52Z">
+      <class name="rmaseleniumtestscripts.RMA_TC_PreConditionCheck">
+        <test-method status="SKIP" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_PreConditionCheck@598067a5]" name="RMA_FailureReport" is-config="true" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+        <test-method status="SKIP" signature="RMAApp_TC_PreCondition()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_PreConditionCheck@598067a5]" name="RMAApp_TC_PreCondition" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMAApp_TC_PreCondition -->
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_PreConditionCheck -->
+    </test> <!-- RMA_TC_PreConditionCheck -->
+    <test name="RMA_TC_003" duration-ms="0" started-at="2018-03-23T04:37:52Z" finished-at="2018-03-23T04:37:52Z">
+    </test> <!-- RMA_TC_003 -->
+    <test name="RMA_TC_004" duration-ms="15" started-at="2018-03-23T04:37:52Z" finished-at="2018-03-23T04:37:52Z">
+    </test> <!-- RMA_TC_004 -->
+    <test name="RMA_TC_005" duration-ms="0" started-at="2018-03-23T04:37:52Z" finished-at="2018-03-23T04:37:52Z">
+      <class name="rmaseleniumtestscripts.RMA_TC_005">
+        <test-method status="SKIP" signature="ReserveCreation(java.lang.String)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_005@59494225]" name="ReserveCreation" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[M Medical]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReserveCreation -->
+        <test-method status="SKIP" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_005@59494225]" name="RMA_FailureReport" is-config="true" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_005 -->
+    </test> <!-- RMA_TC_005 -->
+    <test name="RMA_TC_006" duration-ms="0" started-at="2018-03-23T04:37:52Z" finished-at="2018-03-23T04:37:52Z">
+    </test> <!-- RMA_TC_006 -->
+    <test name="RMA_TC_007" duration-ms="0" started-at="2018-03-23T04:37:52Z" finished-at="2018-03-23T04:37:52Z">
+      <class name="rmaseleniumtestscripts.RMA_TC_007">
+        <test-method status="SKIP" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_007@6adede5]" name="RMA_FailureReport" is-config="true" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+        <test-method status="SKIP" signature="RMAApp_AddressCreation()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_007@6adede5]" name="RMAApp_AddressCreation" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMAApp_AddressCreation -->
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_007 -->
+    </test> <!-- RMA_TC_007 -->
+    <test name="RMA_TC_009" duration-ms="16" started-at="2018-03-23T04:37:52Z" finished-at="2018-03-23T04:37:52Z">
+      <class name="rmaseleniumtestscripts.RMA_TC_009">
+        <test-method status="SKIP" signature="Address_AddressSearch()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_009@55d56113]" name="Address_AddressSearch" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Address_AddressSearch -->
+        <test-method status="SKIP" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_009@55d56113]" name="RMA_FailureReport" is-config="true" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_009 -->
+    </test> <!-- RMA_TC_009 -->
+    <test name="RMA_TC_010" duration-ms="0" started-at="2018-03-23T04:37:52Z" finished-at="2018-03-23T04:37:52Z">
+      <class name="rmaseleniumtestscripts.RMA_TC_010">
+        <test-method status="SKIP" signature="Address_AddressSearch()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_010@60c6f5b]" name="Address_AddressSearch" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Address_AddressSearch -->
+        <test-method status="SKIP" signature="RMA_FailureReport(org.testng.ITestResult)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_010@60c6f5b]" name="RMA_FailureReport" is-config="true" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RMA_FailureReport -->
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_010 -->
+    </test> <!-- RMA_TC_010 -->
+    <test name="RMA_TC_008" duration-ms="0" started-at="2018-03-23T04:37:52Z" finished-at="2018-03-23T04:37:52Z">
+      <class name="rmaseleniumtestscripts.RMA_TC_008">
+        <test-method status="FAIL" signature="SetUp(int, java.lang.String)[pri:0, instance:rmaseleniumtestscripts.RMA_TC_008@a67c67e]" name="SetUp" is-config="true" duration-ms="0" started-at="2018-03-23T10:07:51Z" finished-at="2018-03-23T10:07:51Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'DataSourceRow' is required by @Configuration on method SetUp but has not been marked @Optional or defined
+in D:\RMA_SeleniumTestAutomation\RMA_Selenium_TestAutomation\RMASeleniumTestSuites\RMA_TestSuiteRunner.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'DataSourceRow' is required by @Configuration on method SetUp but has not been marked @Optional or defined
+in D:\RMA_SeleniumTestAutomation\RMA_Selenium_TestAutomation\RMASeleniumTestSuites\RMA_TestSuiteRunner.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:156)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:370)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:86)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:202)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:307)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:270)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1284)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1209)
+	at org.testng.TestNG.runSuites(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1096)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetUp -->
+        <test-method status="SKIP" signature="EventAndGCCreation()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_008@a67c67e]" name="EventAndGCCreation" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EventAndGCCreation -->
+        <test-method status="SKIP" signature="ExitSetUp()[pri:0, instance:rmaseleniumtestscripts.RMA_TC_008@a67c67e]" name="ExitSetUp" is-config="true" duration-ms="0" started-at="2018-03-23T10:07:52Z" finished-at="2018-03-23T10:07:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExitSetUp -->
+      </class> <!-- rmaseleniumtestscripts.RMA_TC_008 -->
+    </test> <!-- RMA_TC_008 -->
+  </suite> <!-- RMA_SampleSuite -->
+</testng-results>
+

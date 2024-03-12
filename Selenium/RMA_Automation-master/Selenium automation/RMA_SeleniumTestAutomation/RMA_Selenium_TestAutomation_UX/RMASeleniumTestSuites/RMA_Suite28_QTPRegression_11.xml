@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="RMA_Suite28_QTPRegression_11" parallel="none" allow-return-values="true">
+
+<parameter name="DataSourceRow" value="4" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_UXSample" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+  <!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+  <!--Ability To Force The Auto Expansion Of All Adjusters On Load Of Claim Is Validated -->
+	<test name="RMA_QTPRegression_TC_114">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_114" />
+		</classes>
+	</test>
+	
+	  <!--Claim Status Change To Closed When Transaction Type Is Set In Auto Close Options Is Validated  -->
+	<test name="RMA_QTPRegression_TC_115">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_115" />
+		</classes>
+	</test>
+	
+	 <!-- When checkbox 'Prevent Back-Dating of Reserves' is checked , user cannot create reserves at a back date from General System Parameter Setup Is Validated  -->
+	<test name="RMA_QTPRegression_TC_116">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_116" />
+		</classes>
+	</test>
+	
+	 <!--System checks for insufficient reserves when checkbox 'Check for insufficient reserve funds' is checked Is Validated  -->
+	<test name="RMA_QTPRegression_TC_099">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_099" />
+		</classes>
+	</test>
+	
+	
+	 <!--System checks for insufficient reserves when checkbox 'Do Not Allow Negative Reserve Adjustments' is checked and payment/auto check is not saved Is Validated -->
+	<test name="RMA_QTPRegression_TC_100">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_100" />
+		</classes>
+	</test>
+	
+	<!--When checkbox 'Prevent modifying reserves less than paid' is checked , user cannot edit a reserve amount to amount less than paid amount from General System Parameter Setup Is Validated  -->
+	<test name="RMA_QTPRegression_TC_101">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_101" />
+		</classes>
+	</test>
+	
+	<!-- when checkbox 'Allow Void of Cleared Payments' is checked , user is allowed to void even cleared payments from General System Parameter Setup Is Validated  -->
+	<test name="RMA_QTPRegression_TC_102">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_102" />
+		</classes>
+	</test>
+	
+	<!-- Verify system checks for insufficient reserves when checkbox 'Check for Insufficient Reserve Funds in Auto Checks' is checked  -->
+	<!-- <test name="RMA_QTPRegression_TC_103">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_103" />
+		</classes>
+	</test> -->
+	
+	<!-- Verify Editing a Transaction when per claim pay limit is enabled  -->
+	<test name="RMA_QTPRegression_TC_104">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_104" />
+		</classes>
+	</test>
+	
+	</suite>

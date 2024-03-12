@@ -1,0 +1,79 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite01_Funds_Withholding_EROFF_03" />
+	<!-- To make this suite run on any server, please change DSN name in DataSheet "RMA_Suite01_Funds_Withholding.xlsx" for test 
+		cases RMA_Reg_Funds_Withholding_TC025,021 -->
+	
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Enable Required SMS And Utility Settings For Suite RMA_Suite01_Funds_Withholding -->
+	<test name="RMA_Reg_Funds_Withholding_TC_025">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_025" />
+		</classes>
+	</test>	
+	
+	<!--Verify Maintenance Screen Navigation In RMA Application -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+	
+	<!--Verify The All Validation Messages Of Save Button On Withholding Screen.-->
+	<test name="RMA_Reg_Funds_Withholding_RecipientCreation">
+	<parameter name="NoOfWithholdingRecipient" value="1" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_RecipientCreation" />
+		</classes>
+	</test>		
+	
+	<!--Verify Withholding Setup Done For MedicalStaff On ER OFF Environment And Withholding Payment Created And Then Cleared On Carrier Workers' Comp Claim -->
+	<test name="RMA_Reg_Funds_Withholding_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_013" />
+		</classes>
+	</test>	
+		
+	<!--Verify Withholding Setup Done With Voucher Payment For Org. Hierarchy On ER OFF Environment And Withholding Payment Created On Carrier General Claim -->
+	<test name="RMA_Reg_Funds_Withholding_TC_016">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_016" />
+		</classes>
+	</test>	
+	
+	<!--Verify Withholding Setup Done For People Maintenance On ER OFF Environment And Withholding Payment Created And Voided On Carrier Non Occupational Claim  -->
+	<test name="RMA_Reg_Funds_Withholding_TC_023">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_023" />
+		</classes>
+	</test>	
+	
+	<!--Verify Withholding Setup Done For Driver On ER OFF Environment And Withholding Payment Created On Carrier Health Claim And Verify That On Clearing The Main Transaction Withholding Transactions Gets Cleared -->
+	<test name="RMA_Reg_Funds_Withholding_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_Withholding_TC_015" />
+		</classes>
+	</test>
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

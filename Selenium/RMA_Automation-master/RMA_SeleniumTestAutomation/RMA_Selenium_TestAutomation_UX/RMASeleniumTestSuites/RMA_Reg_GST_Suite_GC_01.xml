@@ -1,0 +1,134 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+ <!-- Change The System Time To Eastern Standard Time Before Execution Of This Suite -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_GST_Suite_GC_01" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Verify Entity Is Created Successfully With GST Details -->
+	<test name="RMA_Reg_GST_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_001" />
+		</classes>
+	</test>	
+	
+	<!--Successful Corporate General Claim Creation Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Verify GST Related Fields On Payment Screen Is Validated-->
+	<test name="RMA_Reg_GST_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_002" />
+		</classes>
+	</test>
+	
+	<!--Verify SMS Permission To Overwrite GST and ITC Rate Fields On Payment Screen Is Validated-->
+	<test name="RMA_Reg_GST_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_019" />
+		</classes>
+	</test>
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is OFF And ITC Entitlement (Payor/Insurer) is 100% Is Validated-->
+	<test name="RMA_Reg_GST_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_003" />
+		</classes>
+	</test>
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is OFF And ITC Entitlement (Payor/Insurer) is 50% Is Validated-->
+	<test name="RMA_Reg_GST_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_004" />
+		</classes>
+	</test>
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is OFF And ITC Entitlement (Payor/Insurer) is 0% Is Validated-->
+	<test name="RMA_Reg_GST_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_005" />
+		</classes>
+	</test>	
+	
+	<!--Successful Corporate General Claim Creation Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC_01">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+	
+	<!--Verify Validation Message On Payment Screen When Settlement Payment CheckBox Is ON And Payee Is Not GST Registered Is Validated-->
+	<test name="RMA_Reg_GST_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_006" />
+		</classes>
+	</test>
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is ON And ITC Entitlement (Payee) is 100% With And Without Excess On Insurance Amount 100 Is Validated-->
+	<test name="RMA_Reg_GST_TC_007">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_007" />
+		</classes>
+	</test>
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is ON And ITC Entitlement (Payee) is 70% Without Excess On Insurance Amount Is Validated-->
+	<test name="RMA_Reg_GST_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_008" />
+		</classes>
+	</test>
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is ON And ITC Entitlement (Payee) is 0% Without Excess On Insurance Amount Is Validated-->
+	<test name="RMA_Reg_GST_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_009" />
+		</classes>
+	</test>
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is ON And ITC Entitlement (Payee) is 70% With Excess On Insurance Amount 100 Is Validated-->
+	<test name="RMA_Reg_GST_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_010" />
+		</classes>
+	</test>	
+	
+	<!--Verify Details On GST Details Tab On Payment Screen With Settlement Payment CheckBox Is ON And ITC Entitlement (Payee) is 0% With Excess On Insurance Amount 100 Is Validated-->
+	<test name="RMA_Reg_GST_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_011" />
+		</classes>
+	</test>	
+
+	<!--Verify If User Is Not Having SMS Permission To Overwrite GST and ITC Rate Then Corresponding Fields Are In ReadOnly State On Payment Screen Is Validated-->
+	<test name="RMA_Reg_GST_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_GST_TC_020" />
+		</classes>
+	</test>
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

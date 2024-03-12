@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="RMA_Suite23_SmokeSuite03" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_DailySmoke_CarrierGCandWC_02" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+ 	<!--Successful Carrier Workers Compensation Claim Creation On Providing Mandatory Data, Existence of Necessary Tabs With Data Entry Of One Text Field In Each, Edit Of Created Claim Is Validated -->
+	<test name="RMA_Smoke_075">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_075" />
+		</classes>
+	</test>
+
+	<!-- Successful Reserve Creation On WC, Reserve Grid Value Verification, Color Code Change And Tool Tip Amount Of Reserve Progress Image On Claim Screen 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_053_CarrierWC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_053_CarrierWC" />
+		</classes>
+	</test>
+	
+	<!--Successful Payment Addition On Worker Compensation Claim Is Done -->
+	<test name="RMA_Smoke_TC_011_CarrierWC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_011_CarrierWC" />
+		</classes>
+	</test>
+	
+	<!--Successful Collection Addition On Worker Compensation Claim Is Done -->
+	<test name="RMA_Smoke_TC_014_CarrierWC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_014_CarrierWC" />
+		</classes>
+	</test>
+	
+	<!-- Successful Creation Of Auto Check Of 5 Split Through Financial Reserves Schedule Check Button on Carrier Claim Is Validated -->
+	<test name="RMA_Smoke_TC_057_CarrierWC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_057_CarrierWC" />
+		</classes>
+	</test>
+
+	
+	<!--Successful Comment Creation For An Already Created Claim, Close And Cancel Image Button Function On Comments Screen Is Validated -->
+	 <test name="RMA_Smoke_TC_024">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_024" />
+		</classes>
+	</test>
+	
+	<!--Verify That Enhanced Notes Can Be Created,Edited And Deleted Successfully From Claim Page Along-with Back To Notes, Note Type And NG Grid Search Filter Functionalities -->
+	 <test name="RMA_Smoke_TC_025">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_025" />
+		</classes>
+	</test>
+	
+	<!--Verify Attachment of Documents Happens In Claim Successfully Along-with NG Grid Search Filter Functionalities-->
+	 <test name="RMA_Smoke_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_021" />
+		</classes>
+</test> 
+
+	<!--Create, Edit And Delete Of MedicalStaff As Person Involved For Created WC Claim Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_027_WorkersCompensationClaim">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_027" />
+		</classes>
+	</test>
+	
+	<!--Successful Send Mail Send Mail After Suite Completion-->
+	 <test name="RMA_Smoke_TCCompletionMailReport">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TCCompletionMailReport" />
+		</classes>
+	</test>	
+</suite>

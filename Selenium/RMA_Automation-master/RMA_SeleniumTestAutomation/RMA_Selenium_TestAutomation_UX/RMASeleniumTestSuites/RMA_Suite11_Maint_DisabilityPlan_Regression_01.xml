@@ -1,0 +1,69 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite11_Maint_DisabilityPlan_Regression_01" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Verify Maintenance Screen Navigation In RMA Application -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+
+	<!--Verify User Is Able To Add Data In All The Fields On Disability Plan Management Page And Create A BiWeekly Disability Plan -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_014" />
+		</classes>
+	</test>
+
+	<!--Various Fields, Tabs And Creation Of Plan Class(Bi-Weekly) With Mandatory Fields On Disability Plan Management Are Validated -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_013" />
+		</classes>
+	</test>
+	
+	<!--Verification Of All The Fields, Tool Bar Buttons Functionality On Class Creation Page And Data Validation On Created Plan Class Page -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_019" />
+		</classes>
+	</test>
+
+	<!-- Verify That A Plan With Invalid Expiration Date, Effective Date And Status Will Not Be Available For Selection On Non Occupational Claim Screen -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_020" />
+		</classes>
+	</test>
+	
+	<!--Verify User Is Able To Delete A Disability Plan -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_015">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_015" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

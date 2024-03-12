@@ -1,0 +1,212 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Diary_AutoDiarySetup" />
+
+	<parameter name="DataSourceRow" value="1" />
+	<!--To Set The Datasource Row Name From The sheet RMA_TC_002 of File RMASeleniumAutomationTestData -->
+
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- Deletion of Auto Diary Setup Is Validated -->
+	<test name="RMA_Regression_Diary_DeleteAutoDiarySetup_1">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Regression_Diary_DeleteAutoDiarySetup" />
+		</classes>
+	</test>
+
+	<!-- Successful Corporate General Claim Creation With Current Date -->
+	<test name="RMA_Regression_Diary_ClaimCreation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_ClaimCreation" />
+		</classes>
+	</test>
+
+	<!-- Auto Diary Setup From Task Manager For Claimant Review Is Validated -->
+	<test name="RMA_Regression_Diary_TC_10_Claimant">
+		<parameter name="EntityName" value="Claimant" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_10" />
+		</classes>
+	</test>
+
+	<!-- Enable The User To Schedule A Process WPA Diaries Task From Task Manager 
+		And To View Completed Task From Task Manager -->
+	<test name="RMA_Regression_Diary_ScheduleWPATask_Claimant">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_ScheduleWPATask" />
+		</classes>
+	</test>
+
+	<!-- Verification of WPA Processed Claimant Auto Generated Diaries On Diary 
+		List Screen. -->
+	<test name="RMA_Regression_Diary_WPAProcessingVerification_Claimant">
+		<parameter name="EntityName" value="Claimant" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Regression_Diary_WPAProcessingVerification" />
+		</classes>
+	</test>
+
+	<!-- Auto Diary Setup From Task Manager For Litigation Review Is Validated -->
+	<test name="RMA_Regression_Diary_TC_10_Litigation">
+		<parameter name="EntityName" value="Litigation" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_10" />
+		</classes>
+	</test>
+
+	<!-- Enable The User To Schedule A Process WPA Diaries Task From Task Manager 
+		And To View Completed Task From Task Manager -->
+	<test name="RMA_Regression_Diary_ScheduleWPATask_Litigation">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_ScheduleWPATask" />
+		</classes>
+	</test>
+
+	<!-- Verification of WPA Processed Litigation Auto Generated Diaries On 
+		Diary List Screen. -->
+	<test name="RMA_Regression_Diary_WPAProcessingVerification_Litigation">
+		<parameter name="EntityName" value="Litigation" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Regression_Diary_WPAProcessingVerification" />
+		</classes>
+	</test>
+
+	<!-- Auto Diary Setup From Task Manager For Reserve Review Is Validated -->
+	<test name="RMA_Regression_Diary_TC_11_Reserve">
+		<parameter name="EntityName" value="Reserve" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_11" />
+		</classes>
+	</test>
+
+	<!-- Enable The User To Schedule A Process WPA Diaries Task From Task Manager 
+		And To View Completed Task From Task Manager -->
+	<test name="RMA_Regression_Diary_ScheduleWPATask_Reserve">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_ScheduleWPATask" />
+		</classes>
+	</test>
+
+	<!-- Verification of WPA Processed Reserve Auto Generated Diaries On Diary 
+		List Screen. -->
+	<test name="RMA_Regression_Diary_WPAProcessingVerification_Reserve">
+		<parameter name="EntityName" value="Reserve" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Regression_Diary_WPAProcessingVerification" />
+		</classes>
+	</test>
+
+	<!-- Auto Diary Setup From Task Manager For Reserve History Review Is Validated -->
+	<test name="RMA_Regression_Diary_TC_11_ReserveHistory">
+		<parameter name="EntityName" value="Reserve History" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_11" />
+		</classes>
+	</test>
+
+	<!-- Enable The User To Schedule A Process WPA Diaries Task From Task Manager 
+		And To View Completed Task From Task Manager -->
+	<test name="RMA_Regression_Diary_ScheduleWPATask_ReserveHistory">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_ScheduleWPATask" />
+		</classes>
+	</test>
+
+	<!-- Verification of WPA Processed Reserve History Auto Generated Diaries 
+		On Diary List Screen. -->
+	<test name="RMA_Regression_Diary_WPAProcessingVerification_ReserveHistory">
+		<parameter name="EntityName" value="Reserve History" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Regression_Diary_WPAProcessingVerification" />
+		</classes>
+	</test>
+
+	<!-- Auto Diary Setup From Task Manager For Schedule Payment Review Review 
+		Is Validated -->
+	<test name="RMA_Regression_Diary_TC_12_SchedulePayment">
+		<parameter name="EntityName" value="Schedule Payment Review" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_12" />
+		</classes>
+	</test>
+
+	<!-- Enable The User To Schedule A Process WPA Diaries Task From Task Manager 
+		And To View Completed Task From Task Manager -->
+	<test name="RMA_Regression_Diary_ScheduleWPATask_SchedulePayment">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_ScheduleWPATask" />
+		</classes>
+	</test>
+
+	<!-- Verification of WPA Processed Schedule Payment Review Auto Generated 
+		Diaries On Diary List Screen. -->
+	<test
+		name="RMA_Regression_Diary_WPAProcessingVerification_SchedulePaymentReview">
+		<parameter name="EntityName" value="Schedule Payment Review" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Regression_Diary_WPAProcessingVerification" />
+		</classes>
+	</test>
+
+	<!-- Auto Diary Setup From Task Manager For Progress Notes Review Is Validated -->
+	<test name="RMA_Regression_Diary_TC_12_ProgressNotes">
+		<parameter name="EntityName" value="Progress Notes" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_TC_12" />
+		</classes>
+	</test>
+
+	<!-- Enable The User To Schedule A Process WPA Diaries Task From Task Manager 
+		And To View Completed Task From Task Manager -->
+	<test name="RMA_Regression_Diary_ScheduleWPATask">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_Diary_ScheduleWPATask" />
+		</classes>
+	</test>
+
+	<!-- Verification Of Progress Notes WPA Processed Schedule Payment Review 
+		Auto Generated Diaries On Diary List Screen. -->
+	<test name="RMA_Regression_Diary_WPAProcessingVerification_ProgressNotes">
+		<parameter name="EntityName" value="Progress Notes" />
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Regression_Diary_WPAProcessingVerification" />
+		</classes>
+	</test>
+
+	<!-- Deletion of Auto Diary Setup Is Validated -->
+	<test name="RMA_Regression_Diary_DeleteAutoDiarySetup_2">
+		<classes>
+			<class
+				name="rmaseleniumtestscripts.RMA_Regression_Diary_DeleteAutoDiarySetup" />
+		</classes>
+	</test>
+	
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>
+

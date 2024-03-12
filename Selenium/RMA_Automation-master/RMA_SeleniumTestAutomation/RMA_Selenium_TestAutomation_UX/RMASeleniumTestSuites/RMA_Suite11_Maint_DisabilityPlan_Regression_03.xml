@@ -1,0 +1,77 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite11_Maint_DisabilityPlan_Regression_03" />
+	<!-- Create a Disability Plan Mail Merge Template With Name "DisabilityPlan_Template" For Test Case RMA_Reg_Maint_DisabilityPlan_TC_005 -->
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Verify Maintenance Screen Navigation In RMA Application -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+
+	<!--Verify The Display Of Some Fields On Selection Of Value In Other Fields -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_008">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_008" />
+		</classes>
+	</test>
+	
+	<!--Verify User Is Able To Select Department Or Any Level From The OrgHierachy As Insured(s)/Account(s) -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_009" />
+		</classes>
+	</test>
+	
+	<!--Verify User Is Able To Add Data In All The Fields On Disability Plan Management Page And Create A Weekly Disability Plan -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_010">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_010" />
+		</classes>
+	</test>
+
+	<!--Various Fields, Tabs And Creation Of Plan Class(Weekly) With Mandatory Fields On Disability Plan Management Are Validated -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_011">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_011" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Add Values In Supplemental Tab On Disability Plan Management Page -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_021" />
+		</classes>
+	</test>
+
+	<!--Verify The Functionality Of ToolBar Buttons On Disability Plan Management Page -->
+	<test name="RMA_Reg_Maint_DisabilityPlan_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_DisabilityPlan_TC_005" />
+		</classes>
+	</test>
+	
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

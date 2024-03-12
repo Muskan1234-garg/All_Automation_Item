@@ -1,0 +1,69 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="2" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_26_SelReg_11_EnhancedNotes(GC_POLICY)" />
+	
+	<!-- This Suite Contains TestCase RMA_SeleniumRegession_TC_084 at The End Of All the Person Involved As It Contains Code To Delete The Created Litigation At The End -->
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>	
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+		<!--'Creation Of A Carrier General Claim Is Validated -->
+	<test name="RMA_Smoke_TC_058_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_058" />
+		</classes>
+	</test>
+	<!--'Create,Edit And Delete Of Enhanced Notes On Policy On Carrier General Claim Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_099_GC_POLICY">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_099" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On An Accommodation For A General Claim On Policy Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_157_GC_POLICY">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_157" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A DemandOffer(Injury/Illness) For A General Claim On Policy Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_156_GC_POLICY">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_156" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Case Management For A General Claim On Policy Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_159_GC_POLICY">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_159" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Vocational Rehabilitation For A General Claim On Policy Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_160_GC_POLICY">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_160" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Case Manager For A General Claim On Policy Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_161_GC_POLICY">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_161" />
+		</classes>
+	</test>
+	<!--'Create, Edit And Delete Of An Enhanced Note On A Case Manager Notes For A General Claim On Policy Is Validated -->
+	<test name="RMA_SeleniumRegressiom_TC_158_GC_POLICY">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_158" />
+		</classes>
+	</test>
+	
+	</suite>

@@ -1,0 +1,78 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_29_SelReg_11_Attachments(EVT)" />
+<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>	
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment On An Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_101_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_101" />
+		</classes>
+	</test>	
+ 	<!--Create, Edit And Delete Of An Attachment On PI(MedicalStaff) On Event Is Validated --> -->
+<!-- 	<test name="RMA_SeleniumRegression_TC_111_Event"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_111" /> -->
+<!-- 		</classes> -->
+<!-- 	</test>	 -->
+	<!--Create, Edit And Delete Of An Attachment On PI(Employee) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_112_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_112" />
+		</classes>
+	</test>	
+	<!--Create, Edit And Delete Of An Attachment OnPI(Patient) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_113_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_113" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On PI(Physician) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_114_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_114" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On PI(Driver) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_115_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_115" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment OnPI(Witness) On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_116_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_116" />
+		</classes>
+	</test>
+	<!--Create, Edit And Delete Of An Attachment On PI(OtherPerson) On Event Is Validated --> -->
+<!-- 	<test name="RMA_SeleniumRegression_TC_117_Event"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_117" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+	<!--Create, Edit And Delete Of An Attachment On Dated Text On Event Is Validated -->
+	<test name="RMA_SeleniumRegression_TC_131_Event">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_SeleniumRegression_TC_131" />
+		</classes>
+	</test>		
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

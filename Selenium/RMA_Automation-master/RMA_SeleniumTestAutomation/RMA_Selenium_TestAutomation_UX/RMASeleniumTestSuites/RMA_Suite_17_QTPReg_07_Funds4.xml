@@ -1,0 +1,71 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite_17_QTPReg_07_Funds4"/>
+
+	<!-- Test Case RMA_QTPRegression_TC_051_C Is Required To Reset The OLD UI Settings After The Execution Of Suite24-->
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- LOB Parameter Settings 'Set Reserve Balance To Zero' To View Reserve Balances For Reserves When Closed Is Validated -->
+	<test name="RMA_QTPRegression_TC_047">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_047" />
+		</classes>
+	</test>
+
+	<!-- LOB Parameter Settings 'Set Negative Reserve Balance To Zero' To View Reserve Balances For Reserves When Closed Is Validated -->
+	<test name="RMA_QTPRegression_TC_048">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_048" />
+		</classes>
+	</test>
+
+	<!-- LOB Parameter Settings 'Do Nothing' To View Reserve Balances For Reserves When Closed Is Validated -->
+	<test name="RMA_QTPRegression_TC_049">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_049" />
+		</classes>
+	</test>
+
+	<!-- LOB Parameter Settings 'Auto Adjust Negative Reserves To Zero(Open Claims)' To View Reserve Balances For Open Claims Is Validated -->
+	<test name="RMA_QTPRegression_TC_050">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_050" />
+		</classes>
+	</test>
+
+	<!-- LOB Parameter Settings 'Auto Adjust Negative Reserves To Zero(Open Claims) Per Reserve' To View Reserve Balances For Open Claims Is Validated -->
+	<test name="RMA_QTPRegression_TC_051">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_051" />
+		</classes>
+	</test>
+
+	<!-- To Reset LOB Parameter Setting After Suite24 Is Validated -->
+	<test name="RMA_QTPRegression_TC_051_C">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_051_C" />
+		</classes>
+	</test>
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>
+

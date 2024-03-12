@@ -1,0 +1,108 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="2" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_Suite_ReadyToPrint_01" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data, 
+		Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of 
+		Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To See Settings And Fields Related To Ready 
+		To Print Screen -->
+	<test name="RMA_Reg_Funds_ReadyToPrint_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReadyToPrint_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Mark A Payment As Ready To Print -->
+	<test name="RMA_Reg_Funds_ReadyToPrint_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReadyToPrint_TC_002" />
+		</classes>
+	</test>
+
+	<!--Verify That Copy Transaction/Void & ReIssue Does Not Copy the Value 
+		Of Ready To Print CheckBox -->
+	<test name="RMA_Reg_Funds_ReadyToPrint_TC_003">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReadyToPrint_TC_003" />
+		</classes>
+	</test>
+
+	<!-- Verify The Print Preview Option Of Ready To Print CheckBox -->
+	<test name="RMA_Reg_Funds_ReadyToPrint_TC_004">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReadyToPrint_TC_004" />
+		</classes>
+	</test>
+
+	<!--Verify The Ready To Print CheckBox Is In Read-Only Mode For All The 
+		Check Status Except 'Released' -->
+	<test name="RMA_Reg_Funds_ReadyToPrint_TC_006">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReadyToPrint_TC_006" />
+		</classes>
+	</test>
+
+	<!--Verify The Ready To Print CheckBox Do Not Appear On Schedule Check and 
+		NonOcc Payments Screen -->
+	<test name="RMA_Reg_Funds_ReadyToPrint_TC_005">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReadyToPrint_TC_005" />
+		</classes>
+	</test>
+
+	<!--Successful Corporate General Claim Creation On Providing Mandatory Data, 
+		Existence of Necessary Tabs With Edit Of One Text Field In Each, Edit Of 
+		Created Claim Is Validated -->
+	<test name="RMA_Smoke_TC_002_GC_1">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!-- Successful Reserve Creation, Reserve Grid Value Verification, Color 
+		Code Change And Tool Tip Amount Of Reserve Progress Image On Claim Screen 
+		Is Validated -->
+	<test name="RMA_Smoke_TC_009_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_009" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To See Settings And Fields Related To Ready 
+		To Print Screen -->
+	<test name="RMA_Reg_Funds_ReadyToPrint_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Funds_ReadyToPrint_TC_009" />
+		</classes>
+	</test>
+
+	<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+</suite>

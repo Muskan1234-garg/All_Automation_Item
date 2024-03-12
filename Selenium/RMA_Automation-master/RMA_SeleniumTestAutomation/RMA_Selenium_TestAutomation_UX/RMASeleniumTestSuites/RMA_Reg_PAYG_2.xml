@@ -1,0 +1,89 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!-- Note To Execute This Suite -->
+	<!-- Set Base Currency To AUD -->
+	<!-- Uncheck Setting 'Auto Adjust Negative Reserves To Zero' On Reserve 
+		Settings On LOB -->
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Reg_PAYG" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required"RMASeleniumTestSuites/RMA_Maint_Physican_ERON.xml" 
+		DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!-- PAYG Setup -->
+	<test name="RMA_Regression_PAYG_SetUp">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_PAYG_SetUp" />
+		</classes>
+	</test>
+
+	<!--============================PAYG without TFN============================================ -->
+
+	<test name="RMA_Regression_PAYG_01_1">
+		<parameter name="TFNProvided" value="No" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_PAYG_01" />
+		</classes>
+	</test>
+
+	<test name="RMA_Regression_PAYG_02_6">
+		<parameter name="TFN" value="No" />
+		<parameter name="TaxFreeThreshold" value="Yes" />
+		<parameter name="Resident" value="Yes" />
+		<parameter name="MedicareLevyExemption" value="None" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_PAYG_02" />
+		</classes>
+	</test>
+
+	<test name="RMA_Regression_PAYG_02_7">
+		<parameter name="TFN" value="No" />
+		<parameter name="TaxFreeThreshold" value="Yes" />
+		<parameter name="Resident" value="No" />
+		<parameter name="MedicareLevyExemption" value="None" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_PAYG_02" />
+		</classes>
+	</test>
+
+	<test name="RMA_Regression_PAYG_02_8">
+		<parameter name="TFN" value="No" />
+		<parameter name="TaxFreeThreshold" value="No" />
+		<parameter name="Resident" value="Yes" />
+		<parameter name="MedicareLevyExemption" value="None" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_PAYG_02" />
+		</classes>
+	</test>
+
+	<test name="RMA_Regression_PAYG_02_9">
+		<parameter name="TFN" value="No" />
+		<parameter name="TaxFreeThreshold" value="No" />
+		<parameter name="Resident" value="No" />
+		<parameter name="MedicareLevyExemption" value="None" />
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Regression_PAYG_02" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

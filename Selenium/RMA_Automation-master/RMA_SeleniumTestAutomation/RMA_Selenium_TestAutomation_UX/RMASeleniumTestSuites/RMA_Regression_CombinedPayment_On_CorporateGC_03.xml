@@ -1,0 +1,71 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName"
+		value="RMA_Regression_CombinedPayment_On_CorporateGC_03" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Combined Payment Setup In RMA Application -->
+	<test name="RMA_QTPRegression_TC_052_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_052_I" />
+		</classes>
+	</test>
+
+	<!--Corporate General Claim Creation In RMA Application -->
+	<test name="RMA_Smoke_TC_002_GC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_GC" />
+		</classes>
+	</test>
+
+	<!--Reserve Creation In RMA Application For Making Auto Checks -->
+	<test name="RMA_Smoke_TC_009">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_009" />
+		</classes>
+	</test>
+
+	<!--Verify That Combined Payments Cannot Be Rolled Up With Non Combined 
+		Payments If Roll Up Payments To The Same Payee Is Turned Off -->
+	<test name="RMA_Reg_CombinedPayment_TC_014">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_CombinedPayment_TC_014" />
+		</classes>
+	</test>
+
+	<!--Verify SMS Setting Of Combined Payment Functionality -->
+	<test name="RMA_Reg_CombinedPaymentSMS_TC_07">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_CombinedPaymentSMS_TC_07" />
+		</classes>
+	</test>
+
+	<!--Verify Combined Payment Functinality In Power View -->
+	<test name="RMA_Reg_CombinedPaymentPV_TC_08">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_CombinedPaymentPV_TC_08" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

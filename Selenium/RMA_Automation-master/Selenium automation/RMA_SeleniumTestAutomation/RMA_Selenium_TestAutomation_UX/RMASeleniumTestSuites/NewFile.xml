@@ -1,0 +1,30 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_01_SmokeSuite01" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+   <test name="RMA_TC_003">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I"/>
+    </classes>
+  </test>
+   <test name="RMA_TC_004">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_001"/>
+    </classes>
+  </test>
+  </suite>

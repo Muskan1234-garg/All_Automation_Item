@@ -1,0 +1,186 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite05_Maint_Physician_Regression_02" />
+
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="1" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That A PowerView Is Created And Created User Is Given Permission 
+		To That PowerView -->
+	<test name="RMA_Reg_PowerviewCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That When User Changes The Order Of ToolBar Button In UX PowerView 
+		Then The Same Must Be Reflected In UX On Certification Page -->
+	<test name="RMA_Reg_Maint_Physician_030">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_030" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Make Any Field Required, ReadOnly On Certification 
+		Page -->
+	<test name="RMA_Reg_Maint_Physician_031">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_031" />
+		</classes>
+	</test>
+
+	<!--Verify That Help Is Displayed If Added Via PowerView For Any Field On 
+		Certification Page -->
+	<test name="RMA_Reg_Maint_Physician_032">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_032" />
+		</classes>
+	</test>
+
+	<!--Verify That Validation Must Be Displayed When User Has Not Entered Data 
+		In Any Required Field On Certification -->
+	<test name="RMA_Reg_Maint_Physician_033">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_033" />
+		</classes>
+	</test>
+
+	<!--Verify The Correct Validation When User Click ToolBar Button Of A Record 
+		Without Saving It On Certification -->
+	<test name="RMA_Reg_Maint_Physician_034">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_034" />
+		</classes>
+	</test>
+
+	<!--Verification Of ToolBar Buttons Of Certifications On Physician Maintenance 
+		Screen -->
+	<test name="RMA_Reg_Maint_Physician_035">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_035" />
+		</classes>
+	</test>
+
+	<!--Verify That When User Changes The Order Of ToolBar Button In UX PowerView 
+		Then The Same Must Be Reflected In UX On Education Page -->
+	<test name="RMA_Reg_Maint_Physician_036">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_036" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Make Any Field Required, ReadOnly On Education 
+		Page -->
+	<test name="RMA_Reg_Maint_Physician_037">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_037" />
+		</classes>
+	</test>
+
+	<!--Verify That Help Is Displayed If Added Via PowerView For Any Field On 
+		Education Page -->
+	<test name="RMA_Reg_Maint_Physician_038">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_038" />
+		</classes>
+	</test>
+
+	<!--Verify That Validation Must Be Displayed When User Has Not Entered Data 
+		In Any Required Field On Education -->
+	<test name="RMA_Reg_Maint_Physician_039">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_039" />
+		</classes>
+	</test>
+
+	<!--Verify The Correct Validation When User Click ToolBar Button Of A Record 
+		Without Saving It On Education -->
+	<test name="RMA_Reg_Maint_Physician_040">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_040" />
+		</classes>
+	</test>
+
+	<!--Verify That When User Changes The Order Of ToolBar Button In UX PowerView 
+		Then The Same Must Be Reflected In UX On Previous Hospitals Page -->
+	<test name="RMA_Reg_Maint_Physician_041">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_041" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Make Any Field Required, ReadOnly On Previous 
+		Hospitals Page -->
+	<test name="RMA_Reg_Maint_Physician_042">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_042" />
+		</classes>
+	</test>
+
+	<!--Verify That Help Is Displayed If Added Via PowerView For Any Field On 
+		Previous Hospitals Page -->
+	<test name="RMA_Reg_Maint_Physician_043">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_043" />
+		</classes>
+	</test>
+
+	<!--Verify That Validation Must Be Displayed When User Has Not Entered Data 
+		In Any Required Field On Previous Hospital -->
+	<test name="RMA_Reg_Maint_Physician_044">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_044" />
+		</classes>
+	</test>
+
+	<!--Verify The Correct Validation When User Click ToolBar Button Of A Record 
+		Without Saving It On Previous Hospital -->
+	<test name="RMA_Reg_Maint_Physician_045">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_045" />
+		</classes>
+	</test>
+
+	<!--Verification Of Toolbar Buttons Of Previous Hospital On Physician Maintenance 
+		Screen -->
+	<test name="RMA_Reg_Maint_Physician_046">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_046" />
+		</classes>
+	</test>
+
+	<!--Verification Of Data Being Modified On Privileges, Certification, Education 
+		And Previous Hospital Screen Is Updated Correctly On Physician Maintenance -->
+	<test name="RMA_Reg_Maint_Physician_047">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Physician_047" />
+		</classes>
+	</test>
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

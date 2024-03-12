@@ -1,0 +1,350 @@
+<suite name="RMA_Suite_06_SmokeSuite_01_NonOcc" parallel="none" allow-return-values="true">
+
+ <!--To Set The Row Of The Used DataSourceName-->
+<parameter name="DataSourceRow" value="1" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite_06_SmokeSuite_01_NonOcc" />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test> 
+
+<!--Verify That Required DSN Is Selected In RMA Application-->
+    <test name="RMA_TC_002">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_002"/>
+    </classes>
+     </test>
+    
+ <!--Verify Event Is Created By Providing Data In All Mandatory Fields-->
+    <test name="RMA_Smoke_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_001"/>
+    </classes>
+       </test>
+       
+<!--Verify That Workers Comp Claim Is Created Successfully-->
+    <test name="RMA_Smoke_TC_002_NonOcc">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_NonOcc"/>
+    </classes>
+       </test>
+
+<!--Creation, Edition and Deletion of Adjuster Under Claim Tree Is Validated-->
+   <test name="RMA_Smoke_TC_003">
+   <classes>
+   <class name="rmaseleniumtestscripts.RMA_Smoke_TC_003"/>
+    </classes>
+ </test>
+  
+<!--Creation, Edition and Deletion of Claimant Under Claim Tree Is Out Of Scope For NonOcc Comp Claim Hence RMA_Smoke_TC_004 Is Removed For NonOcc -->   
+  
+<!--Creation, Edition and Deletion of Defendant Under Claim Tree Is Validated-->
+    <test name="RMA_Smoke_TC_005">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_005"/>
+    </classes>
+       </test>
+	   
+<!--Creation, Edition and Deletion of Litigation Under Claim Tree Is Validated-->
+    <test name="RMA_Smoke_TC_006">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_006"/>
+    </classes>
+       </test>
+
+<!--Creation, Edition and Deletion of Subrogation Under Claim Tree Is Validated-->
+    <test name="RMA_Smoke_TC_007">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_007"/>
+    </classes>
+       </test>	
+
+<!-- Arbitration link in not available on NonOcc Claim -->
+<!--Creation, Edition and Deletion of Arbitration Under Claim Tree Is Validated
+    <test name="RMA_Smoke_TC_008">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_008"/>
+    </classes>
+       </test>-->
+	   
+<!--Verify Changing Claim Status Happens Successfully-->
+    <test name="RMA_Smoke_TC_016">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_016"/>
+    </classes>
+       </test>
+
+<!--Successful Reserve Creation Is Validated-->
+    <test name="RMA_Smoke_TC_009">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_009"/>
+    </classes>
+       </test>	
+       
+<!--Create Auto Check Of 5 Split Through Financial Reserve Schedule Check-->
+    <test name="RMA_Smoke_TC_010">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_010"/>
+    </classes>
+       </test>	
+       
+<!--Successful Payment Addition Against An Already Created Reserve Is Validated-->
+    <test name="RMA_Smoke_TC_011">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_011"/>
+    </classes>
+       </test>	
+       
+<!--Successful Collection Addition Is Validated-->
+    <test name="RMA_Smoke_TC_014">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_014"/>
+    </classes>
+       </test>	
+       
+<!--Verify Adding,Editing And Deleting Of new Employee As Person Involved For Event-->
+    <test name="RMA_Smoke_TC_015">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_015"/>
+    </classes>
+       </test>
+<!--RMA_Smoke_TC_016 Is Placed In Between RMA_Smoke_TC_008 And RMA_Smoke_TC_009 -->      
+       
+<!--Claim History Works Correctly On Claimant Screen Is Validated, Is Out Of Scope For Workers Comp Claim Hence RMA_Smoke_TC_017 Is Removed For NonOcc --> 
+       
+<!--Claim History Works Correctly On Defendant Screen Is Validated-->
+    <test name="RMA_Smoke_TC_018">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_018"/>
+    </classes>
+       </test>
+       
+<!--Verify That Executive Summary Displays Correct Claim Details-->
+    <test name="RMA_Smoke_TC_019">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_019"/>
+    </classes>
+       </test>
+       
+<!--Verify Record Summary Open Correctly For Claim-->
+    <test name="RMA_Smoke_TC_020">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_020"/>
+    </classes>
+       </test>
+       
+<!--Verify Attachment of Documents Happens In Claim Successfully-->
+    <test name="RMA_Smoke_TC_021">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_021"/>
+    </classes>
+       </test>
+       
+<!--Verify Diary Creation On Claim-->
+    <test name="RMA_Smoke_TC_022">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_022"/>
+    </classes>
+       </test>
+       
+<!--Verify View Record Diary Is Showing Diary, Created For Claim-->
+    <test name="RMA_Smoke_TC_023">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_023"/>
+    </classes>
+       </test>
+	   
+<!--Verify That Comments Can Be Added To Claim-->
+    <test name="RMA_Smoke_TC_024">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_024"/>
+    </classes>
+       </test>	   
+
+<!--Verify That Enhanced Notes Can Be Created,Edited And Deleted Successfully From Claim Page-->
+    <test name="RMA_Smoke_TC_025">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_025"/>
+    </classes>
+       </test>
+ <!--Quick Summary Contents For A Claim Is Validated-->
+    <test name="RMA_Smoke_TC_026">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_026"/>
+    </classes>
+       </test>		   
+       
+<!--Verify That Claim Comments Summary Window Displays Comments, Added On Comments Window Previously-->
+    <test name="RMA_Smoke_TC_027">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_027"/>
+    </classes>
+       </test>	
+   
+<!-- Send Mail Functionality For A Claim Is Validated-->
+    <test name="RMA_Smoke_TC_028">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_028"/>
+    </classes>
+       </test>   
+	   
+<!-- ISO Submit Functionality For A Claim Is Validated-->
+    <test name="RMA_Smoke_TC_029">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_029"/>
+    </classes>
+       </test> 
+	   
+<!--Enable Activity Log Functionality For A Claim Is Validated-->
+    <test name="RMA_Smoke_TC_030">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_030"/>
+    </classes>
+       </test>	
+	   
+<!--Edit Of Reserve Is Validated-->
+    <test name="RMA_Smoke_TC_031">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_031"/>
+    </classes>
+       </test>	
+      
+<!--Verify Attachment of Documents Happens On Payment Successfully-->
+    <test name="RMA_Smoke_TC_032">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_032"/>
+    </classes>
+       </test>	
+       
+<!--Verify Successful Diary Creation From ToolBar Of Payment-->
+    <test name="RMA_Smoke_TC_033">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_033"/>
+    </classes>
+       </test>	
+   
+  <!--Verify That Enhanced Notes Can Be Created,Edited And Deleted Successfully From Payments Page-->
+    <test name="RMA_Smoke_TC_034">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_034"/>
+    </classes>
+       </test>
+	   
+ <!--Send Mail Functionality For A Payment Is Validated-->
+    <test name="RMA_Smoke_TC_035">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_035"/>
+    </classes>
+       </test>
+	   
+<!--Verify Attachment of Documents Happens On Collection Successfully-->
+    <test name="RMA_Smoke_TC_036">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_036"/>
+    </classes>
+       </test>	
+       
+<!--Verify Successful Diary Creation From ToolBar Of Collection-->
+    <test name="RMA_Smoke_TC_037">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_037"/>
+    </classes>
+       </test>	
+	   
+<!--Verify That Enhanced Notes Can Be Created,Edited And Deleted Successfully From Collection Page-->
+    <test name="RMA_Smoke_TC_038">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_038"/>
+    </classes>
+       </test>
+	   
+<!--Send Mail Functionality For A Collection Is Validated-->
+    <test name="RMA_Smoke_TC_039">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_Smoke_TC_039"/>
+    </classes>
+       </test>	
+	   
+<!--Print Preview On Payment Screen -->
+	<test name="RMA_Smoke_TC_041">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041" />
+		</classes>
+	</test>
+		
+	<!--Verify Print Preview Functionality Working on Collection Screen Successfully -->
+
+	<test name="RMA_Smoke_TC_042">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_042" />
+		</classes>
+	</test>
+	<!--Successfully Print Summary Verification on Payment Screen Is Validated -->
+
+	<test name="RMA_Smoke_TC_043">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_043" />
+		</classes>
+	</test>
+	<!--Successful Printing of Check Is Validated -->
+
+	<test name="RMA_Smoke_TC_012">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_012" />
+		</classes>
+	</test>
+
+	<!--Transaction History Displays All The Transactions Are Validated -->
+	<test name="RMA_Smoke_TC_013">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_013" />
+		</classes>
+	</test>
+
+	<!--Successfully Print Summary Verification on Collection Screen Is Validated -->
+	<test name="RMA_Smoke_TC_044">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_044" />
+		</classes>
+	</test>	
+
+	<!--Verify Claim Is Deleted Successfully -->
+	<test name="RMA_Smoke_TC_040">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_040" />
+		</classes>
+	</test>
+	
+	<!--Verify That Workers Comp Claim Is Created Successfully -->
+	<test name="RMA_Smoke_TC_002_WC">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_002_WC" />
+		</classes>
+	</test>
+	
+	<!--Successfully Verify that Restrictions Can be Added And Deleted for WC Claim -->
+	<test name="RMA_Smoke_TC_093">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_093" />
+		</classes>
+	</test>
+	
+	<!--Successfully Verify The Functionality Of Claim Involvement History on Workers' Comp Claim -->
+	<test name="RMA_Smoke_TC_094">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_094" />
+		</classes>
+	</test>
+	
+	<!--Successfully Verify that Work Loss Can be Added And Deleted for WC Claim -->
+	<test name="RMA_Smoke_TC_095">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_095" />
+		</classes>
+	</test>
+ </suite> 

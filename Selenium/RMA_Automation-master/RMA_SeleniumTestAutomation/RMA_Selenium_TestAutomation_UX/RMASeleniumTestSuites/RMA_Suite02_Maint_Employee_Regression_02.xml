@@ -1,0 +1,173 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+	<parameter name="DataSourceRow" value="1" />
+
+	<!--To Set The Executed SuiteName -->
+	<parameter name="ExecutedSuiteName" value="RMA_Suite02_Maint_Employee_Regression_02" />
+	<!-- RMA_Reg_Maint_Employee_TC_041 Is Placed At Last As It Do Not Contain 
+		Settings To Revert -->
+	<!--Verify That RMA Application Is Logged In -->
+	<test name="RMA_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+
+	<!--Successful New Users For Supervisory Chain Creation Is Validated Validated -->
+	<!--To Set The No. Of Users in supervisory chain -->
+	<parameter name="NoOfUsers" value="1" />
+	<test name="RMA_Reg_Super_UserCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Super_UserCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That A PowerView Is Created And Created User Is Given Permission 
+		To That PowerView -->
+	<test name="RMA_Reg_PowerviewCreation_TC_001">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_PowerviewCreation_TC_001" />
+		</classes>
+	</test>
+
+	<!--Verify That Page Cannot Be Found In Power View Message Must Be Displayed 
+		When User Has Removed Employee Maintenance Screen From Power View -->
+	<test name="RMA_Reg_Maint_Employee_TC_046">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_046" />
+		</classes>
+	</test>
+
+	<!--Verify That Employee Maintenance Screen Is Opening Without Any Error 
+		When Respective Screen Is Added In Power View -->
+	<test name="RMA_Reg_Maint_Employee_TC_045">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_045" />
+		</classes>
+	</test>
+
+	<!--Verify That When SMS Setting Of Employee In WC Claim Is Off Then Employee 
+		Related Fields Are Disabled On WC Claim -->
+	<test name="RMA_Reg_Maint_Employee_TC_026">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_026" />
+		</classes>
+	</test>
+
+	<!--Verify That User Gets Validation When User Tries To Remove Any Required 
+		Field In Power View UX(Dependent) -->
+	<test name="RMA_Reg_Maint_Employee_TC_044">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_044" />
+		</classes>
+	</test>
+
+	<!--Verify That No ToolBar Buttons, Child Navigation Options Are Displayed 
+		When User Has Removed The Same From PowerView -->
+	<test name="RMA_Reg_MaintEmployee_TC_040">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_040" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Make Any Field As Required and Validation 
+		Message Is Displayed In UX PowerView On Employee -->
+	<test name="RMA_Reg_Maint_Employee_TC_029">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_029" />
+		</classes>
+	</test>
+
+	<!--Verify That Page Cannot Be Found In PowerView Message Is Displayed When 
+		User Removes Pages Of Right Navigation Link(Violation Page) -->
+	<test name="RMA_Reg_Maint_Employee_TC_038">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_038" />
+		</classes>
+	</test>
+
+	<!--Verify That Same Fields Are Coming In PowerView Editor UX As In Old 
+		UI -->
+		<!-- Not Applicable Now -->
+<!-- 	<test name="RMA_Reg_Maint_Employee_TC_025"> -->
+<!-- 		<classes> -->
+<!-- 			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_025" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+
+	<!--Verify That User Is Able To Add/Delete Fields In PowerViewEditor For 
+		Employee Screen and User Is Able To Save New Employee -->
+	<test name="RMA_Reg_Maint_Employee_TC_023">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_023" />
+		</classes>
+	</test>
+
+	<!--Verify That Same Fields Are Coming In PowerView As Defined In PowerView 
+		Editor For Employee Screen -->
+	<test name="RMA_Reg_Maint_Employee_TC_022">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_022" />
+		</classes>
+	</test>
+
+	<!--Verify That User Is Able To Add New Supplemental Field On Dependents -->
+	<test name="RMA_Reg_Maint_Employee_TC_021">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_021" />
+		</classes>
+	</test>
+
+	<!--Verify That Error Must Be Displayed If Required Supplemental Field Is 
+		Not Present On The Dependent -->
+	<test name="RMA_Reg_Maint_Employee_TC_020">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_020" />
+		</classes>
+	</test>
+
+	<!--Verify That Error Must Be Displayed If Required Supplemental Field Is 
+		Not Present On The Employee -->
+	<test name="RMA_Reg_Maint_Employee_TC_019">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_019" />
+		</classes>
+	</test>
+
+	<!--Verify That When User Changes The ToolTip Of Any ToolBar Button Then 
+		The Same Is Updated In UX On Employee Page -->
+	<test name="RMA_Reg_Maint_Employee_TC_035">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_035" />
+		</classes>
+	</test>
+
+	<!--Verify That When User Changes The ToolTip Of Navigation Link By UX Power 
+		View Then Same Is Updated Correctly -->
+	<test name="RMA_Reg_Maint_Employee_TC_034">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_034" />
+		</classes>
+	</test>
+
+	<!--Verify That Field Becomes ReadOnly When User Enables Read Only Flag 
+		Via UX PowerView On Employee Maintenance -->
+	<test name="RMA_Reg_Maint_Employee_TC_037">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Maint_Employee_TC_037" />
+		</classes>
+	</test>
+
+<!-- Logout From Application At end -->
+	<test name="RMA_Reg_Logout">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Reg_Logout" />
+		</classes>
+	</test>
+	</suite>

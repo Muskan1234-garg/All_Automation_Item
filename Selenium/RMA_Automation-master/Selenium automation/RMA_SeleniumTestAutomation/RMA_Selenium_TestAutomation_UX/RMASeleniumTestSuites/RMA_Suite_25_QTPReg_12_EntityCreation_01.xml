@@ -1,0 +1,56 @@
+<suite name="RMA_SampleSuite" parallel="none" allow-return-values="true">
+<parameter name="DataSourceRow" value="5" />
+
+<!--To Set The Executed SuiteName-->
+<parameter name="ExecutedSuiteName" value="RMA_Suite12EntPPl_QTPRegression_02 " />
+
+<!--Verify That RMA Application Is Logged In-->
+  <test name="RMA_TC_001">
+    <classes>
+      <class name="rmaseleniumtestscripts.RMA_TC_001"/>
+    </classes>
+  </test>
+  
+<!--Verify That Required DSN Is Selected In RMA Application -->
+	<test name="RMA_TC_002">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_TC_002" />
+		</classes>
+	</test>
+	
+<!--Navigation Screen Validation Pre-requisite For Smoke Suite 12 Test Cases Is Validated -->
+	<test name="RMA_Smoke_TC_041_I">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_Smoke_TC_041_I" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Entity (Banks,Attorney Firms,Bill Review Company,Broker Firm,Claim Administrator-Default WC,Claim Administrator-TPA,Contractor) From Maintenance Screen Is Validated -->
+	<test name="RMA_QTPRegression_TC_081">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_081" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Entity (Educational Institution,Finance Company,Hospital,Insurers,Lease Company,Managed Care Organizations,Manufacturers) From Maintenance Screen Is Validated -->
+	<test name="RMA_QTPRegression_TC_082">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_082" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Entity (MMSEA Claim Party Entity,OSHA Establishment,Police Agency,Providers,Rehab. Job Placement Provider Firms,Rehab. Provider Firms,SALVAGE YARD) From Maintenance Screen Is Validated -->
+	<test name="RMA_QTPRegression_TC_083">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_083" />
+		</classes>
+	</test>
+	
+<!--Create, Edit And Delete Of Entity (Self Insured Certificate,State Agency,State Agency Location,Tax Collecting Entity,Vendor,WC Parent Company) From Maintenance Screen Is Validated -->
+	<test name="RMA_QTPRegression_TC_084">
+		<classes>
+			<class name="rmaseleniumtestscripts.RMA_QTPRegression_TC_084" />
+		</classes>
+	</test>
+
+</suite>
