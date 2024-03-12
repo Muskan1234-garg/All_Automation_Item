@@ -1,0 +1,699 @@
+Queries for Utility_CSVToDB :-
+
+1)
+create table PerformanceReportAPI
+(
+NoOfUser varchar(3),
+RunCount int,
+MinValue Decimal(4,2),
+MeanValue Decimal(4,2),
+MaxValue Decimal(4,2),
+Release Decimal(3,1),
+Env varchar(50),
+TestcaseNo int,
+CreatedDateAndTime varchar(200)
+)
+
+2) 
+create table MainPerformanceTable
+(
+TestcaseName varchar(50),
+TestcaseDescription varchar(200),
+TestcaseNo int
+)
+
+insert into MainPerformanceTable values(
+'RMA_TC_001','Create a new GC Claim. Download a Policy from Staging. Create a Recovery reserve & Make a Collection',1)
+
+insert into MainPerformanceTable values(
+'RMA_TC_002', 'Create a new GC Claim. Download a Policy from Staging. Create a Medical/Expense Reserve & Make a Payment',2)
+
+insert into MainPerformanceTable values(
+'RMA_TC_003', 'Search General Claim Record and Modify Existing Reserve',3)
+
+insert into MainPerformanceTable values(
+'RMA_TC_004', 'Search Existing GC Claims and create First and final Payment',4)
+
+insert into MainPerformanceTable values(
+'RMA_TC_005', 'Search & Download an existing Policy. Create a new GC claim starting with the policy',5)
+
+insert into MainPerformanceTable values(
+'RMA_TC_006', 'Search & Download an existing Policy. Create a new WC claim starting with the policy',6)
+
+insert into MainPerformanceTable values(
+'RMA_TC_007', 'Create a new WC Claim. Create a Recovery reserve & Make a Collection',7)
+
+insert into MainPerformanceTable values(
+'RMA_TC_008', 'Create a new WC Claim. Create a Medical/Expense Reserve & Make a Payment',8)
+
+insert into MainPerformanceTable values(
+'RMA_TC_009', 'Search WC Claim Record and Modify Existing Reserve',9)
+
+insert into MainPerformanceTable values(
+'RMA_TC_010', 'Search Existing WC Claim and create Supplemental Payment',10)
+
+insert into MainPerformanceTable values(
+'RMA_TC_011', 'Print check from Funds - with at least 100 checks',11)
+
+insert into MainPerformanceTable values(
+'RMA_TC_012','Search for an existing claim. Create new litigation record. Update the litigation record',12)
+
+insert into MainPerformanceTable values(
+'RMA_TC_013', 'Search for an existing claim. Create new Liability loss record',13)
+
+insert into MainPerformanceTable values(
+'RMA_TC_014', 'Search and View Employee Information',14)
+
+insert into MainPerformanceTable values(
+'RMA_TC_015', 'Display Organization Hierarchy Tree',15)
+
+insert into MainPerformanceTable values(
+'RMA_TC_016', 'Create Event and Display Recent Events',16)
+
+insert into MainPerformanceTable values(
+'RMA_TC_017', 'Display Diary list and create a Diary',17)
+
+insert into MainPerformanceTable values(
+'RMA_TC_018', 'Display Executive Summary : Need to know options to be checked in config screen while loading it',18)
+
+insert into MainPerformanceTable values(
+'RMA_TC_019', 'Create Enhanced Note',19)
+
+insert into MainPerformanceTable values(
+'RMA_TC_020', 'Create Entity',20)
+
+insert into MainPerformanceTable values(
+'RMA_TC_021', 'Maintain Entity Information',21)
+
+insert into MainPerformanceTable values(
+'RMA_TC_022', 'Display Diary Calendar',22)
+
+insert into MainPerformanceTable values(
+'RMA_TC_023', 'Search and View Claim Information using Claimant First Name and Last name',23)
+
+insert into MainPerformanceTable values(
+'RMA_TC_024','Search for an existing claim. Load all comments for the claim',24)
+
+insert into MainPerformanceTable values(
+'RMA_TC_025','Search for an existing claim. Load all Diaries for the claim',25)
+
+insert into MainPerformanceTable values(
+'RMA_TC_026','Search for an existing claim. Load all Enhanced notes for the claim',26)
+
+insert into MainPerformanceTable values(
+'RMA_TC_027','Search for an existing claim. Load all Attachments for the claim',27)
+
+insert into MainPerformanceTable values(
+'RMA_TC_028','Display Payment/Transaction history screen',28)
+
+insert into MainPerformanceTable values(
+'RMA_TC_029','Standard Diary Search',29)
+
+insert into MainPerformanceTable values(
+'RMA_TC_030','Create Attachments on Claim screen',30)
+
+insert into MainPerformanceTable values(
+'RMA_TC_031','Create and Edit Org Hierarchy from Maintenance',31)
+
+insert into MainPerformanceTable values(
+'RMA_TC_032','Create Claimant on GC',32)
+
+
+Queries for Utility_WDS_CSVToDB
+
+1)
+Create table BreakPointDetails
+(
+TestcaseName varchar(50),
+BreakPointNumber int,
+BreakPointDesc varchar(100)
+)
+
+2)
+create table PerformanceReportWDS
+(
+ReleaseVersion Decimal(3,1),
+ReleaseType varchar(20),
+Env varchar(10),
+TestcaseNo int,
+ExecutionType varchar(30),
+RunCount Varchar(40),
+BreakPoint_1 Decimal(4,2),
+BreakPoint_2 Decimal(4,2),
+BreakPoint_3 Decimal(4,2),
+BreakPoint_4 Decimal(4,2),
+BreakPoint_5 Decimal(4,2),
+BreakPoint_6 Decimal(4,2),
+BreakPoint_7 Decimal(4,2),
+BreakPoint_8 Decimal(4,2),
+BreakPoint_9 Decimal(4,2),
+BreakPoint_10 Decimal(4,2),
+BreakPoint_11 Decimal(4,2),
+BreakPoint_12 Decimal(4,2),
+BreakPoint_13 Decimal(4,2),
+CreatedDateAndTime varchar(30)
+)
+
+
+insert into BreakPointDetails values('RMA_TC_001',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_001',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_001',3,'BreakPoint_3_Display GC Screen')
+insert into BreakPointDetails values('RMA_TC_001',4,'BreakPoint_4_Policy Staging Page Opened')
+insert into BreakPointDetails values('RMA_TC_001',5,'BreakPoint_5_Search Policy')
+insert into BreakPointDetails values('RMA_TC_001',6,'BreakPoint_6_Inquire Policy')
+insert into BreakPointDetails values('RMA_TC_001',7,'BreakPoint_7_Download Policy')
+insert into BreakPointDetails values('RMA_TC_001',8,'BreakPoint_8_Save GC')
+insert into BreakPointDetails values('RMA_TC_001',9,'BreakPoint_9_Display Reserve Screen')
+insert into BreakPointDetails values('RMA_TC_001',10,'BreakPoint_10_Save Reserve')
+insert into BreakPointDetails values('RMA_TC_001',11,'BreakPoint_11_Display Collection Screen')
+insert into BreakPointDetails values('RMA_TC_001',12,'BreakPoint_12_Save Collection')
+insert into BreakPointDetails values('RMA_TC_001',13,'BreakPoint_13_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_002',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_002',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_002',3,'BreakPoint_3_Display GC Screen')
+insert into BreakPointDetails values('RMA_TC_002',4,'BreakPoint_4_Policy Staging Page Opened')
+insert into BreakPointDetails values('RMA_TC_002',5,'BreakPoint_5_Search Policy')
+insert into BreakPointDetails values('RMA_TC_002',6,'BreakPoint_6_Inquire Policy')
+insert into BreakPointDetails values('RMA_TC_002',7,'BreakPoint_7_Download Policy')
+insert into BreakPointDetails values('RMA_TC_002',8,'BreakPoint_8_Save GC')
+insert into BreakPointDetails values('RMA_TC_002',9,'BreakPoint_9_Display Reserve Screen')
+insert into BreakPointDetails values('RMA_TC_002',10,'BreakPoint_10_Save Reserve')
+insert into BreakPointDetails values('RMA_TC_002',11,'BreakPoint_11_Display Payment Screen')
+insert into BreakPointDetails values('RMA_TC_002',12,'BreakPoint_12_Save Payment')
+insert into BreakPointDetails values('RMA_TC_002',13,'BreakPoint_13_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_003',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_003',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_003',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_003',4,'BreakPoint_4_Search GC Claim')
+insert into BreakPointDetails values('RMA_TC_003',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_003',6,'BreakPoint_6_Display Reserve Listing Screen')
+insert into BreakPointDetails values('RMA_TC_003',7,'BreakPoint_7_Display Existing Reserves Screen')
+insert into BreakPointDetails values('RMA_TC_003',8,'BreakPoint_8_Save Reserve')
+insert into BreakPointDetails values('RMA_TC_003',9,'BreakPoint_9_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_004',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_004',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_004',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_004',4,'BreakPoint_4_Search GC Claim')
+insert into BreakPointDetails values('RMA_TC_004',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_004',6,'BreakPoint_6_Display Reserve Listing Screen')
+insert into BreakPointDetails values('RMA_TC_004',7,'BreakPoint_7_Display Payment Screen')
+insert into BreakPointDetails values('RMA_TC_004',8,'BreakPoint_8_Save Payment')
+insert into BreakPointDetails values('RMA_TC_004',9,'BreakPoint_9_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_005',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_005',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_005',3,'BreakPoint_3_Display Policy System Download Screen')
+insert into BreakPointDetails values('RMA_TC_005',4,'BreakPoint_4_Policy Search')
+insert into BreakPointDetails values('RMA_TC_005',5,'BreakPoint_5_Inquire Policy')
+insert into BreakPointDetails values('RMA_TC_005',6,'BreakPoint_6_Policy Download')
+insert into BreakPointDetails values('RMA_TC_005',7,'BreakPoint_7_Save GC')
+insert into BreakPointDetails values('RMA_TC_005',8,'BreakPoint_8_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_006',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_006',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_006',3,'BreakPoint_3_Display Policy System Download Screen')
+insert into BreakPointDetails values('RMA_TC_006',4,'BreakPoint_4_Policy Search')
+insert into BreakPointDetails values('RMA_TC_006',5,'BreakPoint_5_Inquire Policy')
+insert into BreakPointDetails values('RMA_TC_006',6,'BreakPoint_6_Policy Download')
+insert into BreakPointDetails values('RMA_TC_006',7,'BreakPoint_7_Save WC')
+insert into BreakPointDetails values('RMA_TC_006',8,'BreakPoint_8_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_007',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_007',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_007',3,'BreakPoint_3_Display New WC Screen')
+insert into BreakPointDetails values('RMA_TC_007',4,'BreakPoint_4_Save WC')
+insert into BreakPointDetails values('RMA_TC_007',5,'BreakPoint_5_Display Reserve Screen')
+insert into BreakPointDetails values('RMA_TC_007',6,'BreakPoint_6_Save Reserve')
+insert into BreakPointDetails values('RMA_TC_007',7,'BreakPoint_7_Display Collection Screen')
+insert into BreakPointDetails values('RMA_TC_007',8,'BreakPoint_8_Save Collection')
+insert into BreakPointDetails values('RMA_TC_007',9,'BreakPoint_9_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_008',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_008',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_008',3,'BreakPoint_3_Display New WC Screen')
+insert into BreakPointDetails values('RMA_TC_008',4,'BreakPoint_4_Save WC')
+insert into BreakPointDetails values('RMA_TC_008',5,'BreakPoint_5_Display Reserve Screen')
+insert into BreakPointDetails values('RMA_TC_008',6,'BreakPoint_6_Save Reserve')
+insert into BreakPointDetails values('RMA_TC_008',7,'BreakPoint_7_Display Payment Screen')
+insert into BreakPointDetails values('RMA_TC_008',8,'BreakPoint_8_Save Payment')
+insert into BreakPointDetails values('RMA_TC_008',9,'BreakPoint_9_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_009',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_009',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_009',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_009',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_009',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_009',6,'BreakPoint_6_Display Reserve Listing Screen')
+insert into BreakPointDetails values('RMA_TC_009',7,'BreakPoint_7_Display Existing Reserves Screen')
+insert into BreakPointDetails values('RMA_TC_009',8,'BreakPoint_8_Save Reserve')
+insert into BreakPointDetails values('RMA_TC_009',9,'BreakPoint_9_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_010',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_010',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_010',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_010',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_010',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_010',6,'BreakPoint_6_Display Reserve Screen')
+insert into BreakPointDetails values('RMA_TC_010',7,'BreakPoint_7_Save Reserve')
+insert into BreakPointDetails values('RMA_TC_010',8,'BreakPoint_8_Display Payment Screen')
+insert into BreakPointDetails values('RMA_TC_010',9,'BreakPoint_9_Save Payment')
+insert into BreakPointDetails values('RMA_TC_010',10,'BreakPoint_10_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_012',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_012',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_012',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_012',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_012',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_012',6,'BreakPoint_6_Display Litigation Screen')
+insert into BreakPointDetails values('RMA_TC_012',7,'BreakPoint_7_Save Litigation')
+insert into BreakPointDetails values('RMA_TC_012',8,'BreakPoint_8_Open Litigation Screen')
+insert into BreakPointDetails values('RMA_TC_012',9,'BBreakPoint_9_Save Edit Litigation')
+insert into BreakPointDetails values('RMA_TC_012',10,'BreakPoint_10_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_013',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_013',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_013',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_013',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_013',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_013',6,'BreakPoint_6_Display Liability Loss Screen')
+insert into BreakPointDetails values('RMA_TC_013',7,'BreakPoint_7_Save Liability')
+insert into BreakPointDetails values('RMA_TC_013',8,'BreakPoint_8_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_014',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_014',2,'BreakPoint_2_Maintenance Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_014',3,'Breakpoint_3_Standard Employee Search Screen')
+insert into BreakPointDetails values('RMA_TC_014',4,'Breakpoint_4_Search Employee')
+insert into BreakPointDetails values('RMA_TC_014',5,'Breakpoint_5_Display Employee Record')
+insert into BreakPointDetails values('RMA_TC_014',6,'BreakPoint_6_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_015',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_015',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_015',3,'BreakPoint_3_Display WC Screen')
+insert into BreakPointDetails values('RMA_TC_015',4,'BreakPoint_4_Display Org Hierarchy')
+insert into BreakPointDetails values('RMA_TC_015',5,'BreakPoint_5_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_016',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_016',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_016',3,'BreakPoint_3_Display Event Creation Screen')
+insert into BreakPointDetails values('RMA_TC_016',4,'BreakPoint_4_Save Event')
+insert into BreakPointDetails values('RMA_TC_016',5,'BreakPoint_5_Display Recent Events')
+insert into BreakPointDetails values('RMA_TC_016',6,'BreakPoint_6_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_017',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_017',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_017',3,'BreakPoint_3_Display Diary List')
+insert into BreakPointDetails values('RMA_TC_017',4,'BreakPoint_4_Save Diary')
+insert into BreakPointDetails values('RMA_TC_017',5,'BreakPoint_5_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_018',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_018',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_018',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_018',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_018',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_018',6,'BreakPoint_6_Display Executive Summary')
+insert into BreakPointDetails values('RMA_TC_018',7,'BreakPoint_7_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_019',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_019',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_019',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_019',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_019',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_019',6,'BreakPoint_6_Click Enhanced Notes Icon')
+insert into BreakPointDetails values('RMA_TC_019',7,'BreakPoint_7_Click Create Note')
+insert into BreakPointDetails values('RMA_TC_019',8,'BreakPoint_8_Click Save Icon')
+insert into BreakPointDetails values('RMA_TC_019',9,'BreakPoint_9_Click Back to Notes Icon')
+insert into BreakPointDetails values('RMA_TC_019',10,'BreakPoint_10_Click Edit Notes Button')
+insert into BreakPointDetails values('RMA_TC_019',11,'BreakPoint_11_Click Save Icon Update')
+insert into BreakPointDetails values('RMA_TC_019',12,'BreakPoint_12_Click Back to Notes Icon')
+insert into BreakPointDetails values('RMA_TC_019',13,'BreakPoint_13_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_020',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_020',2,'BreakPoint_2_Maintenance Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_020',3,'BreakPoint_3_Entity Maintenance Screen')
+insert into BreakPointDetails values('RMA_TC_020',4,'BreakPoint_4_Save Entity')
+insert into BreakPointDetails values('RMA_TC_020',5,'BreakPoint_5_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_021',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_021',2,'BreakPoint_2_Maintenance Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_021',3,'BreakPoint_3_Standard Entity Search Screen')
+insert into BreakPointDetails values('RMA_TC_021',4,'BreakPoint_4_Search Entity')
+insert into BreakPointDetails values('RMA_TC_021',5,'BreakPoint_5_Display Entity Record')
+insert into BreakPointDetails values('RMA_TC_021',6,'BreakPoint_6_Save Entity')
+insert into BreakPointDetails values('RMA_TC_021',7,'BreakPoint_7_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_022',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_022',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_022',3,'BreakPoint_3_Display Diary Calendar')
+insert into BreakPointDetails values('RMA_TC_022',4,'BreakPoint_4_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_023',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_023',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_023',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_023',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_023',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_023',6,'BreakPoint_6_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_024',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_024',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_024',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_024',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_024',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_024',6,'BreakPoint_6_Display Comment Screen')
+insert into BreakPointDetails values('RMA_TC_024',7,'BreakPoint_7_Display Claim Comment Summary')
+insert into BreakPointDetails values('RMA_TC_024',8,'BreakPoint_8_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_025',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_025',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_025',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_025',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_025',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_025',6,'BreakPoint_6_Display Attached Diaries')
+insert into BreakPointDetails values('RMA_TC_025',7,'BreakPoint_7_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_026',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_026',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_026',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_026',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_026',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_026',6,'BreakPoint_6_Display Enhanced Notes')
+insert into BreakPointDetails values('RMA_TC_026',7,'BreakPoint_7_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_027',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_027',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_027',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_027',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_027',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_027',6,'BreakPoint_6_Display Attachments')
+insert into BreakPointDetails values('RMA_TC_027',7,'BreakPoint_7_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_028',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_028',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_028',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_028',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_028',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_028',6,'BreakPoint_6_Display Transaction History')
+insert into BreakPointDetails values('RMA_TC_028',7,'BreakPoint_7_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_029',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_029',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_029',3,'BreakPoint_3_Standard Diary Search Screen')
+insert into BreakPointDetails values('RMA_TC_029',4,'BreakPoint_4_Search Diary')
+insert into BreakPointDetails values('RMA_TC_029',5,'BreakPoint_5_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_030',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_030',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_030',3,'BreakPoint_3_Standard Claim Search Screen')
+insert into BreakPointDetails values('RMA_TC_030',4,'BreakPoint_4_Search Worker Comp Claim')
+insert into BreakPointDetails values('RMA_TC_030',5,'BreakPoint_5_Display Claim Record')
+insert into BreakPointDetails values('RMA_TC_030',6,'BreakPoint_6_Click Attach Document Icon')
+insert into BreakPointDetails values('RMA_TC_030',7,'BreakPoint_7_Click Add New Document Icon')
+insert into BreakPointDetails values('RMA_TC_030',8,'BreakPoint_8_Click Save Icon')
+insert into BreakPointDetails values('RMA_TC_030',9,'BreakPoint_9_Click Edit Document Image')
+insert into BreakPointDetails values('RMA_TC_030',10,'BreakPoint_10_Click Save Edit Document Page')
+insert into BreakPointDetails values('RMA_TC_030',11,'BreakPoint_11_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_031',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_031',2,'BreakPoint_2_Maintenance Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_031',3,'BreakPoint_3_Open Org Hierarcy Page')
+insert into BreakPointDetails values('RMA_TC_031',4,'BreakPoint_4_Add New Org Hierarchy')
+insert into BreakPointDetails values('RMA_TC_031',5,'BreakPoint_5_Save Org Hierarchy')
+insert into BreakPointDetails values('RMA_TC_031',6,'BreakPoint_6_Open Edit Page')
+insert into BreakPointDetails values('RMA_TC_031',7,'BreakPoint_7_Save After Edit')
+insert into BreakPointDetails values('RMA_TC_031',8,'BreakPoint_8_LogOut')
+
+insert into BreakPointDetails values('RMA_TC_032',1,'BreakPoint_1_Login')
+insert into BreakPointDetails values('RMA_TC_032',2,'BreakPoint_2_Claims Option Clicked From Dashboard')
+insert into BreakPointDetails values('RMA_TC_032',3,'BreakPoint_3_Display GC Screen')
+insert into BreakPointDetails values('RMA_TC_032',4,'BreakPoint_4_Save GC')
+insert into BreakPointDetails values('RMA_TC_032',5,'BreakPoint_5_Display Claimant Screen')
+insert into BreakPointDetails values('RMA_TC_032',6,'BreakPoint_6_Save Claimant')
+insert into BreakPointDetails values('RMA_TC_032',7,'BreakPoint_7_LogOut')
+
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_001' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_001' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Display GC Screen' WHERE TestcaseName='RMA_TC_001' and BreakPointDesc = 'BreakPoint_3_Display GC Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Policy Staging Page Opened' WHERE TestcaseName='RMA_TC_001' and BreakPointDesc = 'BreakPoint_4_Policy Staging Page Opened';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Search Policy' WHERE TestcaseName='RMA_TC_001' and BreakPointDesc = 'BreakPoint_5_Search Policy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Inquire Policy' WHERE TestcaseName='RMA_TC_001' and BreakPointDesc = 'BreakPoint_6_Inquire Policy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Download Policy' WHERE TestcaseName='RMA_TC_001' and BreakPointDesc = 'BreakPoint_7_Download Policy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Save GC' WHERE TestcaseName='RMA_TC_001' and BreakPointDesc = 'BreakPoint_8_Save GC';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_09_Display Reserve Screen' WHERE TestcaseName='RMA_TC_001' and BreakPointDesc = 'BreakPoint_9_Display Reserve Screen';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_002' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_002' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Display GC Screen' WHERE TestcaseName='RMA_TC_002' and BreakPointDesc = 'BreakPoint_3_Display GC Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Policy Staging Page Opened' WHERE TestcaseName='RMA_TC_002' and BreakPointDesc = 'BreakPoint_4_Policy Staging Page Opened';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Search Policy' WHERE TestcaseName='RMA_TC_002' and BreakPointDesc = 'BreakPoint_5_Search Policy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Inquire Policy' WHERE TestcaseName='RMA_TC_002' and BreakPointDesc = 'BreakPoint_6_Inquire Policy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Download Policy' WHERE TestcaseName='RMA_TC_002' and BreakPointDesc = 'BreakPoint_7_Download Policy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Save GC' WHERE TestcaseName='RMA_TC_002' and BreakPointDesc = 'BreakPoint_8_Save GC';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_09_Display Reserve Screen' WHERE TestcaseName='RMA_TC_002' and BreakPointDesc = 'BreakPoint_9_Display Reserve Screen';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_003' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_003' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_003' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search GC Claim' WHERE TestcaseName='RMA_TC_003' and BreakPointDesc = 'BreakPoint_4_Search GC Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_003' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Reserve Listing Screen' WHERE TestcaseName='RMA_TC_003' and BreakPointDesc = 'BreakPoint_6_Display Reserve Listing Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Display Existing Reserves Screen' WHERE TestcaseName='RMA_TC_003' and BreakPointDesc = 'BreakPoint_7_Display Existing Reserves Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Save Reserve' WHERE TestcaseName='RMA_TC_003' and BreakPointDesc = 'BreakPoint_8_Save Reserve';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_09_LogOut' WHERE TestcaseName='RMA_TC_003' and BreakPointDesc = 'BreakPoint_9_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_004' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_004' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_004' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search GC Claim' WHERE TestcaseName='RMA_TC_004' and BreakPointDesc = 'BreakPoint_4_Search GC Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_004' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Reserve Listing Screen' WHERE TestcaseName='RMA_TC_004' and BreakPointDesc = 'BreakPoint_6_Display Reserve Listing Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Display Payment Screen' WHERE TestcaseName='RMA_TC_004' and BreakPointDesc = 'BreakPoint_7_Display Payment Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Save Payment' WHERE TestcaseName='RMA_TC_004' and BreakPointDesc = 'BreakPoint_8_Save Payment';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_09_LogOut' WHERE TestcaseName='RMA_TC_004' and BreakPointDesc = 'BreakPoint_9_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_005' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_005' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Display Policy System Download Screen' WHERE TestcaseName='RMA_TC_005' and BreakPointDesc = 'BreakPoint_3_Display Policy System Download Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Policy Search' WHERE TestcaseName='RMA_TC_005' and BreakPointDesc = 'BreakPoint_4_Policy Search';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Inquire Policy' WHERE TestcaseName='RMA_TC_005' and BreakPointDesc = 'BreakPoint_5_Inquire Policy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Policy Download' WHERE TestcaseName='RMA_TC_005' and BreakPointDesc = 'BreakPoint_6_Policy Download';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Save GC' WHERE TestcaseName='RMA_TC_005' and BreakPointDesc = 'BreakPoint_7_Save GC';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_LogOut' WHERE TestcaseName='RMA_TC_005' and BreakPointDesc = 'BreakPoint_8_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_006' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_006' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Display Policy System Download Screen' WHERE TestcaseName='RMA_TC_006' and BreakPointDesc = 'BreakPoint_3_Display Policy System Download Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Policy Search' WHERE TestcaseName='RMA_TC_006' and BreakPointDesc = 'BreakPoint_4_Policy Search';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Inquire Policy' WHERE TestcaseName='RMA_TC_006' and BreakPointDesc = 'BreakPoint_5_Inquire Policy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Policy Download' WHERE TestcaseName='RMA_TC_006' and BreakPointDesc = 'BreakPoint_6_Policy Download';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Save WC' WHERE TestcaseName='RMA_TC_006' and BreakPointDesc = 'BreakPoint_7_Save WC';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_LogOut' WHERE TestcaseName='RMA_TC_006' and BreakPointDesc = 'BreakPoint_8_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_007' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_007' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Display New WC Screen' WHERE TestcaseName='RMA_TC_007' and BreakPointDesc = 'BreakPoint_3_Display New WC Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Save WC' WHERE TestcaseName='RMA_TC_007' and BreakPointDesc = 'BreakPoint_4_Save WC';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Reserve Screen' WHERE TestcaseName='RMA_TC_007' and BreakPointDesc = 'BreakPoint_5_Display Reserve Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Save Reserve' WHERE TestcaseName='RMA_TC_007' and BreakPointDesc = 'BreakPoint_6_Save Reserve';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Display Collection Screen' WHERE TestcaseName='RMA_TC_007' and BreakPointDesc = 'BreakPoint_7_Display Collection Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Save Collection' WHERE TestcaseName='RMA_TC_007' and BreakPointDesc = 'BreakPoint_8_Save Collection';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_9_LogOut' WHERE TestcaseName='RMA_TC_007' and BreakPointDesc = 'BreakPoint_9_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_008' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_008' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Display New WC Screen' WHERE TestcaseName='RMA_TC_008' and BreakPointDesc = 'BreakPoint_3_Display New WC Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Save WC' WHERE TestcaseName='RMA_TC_008' and BreakPointDesc = 'BreakPoint_4_Save WC';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Reserve Screen' WHERE TestcaseName='RMA_TC_008' and BreakPointDesc = 'BreakPoint_5_Display Reserve Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Save Reserve' WHERE TestcaseName='RMA_TC_008' and BreakPointDesc = 'BreakPoint_6_Save Reserve';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Display Payment Screen' WHERE TestcaseName='RMA_TC_008' and BreakPointDesc = 'BreakPoint_7_Display Payment Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Save Payment' WHERE TestcaseName='RMA_TC_008' and BreakPointDesc = 'BreakPoint_8_Save Payment';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_09_LogOut' WHERE TestcaseName='RMA_TC_008' and BreakPointDesc = 'BreakPoint_9_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_009' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_009' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_009' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_009' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_009' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Reserve Listing Screen' WHERE TestcaseName='RMA_TC_009' and BreakPointDesc = 'BreakPoint_6_Display Reserve Listing Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Display Existing Reserves Screen' WHERE TestcaseName='RMA_TC_009' and BreakPointDesc = 'BreakPoint_7_Display Existing Reserves Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Save Reserve' WHERE TestcaseName='RMA_TC_009' and BreakPointDesc = 'BreakPoint_8_Save Reserve';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_09_LogOut' WHERE TestcaseName='RMA_TC_009' and BreakPointDesc = 'BreakPoint_9_LogOut';    
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_010' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_010' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_010' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_010' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_010' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Reserve Screen' WHERE TestcaseName='RMA_TC_010' and BreakPointDesc = 'BreakPoint_6_Display Reserve Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Save Reserve' WHERE TestcaseName='RMA_TC_010' and BreakPointDesc = 'BreakPoint_7_Save Reserve';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Display Payment Screen' WHERE TestcaseName='RMA_TC_010' and BreakPointDesc = 'BreakPoint_8_Display Payment Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_09_Save Payment' WHERE TestcaseName='RMA_TC_010' and BreakPointDesc = 'BreakPoint_9_Save Payment';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_010_LogOut' WHERE TestcaseName='RMA_TC_010' and BreakPointDesc = 'BreakPoint_10_LogOut';  
+
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_012' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_012' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_012' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_012' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_012' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Litigation Screen' WHERE TestcaseName='RMA_TC_012' and BreakPointDesc = 'BreakPoint_6_Display Litigation Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Save Litigation' WHERE TestcaseName='RMA_TC_012' and BreakPointDesc = 'BreakPoint_7_Save Litigation';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Open Litigation Screen' WHERE TestcaseName='RMA_TC_012' and BreakPointDesc = 'BreakPoint_8_Open Litigation Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_09_Save Edit Litigation' WHERE TestcaseName='RMA_TC_012' and BreakPointDesc = 'BBreakPoint_9_Save Edit Litigation';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_013' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_013' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_013' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_013' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_013' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Liability Loss Screen' WHERE TestcaseName='RMA_TC_013' and BreakPointDesc = 'BreakPoint_6_Display Liability Loss Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Save Liability' WHERE TestcaseName='RMA_TC_013' and BreakPointDesc = 'BreakPoint_7_Save Liability';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_LogOut' WHERE TestcaseName='RMA_TC_013' and BreakPointDesc = 'BreakPoint_8_LogOut'; 
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_014' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Maintenance Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_014' and BreakPointDesc = 'BreakPoint_2_Maintenance Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'Breakpoint_03_Standard Employee Search Screen' WHERE TestcaseName='RMA_TC_014' and BreakPointDesc = 'Breakpoint_3_Standard Employee Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'Breakpoint_04_Search Employee' WHERE TestcaseName='RMA_TC_014' and BreakPointDesc = 'Breakpoint_4_Search Employee';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'Breakpoint_05_Display Employee Record' WHERE TestcaseName='RMA_TC_014' and BreakPointDesc = 'Breakpoint_5_Display Employee Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_LogOut' WHERE TestcaseName='RMA_TC_014' and BreakPointDesc = 'BreakPoint_6_LogOut'; 
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_015' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_015' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Display WC Screen' WHERE TestcaseName='RMA_TC_015' and BreakPointDesc = 'BreakPoint_3_Display WC Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Display Org Hierarchy' WHERE TestcaseName='RMA_TC_015' and BreakPointDesc = 'BreakPoint_4_Display Org Hierarchy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_LogOut' WHERE TestcaseName='RMA_TC_015' and BreakPointDesc = 'BreakPoint_5_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_016' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_016' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Display Event Creation Screen' WHERE TestcaseName='RMA_TC_016' and BreakPointDesc = 'BreakPoint_3_Display Event Creation Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Save Event' WHERE TestcaseName='RMA_TC_016' and BreakPointDesc = 'BreakPoint_4_Save Event';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Recent Events' WHERE TestcaseName='RMA_TC_016' and BreakPointDesc = 'BreakPoint_5_Display Recent Events';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_LogOut' WHERE TestcaseName='RMA_TC_016' and BreakPointDesc = 'BreakPoint_6_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_017' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_017' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Display Diary List' WHERE TestcaseName='RMA_TC_017' and BreakPointDesc = 'BreakPoint_3_Display Diary List';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Save Diary' WHERE TestcaseName='RMA_TC_017' and BreakPointDesc = 'BreakPoint_4_Save Diary';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_LogOut' WHERE TestcaseName='RMA_TC_017' and BreakPointDesc = 'BreakPoint_5_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_018' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_018' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_018' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_018' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_018' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Executive Summary' WHERE TestcaseName='RMA_TC_018' and BreakPointDesc = 'BBreakPoint_6_Display Executive Summary';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_LogOut' WHERE TestcaseName='RMA_TC_018' and BreakPointDesc = 'BreakPoint_7_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_019' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_019' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_019' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_019' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_019' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Click Enhanced Notes Icon' WHERE TestcaseName='RMA_TC_019' and BreakPointDesc = 'BreakPoint_6_Click Enhanced Notes Icon';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Click Create Note' WHERE TestcaseName='RMA_TC_019' and BreakPointDesc = 'BreakPoint_7_Click Create Note';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Click Save Icon' WHERE TestcaseName='RMA_TC_019' and BreakPointDesc = 'BreakPoint_8_Click Save Icon'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_09_Click Back to Notes Icon' WHERE TestcaseName='RMA_TC_019' and BreakPointDesc = 'BreakPoint_9_Click Back to Notes Icon';    
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_020' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Maintenance Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_020' and BreakPointDesc = 'BreakPoint_2_Maintenance Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Entity Maintenance Screen' WHERE TestcaseName='RMA_TC_020' and BreakPointDesc = 'BreakPoint_3_Entity Maintenance Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Save Entity' WHERE TestcaseName='RMA_TC_020' and BreakPointDesc = 'BreakPoint_4_Save Entity';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_LogOut' WHERE TestcaseName='RMA_TC_020' and BreakPointDesc = 'BreakPoint_5_LogOut';  
+ 
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_021' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Maintenance Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_021' and BreakPointDesc = 'BreakPoint_2_Maintenance Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Entity Search Screen' WHERE TestcaseName='RMA_TC_021' and BreakPointDesc = 'BreakPoint_3_Standard Entity Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Entity' WHERE TestcaseName='RMA_TC_021' and BreakPointDesc = 'BreakPoint_4_Search Entity';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BBreakPoint_05_Display Entity Record' WHERE TestcaseName='RMA_TC_021' and BreakPointDesc = 'BreakPoint_5_Display Entity Record';  
+ UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Save Entity' WHERE TestcaseName='RMA_TC_021' and BreakPointDesc = 'BreakPoint_6_Save Entity';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_LogOut' WHERE TestcaseName='RMA_TC_021' and BreakPointDesc = 'BreakPoint_7_LogOut'; 
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_023' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_023' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_023' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_023' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_023' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_LogOut' WHERE TestcaseName='RMA_TC_023' and BreakPointDesc = 'BreakPoint_6_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_024' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_024' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_024' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_024' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_024' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Comment Screen' WHERE TestcaseName='RMA_TC_024' and BreakPointDesc = 'BreakPoint_6_Display Comment Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Display Claim Comment Summary' WHERE TestcaseName='RMA_TC_024' and BreakPointDesc = 'BreakPoint_7_Display Claim Comment Summary';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_LogOut' WHERE TestcaseName='RMA_TC_024' and BreakPointDesc = 'BreakPoint_8_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_025' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_025' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_025' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_025' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_025' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Attached Diaries' WHERE TestcaseName='RMA_TC_025' and BreakPointDesc = 'BreakPoint_6_Display Attached Diaries';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_LogOut' WHERE TestcaseName='RMA_TC_025' and BreakPointDesc = 'BreakPoint_7_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_026' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_026' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_026' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_026' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_026' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Enhanced Notes' WHERE TestcaseName='RMA_TC_026' and BreakPointDesc = 'BreakPoint_6_Display Enhanced Notes';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_LogOut' WHERE TestcaseName='RMA_TC_026' and BreakPointDesc = 'BreakPoint_7_LogOut';  
+
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_027' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_027' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_027' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_027' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_027' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Attachments' WHERE TestcaseName='RMA_TC_027' and BreakPointDesc = 'BreakPoint_6_Display Attachments';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_LogOut' WHERE TestcaseName='RMA_TC_027' and BreakPointDesc = 'BreakPoint_7_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_028' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_028' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_028' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_028' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_028' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Display Transaction History' WHERE TestcaseName='RMA_TC_028' and BreakPointDesc = 'BreakPoint_6_Display Transaction History';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_LogOut' WHERE TestcaseName='RMA_TC_028' and BreakPointDesc = 'BreakPoint_7_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_029' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_029' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Diary Search Screen' WHERE TestcaseName='RMA_TC_029' and BreakPointDesc = 'BreakPoint_3_Standard Diary Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Diary' WHERE TestcaseName='RMA_TC_029' and BreakPointDesc = 'BreakPoint_4_Search Diary';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_LogOut' WHERE TestcaseName='RMA_TC_029' and BreakPointDesc = 'BreakPoint_5_LogOut';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_030' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_030' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Standard Claim Search Screen' WHERE TestcaseName='RMA_TC_030' and BreakPointDesc = 'BreakPoint_3_Standard Claim Search Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Search Worker Comp Claim' WHERE TestcaseName='RMA_TC_030' and BreakPointDesc = 'BreakPoint_4_Search Worker Comp Claim';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claim Record' WHERE TestcaseName='RMA_TC_030' and BreakPointDesc = 'BreakPoint_5_Display Claim Record';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Click Attach Document Icon' WHERE TestcaseName='RMA_TC_030' and BreakPointDesc = 'BreakPoint_6_Click Attach Document Icon';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Click Add New Document Icon' WHERE TestcaseName='RMA_TC_030' and BreakPointDesc = 'BreakPoint_7_Click Add New Document Icon'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_Click Save Icon' WHERE TestcaseName='RMA_TC_030' and BreakPointDesc = 'BreakPoint_8_Click Save Icon';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_09_Click Edit Document Image' WHERE TestcaseName='RMA_TC_030' and BreakPointDesc = 'BreakPoint_9_Click Edit Document Image';  
+
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_031' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Maintenance Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_031' and BreakPointDesc = 'BreakPoint_2_Maintenance Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Open Org Hierarcy Page' WHERE TestcaseName='RMA_TC_031' and BreakPointDesc = 'BreakPoint_3_Open Org Hierarcy Page';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Add New Org Hierarchy' WHERE TestcaseName='RMA_TC_031' and BreakPointDesc = 'BreakPoint_4_Add New Org Hierarchy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Save Org Hierarchy' WHERE TestcaseName='RMA_TC_031' and BreakPointDesc = 'BreakPoint_5_Save Org Hierarchy';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Open Edit Page' WHERE TestcaseName='RMA_TC_031' and BreakPointDesc = 'BreakPoint_6_Open Edit Page';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_Save After Edit' WHERE TestcaseName='RMA_TC_031' and BreakPointDesc = 'BreakPoint_7_Save After Edit'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_08_LogOut' WHERE TestcaseName='RMA_TC_031' and BreakPointDesc = 'BreakPoint_8_LogOut';  
+ 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_01_Login' WHERE TestcaseName='RMA_TC_032' and BreakPointDesc = 'BreakPoint_1_Login';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_02_Claims Option Clicked From Dashboard' WHERE TestcaseName='RMA_TC_032' and BreakPointDesc = 'BreakPoint_2_Claims Option Clicked From Dashboard'; 
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_03_Display GC Screen' WHERE TestcaseName='RMA_TC_032' and BreakPointDesc = 'BreakPoint_3_Display GC Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_04_Save GC' WHERE TestcaseName='RMA_TC_032' and BreakPointDesc = 'BreakPoint_4_Save GC';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_05_Display Claimant Screen' WHERE TestcaseName='RMA_TC_032' and BreakPointDesc = 'BreakPoint_5_Display Claimant Screen';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_06_Save Claimant' WHERE TestcaseName='RMA_TC_032' and BreakPointDesc = 'BreakPoint_6_Save Claimant';  
+UPDATE BreakPointDetails SET BreakPointDesc = 'BreakPoint_07_LogOut' WHERE TestcaseName='RMA_TC_032' and BreakPointDesc = 'BreakPoint_7_LogOut';  
+
+
+
+
+

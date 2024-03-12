@@ -1,0 +1,18 @@
+//For Comparing two releases Results
+Sub CompareResults()
+Const Firstrow As Byte = 11
+Dim Lastrow As Long
+Dim r As Long
+Dim lastusedrow As Long
+Sheet1.Select
+Lastrow = Sheet1.Range("A" & Rows.Count).End(xlUp).Row  'Checking upto last row
+    For r = Firstrow To Lastrow
+        If Sheet1.Range("o" & r).Value <= -0.2 Then
+           Sheet1.Range("o" & r).Font.Color = RGB(0, 128, 0) 'For Highlighing in Green
+         ElseIf Sheet1.Range("o" & r).Value <= -0.2 And Sheet1.Range("o" & r).Value = 0.2 Then
+           Sheet1.Range("o" & r).Font.Color = RGB(0, 0, 0)  'For Highlighing Black
+        ElseIf Sheet1.Range("o" & r).Value >= 0.2 Then
+           Sheet1.Range("o" & r).Font.Color = RGB(255, 0, 0) 'For Highlighing Red
+        End If
+    Next r
+End Sub

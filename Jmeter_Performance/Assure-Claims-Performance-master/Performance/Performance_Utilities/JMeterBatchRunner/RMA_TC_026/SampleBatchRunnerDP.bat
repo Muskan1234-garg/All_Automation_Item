@@ -1,0 +1,33 @@
+cd d:
+
+
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat
+call D:\JMeterBatchRunner\RMA_TC_026\RMA_TC_026_100_1_ANTDP.bat

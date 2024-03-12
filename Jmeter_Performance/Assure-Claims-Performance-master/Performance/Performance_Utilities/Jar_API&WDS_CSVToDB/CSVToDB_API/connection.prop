@@ -1,0 +1,7 @@
+URL=jdbc:sqlserver://{serverIP};databaseName=PerformanceData_Sicense
+Uname={Username}
+password={Password}
+ExcelsheetName=C:\\Users\\Administrator\\Desktop\\CsvtoDB\\DXCAssureClaims_Performance_Results_22.3_API.xlsx
+//RiskMaster_Performance_Results_20.3_API1
+
+//RiskMaster_Performance_Results_20.3_API1

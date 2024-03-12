@@ -1,0 +1,1 @@
+testcafe chrome SQLSmoke *.js --skip-js-errors -S --reporter html:HTMLReport/report.html

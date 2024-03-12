@@ -1,0 +1,5 @@
+URL=jdbc:sqlserver://{serverIP};databaseName=PerformanceData_Sicense
+Uname={Username}
+password={Password}
+ExcelsheetName=C:\\Users\\Administrator\\Desktop\\WDS data\\22.4_PST_MidRelease_WDSSampler.xlsx
+//RiskMaster_Performance_Results_20.3_API1

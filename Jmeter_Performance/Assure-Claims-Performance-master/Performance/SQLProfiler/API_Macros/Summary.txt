@@ -1,0 +1,659 @@
+Sub API()
+Dim Lastrow As Long
+Dim r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r12, r13, r14, r15, r16, r17, r18, r19, r20, r21, r22, r23, r24, r25, r26, r27, r28, r29, r30, r31, r32 As Long
+Dim lastusedrow As Long
+Summary.Select 'Sheet name (Summary) should come from Properties>Alphabetic>Name
+
+' TC01
+Firstrow = 8
+Lastrow = 13
+For r1 = Firstrow To Lastrow
+        If Summary.Range("A" & r1).Value = 5 And Summary.Range("E" & r1).Value > 0.1 Then
+           Summary.Range("E" & r1).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r1).Value = 10 And Summary.Range("E" & r1).Value > 0.2 Then
+          Summary.Range("E" & r1).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r1).Value = 20 And Summary.Range("E" & r1).Value > 0.3 Then
+           Summary.Range("E" & r1).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r1).Value = 50 And Summary.Range("E" & r1).Value > 0.5 Then
+           Summary.Range("E" & r1).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r1).Value = 100 And Summary.Range("E" & r1).Value > 0.75 Then
+           Summary.Range("E" & r1).Font.Color = vbRed 'For Highlighing
+        End If
+Next r1
+
+' TC02
+Firstrow = 19
+Lastrow = 23
+For r2 = Firstrow To Lastrow
+        If Summary.Range("A" & r2).Value = 5 And Summary.Range("E" & r2).Value > 0.1 Then
+           Summary.Range("E" & r2).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r2).Value = 10 And Summary.Range("E" & r2).Value > 0.2 Then
+          Summary.Range("E" & r2).Font.Color = vbRed 'For Highlighing
+          End If
+        If Summary.Range("A" & r2).Value = 20 And Summary.Range("E" & r2).Value > 0.3 Then
+           Summary.Range("E" & r2).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r2).Value = 50 And Summary.Range("E" & r2).Value > 0.5 Then
+           Summary.Range("E" & r2).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r2).Value = 100 And Summary.Range("E" & r2).Value > 0.75 Then
+           Summary.Range("E" & r2).Font.Color = vbRed 'For Highlighing
+        End If
+Next r2
+
+' TC03
+Firstrow = 29
+Lastrow = 33
+For r3 = Firstrow To Lastrow
+        If Summary.Range("A" & r3).Value = 5 And Summary.Range("E" & r3).Value > 0.1 Then
+           Summary.Range("E" & r3).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r3).Value = 10 And Summary.Range("E" & r3).Value > 0.2 Then
+          Summary.Range("E" & r3).Font.Color = vbRed 'For Highlighing
+          End If
+        If Summary.Range("A" & r3).Value = 20 And Summary.Range("E" & r3).Value > 0.3 Then
+           Summary.Range("E" & r3).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r3).Value = 50 And Summary.Range("E" & r3).Value > 0.5 Then
+           Summary.Range("E" & r3).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r3).Value = 100 And Summary.Range("E" & r3).Value > 0.75 Then
+           Summary.Range("E" & r3).Font.Color = vbRed 'For Highlighing
+        End If
+Next r3
+
+' TC04
+Firstrow = 39
+Lastrow = 43
+For r4 = Firstrow To Lastrow
+        If Summary.Range("A" & r4).Value = 5 And Summary.Range("E" & r4).Value > 0.1 Then
+           Summary.Range("E" & r4).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r4).Value = 10 And Summary.Range("E" & r4).Value > 0.2 Then
+          Summary.Range("E" & r4).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r4).Value = 20 And Summary.Range("E" & r4).Value > 0.3 Then
+           Summary.Range("E" & r4).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r4).Value = 50 And Summary.Range("E" & r4).Value > 0.5 Then
+           Summary.Range("E" & r4).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r4).Value = 100 And Summary.Range("E" & r4).Value > 0.75 Then
+           Summary.Range("E" & r4).Font.Color = vbRed 'For Highlighing
+        End If
+Next r4
+
+' TC05
+Firstrow = 49
+Lastrow = 53
+For r5 = Firstrow To Lastrow
+        If Summary.Range("A" & r5).Value = 5 And Summary.Range("E" & r5).Value > 0.1 Then
+           Summary.Range("E" & r5).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r5).Value = 10 And Summary.Range("E" & r5).Value > 0.2 Then
+          Summary.Range("E" & r5).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r5).Value = 20 And Summary.Range("E" & r5).Value > 0.3 Then
+           Summary.Range("E" & r5).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r5).Value = 50 And Summary.Range("E" & r5).Value > 0.5 Then
+           Summary.Range("E" & r5).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r5).Value = 100 And Summary.Range("E" & r5).Value > 0.75 Then
+           Summary.Range("E" & r5).Font.Color = vbRed 'For Highlighing
+        End If
+Next r5
+
+' TC06
+Firstrow = 59
+Lastrow = 63
+For r6 = Firstrow To Lastrow
+        If Summary.Range("A" & r6).Value = 5 And Summary.Range("E" & r6).Value > 0.1 Then
+           Summary.Range("E" & r6).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r6).Value = 10 And Summary.Range("E" & r6).Value > 0.2 Then
+          Summary.Range("E" & r6).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r6).Value = 20 And Summary.Range("E" & r6).Value > 0.3 Then
+           Summary.Range("E" & r6).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r6).Value = 50 And Summary.Range("E" & r6).Value > 0.5 Then
+           Summary.Range("E" & r6).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r6).Value = 100 And Summary.Range("E" & r6).Value > 0.75 Then
+           Summary.Range("E" & r6).Font.Color = vbRed 'For Highlighing
+        End If
+Next r6
+
+' TC07
+Firstrow = 69
+Lastrow = 73
+For r7 = Firstrow To Lastrow
+        If Summary.Range("A" & r7).Value = 5 And Summary.Range("E" & r7).Value > 0.1 Then
+           Summary.Range("E" & r7).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r7).Value = 10 And Summary.Range("E" & r7).Value > 0.2 Then
+          Summary.Range("E" & r7).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r7).Value = 20 And Summary.Range("E" & r7).Value > 0.3 Then
+           Summary.Range("E" & r7).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r7).Value = 50 And Summary.Range("E" & r7).Value > 0.5 Then
+           Summary.Range("E" & r7).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r7).Value = 100 And Summary.Range("E" & r7).Value > 0.75 Then
+           Summary.Range("E" & r7).Font.Color = vbRed 'For Highlighing
+        End If
+Next r7
+
+' TC08
+Firstrow = 79
+Lastrow = 83
+For r8 = Firstrow To Lastrow
+        If Summary.Range("A" & r8).Value = 5 And Summary.Range("E" & r8).Value > 0.1 Then
+           Summary.Range("E" & r8).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r8).Value = 10 And Summary.Range("E" & r8).Value > 0.2 Then
+          Summary.Range("E" & r8).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r8).Value = 20 And Summary.Range("E" & r8).Value > 0.3 Then
+           Summary.Range("E" & r8).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r8).Value = 50 And Summary.Range("E" & r8).Value > 0.5 Then
+           Summary.Range("E" & r8).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r8).Value = 100 And Summary.Range("E" & r8).Value > 0.75 Then
+           Summary.Range("E" & r8).Font.Color = vbRed 'For Highlighing
+        End If
+Next r8
+
+' TC09
+Firstrow = 89
+Lastrow = 93
+For r9 = Firstrow To Lastrow
+        If Summary.Range("A" & r9).Value = 5 And Summary.Range("E" & r9).Value > 0.1 Then
+           Summary.Range("E" & r9).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r9).Value = 10 And Summary.Range("E" & r9).Value > 0.2 Then
+          Summary.Range("E" & r9).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r9).Value = 20 And Summary.Range("E" & r9).Value > 0.3 Then
+           Summary.Range("E" & r9).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r9).Value = 50 And Summary.Range("E" & r9).Value > 0.5 Then
+           Summary.Range("E" & r9).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r9).Value = 100 And Summary.Range("E" & r9).Value > 0.75 Then
+           Summary.Range("E" & r9).Font.Color = vbRed 'For Highlighing
+        End If
+Next r9
+
+' TC10
+Firstrow = 99
+Lastrow = 103
+For r10 = Firstrow To Lastrow
+        If Summary.Range("A" & r10).Value = 5 And Summary.Range("E" & r10).Value > 0.1 Then
+           Summary.Range("E" & r10).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r10).Value = 10 And Summary.Range("E" & r10).Value > 0.2 Then
+          Summary.Range("E" & r10).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r10).Value = 20 And Summary.Range("E" & r10).Value > 0.3 Then
+           Summary.Range("E" & r10).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r10).Value = 50 And Summary.Range("E" & r10).Value > 0.5 Then
+           Summary.Range("E" & r10).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r10).Value = 100 And Summary.Range("E" & r10).Value > 0.75 Then
+           Summary.Range("E" & r10).Font.Color = vbRed 'For Highlighing
+        End If
+Next r10
+
+' TC12
+Firstrow = 119
+Lastrow = 133
+For r12 = Firstrow To Lastrow
+        If Summary.Range("A" & r12).Value = 5 And Summary.Range("E" & r12).Value > 0.1 Then
+           Summary.Range("E" & r12).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r12).Value = 10 And Summary.Range("E" & r12).Value > 0.2 Then
+          Summary.Range("E" & r12).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r12).Value = 20 And Summary.Range("E" & r12).Value > 0.3 Then
+           Summary.Range("E" & r12).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r12).Value = 50 And Summary.Range("E" & r12).Value > 0.5 Then
+           Summary.Range("E" & r12).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r12).Value = 100 And Summary.Range("E" & r12).Value > 0.75 Then
+           Summary.Range("E" & r12).Font.Color = vbRed 'For Highlighing
+        End If
+Next r12
+
+' TC13
+Firstrow = 129
+Lastrow = 133
+For r13 = Firstrow To Lastrow
+        If Summary.Range("A" & r13).Value = 5 And Summary.Range("E" & r13).Value > 0.1 Then
+           Summary.Range("E" & r13).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r13).Value = 10 And Summary.Range("E" & r13).Value > 0.2 Then
+          Summary.Range("E" & r13).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r13).Value = 20 And Summary.Range("E" & r13).Value > 0.3 Then
+           Summary.Range("E" & r13).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r13).Value = 50 And Summary.Range("E" & r13).Value > 0.5 Then
+           Summary.Range("E" & r13).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r13).Value = 100 And Summary.Range("E" & r13).Value > 0.75 Then
+           Summary.Range("E" & r13).Font.Color = vbRed 'For Highlighing
+        End If
+Next r13
+
+' TC14
+Firstrow = 139
+Lastrow = 143
+For r14 = Firstrow To Lastrow
+        If Summary.Range("A" & r14).Value = 5 And Summary.Range("E" & r14).Value > 0.1 Then
+           Summary.Range("E" & r14).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r14).Value = 10 And Summary.Range("E" & r14).Value > 0.2 Then
+          Summary.Range("E" & r14).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r14).Value = 20 And Summary.Range("E" & r14).Value > 0.3 Then
+           Summary.Range("E" & r14).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r14).Value = 50 And Summary.Range("E" & r14).Value > 0.5 Then
+           Summary.Range("E" & r14).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r14).Value = 100 And Summary.Range("E" & r14).Value > 0.75 Then
+           Summary.Range("E" & r14).Font.Color = vbRed 'For Highlighing
+        End If
+Next r14
+
+' TC15
+Firstrow = 149
+Lastrow = 153
+For r15 = Firstrow To Lastrow
+        If Summary.Range("A" & r15).Value = 5 And Summary.Range("E" & r15).Value > 0.1 Then
+           Summary.Range("E" & r15).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r15).Value = 10 And Summary.Range("E" & r15).Value > 0.2 Then
+          Summary.Range("E" & r15).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r15).Value = 20 And Summary.Range("E" & r15).Value > 0.3 Then
+           Summary.Range("E" & r15).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r15).Value = 50 And Summary.Range("E" & r15).Value > 0.5 Then
+           Summary.Range("E" & r15).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r15).Value = 100 And Summary.Range("E" & r15).Value > 0.75 Then
+           Summary.Range("E" & r15).Font.Color = vbRed 'For Highlighing
+        End If
+Next r15
+
+' TC16
+Firstrow = 159
+Lastrow = 163
+For r16 = Firstrow To Lastrow
+        If Summary.Range("A" & r16).Value = 5 And Summary.Range("E" & r16).Value > 0.1 Then
+           Summary.Range("E" & r16).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r16).Value = 10 And Summary.Range("E" & r16).Value > 0.2 Then
+          Summary.Range("E" & r16).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r16).Value = 20 And Summary.Range("E" & r16).Value > 0.3 Then
+           Summary.Range("E" & r16).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r16).Value = 50 And Summary.Range("E" & r16).Value > 0.5 Then
+           Summary.Range("E" & r16).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r16).Value = 100 And Summary.Range("E" & r16).Value > 0.75 Then
+           Summary.Range("E" & r16).Font.Color = vbRed 'For Highlighing
+        End If
+Next r16
+
+' TC17
+Firstrow = 169
+Lastrow = 173
+For r17 = Firstrow To Lastrow
+        If Summary.Range("A" & r17).Value = 5 And Summary.Range("E" & r17).Value > 0.1 Then
+           Summary.Range("E" & r17).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r17).Value = 10 And Summary.Range("E" & r17).Value > 0.2 Then
+          Summary.Range("E" & r17).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r17).Value = 20 And Summary.Range("E" & r17).Value > 0.3 Then
+           Summary.Range("E" & r17).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r17).Value = 50 And Summary.Range("E" & r17).Value > 0.5 Then
+           Summary.Range("E" & r17).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r17).Value = 100 And Summary.Range("E" & r17).Value > 0.75 Then
+           Summary.Range("E" & r17).Font.Color = vbRed 'For Highlighing
+        End If
+Next r17
+
+' TC18
+Firstrow = 179
+Lastrow = 183
+For r18 = Firstrow To Lastrow
+        If Summary.Range("A" & r18).Value = 5 And Summary.Range("E" & r18).Value > 0.1 Then
+           Summary.Range("E" & r18).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r18).Value = 10 And Summary.Range("E" & r18).Value > 0.2 Then
+          Summary.Range("E" & r18).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r18).Value = 20 And Summary.Range("E" & r18).Value > 0.3 Then
+           Summary.Range("E" & r18).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r18).Value = 50 And Summary.Range("E" & r18).Value > 0.5 Then
+           Summary.Range("E" & r18).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r18).Value = 100 And Summary.Range("E" & r18).Value > 0.75 Then
+           Summary.Range("E" & r18).Font.Color = vbRed 'For Highlighing
+        End If
+Next r18
+
+'TC19
+Firstrow = 189
+Lastrow = 193
+For r19 = Firstrow To Lastrow
+        If Summary.Range("A" & r19).Value = 5 And Summary.Range("E" & r19).Value > 0.1 Then
+           Summary.Range("E" & r19).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r19).Value = 10 And Summary.Range("E" & r19).Value > 0.2 Then
+          Summary.Range("E" & r19).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r19).Value = 20 And Summary.Range("E" & r19).Value > 0.3 Then
+           Summary.Range("E" & r19).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r19).Value = 50 And Summary.Range("E" & r19).Value > 0.5 Then
+           Summary.Range("E" & r19).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r19).Value = 100 And Summary.Range("E" & r19).Value > 0.75 Then
+           Summary.Range("E" & r19).Font.Color = vbRed 'For Highlighing
+        End If
+Next r19
+
+'TC20
+Firstrow = 199
+Lastrow = 203
+For r20 = Firstrow To Lastrow
+        If Summary.Range("A" & r20).Value = 5 And Summary.Range("E" & r20).Value > 0.1 Then
+           Summary.Range("E" & r20).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r20).Value = 10 And Summary.Range("E" & r20).Value > 0.2 Then
+          Summary.Range("E" & r20).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r20).Value = 20 And Summary.Range("E" & r20).Value > 0.3 Then
+           Summary.Range("E" & r20).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r20).Value = 50 And Summary.Range("E" & r20).Value > 0.5 Then
+           Summary.Range("E" & r20).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r20).Value = 100 And Summary.Range("E" & r20).Value > 0.75 Then
+           Summary.Range("E" & r20).Font.Color = vbRed 'For Highlighing
+        End If
+Next r20
+
+' TC21
+Firstrow = 209
+Lastrow = 213
+For r21 = Firstrow To Lastrow
+        If Summary.Range("A" & r21).Value = 5 And Summary.Range("E" & r21).Value > 0.1 Then
+           Summary.Range("E" & r21).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r21).Value = 10 And Summary.Range("E" & r21).Value > 0.2 Then
+          Summary.Range("E" & r21).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r21).Value = 20 And Summary.Range("E" & r21).Value > 0.3 Then
+           Summary.Range("E" & r21).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r21).Value = 50 And Summary.Range("E" & r21).Value > 0.5 Then
+           Summary.Range("E" & r21).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r21).Value = 100 And Summary.Range("E" & r21).Value > 0.75 Then
+           Summary.Range("E" & r21).Font.Color = vbRed 'For Highlighing
+        End If
+Next r21
+
+' TC22
+Firstrow = 219
+Lastrow = 223
+For r22 = Firstrow To Lastrow
+        If Summary.Range("A" & r22).Value = 5 And Summary.Range("E" & r22).Value > 0.1 Then
+           Summary.Range("E" & r22).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r22).Value = 10 And Summary.Range("E" & r22).Value > 0.2 Then
+          Summary.Range("E" & r22).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r22).Value = 20 And Summary.Range("E" & r22).Value > 0.3 Then
+           Summary.Range("E" & r22).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r22).Value = 50 And Summary.Range("E" & r22).Value > 0.5 Then
+           Summary.Range("E" & r22).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r22).Value = 100 And Summary.Range("E" & r22).Value > 0.75 Then
+           Summary.Range("E" & r22).Font.Color = vbRed 'For Highlighing
+        End If
+Next r22
+
+' TC23
+Firstrow = 229
+Lastrow = 233
+For r23 = Firstrow To Lastrow
+        If Summary.Range("A" & r23).Value = 5 And Summary.Range("E" & r23).Value > 0.1 Then
+           Summary.Range("E" & r23).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r23).Value = 10 And Summary.Range("E" & r23).Value > 0.2 Then
+          Summary.Range("E" & r23).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r23).Value = 20 And Summary.Range("E" & r23).Value > 0.3 Then
+           Summary.Range("E" & r23).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r23).Value = 50 And Summary.Range("E" & r23).Value > 0.5 Then
+           Summary.Range("E" & r23).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r23).Value = 100 And Summary.Range("E" & r23).Value > 0.75 Then
+           Summary.Range("E" & r23).Font.Color = vbRed 'For Highlighing
+        End If
+Next r23
+
+' TC24
+Firstrow = 239
+Lastrow = 243
+For r24 = Firstrow To Lastrow
+        If Summary.Range("A" & r24).Value = 5 And Summary.Range("E" & r24).Value > 0.1 Then
+           Summary.Range("E" & r24).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r24).Value = 10 And Summary.Range("E" & r24).Value > 0.2 Then
+          Summary.Range("E" & r24).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r24).Value = 20 And Summary.Range("E" & r24).Value > 0.3 Then
+           Summary.Range("E" & r24).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r24).Value = 50 And Summary.Range("E" & r24).Value > 0.5 Then
+           Summary.Range("E" & r24).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r24).Value = 100 And Summary.Range("E" & r24).Value > 0.75 Then
+           Summary.Range("E" & r24).Font.Color = vbRed 'For Highlighing
+        End If
+Next r24
+
+' TC25
+Firstrow = 249
+Lastrow = 253
+For r25 = Firstrow To Lastrow
+        If Summary.Range("A" & r25).Value = 5 And Summary.Range("E" & r25).Value > 0.1 Then
+           Summary.Range("E" & r25).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r25).Value = 10 And Summary.Range("E" & r25).Value > 0.2 Then
+          Summary.Range("E" & r25).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r25).Value = 20 And Summary.Range("E" & r25).Value > 0.3 Then
+           Summary.Range("E" & r25).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r25).Value = 50 And Summary.Range("E" & r25).Value > 0.5 Then
+           Summary.Range("E" & r25).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r25).Value = 100 And Summary.Range("E" & r25).Value > 0.75 Then
+           Summary.Range("E" & r25).Font.Color = vbRed 'For Highlighing
+        End If
+Next r25
+
+' TC26
+Firstrow = 258
+Lastrow = 262
+For r26 = Firstrow To Lastrow
+        If Summary.Range("A" & r26).Value = 5 And Summary.Range("E" & r26).Value > 0.1 Then
+           Summary.Range("E" & r26).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r26).Value = 10 And Summary.Range("E" & r26).Value > 0.2 Then
+          Summary.Range("E" & r26).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r26).Value = 20 And Summary.Range("E" & r26).Value > 0.3 Then
+           Summary.Range("E" & r26).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r26).Value = 50 And Summary.Range("E" & r26).Value > 0.5 Then
+           Summary.Range("E" & r26).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r26).Value = 100 And Summary.Range("E" & r26).Value > 0.75 Then
+           Summary.Range("E" & r26).Font.Color = vbRed 'For Highlighing
+        End If
+Next r26
+
+' TC27
+Firstrow = 267
+Lastrow = 271
+For r27 = Firstrow To Lastrow
+        If Summary.Range("A" & r27).Value = 5 And Summary.Range("E" & r27).Value > 0.1 Then
+           Summary.Range("E" & r27).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r27).Value = 10 And Summary.Range("E" & r27).Value > 0.2 Then
+          Summary.Range("E" & r27).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r27).Value = 20 And Summary.Range("E" & r27).Value > 0.3 Then
+           Summary.Range("E" & r27).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r27).Value = 50 And Summary.Range("E" & r27).Value > 0.5 Then
+           Summary.Range("E" & r27).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r27).Value = 100 And Summary.Range("E" & r27).Value > 0.75 Then
+           Summary.Range("E" & r27).Font.Color = vbRed 'For Highlighing
+        End If
+Next r27
+
+' TC28
+Firstrow = 276
+Lastrow = 280
+For r28 = Firstrow To Lastrow
+        If Summary.Range("A" & r28).Value = 5 And Summary.Range("E" & r28).Value > 0.1 Then
+           Summary.Range("E" & r28).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r28).Value = 10 And Summary.Range("E" & r28).Value > 0.2 Then
+          Summary.Range("E" & r28).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r28).Value = 20 And Summary.Range("E" & r28).Value > 0.3 Then
+           Summary.Range("E" & r28).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r28).Value = 50 And Summary.Range("E" & r28).Value > 0.5 Then
+           Summary.Range("E" & r28).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r28).Value = 100 And Summary.Range("E" & r28).Value > 0.75 Then
+           Summary.Range("E" & r28).Font.Color = vbRed 'For Highlighing
+        End If
+Next r28
+
+' TC29
+Firstrow = 285
+Lastrow = 289
+For r29 = Firstrow To Lastrow
+        If Summary.Range("A" & r29).Value = 5 And Summary.Range("E" & r29).Value > 0.1 Then
+           Summary.Range("E" & r29).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r29).Value = 10 And Summary.Range("E" & r29).Value > 0.2 Then
+          Summary.Range("E" & r29).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r29).Value = 20 And Summary.Range("E" & r29).Value > 0.3 Then
+           Summary.Range("E" & r29).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r29).Value = 50 And Summary.Range("E" & r29).Value > 0.5 Then
+           Summary.Range("E" & r29).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r29).Value = 100 And Summary.Range("E" & r29).Value > 0.75 Then
+           Summary.Range("E" & r29).Font.Color = vbRed 'For Highlighing
+        End If
+Next r29
+
+' TC30
+Firstrow = 294
+Lastrow = 298
+For r30 = Firstrow To Lastrow
+        If Summary.Range("A" & r30).Value = 5 And Summary.Range("E" & r30).Value > 0.1 Then
+           Summary.Range("E" & r30).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r30).Value = 10 And Summary.Range("E" & r30).Value > 0.2 Then
+          Summary.Range("E" & r30).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r30).Value = 20 And Summary.Range("E" & r30).Value > 0.3 Then
+           Summary.Range("E" & r30).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r30).Value = 50 And Summary.Range("E" & r30).Value > 0.5 Then
+           Summary.Range("E" & r30).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r30).Value = 100 And Summary.Range("E" & r30).Value > 0.75 Then
+           Summary.Range("E" & r30).Font.Color = vbRed 'For Highlighing
+        End If
+Next r30
+
+' TC31
+Firstrow = 303
+Lastrow = 307
+For r31 = Firstrow To Lastrow
+        If Summary.Range("A" & r31).Value = 5 And Summary.Range("E" & r31).Value > 0.1 Then
+           Summary.Range("E" & r31).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r31).Value = 10 And Summary.Range("E" & r31).Value > 0.2 Then
+          Summary.Range("E" & r31).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r31).Value = 20 And Summary.Range("E" & r31).Value > 0.3 Then
+           Summary.Range("E" & r31).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r31).Value = 50 And Summary.Range("E" & r31).Value > 0.5 Then
+           Summary.Range("E" & r31).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r31).Value = 100 And Summary.Range("E" & r31).Value > 0.75 Then
+           Summary.Range("E" & r31).Font.Color = vbRed 'For Highlighing
+        End If
+Next r31
+
+' TC32
+Firstrow = 312
+Lastrow = 316
+For r32 = Firstrow To Lastrow
+        If Summary.Range("A" & r32).Value = 5 And Summary.Range("E" & r32).Value > 0.1 Then
+           Summary.Range("E" & r32).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r32).Value = 10 And Summary.Range("E" & r32).Value > 0.2 Then
+          Summary.Range("E" & r32).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r32).Value = 20 And Summary.Range("E" & r32).Value > 0.3 Then
+           Summary.Range("E" & r32).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r32).Value = 50 And Summary.Range("E" & r32).Value > 0.5 Then
+           Summary.Range("E" & r32).Font.Color = vbRed 'For Highlighing
+        End If
+        If Summary.Range("A" & r32).Value = 100 And Summary.Range("E" & r32).Value > 0.75 Then
+           Summary.Range("E" & r32).Font.Color = vbRed 'For Highlighing
+        End If
+Next r32
+
+
+End Sub

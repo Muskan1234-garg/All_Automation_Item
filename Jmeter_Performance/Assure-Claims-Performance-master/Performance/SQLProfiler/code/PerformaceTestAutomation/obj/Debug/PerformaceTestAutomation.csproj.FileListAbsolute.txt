@@ -1,0 +1,15 @@
+C:\code\PerformaceTestAutomation\bin\Debug\PerformaceTestAutomation.exe.config
+C:\code\PerformaceTestAutomation\bin\Debug\PerformaceTestAutomation.exe
+C:\code\PerformaceTestAutomation\bin\Debug\PerformaceTestAutomation.pdb
+C:\code\PerformaceTestAutomation\bin\Debug\DocumentFormat.OpenXml.dll
+C:\code\PerformaceTestAutomation\bin\Debug\EPPlus.dll
+C:\code\PerformaceTestAutomation\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+C:\code\PerformaceTestAutomation\bin\Debug\System.ComponentModel.Annotations.dll
+C:\code\PerformaceTestAutomation\bin\Debug\DocumentFormat.OpenXml.xml
+C:\code\PerformaceTestAutomation\bin\Debug\EPPlus.xml
+C:\code\PerformaceTestAutomation\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+C:\code\PerformaceTestAutomation\obj\Debug\PerformaceTestAutomation.csprojAssemblyReference.cache
+C:\code\PerformaceTestAutomation\obj\Debug\PerformaceTestAutomation.csproj.CoreCompileInputs.cache
+C:\code\PerformaceTestAutomation\obj\Debug\PerformaceTestAutomation.csproj.CopyComplete
+C:\code\PerformaceTestAutomation\obj\Debug\PerformaceTestAutomation.exe
+C:\code\PerformaceTestAutomation\obj\Debug\PerformaceTestAutomation.pdb

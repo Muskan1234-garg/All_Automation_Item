@@ -1,0 +1,3 @@
+cd C:\apache-jmeter-3.0\apache-jmeter-3.0\extras\RMA_JMeterTestCases
+set jmeter.save.saveservice.print_field_names=true\
+jmeter -n -t C:\apache-jmeter-3.0\apache-jmeter-3.0\extras\RMA_JMeterTestCases\SeleniumWDSTestCases\RMA_TC_028.jmx -JDATASHEETNAME=TC28UI_1-1 -l C:\apache-jmeter-3.0\apache-jmeter-3.0\extras\RMA_JMeterUITestFiles\RMA_TC_028\RMA_TC_028_1-1.csv -e -o C:\apache-jmeter-3.0\apache-jmeter-3.0\extras\RMA_JMeterUIHTMLReports\RMA_TC_028\RMA_TC_028_1-1\
